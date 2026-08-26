@@ -1,0 +1,25 @@
+{
+  "original_animation": "M20260127_2291",
+  "substitutions": [
+    {
+      "index": 9,
+      "label": "GEEL",
+      "trimmed_path": "path/to/trimmed/GEEL.fbx"
+    },
+    {
+      "index": 9,
+      "label": "GROEN",
+      "trimmed_path": "path/to/trimmed/GROEN.fbx"
+    },
+    {
+      "index": 9,
+      "label": "BLAUW",
+      "trimmed_path": "path/to/trimmed/BLAUW.fbx"
+    },
+    {
+      "index": 9,
+      "label": "ROOD",
+      "trimmed_path": "path/to/trimmed/ROOD.fbx"
+    }
+  ]
+}
