@@ -220,5 +220,5 @@ __marimo__/
 .streamlit/secrets.toml
 
 Animations
-example_animation_set
+job_folder_example
 fbx_sdk

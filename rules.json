@@ -1,0 +1,12 @@
+{
+  "task": "Take an input sentence object and generate 2 NEW true variation sentences of logical substitutions, are culturally and contextually appropriate, and are grammatically correct in NGT. These sentences are meant to support parents of deaf children.",
+  "rules": [
+    "Make one JSON only one entry for each original animation, containing the original glosses, original_animation, original_zin, and the list of substitutions.",
+    "The substitutions list should contain the index and label of the substituted glosses, and the new Dutch sentence translation in the 'zin' field.",
+    "Select glosses from the input 'all_glosses' array to substitute to create 2 new valid NGT sentences.",
+    "Specify 0-based index ('index') corresponding to the substituted gloss position in the 'original_glosses' list.",
+    "The substitute gloss 'label' MUST come strictly from the provided available glosses list.",
+    "Include the Dutch sentence translation in the 'zin' field for each variation.",
+    "Output STRICT JSON as an array."
+  ]
+}
