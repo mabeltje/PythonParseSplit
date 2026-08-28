@@ -25,7 +25,7 @@ def generate_sentence_substitutions(glosses_file, sentences_file, rules_file, ou
     SYSTEM RULES:
     {json.dumps(system_prompt)}
 
-    Generate 2 variation instances as a JSON array following the requested structure.
+    Generate variation instances as a JSON array following the requested structure for all input sentences.
     """
 
     messages = [
@@ -33,7 +33,7 @@ def generate_sentence_substitutions(glosses_file, sentences_file, rules_file, ou
         {"role": "user", "content": user_prompt}
     ]
 
-    print("Requesting 2 substitution variations from LLM...")
+    print("Requesting substitution variations from LLM...")
     raw_response = query_llm(messages)
 
     if not raw_response:

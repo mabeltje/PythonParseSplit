@@ -1,0 +1,73 @@
+[
+  {
+    "original_animation": "M20260227_6010",
+    "original_glosses": [
+      "SNEL-A",
+      "EETBUIEN",
+      "KOMEN-A",
+      "BUIK-B",
+      "PIJN-A",
+      "PT-1HAND"
+    ],
+    "original_zin": "Niet te snel eten, dan krijg je buikpijn.",
+    "substitutions": [
+      {
+        "index": 5,
+        "label": "KIND",
+        "zin": "Niet te snel eten, dan krijgt het kind buikpijn."
+      },
+      {
+        "index": 1,
+        "label": "ETEN",
+        "zin": "Eet niet te snel, dan krijg je buikpijn."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260227_5985",
+    "original_glosses": [
+      "nvt",
+      "ALWEER-B",
+      "VEEL-A",
+      "POEP-A"
+    ],
+    "original_zin": "Bobby heeft weer heel veel gepoept.  (zie filmpje Tobias voor naamgebaar van Bobby)",
+    "substitutions": [
+      {
+        "index": 1,
+        "label": "WEER",
+        "zin": "Bobby heeft weer heel veel gepoept."
+      },
+      {
+        "index": 2,
+        "label": "MEER",
+        "zin": "Bobby heeft weer heel meer gepoept."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260227_5990",
+    "original_glosses": [
+      "PT-1hand",
+      "nvt",
+      "MOVE+C",
+      "PT-1hand",
+      "nvt",
+      "WILLEN-A",
+      "PT-1hand"
+    ],
+    "original_zin": "Wil je op een kussen zitten zodat je hoger zit?",
+    "substitutions": [
+      {
+        "index": 0,
+        "label": "KIND",
+        "zin": "Wil het kind op een kussen zitten zodat het hoger zit?"
+      },
+      {
+        "index": 5,
+        "label": "KUNNEN",
+        "zin": "Kun je op een kussen zitten zodat je hoger zit?"
+      }
+    ]
+  }
+]

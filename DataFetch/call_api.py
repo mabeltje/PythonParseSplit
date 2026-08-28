@@ -11,7 +11,6 @@ API_URL = "https://signcollect.nl/blendBaking/api.php"
 
 def download_batch(codes, output_dir):
     for base in codes:
-        print(f"Processing {base}...")
         
         # Create folder for code
         target_folder = os.path.join(output_dir, base)
@@ -59,8 +58,6 @@ def download_single_gloss(gloss, output_dir):
         print(f"Skipping gloss '{gloss}': {data.get('error', 'No data found')}")
         return
 
-    print(f"Found {len(data['sentences'])} sentence(s) containing gloss '{gloss}'.")
-
     # Get glosses for the first sentence by default for now
     sentence = data['sentences'][0]
     glosses = sentence['glosses']
@@ -71,18 +68,15 @@ def download_single_gloss(gloss, output_dir):
     gloss_info = next(g for g in glosses if g['baseGloss'] == gloss)
 
     if gloss_info:
-        print(f"Found gloss '{gloss}' in base '{base}': {gloss_info}")
+        print(f"Found gloss '{gloss}' in base '{base}'")
 
         gloss_start = gloss_info['start']
         gloss_end = gloss_info['end']
 
-    # Create folder for the base code
-    target_folder = os.path.join(output_dir, base)
-    os.makedirs(target_folder, exist_ok=True)
-    
     # Download FBX file
-    fbx_name = fbx_url.split('/')[-1]
-    fbx_path = os.path.join(target_folder, fbx_name)
+    fbx_name = gloss + "_" + fbx_url.split('/')[-1]
+
+    fbx_path = os.path.join(output_dir, fbx_name)
     fbx_data = requests.get(fbx_url).content
     with open(fbx_path, 'wb') as f:
         f.write(fbx_data)
