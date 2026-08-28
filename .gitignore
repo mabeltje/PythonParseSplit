@@ -220,5 +220,6 @@ __marimo__/
 .streamlit/secrets.toml
 
 Animations
-job_folder_example
+DataFetch/jobs/
 fbx_sdk
+DataGenerationBluey/all_glosses.json
