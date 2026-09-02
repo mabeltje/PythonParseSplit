@@ -223,3 +223,9 @@ Animations
 DataFetch/jobs/
 fbx_sdk
 DataGenerationBluey/all_glosses.json
+DataGenerationBluey/all_sentences.json
+DataGenerationBluey/bluey.json
+
+*.fbx
+*.srt
+
