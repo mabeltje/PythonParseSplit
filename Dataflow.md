@@ -29,12 +29,29 @@ flowchart TD
     B --> E[Unreal Engine Blending]
 
     subgraph E[Unreal Engine Blending]
-        E1[Import Job Folders] --> E2[Sequencer] 
-        E2 --> E3[Blend Animations]
-        E3 --> E4[Bake Blended FBX]
-        E3 --> E5[Export Blended SRT]
-        E4 --> E6[Create Dataset of Blended Animations]
-        E5 --> E6
+        subgraph E0[Socket Communication]
+            E0z[One time Start Up of Unreal Headless Instance]
+            E0y[Cache the Unreal Instance for Future Jobs]
+            E0a[Receive URL/Path to Job]
+            E0b[Download or Set Job Folder]
+            E0c[Import Job Folder into Unreal]
+            E0d[Request Unreal to Process Job]
+
+            E0z --> E0y --> E0d
+            E0a --> E0b --> E0c --> E0d
+        end
+
+        subgraph E1[Unreal Job Processing]
+            E1b[Blend Animations in Unreal]
+            E1c[Bake Blended FBX]
+            E1d[Export Blended SRT]
+            E1e[Export Blended FBX]
+
+            E1b --> E1c --> E1d
+            E1c --> E1e
+        end
+
+        E0 --> E1
     end
 
     E --> F[Blended Animations Dataset]

@@ -1,5 +1,6 @@
 import os
 import argparse
+import subprocess
 
 
 # Import modular steps
@@ -7,11 +8,77 @@ from DataGenerationBluey.fetch_data_bluey import run_fetch
 from DataGenerationBluey.generate_substitutions import run_generate
 from DataFetch.parse_split import run_parse_split
 
-UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.3/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
-# UPROJECT_PATH = 
+UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
+UPROJECT_PATH = "C:/Users/visualisationLab/Documents/Unreal Projects/BlendingAutomation/BlendingAutomation.uproject"
+
+def run_unreal_headless(unreal_jobs_dir: str):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    ue_script_path = os.path.join(base_dir, "ue_process_jobs.py")
+
+    if not os.path.exists(UE_CMD_PATH):
+        raise FileNotFoundError(f"UnrealEditor-Cmd not found at {UE_CMD_PATH}")
+    if not os.path.exists(UPROJECT_PATH):
+        raise FileNotFoundError(f".uproject not found at {UPROJECT_PATH}")
+    if not os.path.exists(ue_script_path):
+        raise FileNotFoundError(f"Unreal script not found at {ue_script_path}")
+
+    print(f"\nThe jobs directory for Unreal processing is: {unreal_jobs_dir}")
+    cmd = [
+        UE_CMD_PATH,
+        UPROJECT_PATH,
+        f"-ExecutePythonScript={ue_script_path}",
+        "-nullrhi",          # Headless: disable rendering backend
+        "-nosound",          # Headless: disable audio
+        "-nopause",          # Headless: don't hang on warnings
+        "-unattended",       # Headless: suppress popups and dialogs
+        "-stdout",           # Forward logs to stdout
+        "-FullStdOutLogOutput",
+        f"-jobs_dir={unreal_jobs_dir}"  # Custom argument passed to the UE script
+    ]
+
+    # print(f"\n[Unreal] Launching headless Unreal Engine instance...")
+    # result = subprocess.run(cmd, capture_output=True, text=True)
+
+    # if result.returncode != 0:
+    #     print(f"[Unreal Error] Unreal exited with code {result.returncode}")
+    #     print(result.stderr)
+    # else:
+    #     print("[Unreal] Unreal process finished successfully!")
+
+    # Pass the jobs directory via environment variables
+    env = os.environ.copy()
+    env["UE_JOBS_DIR"] = os.path.abspath(unreal_jobs_dir)
+
+    print(f"\n[Unreal] Launching headless Unreal Engine instance...")
+
+    process = subprocess.Popen(
+        cmd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        bufsize=1,
+        encoding="utf-8",
+        errors="replace",
+        env=env
+    )
+    
+    # Filter lines live as they are emitted
+    keywords = ("LogPython:", "[Headless Pipeline]")
+    if process.stdout:
+        for line in process.stdout:
+            if any(k in line for k in keywords):
+                # Clean up Unreal's default timestamp/category prefix if desired
+                print(line.rstrip())
+
+    process.wait()
+
+    if process.returncode != 0:
+        print(f"\n[Unreal Error] Unreal exited with code {process.returncode}")
+    else:
+        print("\n[Unreal] Unreal process finished successfully!")
 
 
-def run_pipeline(generate_substitutions: bool = False):
+def run_pipeline(generate_substitutions: bool = False, run_ue: bool = True):
     """
     Runs the data fetching and saving pipeline to get all the data ready for Unreal.
     :param generate_substitutions: If True, will generate substitutions from the fetched data.
@@ -62,57 +129,9 @@ def run_pipeline(generate_substitutions: bool = False):
         output_dir=unreal_ready_dir
     )
 
-# def prepare_unreal_manifest(substitutions_file: str | Path, unreal_ready_dir: str | Path) -> Path:
-#     """
-#     Scans substitutions_output.json and maps each sentence to its corresponding
-#     downloaded base FBX and trimmed substitution FBXs.
-#     """
-#     substitutions_path = Path(substitutions_file).resolve()
-#     unreal_dir = Path(unreal_ready_dir).resolve()
-    
-#     with open(substitutions_path, "r", encoding="utf-8") as f:
-#         sentences_data = json.load(f)
-
-    # manifest_tasks = []
-
-    # for index, item in enumerate(sentences_data):
-    #     base_name = item.get("original_animation")
-    #     sentence_text = item.get("zin", "")
-    #     raw_glosses = item.get("glosses", [])
-    #     substitutions = item.get("substitutions", [])
-
-    #     # The base animation directory created by parse_split.py
-    #     anim_folder = unreal_dir / base_name
-    #     base_fbx = anim_folder / f"{base_name}.fbx"
-
-    #     # Collect trimmed substitution FBXs
-    #     sub_list = []
-    #     for sub in substitutions:
-    #         label = sub.get("label")
-    #         trimmed_fbx = anim_folder / f"{label}_TRIMMED.fbx"
-            
-    #         sub_list.append({
-    #             "label": label,
-    #             "fbx_path": str(trimmed_fbx),
-    #             "exists": trimmed_fbx.exists()
-    #         })
-
-    #     task_entry = {
-    #         "task_id": f"sentence_{index:03d}",
-    #         "base_animation_name": base_name,
-    #         "base_fbx_path": str(base_fbx),
-    #         "sentence_text": sentence_text,
-    #         "glosses": raw_glosses,
-    #         "substitutions": sub_list
-    #     }
-    #     manifest_tasks.append(task_entry)
-
-    # manifest_file = unreal_dir / "unreal_task_manifest.json"
-    # with open(manifest_file, "w", encoding="utf-8") as f:
-    #     json.dump({"tasks": manifest_tasks}, f, indent=2, ensure_ascii=False)
-
-    # print(f"\n[Step 4] Unreal task manifest generated with {len(manifest_tasks)} tasks at: {manifest_file}")
-    # return manifest_file
+    print(f"\nStep 4: Executing headless Unreal processing...")
+    if run_ue:
+        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir)
 
    
 if __name__ == "__main__":
@@ -122,5 +141,10 @@ if __name__ == "__main__":
         action="store_true",
         help="Generate substitutions from fetched data. If not set, will reuse existing substitutions_output.json if available."
     )
+    parser.add_argument(
+        "--skip-unreal",
+        action="store_true",
+        help="Skip executing Unreal headless step."
+    )
     args = parser.parse_args()
-    run_pipeline(generate_substitutions=args.generate_substitutions)
+    run_pipeline(generate_substitutions=args.generate_substitutions, run_ue=not args.skip_unreal)
