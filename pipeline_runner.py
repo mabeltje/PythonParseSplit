@@ -63,11 +63,17 @@ def run_unreal_headless(unreal_jobs_dir: str):
     )
     
     # Filter lines live as they are emitted
-    keywords = ("LogPython:", "[Headless Pipeline]")
+    keywords = (
+    "[Headless Pipeline]",
+    "[BlendingAutomation C++]",
+    "LogTemp:",
+    "LogPython: Error:",
+    "LogPython: Warning:"
+
+    )    
     if process.stdout:
         for line in process.stdout:
             if any(k in line for k in keywords):
-                # Clean up Unreal's default timestamp/category prefix if desired
                 print(line.rstrip())
 
     process.wait()

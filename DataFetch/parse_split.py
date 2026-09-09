@@ -63,6 +63,7 @@ def parse_json(file_path: str | Path, output_dir: str | Path) -> Path:
 
             out_path = anim_folder / f"{gloss}_TRIMMED.fbx"
             success, error = trim_fbx_file(fbx_path, start_time, end_time, str(out_path))
+            
 
             if not success:
                 print(f"Error trimming FBX for gloss '{gloss}': {error}")
