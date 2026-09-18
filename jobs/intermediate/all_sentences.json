@@ -1,0 +1,30 @@
+[
+    {
+        "original_animation": "M20260227_5965",
+        "glosses": [
+            "PT-1hand",
+            "DOKTER-A",
+            "HEBBEN-A",
+            "UITZENDING",
+            "PT-1hand",
+            "GOED-A",
+            "ZIEN-A",
+            "KUNNEN-E"
+        ],
+        "zin": "De dokter heeft een lampje om goed te kijken.",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260227_5953",
+        "glosses": [
+            "PT-1hand",
+            "TEKENEN-A",
+            "VOOR-F",
+            "TANTE-A",
+            "WILLEN-A",
+            "PT-1hand"
+        ],
+        "zin": "Wil je een tekening maken voor je tante?",
+        "substitutions": []
+    }
+]

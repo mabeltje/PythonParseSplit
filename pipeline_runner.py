@@ -10,6 +10,7 @@ from DataFetch.parse_split import run_parse_split
 
 UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
 UPROJECT_PATH = "C:/Users/visualisationLab/Documents/Unreal Projects/BlendingAutomation/BlendingAutomation.uproject"
+# UE_GUI_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe"
 
 def run_unreal_headless(unreal_jobs_dir: str):
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -32,6 +33,8 @@ def run_unreal_headless(unreal_jobs_dir: str):
         "-nopause",          # Headless: don't hang on warnings
         "-unattended",       # Headless: suppress popups and dialogs
         "-stdout",           # Forward logs to stdout
+        # "-nosplash",         # Headless: disable splash screen
+        "-Interchange.FeatureFlags.Import.FBX=False", # Disable FBX EXPERIMENTAL import feature flag
         "-FullStdOutLogOutput",
         f"-jobs_dir={unreal_jobs_dir}"  # Custom argument passed to the UE script
     ]
@@ -71,12 +74,18 @@ def run_unreal_headless(unreal_jobs_dir: str):
     "LogPython: Warning:"
 
     )    
+
     if process.stdout:
         for line in process.stdout:
             if any(k in line for k in keywords):
                 print(line.rstrip())
 
     process.wait()
+
+    # keep unreal open after finishing to debug
+   
+
+
 
     if process.returncode != 0:
         print(f"\n[Unreal Error] Unreal exited with code {process.returncode}")

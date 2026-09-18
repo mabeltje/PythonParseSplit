@@ -62,6 +62,10 @@ def main():
             original_animation_srt_path = os.path.join(job_dir, original_animation, srt_file[0])
             donor_animation_path = os.path.join(job_dir, original_animation, f"{label}_TRIMMED.fbx")
 
+            # print the paths for debugging
+            unreal.log(f"[Headless Pipeline] Original animation path: {original_animation_path}")
+            unreal.log(f"[Headless Pipeline] Original animation SRT path: {original_animation_srt_path}")
+            unreal.log(f"[Headless Pipeline] Donor animation path: {donor_animation_path}")
             result = unreal.BlendingAutomationBFL.process_animation_substitution(
                 level_sequence, original_animation_path, original_animation_srt_path, donor_animation_path, label, index)
 
