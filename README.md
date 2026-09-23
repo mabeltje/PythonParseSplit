@@ -22,6 +22,8 @@ Install the Python dependency with:
 python -m pip install requests
 ```
 
+With importing of the FBX files, there is a bug in the Interchange pipeline that withholds the FBX import from happening with the old FBX importer. To work around this, disable the Interchange plugins in the Unreal project settings.
+
 ## Project Layout
 
 ```text

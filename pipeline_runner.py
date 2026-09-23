@@ -34,9 +34,10 @@ def run_unreal_headless(unreal_jobs_dir: str):
         "-unattended",       # Headless: suppress popups and dialogs
         "-stdout",           # Forward logs to stdout
         # "-nosplash",         # Headless: disable splash screen
-        "-Interchange.FeatureFlags.Import.FBX=False", # Disable FBX EXPERIMENTAL import feature flag
+        # "-Interchange.FeatureFlags.Import.FBX=False", # Disable FBX EXPERIMENTAL import feature flag
         "-FullStdOutLogOutput",
         f"-jobs_dir={unreal_jobs_dir}"  # Custom argument passed to the UE script
+        # "-nop4"
     ]
 
     # print(f"\n[Unreal] Launching headless Unreal Engine instance...")
@@ -80,12 +81,11 @@ def run_unreal_headless(unreal_jobs_dir: str):
             if any(k in line for k in keywords):
                 print(line.rstrip())
 
+    # if process.stdout:
+    #     for line in process.stdout:
+    #         print(line.rstrip())
+
     process.wait()
-
-    # keep unreal open after finishing to debug
-   
-
-
 
     if process.returncode != 0:
         print(f"\n[Unreal Error] Unreal exited with code {process.returncode}")
