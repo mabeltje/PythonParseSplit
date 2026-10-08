@@ -24,8 +24,14 @@ def download_batch(codes, output_dir):
             continue
    
         sentence = data['sentences'][0]
+
         fbx_url = sentence['fbxUrl']
         srt_url = sentence['srtUrl']
+
+        # check if fbx_url and srt_url are valid
+        if not fbx_url or not srt_url:
+            print(f"Skipping {base}: Missing FBX or SRT URL.")
+            continue
         
         # Download FBX file
         fbx_name = fbx_url.split('/')[-1]
@@ -67,7 +73,7 @@ def download_single_gloss(gloss, output_dir):
     gloss_info = next(g for g in glosses if g['baseGloss'] == gloss)
 
     if gloss_info:
-        print(f"Found gloss '{gloss}' in base '{base}'")
+        # print(f"Found gloss '{gloss}' in base '{base}'")
 
         gloss_start = gloss_info['start']
         gloss_end = gloss_info['end']

@@ -43,7 +43,7 @@ def parse_json(file_path: str | Path, output_dir: str | Path) -> Path:
         anim_folder = base_out_dir / original_animation
         anim_folder.mkdir(parents=True, exist_ok=True)
 
-        print(f"Processing base: {original_animation}")
+        print(f"Preprocessing base: {original_animation}")
         download_batch([original_animation], output_dir=str(anim_folder))
 
         for sub in substitutions:
@@ -62,9 +62,10 @@ def parse_json(file_path: str | Path, output_dir: str | Path) -> Path:
             fbx_path = item.get("fbx_path")
 
             out_path = anim_folder / f"{gloss}_TRIMMED.fbx"
+
+            # TODO: Consider adding a check to see if the trimmed file already exists to avoid redundant processing
             success, error = trim_fbx_file(fbx_path, start_time, end_time, str(out_path))
             
-
             if not success:
                 print(f"Error trimming FBX for gloss '{gloss}': {error}")
             else:
@@ -73,9 +74,9 @@ def parse_json(file_path: str | Path, output_dir: str | Path) -> Path:
             # Clean up un-trimmed source file
             if fbx_path and os.path.exists(fbx_path):
                 os.remove(fbx_path)
-                print(f"Deleted original FBX file: {fbx_path}")
+                # print(f"Deleted original FBX file: {fbx_path}")
 
-        print(f"Finished processing base: {original_animation}\n")
+        print(f"Finished preprocessing base: {original_animation}\n")
 
     return base_out_dir
    

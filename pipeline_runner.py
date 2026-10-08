@@ -2,7 +2,6 @@ import os
 import argparse
 import subprocess
 
-
 # Import modular steps
 from DataGenerationBluey.fetch_data_bluey import run_fetch
 from DataGenerationBluey.generate_substitutions import run_generate
@@ -40,15 +39,6 @@ def run_unreal_headless(unreal_jobs_dir: str):
         # "-nop4"
     ]
 
-    # print(f"\n[Unreal] Launching headless Unreal Engine instance...")
-    # result = subprocess.run(cmd, capture_output=True, text=True)
-
-    # if result.returncode != 0:
-    #     print(f"[Unreal Error] Unreal exited with code {result.returncode}")
-    #     print(result.stderr)
-    # else:
-    #     print("[Unreal] Unreal process finished successfully!")
-
     # Pass the jobs directory via environment variables
     env = os.environ.copy()
     env["UE_JOBS_DIR"] = os.path.abspath(unreal_jobs_dir)
@@ -72,18 +62,14 @@ def run_unreal_headless(unreal_jobs_dir: str):
     "[BlendingAutomation C++]",
     "LogTemp:",
     "LogPython: Error:",
-    "LogPython: Warning:"
-
+    "LogPython: Warning:",
+    "LogBlendingAuto"
     )    
 
     if process.stdout:
         for line in process.stdout:
             if any(k in line for k in keywords):
                 print(line.rstrip())
-
-    # if process.stdout:
-    #     for line in process.stdout:
-    #         print(line.rstrip())
 
     process.wait()
 

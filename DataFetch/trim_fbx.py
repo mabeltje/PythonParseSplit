@@ -177,6 +177,8 @@ def trim_fbx_file(fbx_path, start_time, end_time, out_path, note=None):
             return False, error
 
         embed_metadata(manager, scene, start_sec, end_sec, note)
+
+        # TODO: Save to a general directory, to save unnecessary trimming in the future
         save_scene(manager, scene, out_path)
         manager.Destroy()
 
