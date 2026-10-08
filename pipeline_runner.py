@@ -9,9 +9,8 @@ from DataFetch.parse_split import run_parse_split
 
 UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
 UPROJECT_PATH = "C:/Users/visualisationLab/Documents/Unreal Projects/BlendingAutomation/BlendingAutomation.uproject"
-# UE_GUI_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe"
 
-def run_unreal_headless(unreal_jobs_dir: str):
+def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     ue_script_path = os.path.join(base_dir, "ue_process_jobs.py")
 
@@ -42,9 +41,10 @@ def run_unreal_headless(unreal_jobs_dir: str):
     # Pass the jobs directory via environment variables
     env = os.environ.copy()
     env["UE_JOBS_DIR"] = os.path.abspath(unreal_jobs_dir)
+    env["UE_OUTPUT_DIR"] = os.path.abspath(unreal_output_dir)
 
     print(f"\n[Unreal] Launching headless Unreal Engine instance...")
-
+    
     process = subprocess.Popen(
         cmd,
         stdout=subprocess.PIPE,
@@ -89,13 +89,16 @@ def run_pipeline(generate_substitutions: bool = False, run_ue: bool = True):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     unreal_ready_dir = os.path.join(base_dir, "jobs", "unreal_ready")
     inter_dir = os.path.join(base_dir, "jobs", "intermediate")
+    unreal_output_dir = os.path.join(base_dir, "jobs", "unreal_out")
 
     os.makedirs(inter_dir, exist_ok=True)
     os.makedirs(unreal_ready_dir, exist_ok=True)
+    os.makedirs(unreal_output_dir, exist_ok=True)
 
     print(f"Base directory: {base_dir}")
     print(f"Intermediate directory: {inter_dir}")
     print(f"Unreal directory: {unreal_ready_dir}")
+    print(f"Output directory: {unreal_output_dir}")
 
     glosses_output_path = os.path.join(inter_dir, "all_glosses.json")
     sentences_output_path = os.path.join(inter_dir, "all_sentences.json")
@@ -132,7 +135,7 @@ def run_pipeline(generate_substitutions: bool = False, run_ue: bool = True):
 
     print(f"\nStep 4: Executing headless Unreal processing...")
     if run_ue:
-        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir)
+        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir)
 
    
 if __name__ == "__main__":

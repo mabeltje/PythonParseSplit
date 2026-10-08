@@ -1,6 +1,3 @@
-from email.mime import text
-from typing import cast
-
 import unreal
 import sys
 import os
@@ -13,7 +10,7 @@ def log_header(text: str):
 
 def main():
     job_dir = os.environ.get("UE_JOBS_DIR")
-    # unreal.log(f"[Headless Pipeline] Received jobs directory: {job_dir}")
+    output_dir = os.environ.get("UE_OUTPUT_DIR")
 
     if not job_dir or not os.path.exists(job_dir):
         unreal.log_error(f"[Headless Pipeline] Invalid jobs directory: {job_dir}")
@@ -30,22 +27,22 @@ def main():
     unreal.log(f"[Headless Pipeline] Starting Unreal Headless Pipeline: {len(job_data)} sentences to process")
 
     level_sequence = unreal.SequencerAbstractionBPLibrary.load_level_sequence_asset("/Game/LevelSequences/start_sequence")
-    
     if not level_sequence:
         unreal.log_error("[Headless Pipeline] Failed to load level sequence asset: /Game/Sequences/start_sequence")
         sys.exit(1)
 
-    # unreal.log(f"[Headless Pipeline] Loaded  the level sequence asset")
-
     for job in job_data:
+        original_animation = job.get('original_animation')
+        os.makedirs(os.path.join(output_dir, original_animation), exist_ok=True)
+
         job_index = job_data.index(job) + 1
-        log_header(f"Processing job {job_index}/{len(job_data)}: '{job.get('original_animation')}' with {len(job.get('substitutions'))} substitution(s)")
+        log_header(f"Processing job {job_index}/{len(job_data)}: '{original_animation}' with {len(job.get('substitutions'))} substitution(s)")
         original_animation = job.get('original_animation')
 
         for sub in job.get('substitutions'):
             label = sub.get('label')
             index = sub.get('index')
-            
+
             # Find file that starts with original)animation and ends with .srt
             srt_file = [f for f in os.listdir(os.path.join(job_dir, original_animation)) if f.startswith(original_animation) and f.endswith('.srt')]
             fbx_file = [f for f in os.listdir(os.path.join(job_dir, original_animation)) if f.startswith(original_animation) and f.endswith('.fbx')]
@@ -53,15 +50,10 @@ def main():
             original_animation_path = os.path.join(job_dir, original_animation, fbx_file[0])
             original_animation_srt_path = os.path.join(job_dir, original_animation, srt_file[0])
             donor_animation_path = os.path.join(job_dir, original_animation, f"{label}_TRIMMED.fbx")
+            out_animation_path = os.path.join(output_dir, original_animation)
 
-            # print the paths for debugging
-            # unreal.log(f"[Headless Pipeline] Original animation path: {original_animation_path}")
-            # unreal.log(f"[Headless Pipeline] Original animation SRT path: {original_animation_srt_path}")
-            # unreal.log(f"[Headless Pipeline] Donor animation path: {donor_animation_path}")
             result = unreal.BlendingAutomationBFL.process_animation_substitution(
-                level_sequence, original_animation_path, original_animation_srt_path, donor_animation_path, label, index)
-
-            # unreal.log(f"[Headless Pipeline] Substitution result: {result}")
+                level_sequence, original_animation_path, original_animation_srt_path, donor_animation_path, label, out_animation_path, index)
 
     unreal.log("[Headless Pipeline] Unreal batch task complete. Exiting...")
     sys.exit(0)
