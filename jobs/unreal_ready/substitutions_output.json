@@ -2,21 +2,51 @@
   {
     "original_animation": "M20260227_5965",
     "original_glosses": [
-      "PT-1hand",
       "DOKTER-A",
-      "HEBBEN-A",
-      "UITZENDING",
       "PT-1hand",
+      "UITZENDING",
+      "HEBBEN-A",
+      "VOOR-D",
+      "PO",
       "GOED-A",
-      "ZIEN-A",
+      "KIJKEN-E",
       "KUNNEN-E"
     ],
     "original_zin": "De dokter heeft een lampje om goed te kijken.",
     "substitutions": [
       {
-        "index": 1,
+        "index": 0,
         "label": "VERPLEEGSTER",
         "zin": "De verpleegster heeft een lampje om goed te kijken."
+      },
+      {
+        "index": 6,
+        "label": "MOSSEL",
+        "zin": "De dokter heeft een lampje om perfect te kijken."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260227_5953",
+    "original_glosses": [
+      "PT-1hand",
+      "TEKENEN-A",
+      "VOOR-F",
+      "TANTE-A",
+      "WILLEN-A",
+      "PT-1hand"
+    ],
+    "original_zin": "Wil je een tekening maken voor je tante?",
+    "substitutions": [
+      {
+        "index": 3,
+        "label": "OMA-A",
+        "zin": "Wil je een tekening maken voor je oma?"
+      },
+      {
+        "index": 4,
+        "label": "MOETEN-A",
+        "zin": "Moet je een tekening maken voor je tante?"
       }
     ]
   }

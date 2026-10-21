@@ -9,6 +9,20 @@ OUTPUT_DIR = r"C:\Users\visualisationLab\Documents\PythonParseSplit\Animations"
 
 API_URL = "https://signcollect.nl/blendBaking/api.php"
 
+def get_base(video_id):
+    response = requests.get(API_URL, params={'action': 'base', 'video': video_id})
+    data = response.json()
+    if not data.get('success'):
+        raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
+    return data.get('base')
+
+def get_senses(gloss):
+    response = requests.get(API_URL, params={'action': 'senses', 'gloss': gloss})
+    data = response.json()
+    if not data.get('success'):
+        raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
+    return data.get('senses', [])
+
 def download_batch(codes, output_dir):
     for base in codes:
         # Create folder for code
@@ -53,28 +67,34 @@ def download_batch(codes, output_dir):
 
 
 # Download a single gloss and its associated FBX file
-def download_single_gloss(gloss, output_dir):
-
+def download_single_gloss(gloss, base_gloss, output_dir):
     # Fetch the first sentence that contains the gloss
-    r = requests.get(API_URL, params={'action': 'timings', 'gloss': gloss, 'limit':1})
+    r = requests.get(API_URL, params={'action': 'timings', 'gloss': base_gloss})
     data = r.json()
 
     if not data.get('success') or not data.get('sentences'):
         print(f"Skipping gloss '{gloss}': {data.get('error', 'No data found')}")
         return
 
-    # Get glosses for the first sentence by default for now
-    sentence = data['sentences'][0]
+    # Loop over sentences to find the one that contains the correct gloss
+    sentence = None
+    for s in data['sentences']:
+        if any(g['gloss'] == gloss for g in s['glosses']):
+            sentence = s
+            break
+
+    if not sentence:
+        print(f"Skipping gloss '{gloss}': No sentence found containing this gloss.")
+        return
+
     glosses = sentence['glosses']
     fbx_url = sentence['fbxUrl']
     base = sentence['base']
 
     # Find the specific gloss info
-    gloss_info = next(g for g in glosses if g['baseGloss'] == gloss)
+    gloss_info = next(g for g in glosses if g['baseGloss'] == base_gloss)
 
     if gloss_info:
-        # print(f"Found gloss '{gloss}' in base '{base}'")
-
         gloss_start = gloss_info['start']
         gloss_end = gloss_info['end']
 
@@ -97,7 +117,8 @@ def download_single_gloss(gloss, output_dir):
 
 def main():
     # download_batch(BASE_CODES, OUTPUT_DIR)
-    download_single_gloss("WIE", OUTPUT_DIR)
+    download_single_gloss("WIE-A", OUTPUT_DIR)
+    # get_senses("NIET-C")
 
 
 if __name__ == "__main__":

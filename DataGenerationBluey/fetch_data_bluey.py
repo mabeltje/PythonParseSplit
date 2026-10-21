@@ -1,7 +1,7 @@
 """
 This script fetches glosses and sentences from the BlendBaking API and saves them to JSON files.
 
-fetch_and_save_glosses(filename): Fetches all glosses from the API and saves them to the specified JSON file.
+fetch_and_save_glosses(filename): Fetches all glosses with their senses from the API and saves them to the specified JSON file.
 fetch_and_save_sentences(filename, page=1, limit=200): Fetches sentences from the API, transforms them into the desired JSON structure, 
 and saves them to the specified JSON file. 
 
@@ -10,9 +10,42 @@ and saves them to the specified JSON file.
 import json
 import requests
 from pathlib import Path
+import sys
+
+# Add project root (PythonParseSplit) to Python search path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.append(str(PROJECT_ROOT))
+
+from DataFetch.call_api import get_senses
 
 API_URL = "https://signcollect.nl/blendBaking/api.php"
 MODULE_DIR = Path(__file__).resolve().parent
+
+def fetch_gloss_variants_mapping(filename: str | Path) -> Path:
+    filepath = Path(filename).resolve()
+    filepath.parent.mkdir(parents=True, exist_ok=True)
+
+    params = {"action": "glosses", "mcpStatusTijdAnnotatie": "Klaar"}
+
+    # Make the GET request
+    response = requests.get(API_URL, params=params)
+    response.raise_for_status()  # Check for network/HTTP errors
+
+    data = response.json()
+
+    # The API returns HTTP 200 even on error, so check the "success" key
+    if isinstance(data, dict) and not data.get("success", True):
+        raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
+    
+    bases = data.get("bases", {})
+    base_variants_map = {base_name: list(base_info.get("variants", []).keys()) for base_name, base_info in bases.items()}
+
+    # Save the base variants mapping to a JSON file into a subdirectory of the project root
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(base_variants_map, f, ensure_ascii=False, indent=4)
+
+    return filepath
 
 def fetch_and_save_glosses(filename: str | Path) -> Path:
     filepath = Path(filename).resolve()
@@ -30,11 +63,22 @@ def fetch_and_save_glosses(filename: str | Path) -> Path:
     if isinstance(data, dict) and not data.get("success", True):
         raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
 
-    data = list(data["bases"].keys())  # Extract the list of glosses
+    bases = data.get("bases", {})
+    bases_variants = []
+
+    for base_name, base_info in bases.items():
+        bases_variants.extend(base_info.get("variants", []))
+
+    variants_with_senses = {}
+
+    for base in bases_variants:
+            # Fetch senses for each gloss (where base is a string variant name)
+            senses = get_senses(base)
+            variants_with_senses[base] = senses
 
     # Save to JSON file with clean formatting and UTF-8 encoding
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+        json.dump(variants_with_senses, f, ensure_ascii=False, indent=4)
 
     print(f"Successfully saved glosses to '{filepath}'")
     return filepath
@@ -78,11 +122,12 @@ def fetch_and_save_sentences(filename: str | Path, page: int = 1, limit: int = 2
     print(f"Successfully saved sentences to '{filepath}'")
     return filepath
 
-def run_fetch(glosses_output: str | Path, sentences_output: str | Path, page: int = 1, limit: int = 200):
+def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_variants_output: str | Path, page: int = 1, limit: int = 200):
     """Unified entry function to call directly from pipeline_runner.py"""
     glosses_path = fetch_and_save_glosses(glosses_output)
+    glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
     sentences_path = fetch_and_save_sentences(sentences_output, page=page, limit=limit)
-    return glosses_path, sentences_path
+    return glosses_path, glosses_variants_path, sentences_path
 
 
 if __name__ == "__main__":
@@ -92,6 +137,7 @@ if __name__ == "__main__":
 
     run_fetch(
         glosses_output=target_dir / "all_glosses.json",
+        glosses_variants_output=target_dir / "base_variants_map.json",
         sentences_output=target_dir / "all_sentences.json",
         page=3,
         limit=2
