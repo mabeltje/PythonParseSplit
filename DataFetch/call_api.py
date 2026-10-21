@@ -19,8 +19,10 @@ def get_base(video_id):
 def get_senses(gloss):
     response = requests.get(API_URL, params={'action': 'senses', 'gloss': gloss})
     data = response.json()
+
     if not data.get('success'):
         raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
+    
     return data.get('senses', [])
 
 def download_batch(codes, output_dir):

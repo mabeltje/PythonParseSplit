@@ -30,4 +30,6 @@ def query_llm(messages):
         return data["choices"][0]["message"]["content"]
     except requests.exceptions.RequestException as e:
         print(f"Error querying LLM: {e}")
+        if response is not None:
+            print(f"Server error details: {response.text}")
         return None

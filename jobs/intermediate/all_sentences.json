@@ -1,30 +1,129 @@
 [
     {
-        "original_animation": "M20260227_5965",
+        "original_animation": "M20260223_4835",
         "glosses": [
             "PT-1hand",
-            "DOKTER-A",
-            "HEBBEN-A",
-            "UITZENDING",
-            "PT-1hand",
-            "GOED-A",
-            "ZIEN-A",
-            "KUNNEN-E"
+            "MUZIEK-A",
+            "LEREN-A",
+            "PT-1hand"
         ],
-        "zin": "De dokter heeft een lampje om goed te kijken.",
+        "zin": "Heb je een versje geleerd?",
         "substitutions": []
     },
     {
-        "original_animation": "M20260227_5953",
+        "original_animation": "M20260223_4827",
         "glosses": [
             "PT-1hand",
-            "TEKENEN-A",
-            "VOOR-F",
-            "TANTE-A",
-            "WILLEN-A",
+            "PT-1hand",
+            "WERKEN-A",
+            "nvt"
+        ],
+        "zin": "Heb je dat voor mij gemaakt?",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260223_4821",
+        "glosses": [
+            "NIET-A",
+            "GEK-B",
+            "DING.PL-A",
+            "DOEN-A",
             "PT-1hand"
         ],
-        "zin": "Wil je een tekening maken voor je tante?",
+        "zin": "Geen gekke dingen doen.",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260223_4820",
+        "glosses": [
+            "DING.PL-A",
+            "KAPOT",
+            "WERKEN-A",
+            "NIET-A"
+        ],
+        "zin": "Geen spullen kapot maken.",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260223_4816",
+        "glosses": [
+            "PT-1hand",
+            "SLAPEN-A",
+            "PT-1hand",
+            "PT-1hand:1",
+            "STRAKS-A",
+            "PT-1hand:1",
+            "ROEPEN-A",
+            "KOMEN-B"
+        ],
+        "zin": "Ik kom je zo uit bed halen.",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260223_4814",
+        "glosses": [
+            "PT-1hand",
+            "AANKLEDEN-B",
+            "OF-A",
+            "ONTBIJT-B",
+            "ENE-KANT-ANDERE-KANT-B",
+            "1.ORD-A",
+            "WILLEN-A",
+            "WAT-A",
+            "PO+PT"
+        ],
+        "zin": "Wil je eerst aankleden of eerst ontbijten?",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260223_4813",
+        "glosses": [
+            "PT-1hand",
+            "NOG-A",
+            "UUR-LANG+1",
+            "DOOR-A",
+            "SLAPEN-C",
+            "nvt"
+        ],
+        "zin": "Ga nog maar een uurtje slapen.",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260223_4807",
+        "glosses": [
+            "MAMA-B",
+            "HOP",
+            "HAAR-B",
+            "nvt",
+            "DAN-A",
+            "AL-A",
+            "PO"
+        ],
+        "zin": "Mama wast je haren snel, dan ben je zo klaar.",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260223_4804",
+        "glosses": [
+            "APPLAUS-A",
+            "OPSCHIETEN-A"
+        ],
+        "zin": "Hup, hup, hup, even snel.",
+        "substitutions": []
+    },
+    {
+        "original_animation": "M20260127_2379",
+        "glosses": [
+            "NU-B",
+            "nvt",
+            "AANKLEDEN-B",
+            "DAN-A",
+            "WIJ-A",
+            "TIJD-A",
+            "VERTREKKEN",
+            "KUNNEN-E"
+        ],
+        "zin": "We gaan nu aankleden, dan kunnen we op tijd vertrekken.",
         "substitutions": []
     }
 ]

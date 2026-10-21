@@ -1,29 +1,5 @@
 [
   {
-    "original_animation": "M20260227_6010",
-    "original_glosses": [
-      "SNEL-A",
-      "EETBUIEN",
-      "KOMEN-A",
-      "BUIK-B",
-      "PIJN-A",
-      "PT-1HAND"
-    ],
-    "original_zin": "Niet te snel eten, dan krijg je buikpijn.",
-    "substitutions": [
-      {
-        "index": 5,
-        "label": "KIND",
-        "zin": "Niet te snel eten, dan krijgt het kind buikpijn."
-      },
-      {
-        "index": 1,
-        "label": "ETEN",
-        "zin": "Eet niet te snel, dan krijg je buikpijn."
-      }
-    ]
-  },
-  {
     "original_animation": "M20260227_5985",
     "original_glosses": [
       "nvt",

@@ -1,766 +1,2075 @@
-[
-    "nvt",
-    "PT-1HAND",
-    "HUILEN",
-    "DAG",
-    "OMGEVING",
-    "WIE",
-    "PT-1hand",
-    "VLEES",
-    "BINNEN",
-    "VINDEN",
-    "KRIJGEN",
-    "CADEAU",
-    "SNEL",
-    "EETBUIEN",
-    "KOMEN",
-    "BUIK",
-    "PIJN",
-    "ALWEER",
-    "VEEL",
-    "POEP",
-    "MOVE+C",
-    "WILLEN",
-    "NU",
-    "MEER",
-    "PRATEN",
-    "KUNNEN",
-    "STOEL",
-    "ZITTEN",
-    "LEKKER",
-    "BIJVOORBEELD",
-    "ZORGEN",
-    "WAT",
-    "TWEEEN",
-    "BOEK",
-    "VERKIEZINGEN",
-    "VOOR",
-    "SLAPEN",
-    "HAND-IN-LUCHT",
-    "STER",
-    "DOKTER",
-    "HEBBEN",
-    "UITZENDING",
-    "GOED",
-    "ZIEN",
-    "TEKENEN",
-    "TANTE",
-    "BEGRIJPEN",
-    "WOEDEND",
-    "SLAAN",
-    "NIET",
-    "VERHAAL",
-    "OVER",
-    "VROEGER",
-    "VERTELLEN",
-    "TEENSLIPPER",
-    "SPELEN",
-    "TANDENPOETSEN",
-    "DAN",
-    "EVEN",
-    "LOGOPEDIE",
-    "AL",
-    "ZELF",
-    "ETEN",
-    "HAND.PL",
-    "GROOT-HORIZONTAAL",
-    "BOOM",
-    "BOS",
-    "WIND",
-    "MOVE+5",
-    "VIS",
-    "AANWEZIG",
-    "KNUFFELEN",
-    "MOGEN",
-    "-",
-    "ROEPEN:1",
-    "VROUW",
-    "PO",
-    "LAAT-MAAR",
-    "ERG",
-    "GLAS",
-    "ZIN-IN",
-    "PT-arc",
-    "DING.PL",
-    "VAN",
-    "OPLETTEN",
-    "WACHTEN",
-    "KIND",
-    "MEISJE",
-    "PO+PT",
-    "STEL",
-    "OVERGEVEN",
-    "RONDSNUFFELEN",
-    "KIJKEN",
-    "OVERSTROMING",
-    "KLINKT",
-    "GEK",
-    "MISSCHIEN",
-    "GAAN-NAAR",
-    "AUDIOLOGIE",
-    "MOETEN",
-    "HERINNEREN",
-    "BOOS",
-    "WOLF",
-    "VANDAAG",
-    "WEER",
-    "HOE",
-    "PT-1hand:1",
-    "GRAS",
-    "RUIMTE",
-    "SLANG",
-    "HOEVEEL",
-    "BLADEREN",
-    "THUIS",
-    "BLIJVEN",
-    "FRIS",
-    "WAAR",
-    "JA",
-    "MOND",
-    "ALLES",
-    "PAPA",
-    "VINGER",
-    "SOMS",
-    "GEBOREN",
-    "KLEIN-HORIZONTAAL",
-    "MUTS",
-    "PERFECT",
-    "HAAR",
-    "1.ORD",
-    "GEHOORAPPARAAT",
-    "BUITEN",
-    "SOK",
-    "ANDERS",
-    "KOUD",
-    "MOVE+S",
-    "ZWEMMEN",
-    "CI",
-    "CI-AFDOEN",
-    "KOFFIE",
-    "RUSTIG",
-    "GEBEUREN",
-    "TRAP",
-    "WAARVOOR",
-    "OM",
-    "#T",
-    "#V",
-    "BEEN",
-    "FIT",
-    "VOELEN",
-    "HEE",
-    "BED",
-    "TIJD",
-    "STIL",
-    "LOPEND-VOORTBEWEGEN",
-    "JAS",
-    "COOL",
-    "NIEUW",
-    "WETEN",
-    "LANGZAAM",
-    "WIJ",
-    "HALEN",
-    "OP",
-    "OMA",
-    "OPA",
-    "OOK",
-    "JARIG",
-    "GEVOEL",
-    "JAAR",
-    "SCHOEN",
-    "IETS",
-    "PAARD",
-    "WEGGAAN",
-    "WORTEL",
-    "OF",
-    "MANDARIJN",
-    "WEGGOOIEN",
-    "PIET",
-    "VAAK",
-    "GEVOLG",
-    "NIEMAND",
-    "WAKKER",
-    "BEZOEK",
-    "WAAROM",
-    "MAMA",
-    "ONTBIJT",
-    "MOVE+snavel",
-    "WERKEN",
-    "MUZIEK",
-    "LEREN",
-    "MOOI",
-    "DOEN",
-    "KAPOT",
-    "STRAKS",
-    "ROEPEN",
-    "SHAMPOO",
-    "AANKLEDEN",
-    "ENE-KANT-ANDERE-KANT",
-    "NOG",
-    "UUR-LANG+1",
-    "DOOR",
-    "HOP",
-    "SCHOONMAKEN",
-    "APPLAUS",
-    "OPSCHIETEN",
-    "PT:up",
-    "WELKOM",
-    "SCHAAP",
-    "HOEFT-NIET",
-    "KIND-VAN",
-    "VERTREKKEN",
-    "10",
-    "MINUUT",
-    "OPRUIMEN",
-    "WINKELEN",
-    "LEVEN",
-    "TUIN",
-    "BEDENKEN",
-    "KAART",
-    "KAARTEN",
-    "MEE",
-    "HELPEN",
-    "DOUCHEN",
-    "KLAAR",
-    "STRAND",
-    "DRIEEN",
-    "1",
-    "KEER",
-    "UITLEGGEN",
-    "MAKKELIJK",
-    "TELEVISIE",
-    "LEUK",
-    "HANDEN-WRIJVEN",
-    "VRIJDAG",
-    "GIRAFFE",
-    "BIBLIOTHEEK",
-    "GISTEREN",
-    "WELKE",
-    "KLEUR",
-    "PAS",
-    "SLIM",
-    "MOVE+Baby_C",
-    "TOT-NU",
-    "PRIMA",
-    "PT-Bhand",
-    "ENG",
-    "TANDARTS",
-    "LICHT-AAN",
-    "PRETTIG",
-    "SCHOMMELEN",
-    "GLIJBAAN",
-    "PT:down",
-    "ZAND",
-    "PALEIS",
-    "BOUWEN",
-    "VLAKBIJ",
-    "ARM",
-    "AANLEUNEN",
-    "SCHOON",
-    "TOT",
-    "BAL",
-    "UUR-HALF",
-    "6",
-    "MAAR",
-    "KAALHOOFDIG",
-    "GROOT-VERTICAAL",
-    "PLAFOND",
-    "BIJNA",
-    "DORP",
-    "BIJ",
-    "MOLEN",
-    "WONEN",
-    "KLEIN",
-    "FAMILIE",
-    "KLEIN-VERTICAAL",
-    "GELD",
-    "BEHOEFTIG",
-    "ZWART",
-    "MORGEN",
-    "SPANNEND",
-    "WEDSTRIJD",
-    "OH",
-    "BEURT",
-    "MIS",
-    "BETER",
-    "NEE",
-    "ACHTERDOCHTIG",
-    "ALLEMAAL",
-    "verzamelen",
-    "HOOFD",
-    "HOOG",
-    "GRAPPIG",
-    "TAS",
-    "ALVAST",
-    "SCHOOL",
-    "AFSPRAAK",
-    "FILM",
-    "HELE",
-    "DICHTBIJ",
-    "SAMEN",
-    "ZACHT",
-    "BROEK",
-    "LUKKEN-NIET",
-    "NETJES",
-    "MOVE+Snavel",
-    "VADER",
-    "KOPEN",
-    "BADPAK",
-    "DROOG",
-    "KLEREN",
-    "TRUI",
-    "VERPLEEGSTER",
-    "PERSOON",
-    "GORDIJN",
-    "LICHT",
-    "OBER",
-    "GEVEN",
-    "PROBEREN",
-    "VASTHOUDEN",
-    "LANG",
-    "BOM",
-    "VIES",
-    "ROOK",
-    "IN",
-    "GEBAREN",
-    "HAAK",
-    "VUURWERK",
-    "BEGINNEN",
-    "ZEGGEN",
-    "REKENING-HOUDEN-MET",
-    "DRINKEN",
-    "ALTIJD",
-    "BEDOELEN",
-    "LIEF",
-    "KIND.PL",
-    "SPIEGEL",
-    "GELUK",
-    "MOVE+B",
-    "GROEP",
-    "KNUTSELEN",
-    "WEEKEND",
-    "BROOD",
-    "BEDRIJF",
-    "LUISTEREN",
-    "WC",
-    "INDRUKKEN",
-    "GEWOON",
-    "SCHULD",
-    "VERSCHIL",
-    "GROEIEN",
-    "KAPPER",
-    "ZIN",
-    "KNIPPEN",
-    "PLASSEN",
-    "LEGO",
-    "DOOS",
-    "GLANS",
-    "PEN",
-    "STAD",
-    "HAND",
-    "PRACHTIG",
-    "LIEVER",
-    "GEBRUIKEN",
-    "GASFORNUIS",
-    "HEET",
-    "PLEZIER",
-    "KAARS",
-    "PLANT",
-    "ZETTEN-LEGGEN",
-    "LIGGEN",
-    "DEUR",
-    "DICHT",
-    "VORK",
-    "MES",
-    "LA",
-    "KOPJE",
-    "BORD",
-    "KAST",
-    "RAAM",
-    "AANDOEN",
-    "OPHANGEN",
-    "LAWN-MOWER",
-    "LAWAAI",
-    "PLANK",
-    "SCHRIJVEN",
-    "DIER",
-    "HUISWERK",
-    "STORM",
-    "HEMEL",
-    "DONKER",
-    "TWIJFEL",
-    "REGEN",
-    "ELLEBOOG",
-    "WIMPERS",
-    "TEEN",
-    "LUKKEN",
-    "TYPEN",
-    "ELKE",
-    "NAGEL",
-    "LICHAAM",
-    "TAFEL",
-    "BIJEENKOMEN",
-    "KAUWEN",
-    "SLIKKEN",
-    "EVEN-WACHTEN",
-    "TUSSEN",
-    "WATER",
-    "PROEVEN",
-    "GENOEG",
-    "UITSTAPPEN",
-    "ONDERZOEK",
-    "PASTA",
-    "WARM",
-    "PT:bodypart",
-    "BES",
-    "NOOT",
-    "MENING",
-    "TEMPERATUUR",
-    "HELPEN-A:1",
-    "PT+PO",
-    "2",
-    "3",
-    "SPUITEN",
-    "GEZOND",
-    "BATTERIJ",
-    "BELLEN",
-    "HALLO",
-    "HUIS",
-    "EIGEN",
-    "AANBELLEN",
-    "OPEN",
-    "GELIJKWAARDIG",
-    "PANNENKOEK",
-    "OLIE",
-    "HAGELSLAG",
-    "NAT",
-    "LAATSTE",
-    "DOOIEN",
-    "FOTO",
-    "OPSTUREN",
-    "BLIJ",
-    "BRUS",
-    "WORST",
-    "DEEL",
-    "PLAATSEN",
-    "BINNENKORT",
-    "ZOEN",
-    "TERUG",
-    "HAND-OP-MOND",
-    "MELK",
-    "BANAAN",
-    "PINDAKAAS",
-    "PATAT",
-    "ZOUT",
-    "SCHAAL",
-    "PAKKEN",
-    "ZO",
-    "KUNNEN-NIET",
-    "STERK",
-    "TASTEN",
-    "AUTO",
-    "HOP:1",
-    "LEPEL",
-    "REKENEN",
-    "YOGHURT",
-    "WASSEN",
-    "STOUT",
-    "PLEISTER",
-    "KIEZEN",
-    "AFWEGEN",
-    "STAAN",
-    "STANDAARD",
-    "DOOF",
-    "WEG",
-    "OOR",
-    "BIJZONDER",
-    "OMDAT",
-    "WILLEN-NIET",
-    "EVEN-KIJKEN",
-    "HOREN",
-    "HOUDEN-VAN",
-    "STICKER",
-    "VENEZUELA",
-    "EI",
-    "ZOEKEN",
-    "VOORHOOFD",
-    "GRAAG",
-    "EIGENLIJK",
-    "DROMEN",
-    "ONTSPANNEN",
-    "WORDEN",
-    "SORRY",
-    "SCHATTIG",
-    "DIE",
-    "NACHT",
-    "IN-SLAAP-VALLEN",
-    "VERSPREIDEN",
-    "GLAD",
-    "TAART",
-    "AANLEREN",
-    "MOSSEL",
-    "TOT-NU-TOE",
-    "VORIGE",
-    "MISSELIJK",
-    "OVERSTEKEN",
-    "GRATIS",
-    "VALLEN",
-    "RENNEN",
-    "VERSTOPPEN",
-    "SERIEUS",
-    "VRAGEN",
-    "PROOST",
-    "BESTE",
-    "BRIL",
-    "TAAL",
-    "VAST",
-    "PT-Bhand:1",
-    "KAPSEL",
-    "KRULLEN",
-    "PONY",
-    "KOEK",
-    "GEDRAG",
-    "MACHT",
-    "zonde",
-    "ENTHOUSIAST",
-    "WANG",
-    "HAND-OP-WANG",
-    "IDEE",
-    "ONDERWEG",
-    "SLAK",
-    "VLINDER",
-    "BLOEM",
-    "ZON",
-    "ZONSONDERGANG",
-    "GELUID",
-    "KREKEL",
-    "LIEFDE",
-    "VAN-TOT",
-    " nvt",
-    "LUIER",
-    "ROMPERTJE",
-    "BIKINI",
-    "VERSIEREN",
-    "IEDEREEN",
-    "GRIEP",
-    "DENKEN",
-    "KLEED",
-    "BEHANDELEN",
-    "RESPECTEREN",
-    "WESP",
-    "KERMIS",
-    "VAKANTIE",
-    "KOFFER",
-    "GOOIEN",
-    "DUWEN",
-    "APPEL",
-    "ZEBRA",
-    "DUIDELIJK",
-    "CABRIOLET",
-    "PASPOORT",
-    "CHOCOLADE",
-    "AARDBEI",
-    "LOLLY",
-    "LOPEN",
-    "RUPS",
-    "KIJKEN-F:1",
-    "VINGER-OPSTEKEN",
-    "PIRAAT",
-    "AVONTUUR",
-    "WIP",
-    "KAMP",
-    "KAMPEREN",
-    "ZEE",
-    "AAP",
-    "MAAT-HORIZONTAAL",
-    "GEEL",
-    "0",
-    "DANSEN",
-    "JAM",
-    "SERVET",
-    "MENS.PL",
-    "PT-alt",
-    "SCHRIKKEN",
-    "VOGEL",
-    "FLUITEN",
-    "STOFZUIGEN",
-    "PAPEGAAI",
-    "OVERNEMEN",
-    "STEIGER",
-    "MIER",
-    "KROKODIL",
-    "MOVE+T",
-    "WIT",
-    "WALVIS",
-    "VOGELKOOI",
-    "ALSTUBLIEFT",
-    "WANNEER",
-    "SPROEIEN",
-    "ZEIL",
-    "WATER-GEVEN",
-    "TOUW",
-    "HUT",
-    "HARD",
-    "STRIP",
-    "VERZAMELEN",
-    "GROENTE",
-    "KAR",
-    "MOVE+V",
-    "REIZEN",
-    "AFSLUITEN",
-    "LASTIG",
-    "DOORZETTEN",
-    "LEZEN",
-    "PLAATS",
-    "SCHREEUWEN",
-    "ADEMEN",
-    "TROTS",
-    "EMOTIE",
-    "FOUT",
-    "HART-BONST",
-    "#O",
-    "#K",
-    "ECHT",
-    "INPAKKEN",
-    "EXTRA",
-    "MOVE+C_spreid",
-    "PIZZA",
-    "KLEI",
-    "COMBINATIE",
-    "SCHILDEREN",
-    "BOTER",
-    "MAART",
-    "VERS",
-    "BABY",
-    "AANDACHT",
-    "VLOEIBAAR",
-    "ZELFSTANDIG",
-    "BEZIG",
-    "OPLOSSEN",
-    "PROBLEEM",
-    "VRIEND",
-    "SAMENWERKEN",
-    "NADENKEN",
-    "AANRAKEN",
-    "REGELS",
-    "HART",
-    "FAVORIET",
-    "MERKEN",
-    "VERBETEREN",
-    "VRIENDELIJK",
-    "LENEN",
-    "VERFIJNEN",
-    "TANDPASTA",
-    "LIP",
-    "TONG",
-    "NADOEN",
-    "BEUGEL",
-    "GA-MAAR",
-    "HOND",
-    "OPNIEUW",
-    "HONGER",
-    "ZIE-JE-WEL",
-    "ONTMOETEN",
-    "MEEVALLEN",
-    "TOCH",
-    "LACHEN",
-    "ATTENTIE",
-    "ONDERWIJS",
-    "GYMNASTIEK",
-    "VERTICALE-CYLINDER",
-    "ROND",
-    "STAF",
-    "PAN",
-    "JEZUS",
-    "KERST",
-    "KASTEEL",
-    "FIETSEN",
-    "BROEKZAK",
-    "BOODSCHAPPEN",
-    "ZWAAR",
-    "KAAS",
-    "TE-MAKEN-MET",
-    "TREIN",
-    "STEM",
-    "SNOEP",
-    "in",
-    "NOVEMBER",
-    "VOL",
-    "KOE",
-    "GRAZEN",
-    "OLIFANT",
-    "PO-PT",
-    "OK",
-    "DOOD",
-    "HAAS",
-    "SPIN",
-    "GEIT",
-    "TOEDIENEN",
-    "OOG",
-    "AANDACHT-TREKKEN",
-    "KASSA",
-    "POSTZEGEL",
-    "ONDERBROEK",
-    "LUISTEREN-NIET",
-    "VAATWASSER",
-    "MOVE+B_krom",
-    "TREKKEN",
-    "BANK",
-    "MET",
-    "AFSTANDSBEDIENING",
-    "KLAP",
-    "MOL",
-    "ONDER",
-    "MOEILIJK",
-    "JAMMER",
-    "VERGETEN",
-    "ERUIT",
-    "TOREN",
-    "OPBOUWEN",
-    "LAARS",
-    "SPRINGEN",
-    "VERBINDEN",
-    "RELATIE",
-    "BUS",
-    "FEEST",
-    "PEPERNOTEN",
-    "NOG-NIET",
-    "MOVE+Snavel_open",
-    "TANKEN",
-    "JONG",
-    "OUD",
-    "VOETSTAPPEN",
-    "Pt-1hand",
-    "MACHINE",
-    "KASTANJE",
-    "DUPLO",
-    "OUDERS",
-    "MAAKT-NIET-UIT",
-    "OEFENEN",
-    "VAARDIG",
-    "WEGSCHIETEN",
-    "DEKSEL",
-    "VOLGEN",
-    "PLUS",
-    "WEEK",
-    "BEDANKEN",
-    "RIEM",
-    "GAAN",
-    "BOER",
-    "FIXEN",
-    "AFPAKKEN",
-    "POT",
-    "HALF",
-    "9",
-    "JONGEN",
-    "WOORD",
-    "VERWOORDEN",
-    "GEVEN:1",
-    "NAAST",
-    "VERANTWOORDELIJK",
-    "PAPRIKA",
-    "EVEN-DENKEN",
-    "ALLEEN",
-    "HERDENKING",
-    "KIP",
-    "AAIEN"
-]
+{
+    "POEP-A": [
+        "poep, schijt, kak, poepen, schijten, kakken, mest"
+    ],
+    "LA": [
+        "la, lade"
+    ],
+    "TANTE-A": [
+        "tante"
+    ],
+    "KAPPER": [
+        "kapper"
+    ],
+    "BEDENKEN": [
+        "bedenken, verzinnen, zich bedenken dat, idee, aha",
+        "raden"
+    ],
+    "PT-1hand": [
+        "daar, dat, deze, die, dit, het, hij, hun, zij, jij, jou"
+    ],
+    "VIES-B": [
+        "vies, vuil"
+    ],
+    "HOUDEN-VAN": [
+        "houden van, liefde, verliefd, hobby, braaf, aardig (Gr.), behoefte, voorkeur hebben voor, voorliefde hebben voor, voelen"
+    ],
+    "HAND-IN-LUCHT": [
+        "kom nou toch, nou ja, kom op zeg"
+    ],
+    "JA-A": [
+        "klopt, dat klopt, wel, ja"
+    ],
+    "TRUI": [
+        "trui"
+    ],
+    "NIET-A": [
+        "niet, nee",
+        "mag niet",
+        "verboden",
+        "geen (nadruk)",
+        "nooit"
+    ],
+    "COOL-B": [
+        "cool, stoer"
+    ],
+    "GAAN-NAAR-A": [
+        "naar buiten gaan, erheen, gaan, gaan naar, heen, naar"
+    ],
+    "LAATSTE-A": [
+        "laatste, laat"
+    ],
+    "MOLEN": [
+        "molen"
+    ],
+    "HAGELSLAG-A": [
+        "schudden, hagelslag, strooien",
+        "Kruidvat",
+        "ketchup"
+    ],
+    "HUIS-A": [
+        "huis, huisje, hok, schuur"
+    ],
+    "KIEZEN-A": [
+        "selecteren, keuze, kiezen"
+    ],
+    "PT-arc": [
+        "allemaal, allen, alle, jullie"
+    ],
+    "WALVIS": [
+        "Walvis"
+    ],
+    "SAMENWERKEN-A": [
+        "samenwerken, samenwerking"
+    ],
+    "UUR-HALF": [
+        "een half uur"
+    ],
+    "RUSTIG": [
+        "rustig, kalm, rustig maar, kalm aan, voorzichtig, langzaam, traag, sloom, loom, zacht, zachtjes"
+    ],
+    "JARIG-A": [
+        "verjaardag, jarig",
+        "feliciteren, gefeliciteerd"
+    ],
+    "APPLAUS-A": [
+        "klappen, applaus"
+    ],
+    "GROOT-HORIZONTAAL-D": [
+        "groot, lang, breed, groter (worden), langer (worden), breder (worden), toenemen, uitbreiden, uitgebreid, langdurig"
+    ],
+    "FAMILIE-B": [
+        "familie"
+    ],
+    "GLAS-B": [
+        "glas, beker, mok, kop, fles"
+    ],
+    "ACHTERDOCHTIG": [
+        "achterdochtig"
+    ],
+    "GROOT-HORIZONTAAL-C": [
+        "groot, lang, afstand, breed, groter (worden), langer (worden), breder (worden), toenemen"
+    ],
+    "ZELF-A": [
+        "eigen, vanzelf, zelf"
+    ],
+    "PLEISTER-C": [
+        "pleister, pleisteren, tapen, klittenband"
+    ],
+    "TANDPASTA-B": [
+        "tandpasta"
+    ],
+    "BEHOEFTIG-A": [
+        "arm, behoeftig, niet rijk"
+    ],
+    "SCHRIJVEN-A": [
+        "opschrijven, pen, potlood, schrijven"
+    ],
+    "PROBEREN-A": [
+        "proef, poging, proberen"
+    ],
+    "BEGRIJPEN": [
+        "begrijpen, kennen, verstaan"
+    ],
+    "BLOEM-A": [
+        "plant, bloem, bloem gaat open"
+    ],
+    "MOGEN-B": [
+        "mag, mogen"
+    ],
+    "PAPA-A": [
+        "vader, ouders, papa"
+    ],
+    "GORDIJN-A": [
+        "gordijn, gordijnen openen"
+    ],
+    "VERANTWOORDELIJK-A": [
+        "verantwoord",
+        "verantwoordelijkheid, verantwoordelijk, op mijn schouders nemen"
+    ],
+    "TRAP-A": [
+        "trap naar boven, trap, de trap op, omhoog lopen"
+    ],
+    "IDEE": [
+        "bedenken, idee, lampje gaat branden, plan, plannen, mening"
+    ],
+    "HELPEN-A:1": [
+        "mij helpen, zij, hij, iemand helpt mij, zij helpen mij"
+    ],
+    "GEBEUREN-A": [
+        "in toekomst gebeuren, gebeuren"
+    ],
+    "OMDAT-A": [
+        "daarom, oorzaak, omdat, daardoor, want"
+    ],
+    "GELIJKWAARDIG": [
+        "gelijkwaardig, van gelijke waarde, met dezelfde waarde, equivalent"
+    ],
+    "PAS-A": [
+        "net, vroeger, geleden, toen, pas, onlangs, daarstraks"
+    ],
+    "OVER-D": [
+        "over",
+        "overheen"
+    ],
+    "AUTO": [
+        "autorijden, chaufeur, auto, stuur",
+        "skelter"
+    ],
+    "RONDSNUFFELEN": [
+        "rondsnuffelen, rondneuzen, nieuwsgierig"
+    ],
+    "BEEN-C": [
+        "benen, been, poot"
+    ],
+    "WELKE-B": [
+        "welke, welke van de twee"
+    ],
+    "TEKENEN-C": [
+        "tekenen, ontwerpen, schetsen",
+        "grafisch"
+    ],
+    "HARD-A": [
+        "steen, kei, hard, ijzer, bikkel"
+    ],
+    "VADER-C": [
+        "vader"
+    ],
+    "TAFEL": [
+        "tafel, podium",
+        "bureau"
+    ],
+    "OP-F": [
+        "op"
+    ],
+    "MOVE+T": [
+        "klein, dun ding (delicaat) oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+    ],
+    "WIND": [
+        "waaien, wind"
+    ],
+    "OP-C": [
+        "op, niks meer over, leeg zijn, op zijn; opslaan (op computer); uitdoen, uitgaan"
+    ],
+    "BEURT": [
+        "beurt"
+    ],
+    "AANKLEDEN-B": [
+        "aantrekken, aankleden, aan doen",
+        "kleren, kleding",
+        "omkleden, verkleden"
+    ],
+    "LOPEND-VOORTBEWEGEN-A": [
+        "wandelen, lopen, te voet gaan, met de benenwagen"
+    ],
+    "LOLLY-B": [
+        "lolly"
+    ],
+    "WEG-D": [
+        "weg, over, verlaten, voorbij, weg doen, weg ermee, voor niks, afschaffen, vanaf"
+    ],
+    "VERPLEEGSTER": [
+        "verpleegster, zuster, non, de kap van een zuster, verpleegkundig"
+    ],
+    "MES": [
+        "mes, snijden, bestek"
+    ],
+    "EMOTIE-B": [
+        "emotie, emoties, emotioneel, geemotioneerd",
+        "voelen, gevoelens, gevoel, voel"
+    ],
+    "ZEE": [
+        "zee, golven",
+        "Zeeland"
+    ],
+    "ADEMEN-C": [
+        "ademhalen, ademen, benauwd, hijgen, inademen, uitademen, zuurstof, borstademhaling"
+    ],
+    "DAN-A": [
+        "binnenkort, daarna, dan, erna, in de komende tijd, over, vervolgens, volgende",
+        "dus"
+    ],
+    "STEL-A": [
+        "stel, als, stel je voor, stel dat..., zich voorstellen dat"
+    ],
+    "ONTMOETEN-E": [
+        "ontmoeten, elkaar tegenkomen, elkaar treffen"
+    ],
+    "OPRUIMEN": [
+        "opruimen"
+    ],
+    "TANDENPOETSEN-B": [
+        "tandenborstel, tandenpoetsen"
+    ],
+    "ELLEBOOG-B": [],
+    "GRIEP": [
+        "griep"
+    ],
+    "ECHT-A": [
+        "echt, toch, zeker"
+    ],
+    "LAAT-MAAR-A": [
+        "ach, valt mee, af, niet nodig, laat maar, ga weg, nee joh"
+    ],
+    "GEK-B": [
+        "getikt, raar, weirdo, maf, gek",
+        "Heiloo"
+    ],
+    "TRAP-B": [
+        "trap, trap naar beneden, de trap af"
+    ],
+    "NACHT-A": [
+        "nacht, donker"
+    ],
+    "ANDERS-A": [
+        "andere, ander, anders"
+    ],
+    "DEUR-A": [
+        "deur, deuropening"
+    ],
+    "ALLES-D": [
+        "alles"
+    ],
+    "NOG-B": [
+        "nog, na, daarna, erna, dan"
+    ],
+    "EETBUIEN": [
+        "eetbuien, eten naar binnen werken"
+    ],
+    "BADPAK": [
+        "badpak, zwempak"
+    ],
+    "BIJ-A": [
+        "met, dichtbij, vlakbij, en, bij"
+    ],
+    "UUR-LANG+1": [
+        "1 uur lang, 1 uur achter elkaar, 1 uur aan een stuk"
+    ],
+    "LIEVER-C": [
+        "liever"
+    ],
+    "FLUITEN-C": [
+        "fluiten"
+    ],
+    "LICHAAM-B": [
+        "lijf, lichaam, lichamelijk, fysiek, houding, zijnswijze, mens, humaan"
+    ],
+    "OVERSTROMING": [
+        "overstroming, tsunami"
+    ],
+    "KUNNEN-E": [
+        "kunnen, kan, moeilijk"
+    ],
+    "PLASSEN-B": [
+        "plassen",
+        "Venezuela"
+    ],
+    "FIETSEN-A": [
+        "fiets, fietsen, trappen",
+        "radler (bier)"
+    ],
+    "DOOS-A": [
+        "met betrekking tot, omkaderd, beperkt tot, categorie, doos, cadeau"
+    ],
+    "LICHT-B": [
+        "niet donker, licht, weer"
+    ],
+    "NEE-B": [
+        "niet, mag niet, geen, nee, ontkennen"
+    ],
+    "DOOIEN": [
+        "dooien, smelten, dooi"
+    ],
+    "HAAR-B": [
+        "haar"
+    ],
+    "UITZENDING": [
+        "uitzending"
+    ],
+    "ATTENTIE": [
+        "maar",
+        "als",
+        "moment, wacht even",
+        "pas op, let op",
+        "oja, ik weet het weer",
+        "even denken",
+        "vooral",
+        "soms"
+    ],
+    "STEIGER": [
+        "steiger"
+    ],
+    "VUURWERK": [
+        "vuurwerk, Enschede"
+    ],
+    "NIEUW-A": [
+        "opnieuw, nieuw, nieuws",
+        "nieuws, journaal"
+    ],
+    "MEER-A": [
+        "groter aantal of hoeveelheid, meer, meestal, nog, nog meer, vooral"
+    ],
+    "AANRAKEN-A": [
+        "aanraken"
+    ],
+    "LEREN-A": [
+        "leren, aanleren, school, studeren, onderwijzen"
+    ],
+    "SCHOONMAKEN": [
+        "schoonmaken, huishouden, poetsen"
+    ],
+    "MENS.PL": [
+        "antropologie, mens.pl, menselijk, mensen"
+    ],
+    "MOVE+Snavel": [
+        "breed plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+    ],
+    "KIJKEN-B": [
+        "eens kijken, even kijken, kijken, bekijken, zien"
+    ],
+    "VENEZUELA": [
+        "Venezuela"
+    ],
+    "VAN-A": [
+        "eigen, van mij, mijn, braaf, van"
+    ],
+    "TREIN": [
+        "trein"
+    ],
+    "KNUTSELEN": [
+        "knutselen"
+    ],
+    "MOVE+B_krom": [
+        "gebogen plat breed ding beweegt door de ruimte, groot bolvormig ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+    ],
+    "NEE-C": [
+        "nee"
+    ],
+    "MOSSEL-B": [
+        "mossel, schelp",
+        "oester"
+    ],
+    "SCHOEN-A": [
+        "schoen, schoenen,, schoen aandoen"
+    ],
+    "BES": [
+        "bes",
+        "dingen, spullen",
+        "boon"
+    ],
+    "KROKODIL-A": [
+        "krokodil, alligator"
+    ],
+    "OPLETTEN-A": [
+        "opletten, oppassen, even kijken, uitkijken, even aankijken, pas op"
+    ],
+    "DIER": [
+        "dier, dieren, beest, beesten"
+    ],
+    "MOVE+Snavel_open": [
+        "breed tamelijk plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+    ],
+    "AFSLUITEN": [
+        "afsluiten"
+    ],
+    "VERTELLEN": [
+        "uitleggen, verhaal, vertellen"
+    ],
+    "DICHTBIJ": [
+        "dichtbij, vlakbij, komt steeds dichterbij, bijna dichtbij"
+    ],
+    "MOVE+B": [
+        "plat breed ding beweegt door de ruimte; groot ding met vlakke bodem of vlakke zijkanten oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+    ],
+    "HEMEL": [
+        "hemel, weer, lucht",
+        "hemel (religie)"
+    ],
+    "OVERGEVEN-B": [
+        "overgeven, kotsen"
+    ],
+    "WAKKER": [
+        "oog open, wakker, ogen open"
+    ],
+    "NOG-A": [
+        "nog, na, daarna, erna, dan"
+    ],
+    "LIEF-A": [
+        "aardig, lief",
+        "lieveling, schattig, liefje",
+        "liever",
+        "liefde"
+    ],
+    "PIZZA-A": [
+        "pizza"
+    ],
+    "LAWAAI-C": [
+        "lawaai, ruis, geruis"
+    ],
+    "CADEAU-A": [
+        "kado, cadeau"
+    ],
+    "GROEIEN-B": [
+        "groeien (planten)"
+    ],
+    "TEENSLIPPER-A": [
+        "teenslipper",
+        "voet"
+    ],
+    "ZOEKEN-A": [
+        "zoeken"
+    ],
+    "PRIMA-A": [
+        "OK, fantastisch, geweldig, okee, perfect, prima, super, uitstekend"
+    ],
+    "GEBEUREN-B": [
+        "gebeurd, in verleden gebeuren, gebeuren"
+    ],
+    "TIJD-A": [
+        "tijd, lang, minuut, seconde, moment",
+        "TYD",
+        "let op de tijd, het is tijd",
+        "hoe laat?",
+        "klok, horloge"
+    ],
+    "WILLEN-NIET": [
+        "niet willen, weigeren, wil niet"
+    ],
+    "EVEN-A": [
+        "even, eventjes"
+    ],
+    "FIXEN": [
+        "fixen, fiksen, knutselen, klussen, in elkaar zetten"
+    ],
+    "BOS-A": [
+        "bos"
+    ],
+    "DAG-B": [
+        "dag"
+    ],
+    "ZEBRA": [
+        "zebra",
+        "strepen"
+    ],
+    "SORRY-A": [
+        "pardon, sorry, het spijt me"
+    ],
+    "VERSPREIDEN-B": [
+        "netwerk, verspreiden, snel verspreiden"
+    ],
+    "NAAST": [
+        "ernaast, daarnaast, naast, buren, behalve dat, achter"
+    ],
+    "GEBRUIKEN-A": [
+        "gebruiken, nodig, nuttig"
+    ],
+    "GEHOORAPPARAAT-B": [
+        "gehoorapparaat"
+    ],
+    "BORD-A": [
+        "bord, bordje",
+        "schotel, schoteltje"
+    ],
+    "WAT-A": [
+        "wat, welk (Gronings), welke",
+        "minuut",
+        "betekenen"
+    ],
+    "OF-A": [
+        "of, oftewel, andere kant, mogelijk"
+    ],
+    "REKENING-HOUDEN-MET": [
+        "rekening houden met, voorzichtig",
+        "verwachten"
+    ],
+    "REGEN-A": [
+        "motregen, stortregen, bui, regen, miezerig",
+        "herfst"
+    ],
+    "TONG": [
+        "tong"
+    ],
+    "MAART-A": [
+        "maart, dooien, dooi, smelten, diarree"
+    ],
+    "DICHT-B": [
+        "dicht, dicht gaan, deur gaat dicht, deur sluit"
+    ],
+    "AANKLEDEN-C": [
+        "broek/rok aantrekken",
+        "broek aan doen",
+        "broek omhoog hijsen"
+    ],
+    "VLAKBIJ-C": [
+        "vlakbij, dichtbij"
+    ],
+    "LEZEN-B": [
+        "lezen"
+    ],
+    "MOVE+C_spreid": [
+        "rond of groot vormloos ding beweegt door de ruimte; groot rond ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+    ],
+    "FILM": [
+        "filmen, bioscoop, film"
+    ],
+    "PIET": [
+        "zwarte piet, piet"
+    ],
+    "ZEIL-B": [
+        "vliegeren",
+        "zeilen"
+    ],
+    "SNEL-A": [
+        "vlug, hard, meteen, gelijk, snel, sneller"
+    ],
+    "VLEES-B": [
+        "vlees"
+    ],
+    "VINGER": [
+        "vinger"
+    ],
+    "#T": [
+        "t..."
+    ],
+    "JAS-A": [
+        "aandoen, colbert, jas, vest"
+    ],
+    "WESP": [
+        "wesp"
+    ],
+    "HELE": [
+        "hele dag, hele tijd, duren, lang, allemaal, hele"
+    ],
+    "ENE-KANT-ANDERE-KANT-B": [
+        "aan de ene kant ..., aan de andere kant..., enerzijds-anderzijds, beide, of dit of dat, twijfel"
+    ],
+    "LUIER-A": [
+        "luier, maandverband, verband"
+    ],
+    "PT+Bhand": [],
+    "STRIP-A": [
+        "strip"
+    ],
+    "BIJZONDER": [
+        "speciaal, bijzonder"
+    ],
+    "MOND": [
+        "mond, lippen"
+    ],
+    "KLEREN-B": [
+        "kleding, kleren, pyjama, t-shirt, aantrekken, trui, bloes"
+    ],
+    "APPEL": [
+        "appel"
+    ],
+    "ZETTEN-LEGGEN-K": [
+        "zetten, leggen, neerzetten, neerleggen"
+    ],
+    "STIL-A": [
+        "zwijgen, stil, mond dicht houden"
+    ],
+    "DONKER-A": [
+        "donker, duister, verduisteren, avond valt in",
+        "onzichtbaar"
+    ],
+    "ZIN-IN-A": [
+        "trek, zin, zin in"
+    ],
+    "TEKENEN-A": [
+        "tekenen, ontwerpen",
+        "kleuren",
+        "kunst"
+    ],
+    "RUPS-A": [
+        "rups, worm"
+    ],
+    "ZOEN-C": [
+        "zoen, zoenen"
+    ],
+    "KLEED": [
+        "kleed"
+    ],
+    "HAAK": [
+        "haak, kleerhanger, knaapje, ophangen"
+    ],
+    "LEKKER-A": [
+        "heerlijk, lekker, smakelijk, verrukkelijk, zalig",
+        "vers"
+    ],
+    "BROEK": [
+        "broek, pantalon, broek omhoog doen, ophijsen"
+    ],
+    "KIJKEN-E": [
+        "kijken"
+    ],
+    "PRATEN-A": [
+        "spreken, kletsen, bespreken, praten, babbelen, zeggen"
+    ],
+    "ALWEER-B": [
+        "alweer, opnieuw, nogmaals"
+    ],
+    "BEUGEL": [
+        "beugel"
+    ],
+    "WARM-A": [
+        "warm"
+    ],
+    "GLIJBAAN": [
+        "glijbaan, glijden"
+    ],
+    "KUNNEN-A": [
+        "mogelijkheid, wel, mogelijk, kunnen, niet kunnen, moeilijk"
+    ],
+    "WEGSCHIETEN": [
+        "wegschieten",
+        "verwerpen (idee), weggooien (object)"
+    ],
+    "SCHRIKKEN-C": [
+        "schrikken, geschrokken",
+        " schok, shock"
+    ],
+    "ZON-A": [
+        "schijnen, zon, zonnig",
+        "fel"
+    ],
+    "OPA": [
+        "grootvader, opa"
+    ],
+    "SOMS-A": [
+        "soms"
+    ],
+    "NAT": [
+        "nat"
+    ],
+    "TUIN-A": [
+        "tuin"
+    ],
+    "GEBAREN-C": [
+        "soepel gebaren, vlotjes gebaren, vloeiend gebaren, gebaren, kletsen, babbelen"
+    ],
+    "GROOT-VERTICAAL-F": [
+        "groot, lang, hoog, veel, groter (worden), langer (worden), hoger (worden), meer, ouder, groeien, opgroeien, boven, Hogeschool"
+    ],
+    "KAART-C": [
+        "kaart, envelop",
+        "pas",
+        "brief",
+        "plaat",
+        "portemonnee",
+        "zakje"
+    ],
+    "GOED-A": [
+        "prima, fantastisch, super, okee, perfect, OK, geweldig, goed, leuk"
+    ],
+    "HALLO-A": [
+        "hallo, dag, uitzwaaien, zwaaien, hoi, toedeloe, hee"
+    ],
+    "PASTA-B": [
+        "pasta"
+    ],
+    "ARM-B": [
+        "arm (lichaamsdeel)"
+    ],
+    "OBER-B": [
+        "ober, serveerster",
+        "dienblad",
+        "serveren, bedienen"
+    ],
+    "BANAAN-A": [
+        "banaan, banaan pellen"
+    ],
+    "DUIDELIJK-A": [
+        "duidelijk, helder"
+    ],
+    "SLIM-B": [
+        "intelligent, intelligentie, slim"
+    ],
+    "WAAR-A": [
+        "waarom, waar"
+    ],
+    "TELEVISIE-A": [
+        "TV, televisie"
+    ],
+    "TERUG-C": [
+        "terug"
+    ],
+    "PLASSEN-A": [
+        "plassen, pissen, pies, zeiken, urine, urineren, wateren"
+    ],
+    "DOUCHEN": [
+        "douche, douchen"
+    ],
+    "#V": [
+        "v..."
+    ],
+    "VOOR-A": [
+        "eerder, achter, van te voren, afstand, voor"
+    ],
+    "PT:down": [
+        "in",
+        "nu",
+        "hier",
+        "zuid",
+        "daar",
+        "dit"
+    ],
+    "GROEP-A": [
+        "team, klas, club, gemeenschap, afdeling, groep",
+        "gezin",
+        "partij",
+        "nest"
+    ],
+    "KLEUR-A": [
+        "kleur"
+    ],
+    "WATER-B": [
+        "water, drinkwater, water uit de kraan"
+    ],
+    "ROEPEN:1": [
+        "mij vragen, mij roepen, mij aantikken, mijn aandacht vragen"
+    ],
+    "1-A": [
+        "1, een, één"
+    ],
+    "PO": [
+        "po"
+    ],
+    "CI-AFDOEN-B": [
+        "CI afdoen, geen CI meer gebruiken, hoortoestel afdoen, geen hoortoestel gebruiken"
+    ],
+    "KOUD-A": [
+        "koud, kouwelijk, winter, ijzig, kil, koelen"
+    ],
+    "WASSEN-A": [
+        "wassen, kleren wassen"
+    ],
+    "DOKTER-A": [
+        "medisch, arts, dokter"
+    ],
+    "GEBAREN-A": [
+        "gebaar, gebaren"
+    ],
+    "AAP-B": [
+        "aap",
+        "chimpansee"
+    ],
+    "MAMA-A": [
+        "moeder, mama"
+    ],
+    "WAARVOOR": [
+        "waarvoor"
+    ],
+    "HEET-B": [
+        "heet"
+    ],
+    "VOOR-D": [
+        "ten behoeve van, met als doel, voor"
+    ],
+    "ALLEMAAL-B": [
+        "allen, jullie, zij, iedereen, ruimte, overal, allemaal, sommigen"
+    ],
+    "TOCH-A": [
+        "wel, toch"
+    ],
+    "VOETSTAPPEN": [
+        "stappen, voetstappen"
+    ],
+    "TEMPERATUUR": [
+        "temperatuur",
+        "thermometer"
+    ],
+    "FOTO": [
+        "foto, fotograferen, kiekje maken"
+    ],
+    "HOP:1": [
+        "op mij, aan mij, iets of iemand doet een actie gericht op mij"
+    ],
+    "OPHANGEN-C": [
+        "hangen van foto of schilderij, ophangen van foto of schilderij"
+    ],
+    "MOVE+V": [
+        "2 lange dunne dingen, mensen of dieren bewegen door de ruimte, ding met 2 extensies (benen, armen) beweegt door de ruimte"
+    ],
+    "ZORGEN-A": [
+        "babysitten, oppassen, pleegzorg, pleeg",
+        "verplegen, verzorgen, zorgen"
+    ],
+    "BIJVOORBEELD-B": [
+        "bijvoorbeeld, laten zien, voorbeeld, tonen, aantonen"
+    ],
+    "BOUWEN": [
+        "bouw, verbouwen, ombouwen, opbouwen, bouwen",
+        "produceren, product",
+        "functioneren, functie"
+    ],
+    "GRAAG-A": [
+        "graag"
+    ],
+    "PAPEGAAI-B": [
+        "papegaai",
+        "valk",
+        "feyenoord",
+        "heks, kromme neus",
+        "Zlatan Ibrahimovic"
+    ],
+    "LIEFDE": [
+        "liefde, verliefd"
+    ],
+    "OMA-A": [
+        "oma"
+    ],
+    "KIJKEN-F:1": [
+        "kijk me aan"
+    ],
+    "PRATEN-L": [
+        "spreken, kletsen, bespreken, praten, babbelen"
+    ],
+    "KLAAR-C": [
+        "klaar, gedaan",
+        " af, afgelopen zijn, voorbij",
+        " stoppen, ophouden, genoeg",
+        "de maat is vol, basta",
+        "mag niet",
+        "afkappen"
+    ],
+    "KAMPEREN": [
+        "kamperen, kamp, tenten, tent, camping"
+    ],
+    "BEDOELEN": [
+        "noemen, bedoelen"
+    ],
+    "KOPJE-A": [
+        "kopje, thee, koffie, drinken"
+    ],
+    "WILLEN-A": [
+        "willen"
+    ],
+    "ROEPEN-A": [
+        "aanspreken, vragen, roepen, aantikken, aandringen"
+    ],
+    "BAL-A": [
+        "bal, bol",
+        "aarde, wereld, globe"
+    ],
+    "TOT-NU-A": [
+        "tot nu toe, van toen tot nu, tot op heden"
+    ],
+    "GASFORNUIS": [
+        "gasfornuis"
+    ],
+    "ZWAAR-A": [
+        "bezwaar, zwaar, gewicht"
+    ],
+    "COMBINATIE": [
+        "combineren, combinatie"
+    ],
+    "SCHREEUWEN-E": [
+        "schreeuwen"
+    ],
+    "LICHT-A": [
+        "lamp, verlichting, flits, licht, zon, schijnen"
+    ],
+    "ROMPERTJE": [
+        "rompertje"
+    ],
+    "ALLES-A": [
+        "algemeen, totaal, heel, geheel, totaalbeeld, helemaal, alles, volledig"
+    ],
+    "VLINDER-A": [
+        "vlinder",
+        "Emmen"
+    ],
+    "VAKANTIE": [
+        "vakantie"
+    ],
+    "LACHEN-A": [
+        "lachen, hard lachen, schateren, schaterlachen"
+    ],
+    "OH": [
+        "oeps, oh, hand op mond"
+    ],
+    "BIKINI": [
+        "bikini"
+    ],
+    "KLAP": [
+        "klap, smak, slag, klets, lel, pets"
+    ],
+    "PANNENKOEK-B": [
+        "pannenkoek"
+    ],
+    "SAMEN-A": [
+        "samen, tezamen, bij elkaar, met elkaar",
+        "samenkomen, bijeenkomen, bijeenkomst",
+        "samenvoegen",
+        "groep",
+        "team",
+        "gemeenschap"
+    ],
+    "PLEISTER-A": [
+        "pleister, pleisteren, tapen"
+    ],
+    "AVONTUUR-B": [
+        "avontuur"
+    ],
+    "KOFFER-A": [
+        "bagage, dragen, emmer, koffer"
+    ],
+    "GRAPPIG-A": [
+        "humor, grap, grappig, mop, nep, fop, alsof"
+    ],
+    "KLEIN-VERTICAAL-A": [
+        "minder, minder worden, klein beetje, weinig, niet veel"
+    ],
+    "BUITEN-B": [
+        "buiten"
+    ],
+    "KLINKT-A": [
+        "klinkt",
+        "geluid"
+    ],
+    "HALEN-A": [
+        "ophalen, halen"
+    ],
+    "BOOS-D": [
+        "boos, kwaad"
+    ],
+    "GROENTE-B": [
+        "groente, groenten"
+    ],
+    "HOOG": [
+        "omhoog, verhogen, hoog"
+    ],
+    "BOM-A": [
+        "bom",
+        "ontploffen"
+    ],
+    "AFSPRAAK-A": [
+        "afspreken, afgesproken, afspraak"
+    ],
+    "GISTEREN": [
+        "vorige, vroeger, gisteren"
+    ],
+    "PROEVEN-C": [
+        "proeven"
+    ],
+    "Pt-1hand": [
+        "daar, dat, deze, die, dit, het, hij, hun, zij, jij, jou"
+    ],
+    "PERFECT-A": [
+        "perfect, ideaal, keurig, netjes, deftig, fantastisch, prachtig, super, precies",
+        "veilig"
+    ],
+    "WC-D": [
+        "wc, plassen"
+    ],
+    "HAAS-C": [
+        "konijn, haas"
+    ],
+    "IN-G": [
+        "in, binnen"
+    ],
+    "HAND": [
+        "hand"
+    ],
+    "VERSPREIDEN-A": [
+        "netwerk, verspreiden"
+    ],
+    "AARDBEI": [
+        "aardbei"
+    ],
+    "AL-A": [
+        "al, af, afgelopen, eerder, gehad, geweest, klaar, meer niet, nog, reeds, ophouden"
+    ],
+    "KRIJGEN-B": [
+        "krijgen, geven aan mij, ontvangen"
+    ],
+    "NU-B": [
+        "nu, tegenwoordig, huidig"
+    ],
+    "PAKKEN-A": [
+        "nemen, stelen, betrappen, aannemen, pakken, halen, afpakken"
+    ],
+    "ZACHT": [
+        "zacht"
+    ],
+    "PT-alt": [
+        "her en der, hier en daar, die en die en die, dit en dit en dit, dat en dat en dat"
+    ],
+    "OPSTUREN-B": [
+        "posten, zenden, verzenden, versturen, sturen, opsturen, emailen, SMSen, mail, e-mail"
+    ],
+    "EXTRA-A": [
+        "extra"
+    ],
+    "KEER": [
+        "keer",
+        "maal",
+        "kruis",
+        "vermenigvuldigen"
+    ],
+    "PERSOON-A": [
+        "iemand, persoon, persoonlijk"
+    ],
+    "BIJ-F": [
+        "bij",
+        "prikken, geprikt worden"
+    ],
+    "PLANT-A": [
+        "plant",
+        "hooi",
+        "stro"
+    ],
+    "GEHOORAPPARAAT-A": [
+        "hoorapparaat, oorhanger, gehoorapparaat"
+    ],
+    "VERFIJNEN": [
+        "verfijnen, aan iets schaven"
+    ],
+    "LUISTEREN": [
+        "horen, gehoord, verstaan, luisteren, aanhoren, afluisteren, toehoren"
+    ],
+    "TAART-A": [
+        "taart"
+    ],
+    "KAARTEN-D": [
+        "kaarten"
+    ],
+    "MAAR": [
+        "maar"
+    ],
+    "TWIJFEL-A": [
+        "aarzeling, afwegen, eigenlijk, matig, misschien, mwah, ongeveer, onzeker, redelijk, twijfel, twijfelachtig, weet niet zeker, zozo, eventueel"
+    ],
+    "LUKKEN": [
+        "lukken, slagen, geslaagd, uitslag",
+        "aanslag"
+    ],
+    "TYPEN": [
+        "computer, toetsen, toetsenbord, kantoor, typen, internet"
+    ],
+    "SCHULD": [
+        "schuld, schuldig"
+    ],
+    "STRAKS-C": [
+        "straks"
+    ],
+    "DIE": [
+        "wijzen, die, deze, dit"
+    ],
+    "SPELEN-C": [
+        "spelen"
+    ],
+    "WEDSTRIJD": [
+        "wedstrijd"
+    ],
+    "KOFFIE-C": [
+        "koffie, roeren, lepelen"
+    ],
+    "HUISWERK": [
+        "huiswerk",
+        "Roemenië"
+    ],
+    "TWEEEN-F": [
+        "allebei, alleen wij tweeën, elkaar, jullie, jullie twee√´n, ons, samen, tweeen, wij, wij twee√´n, zij"
+    ],
+    "VOORHOOFD": [
+        "voorhoofd"
+    ],
+    "6-A": [
+        "6, zes"
+    ],
+    "KAPSEL": [
+        "kapsel"
+    ],
+    "LOPEND-VOORTBEWEGEN-C": [],
+    "LUKKEN-NIET-A": [
+        "lukt niet, niet lukken, tevergeefs"
+    ],
+    "ONDERWIJS-A": [
+        "les, lesgeven, leraar, docent, meester, juf, leerkracht, onderwijzer, juffrouw, onderwijs, doceren, educatie, instructie, instrueren"
+    ],
+    "HOE-B": [
+        "hoe"
+    ],
+    "BRUS-A": [
+        "broer, zus, zussen, broers",
+        "neef, nicht",
+        "vriend, vriendin, iemand die dichtbij je staat op hetzelfde niveau"
+    ],
+    "GLAD": [
+        "glad",
+        "uitglijden"
+    ],
+    "LUISTEREN-B": [
+        "luisteren"
+    ],
+    "MOL": [
+        "mol"
+    ],
+    "MERKEN-A": [
+        "herkennen, merken, ontdekken, opmerken, bemerken",
+        "betrappen"
+    ],
+    "DRINKEN-A": [
+        "drinken, water, zuipen, drank, opdrinken"
+    ],
+    "SPANNEND": [
+        "spanning, gespannen, spannend"
+    ],
+    "BED-A": [
+        "bed, slapen gaan, onder de dekens"
+    ],
+    "MOVE+C": [
+        "rond of cylindervormig ding beweegt door de ruimte; rond, of cylindervormig of plat dik ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+    ],
+    "GORDIJN-B": [
+        "gordijn",
+        "gordijnen dicht, gordijnen dicht doen"
+    ],
+    "BUIK-B": [
+        "buik"
+    ],
+    "DENKEN": [
+        "denken, weten, bewust, beseffen, besef",
+        "DENK (politieke partij)"
+    ],
+    "PT-Bhand": [
+        "die, dat, dit, daar, deze",
+        "het, hij, hun, zij, jij, jou"
+    ],
+    "VOOR-F": [
+        "voor"
+    ],
+    "WIJ-A": [
+        "ons, wij"
+    ],
+    "2-A": [
+        "2, twee"
+    ],
+    "KNUFFELEN": [
+        "knuffelen, omhelzen, vasthouden"
+    ],
+    "STICKER": [
+        "sticker"
+    ],
+    "ERG-A": [
+        "erg, vreselijk, afschuwelijk, verschrikkelijk"
+    ],
+    "ONTBIJT-B": [
+        "ontbijt"
+    ],
+    "FOUT-A": [
+        "fout"
+    ],
+    "DAG-A": [
+        "dag"
+    ],
+    "HEE-A": [
+        "aandacht, aandacht trekken, roepen, hee, hallo, mag ik vragen, beurt nemen in gesprek"
+    ],
+    "LEVEN-B": [
+        "leven",
+        "spelen"
+    ],
+    "WATER-A": [
+        "water, meer, plas, ven"
+    ],
+    "GLANS": [
+        "glans, glimmen"
+    ],
+    "JAAR-B": [
+        "jaar"
+    ],
+    "BIJEENKOMEN": [
+        "bijeenkomen, samen komen, groep komt bijeen",
+        "integreren"
+    ],
+    "MEISJE-B": [
+        "meisje"
+    ],
+    "VEEL-A": [
+        "vaak, veel, heel veel",
+        "meestal"
+    ],
+    "LIP": [
+        "lip, mond"
+    ],
+    "LANG-A": [
+        "langzaam",
+        "lang, duurt lang",
+        "laat",
+        "hoelang"
+    ],
+    "SPIEGEL": [
+        "spiegelbeeld, spiegel, spiegeling"
+    ],
+    "LANGZAAM-A": [
+        "langzaam, sloom, loom, rustig, slow, zacht, zachtjes"
+    ],
+    "VAARDIG": [
+        "vloeiend, geoefend, vaardigheid, vaardigheden, ervaring, vaardig, bekwaam"
+    ],
+    "SLAPEN-C": [
+        "slapen"
+    ],
+    "DOEN-A": [
+        "doen, doe, gedaan"
+    ],
+    "ZAND-B": [
+        "zand"
+    ],
+    "PT:bodypart": [],
+    "VAN-B": [
+        "van jullie, zelf weten, van jou, even wachten, eigen pakkie an, van",
+        "haar, zijn"
+    ],
+    "VOELEN-B": [
+        "iets, waarde?, zoiets, weet je wel, aanvoelen, gevoel, subtiel, sfeer, voelen",
+        "sensitief"
+    ],
+    "LOGOPEDIE-A": [
+        "logopedie, articulatie"
+    ],
+    "LEGO": [
+        "lego"
+    ],
+    "LEUK-A": [
+        "leuk"
+    ],
+    "YOGHURT-A": [
+        "yoghurt"
+    ],
+    "KAMP-B": [
+        "tent, kamperen, kamp, camping"
+    ],
+    "NOOT-B": [
+        "noot"
+    ],
+    "STRAKS-A": [
+        "straks",
+        "batterij"
+    ],
+    "BOS-B": [
+        "bos"
+    ],
+    "KLAAR-A": [
+        "klaar",
+        "af, afgelopen zijn, voorbij",
+        "gedaan",
+        "stoppen, ophouden, genoeg",
+        "de maat is vol, basta",
+        "mag niet",
+        "afkappen",
+        "vol"
+    ],
+    "VANDAAG": [
+        "vandaag",
+        "beneden",
+        "hier",
+        "nu"
+    ],
+    "IETS-A": [
+        "iets, een fractie"
+    ],
+    "TANDARTS-A": [
+        "tandarts"
+    ],
+    "LAWAAI-A": [
+        "lawaai, herrie, kabaal, geluid",
+        "geraas, getier"
+    ],
+    "TAS": [
+        "tas, dragen"
+    ],
+    "DORP": [
+        "dorp"
+    ],
+    "TWEEEN-C": [
+        "wij twee√´n, jullie twee√´n, wij, jullie, zij, samen, elkaar, allebei, tweeen, ons, alleen wij tweeën"
+    ],
+    "ZONSONDERGANG": [
+        "zonsondergang"
+    ],
+    "MELK": [
+        "melk"
+    ],
+    "CI-A": [
+        "CI, Cochleair Implantaat, cochleaire implantatie, implanteren"
+    ],
+    "AANLEUNEN": [
+        "aanleunen, leunen op, leuning",
+        "aanleunwoning"
+    ],
+    "PINDAKAAS-A": [
+        "pindakaas"
+    ],
+    "TANDENPOETSEN-A": [
+        "tandenpoetsen, tandenborstel"
+    ],
+    "GEHOORAPPARAAT-E": [
+        "gehoorapparaat"
+    ],
+    "BINNEN-A": [
+        "entree, toegang, toegankelijk",
+        "binnen, erin, in, van binnen"
+    ],
+    "DOOR-A": [
+        "door, doorgaan, steeds doorgaan, verder"
+    ],
+    "GEVEN-C": [
+        "geven, inbreng"
+    ],
+    "VERBETEREN": [
+        "verbeteren, corrigeren"
+    ],
+    "VRIEND-A": [
+        "vriend, bevriend, vrienden, vriendschappelijk"
+    ],
+    "HAND-OP-MOND-A": [
+        "lachertje, uitlachen, niet bijzonder, makkelijk, gemakkelijk, simpel, fluitje van een cent"
+    ],
+    "HAAR-A": [
+        "haar, blond",
+        "Haarlem"
+    ],
+    "MACHT": [
+        "macht"
+    ],
+    "REKENEN-A": [
+        "getal, rekenen, aantal, tellen"
+    ],
+    "ONDER": [
+        "tunnel, onder, metro, binnen, in"
+    ],
+    "KOMEN-A": [
+        "komen, gekomen"
+    ],
+    "DRIEEN-A": [
+        "met z'n drieen, drieen, drietal"
+    ],
+    "HOP": [
+        "op"
+    ],
+    "HANDEN-WRIJVEN-B": [
+        "plezier, verheugen, handen wrijven, zin in",
+        "motivatie, gemotiveerd",
+        "handen wassen"
+    ],
+    "OM": [
+        "om, afhankelijk van, hangt van af"
+    ],
+    "STERK": [
+        "sterk, krachtig, spierballen"
+    ],
+    "KOPEN-A": [
+        "kopen, gekocht"
+    ],
+    "KIND.PL": [
+        "kinderen"
+    ],
+    "HELPEN-A": [
+        "hulp, helpen"
+    ],
+    "BUITEN-A": [
+        "buiten"
+    ],
+    "INPAKKEN-B": [
+        "inpakken"
+    ],
+    "BOEK": [
+        "bibliotheek, boek, boek open, schrift, map",
+        "rijbewijs"
+    ],
+    "VOGELKOOI-A": [
+        "vogelkooi"
+    ],
+    "MOEILIJK-C": [
+        "moeilijk, moeite, heel moeilijk"
+    ],
+    "VERGETEN-A": [
+        "vergeten",
+        "verbijsterend"
+    ],
+    "ZITTEN-A": [
+        "stoel, bank",
+        "zitten"
+    ],
+    "PIRAAT": [
+        "piraat"
+    ],
+    "OEFENEN-A": [
+        "oefening, trainen, training, oefenen"
+    ],
+    "ONDERZOEK-C": [
+        "onderzoek, onderzoeken"
+    ],
+    "OPLOSSEN-A": [
+        "oplossing, oplossen, uitvinden, uitvinding"
+    ],
+    "VAN-TOT-A": [
+        "van ... tot ..., na, erna, daarna, tot, later, dan"
+    ],
+    "WORDEN": [
+        "worden"
+    ],
+    "IETS-D": [
+        "iets, ding"
+    ],
+    "VAATWASSER": [
+        "vaatwasser"
+    ],
+    "WERKEN-A": [
+        "werk, baan, beroep, werken, maken, meegemaakt",
+        "schoen"
+    ],
+    "BLIJVEN-B": [
+        "blijven, verblijf"
+    ],
+    "MEEVALLEN": [
+        "meevallen, niet zo erg zijn, het valt wel mee"
+    ],
+    "MUZIEK-A": [
+        "zingen, muziek, zang, koor, lied, song"
+    ],
+    "SCHOON": [
+        "schoon"
+    ],
+    "IEDEREEN-A": [
+        "ieder, iedereen, allemaal, allen"
+    ],
+    "ELKE-A": [
+        "dagelijks, iedere dag, elke maand, elke week, elke"
+    ],
+    "KASTEEL": [
+        "kasteel",
+        "paleis"
+    ],
+    "ALLEMAAL-C": [
+        "allemaal"
+    ],
+    "BLADEREN": [
+        "bladeren, doorbladeren, snel doorkijken"
+    ],
+    "GRAZEN-B": [
+        "grazen"
+    ],
+    "MOOI-A": [
+        "mooi, goed, prima",
+        "precies"
+    ],
+    "NIEUW-B": [
+        "opnieuw, nieuw, weer, alweer",
+        "nieuws"
+    ],
+    "GEVOLG": [
+        "gevolg, opvolgen, opvolging"
+    ],
+    "PALEIS-B": [
+        "paleis"
+    ],
+    "FIT": [
+        "fit",
+        "sterk"
+    ],
+    "MIER-A": [
+        "mier"
+    ],
+    "HAND-OP-WANG": [
+        "hand op wang"
+    ],
+    "JAAR-G": [
+        "jaar"
+    ],
+    "HOEVEEL-A": [
+        "hoeveel, enkele, paar, sommige"
+    ],
+    "VRAGEN-A": [
+        "vragen, vraag, aanvragen, aanvraag"
+    ],
+    "PIJN-A": [
+        "heet, warm, pijn, zeer, au, oei"
+    ],
+    "MOGEN-A": [
+        "mogelijkheid, mag, toestemming, mogen, toegestaan, open, opening"
+    ],
+    "EVEN-B": [
+        "even"
+    ],
+    "HAND.PL": [
+        "hand, handen"
+    ],
+    "STOUT-B": [
+        "boef, ondeugend, stout"
+    ],
+    "WETEN-A": [
+        "weten, denken, kennen, bewust, leren, beseffen, verstand, verstandelijk, psychisch"
+    ],
+    "PLEZIER-A": [
+        "plezier"
+    ],
+    "VAAK": [
+        "vaak"
+    ],
+    "VRIENDELIJK": [
+        "vrolijk, aardig, vriendelijk"
+    ],
+    "CABRIOLET": [
+        "cabriolet"
+    ],
+    "OVER-C": [
+        "betreffende, over, waarover, hierover"
+    ],
+    "GEVOEL-A": [
+        "gelukkig, gevoel, gevoelens, plezant, plezier, plezierig, prettig, geluk",
+        "borst"
+    ],
+    "GROEIEN-A": [
+        "groeien"
+    ],
+    "GA-MAAR-A": [
+        "hup hup, zetje geven, ga maar, sneller, tempo"
+    ],
+    "KLEIN-A": [
+        "beetje, bijna, weinig, klein, kleintje, mini, peuter, jury",
+        "even"
+    ],
+    "MENING-A": [
+        "mening, eigen, egoïstisch, zelf, zichzelf"
+    ],
+    "ONDERBROEK": [
+        "onderbroek",
+        "panty",
+        "luier",
+        "broekje"
+    ],
+    "KIJKEN-F": [
+        "kijken, even kijken"
+    ],
+    "THUIS-A": [
+        "thuis, wonen"
+    ],
+    "OPSCHIETEN-A": [
+        "haast maken, opschieten, vort, vooruit"
+    ],
+    "SCHILDEREN-B": [
+        "verf, kwast, schilderij, verven, schilderen"
+    ],
+    "MAMA-B": [
+        "mama, moeder"
+    ],
+    "NIEMAND-B": [
+        "niemand, geen, zonder, niks, niets, nergens"
+    ],
+    "TWEEEN-A": [
+        "wij tweeën, jullie tweeën, wij, jullie, zij, samen, elkaar, allebei, tweeling, tweeen, ons"
+    ],
+    "GOOIEN-A": [
+        "gooien, worp, werpen, gooi"
+    ],
+    "DROOG-A": [
+        "droog"
+    ],
+    "KLEUR-B": [
+        "kleur, tekenen"
+    ],
+    "ZOEN-A": [
+        "zoen, kus, kussen, zoenen"
+    ],
+    "VERZAMELEN-B": [
+        "verwerven, verwerving, verzamelen, bijeen schrapen, sprokkelen, bijeen harken"
+    ],
+    "ZO-A": [
+        "zo, zo is het//dat/hij/zij/..., zoals"
+    ],
+    "GYMNASTIEK-B": [
+        "gymnastiek"
+    ],
+    "GROEP-C": [
+        "team, klas, club, gemeenschap, groep, besloten",
+        "gezin, familie"
+    ],
+    "10-B": [
+        "10, tien"
+    ],
+    "VORIGE": [
+        "vorige"
+    ],
+    "TOUW-A": [
+        "touw, draad, snoer, kabel",
+        "maat",
+        "zenuw"
+    ],
+    "HOND-A": [
+        "hond"
+    ],
+    "GAAN": [
+        "gaan, ga"
+    ],
+    "WIMPERS": [
+        "wimpers"
+    ],
+    "PRACHTIG-C": [
+        "prachtig"
+    ],
+    "LEZEN-A": [
+        "lezen, voorlezen"
+    ],
+    "3-B": [
+        "3, drie"
+    ],
+    "WOEDEND": [
+        "woedend"
+    ],
+    "SCHRIKKEN-A": [
+        "geschrokken, schok, eng, schrikken, onverwacht, geschokt"
+    ],
+    "GELD": [
+        "geld",
+        "kosten",
+        "waarde",
+        "waarden",
+        "rijk",
+        "duur",
+        "schulden",
+        "fonds",
+        "kapitalisme",
+        "financien, financiën"
+    ],
+    "SLAPEN-A": [
+        "logeren, bed, slapen, dutje, gaan slapen, slaapje, doezelen, slaap"
+    ],
+    "MOVE+5": [
+        "5 lange dunne dingen, mensen of dieren bewegen door de ruimte"
+    ],
+    "DING.PL-A": [
+        "dingen, kleine dingen, bepaalde dingen, van die dingen",
+        "blokker"
+    ],
+    "GELUID": [
+        "geluid, verstaan"
+    ],
+    "LICHT-AAN": [
+        "licht aan, lamp aandoen "
+    ],
+    "KAR": [
+        "wagen, buggy, kinderwagen, winkelwagen, kar, rijtuig, voertuig"
+    ],
+    "OOK-A": [
+        "ook, zelfde, lijken op, lijkt net, net als, gelijk als, zelfde als"
+    ],
+    "KIEZEN-B": [
+        "kiezen, keuze"
+    ],
+    "ALLEMAAL-A": [
+        "alles, iedereen, allemaal, alle, sommigen, geheel, allen, de hele mikmak, al, jullie, zij, hen, de mensen, het volk"
+    ],
+    "NU-A": [
+        "nu, tegenwoordig, hier, huidig"
+    ],
+    "STORM": [
+        "storm"
+    ],
+    "OP-A": [
+        "op"
+    ],
+    "KOMEN-B": [
+        "komen",
+        "kom maar, kom mee",
+        "kom hier",
+        "kom op",
+        "afkomstig, uit komen, vandaan komen"
+    ],
+    "OLIE-B": [
+        "olie"
+    ],
+    "OPNIEUW-A": [
+        "opnieuw, weer, alweer, wederom"
+    ],
+    "LUISTEREN-NIET-A": [
+        "ongehoorzaam, niet luisteren, negeren"
+    ],
+    "VOGEL-A": [
+        "vliegen, vogel, vleugels"
+    ],
+    "LIGGEN-A": [
+        "liggen, plat, vlak, vloer, grond"
+    ],
+    "PT-1hand:1": [
+        "ik, mij, mijn"
+    ],
+    "VROEGER-A": [
+        "verleden, lang geleden, tijdje geleden, toen, onlangs, vorige, vroeger, een poos geleden, in het verleden"
+    ],
+    "KASTANJE": [
+        "kastanje"
+    ],
+    "ETEN-A": [
+        "eten, voedsel, voer, eet"
+    ],
+    "MISSELIJK": [
+        "misselijk, naar ervan, akelig, vervelend"
+    ],
+    "EI-A": [
+        "ei"
+    ],
+    "ALTIJD-A": [
+        "steeds, altijd"
+    ],
+    "GROOT-VERTICAAL-C": [
+        "meer, extra, meerdere, gestegen"
+    ],
+    "KRULLEN": [
+        "krul, krullend haar, krullen, permanent"
+    ],
+    "HEBBEN-A": [
+        "hebben"
+    ],
+    "POEP-B": [
+        "poep, poepen, schijten, kakken, schijt, kak"
+    ],
+    "MINUUT": [
+        "moment, seconde, minuut, tel",
+        "minuut"
+    ],
+    "NETJES-A": [
+        "netjes, keurig, onberispelijk, net, elegant, correct"
+    ],
+    "MOVE+snavel": [
+        "breed plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+    ],
+    "ZEGGEN": [
+        "benoemen, noemen, zeggen"
+    ],
+    "TASTEN-A": [
+        "voelen, aanraken, tasten"
+    ],
+    "ZIEN-A": [
+        "zien, kijken, merken, opletten"
+    ],
+    "PEN": [
+        "pen"
+    ],
+    "ALLES-B": [
+        "algemeen, totaal, heel, geheel, alles"
+    ],
+    "1.ORD-A": [
+        "1e, eerst, eerste",
+        "vooral",
+        "eigenlijk"
+    ],
+    "WC-A": [
+        "wc, toilet"
+    ],
+    "TOT-NU-TOE-C": [
+        "van toen tot nu, door de tijd heen, sinds, tot nu toe, al die tijd tot nu toe"
+    ],
+    "LEPEL": [
+        "lepel"
+    ],
+    "IETS-C": [
+        "iets"
+    ],
+    "SCHOOL-A": [
+        "school, onderwijs"
+    ],
+    "WONEN-A": [
+        "wonen"
+    ],
+    "WINKELEN-A": [
+        "boodschappen, winkel, winkelen, shoppen"
+    ],
+    "KAPOT": [
+        "breken, beschadigen, kwetsen, beschadigd, gebrek, gebreken, gebroken, kapot, stuk, kaduuk, defect"
+    ],
+    "TROTS-A": [
+        "trots"
+    ],
+    "ENG": [
+        "eng",
+        "horror "
+    ],
+    "INDRUKKEN-B": [
+        "toetsen, intoetsen, op knop drukken, indrukken, aanbellen, op de bel drukken"
+    ],
+    "EVEN-WACHTEN-A": [
+        "wachten, afwachten, even wachten, ho even, kalm, rustig, niet te snel, moment"
+    ],
+    "ERG-F": [
+        "versterkende functie (heel, ontzettend etc.)",
+        "erg, vreselijk, afschuwelijk, verschrikkelijk, allemachtig, wow, heftig, hevig, zo hee, tjonge, heel erg, heel wat"
+    ],
+    "BIBLIOTHEEK-A": [
+        "bibliotheek, bieb ",
+        "literatuur"
+    ],
+    "PRETTIG-A": [
+        "plezier, gezellig, genieten, prettig, fijn, plezant, leuk"
+    ],
+    "VLAKBIJ-A": [
+        "dichtbij, vlakbij"
+    ],
+    "VORK-A": [
+        "vork",
+        "prikken met vork"
+    ],
+    "POT-A": [
+        "potje, vaas, pot"
+    ],
+    "WACHTEN-A": [
+        "afwachten, verwachten, wachten"
+    ],
+    "WEG-C": [
+        "weg zijn, kwijt, niet hebben, leeg, foetsie, er niet meer zijn"
+    ],
+    "KNIPPEN-A": [
+        "schaar, knippen, snoeien, kappen"
+    ],
+    "VERTREKKEN": [
+        "weg, weggaan, vertrekken, ervandoor gaan"
+    ],
+    "EI-B": [
+        "ei, pasen"
+    ],
+    "BOTER-B": [
+        "boter, smeren, op brood smeren, pasta",
+        "lijm"
+    ],
+    "AANDACHT-A": [
+        "richten op, focus",
+        "concentreren, concentratie",
+        "aandacht"
+    ],
+    "PT+PO": [],
+    "MAAT-HORIZONTAAL-D": [
+        "deze maat, deze grootte, deze lengte, zo groot, zo lang, zo veel"
+    ],
+    "BINNENKORT-D": [
+        "zometeen, binnenkort"
+    ],
+    "OOR-A": [
+        "oor, horen"
+    ],
+    "HONGER-B": [
+        "honger"
+    ],
+    "VLOEIBAAR": [
+        "stof, vloeistof, vloeibaar"
+    ],
+    "SCHATTIG-A": [
+        "schattig, schat"
+    ],
+    "TOT-B": [
+        "tot"
+    ],
+    "BELLEN": [
+        "bellen, opbellen"
+    ],
+    "ETEN-B": [
+        "eten, voeden, met handen eten",
+        "speen, speentje"
+    ],
+    "KAST": [
+        "kast, kastje"
+    ],
+    "PO+PT": [],
+    "WIE-A": [
+        "wie"
+    ],
+    "VERHAAL": [
+        "verhaal"
+    ],
+    "MORGEN-A": [
+        "morgen"
+    ],
+    "PRACHTIG-A": [
+        "fantastisch, geweldig, ergens goed in zijn, prachtig, mooi, toppie, super, perfect"
+    ],
+    "VASTHOUDEN-K": [
+        "vasthouden"
+    ],
+    "RUIMTE-A": [
+        "gebied, omgeving, regio",
+        "maatschappij",
+        "algemeen",
+        "situatie, geval",
+        "groep mensen",
+        "milieu",
+        "wijk, buurt",
+        "kamer, ruimte",
+        "ergens, plaats",
+        "familie",
+        "tuin"
+    ],
+    "ZWEMMEN-A": [
+        "zwemmen, schoolslag"
+    ],
+    "ZWART-A": [
+        "zwart, Zorro"
+    ],
+    "NIET-C": [
+        "niet, geen",
+        "niets, niks,",
+        "nooit",
+        "zonder",
+        "niemand",
+        "nergens"
+    ],
+    "RENNEN-A": [
+        "hardlopen, lopen, rennen, joggen"
+    ],
+    "VIES-A": [
+        "vies, vuil"
+    ],
+    "KOE-D": [
+        "koe"
+    ],
+    "HOEFT-NIET-A": [
+        "geeft niet, niet erg, hoeft niet"
+    ],
+    "AANWEZIG-A": [
+        "aanwezig zijn, er is, er zijn, aanwezig, present, ter plaatse",
+        "bestaande, bestaan"
+    ],
+    "MEE": [
+        "mee eens, meedoen, meemaken, meenemen, meegemaakt, meevallen, mee"
+    ],
+    "VERKIEZINGEN": [
+        "verkiezingen, selecteren, kiezen"
+    ],
+    "STER-A": [
+        "ster"
+    ],
+    "VASTHOUDEN-A": [],
+    "TEEN": [
+        "teen"
+    ],
+    "SLAAN-B": [
+        "slaan, meppen, mep, tik, klap"
+    ],
+    "OVERNEMEN-A": [
+        "eigen maken, verwerven, nadoen, overnemen"
+    ],
+    "WEER": [
+        "het weer, lucht, weer"
+    ],
+    "KIJKEN-A": [
+        "kijken, observeren, gadeslaan, iets of iemand bestuderen, bekijken, toezien, toezicht, zien, beschouwen"
+    ],
+    "SOK-A": [
+        "sok, sok aandoen"
+    ],
+    "ALSTUBLIEFT-B": [
+        "alsjeblieft, verzoeken",
+        "smeken",
+        "Lieverdjes (Amsterdamse Dove Jongerenclub)"
+    ],
+    "GEWOON-A": [
+        "normaal, regulier, gewoonte, simpel, eenvoudig, gewoon, gebruikelijk, gewoonlijk",
+        "wennen"
+    ],
+    "VINDEN-B": [
+        "gevonden, vinden, vondst, ontdekking, ontdekken"
+    ],
+    "STOFZUIGEN": [
+        "stofzuigen"
+    ],
+    "KIJKEN-G": [
+        "kijken, kijk eens"
+    ],
+    "WATER-GEVEN": [
+        "water geven, gieten"
+    ],
+    "SPUITEN": [
+        "drugs, injecteren, injectie, prik, spuit, spuiten, vaccinatie, verdoven, verdoving, inspuiten"
+    ],
+    "nee-f": [
+        "nee, niet, niet mogelijk"
+    ],
+    "MOETEN-A": [
+        "moeten, verplicht, eis, bevel, zullen, gebieden"
+    ],
+    "SPROEIEN": [
+        "sproeien",
+        "tuinslang"
+    ],
+    "BLIJ-A": [
+        "vrolijk, gezellig, blij, plezier, prettig, fijn, plezant"
+    ],
+    "KIND-A": [
+        "kind, jongen, zoon, kleintje"
+    ],
+    "BUITEN-D": [
+        "buiten"
+    ],
+    "HART-BONST": [
+        "angst, angstig, bang, hart bonst, bonzend hart, kloppend hart, hart klopt"
+    ],
+    "VINGER-OPSTEKEN": [
+        "vinger opsteken"
+    ],
+    "STOEL": [
+        "stoel"
+    ],
+    "BIJ-E": [
+        "bij, honing"
+    ],
+    "TELHAND+5": [
+        "ten vijfde, punt vijf (in de lijst), telhand"
+    ],
+    "KAUWEN": [
+        "kauwen"
+    ],
+    "PROBLEEM-C": [
+        "probleem, problemen"
+    ]
+}

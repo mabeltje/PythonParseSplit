@@ -1,0 +1,1746 @@
+{
+    "nvt": [
+        "nvt"
+    ],
+    "ALWEER": [
+        "ALWEER-B"
+    ],
+    "VEEL": [
+        "VEEL-A"
+    ],
+    "POEP": [
+        "POEP-A",
+        "POEP-B"
+    ],
+    "PT-1hand": [
+        "PT-1hand"
+    ],
+    "STOEL": [
+        "STOEL"
+    ],
+    "ZITTEN": [
+        "ZITTEN-A"
+    ],
+    "LEKKER": [
+        "LEKKER-A"
+    ],
+    "BIJVOORBEELD": [
+        "BIJVOORBEELD-B"
+    ],
+    "ZORGEN": [
+        "ZORGEN-A"
+    ],
+    "WAT": [
+        "WAT-A"
+    ],
+    "PT+PO": [
+        "PT+PO"
+    ],
+    "STER": [
+        "STER-A"
+    ],
+    "DOKTER": [
+        "DOKTER-A"
+    ],
+    "UITZENDING": [
+        "UITZENDING"
+    ],
+    "HEBBEN": [
+        "HEBBEN-A"
+    ],
+    "VOOR": [
+        "VOOR-D",
+        "VOOR-F",
+        "VOOR-A"
+    ],
+    "PO": [
+        "PO"
+    ],
+    "GOED": [
+        "GOED-A"
+    ],
+    "KIJKEN": [
+        "KIJKEN-E",
+        "KIJKEN-F",
+        "KIJKEN-B",
+        "KIJKEN-G",
+        "KIJKEN-A"
+    ],
+    "KUNNEN": [
+        "KUNNEN-E",
+        "KUNNEN-A"
+    ],
+    "TEKENEN": [
+        "TEKENEN-A",
+        "TEKENEN-C"
+    ],
+    "TANTE": [
+        "TANTE-A"
+    ],
+    "WILLEN": [
+        "WILLEN-A"
+    ],
+    "BEGRIJPEN": [
+        "BEGRIJPEN"
+    ],
+    "WOEDEND": [
+        "WOEDEND"
+    ],
+    "SLAAN": [
+        "SLAAN-B"
+    ],
+    "NIET": [
+        "NIET-A",
+        "NIET-C"
+    ],
+    "ATTENTIE": [
+        "ATTENTIE"
+    ],
+    "VERHAAL": [
+        "VERHAAL"
+    ],
+    "OVER": [
+        "OVER-C",
+        "OVER-D"
+    ],
+    "VROEGER": [
+        "VROEGER-A"
+    ],
+    "VERTELLEN": [
+        "VERTELLEN"
+    ],
+    "TEENSLIPPER": [
+        "TEENSLIPPER-A"
+    ],
+    "SPELEN": [
+        "SPELEN-C"
+    ],
+    "TANDENPOETSEN": [
+        "TANDENPOETSEN-B",
+        "TANDENPOETSEN-A"
+    ],
+    "DAN": [
+        "DAN-A"
+    ],
+    "EVEN": [
+        "EVEN-B",
+        "EVEN-A"
+    ],
+    "BOEK": [
+        "BOEK"
+    ],
+    "GROOT-HORIZONTAAL": [
+        "GROOT-HORIZONTAAL-D",
+        "GROOT-HORIZONTAAL-C"
+    ],
+    "BOS": [
+        "BOS-B",
+        "BOS-A"
+    ],
+    "MOVE+5": [
+        "MOVE+5"
+    ],
+    "WIND": [
+        "WIND"
+    ],
+    "PT-arc": [
+        "PT-arc"
+    ],
+    "DING.PL": [
+        "DING.PL-A"
+    ],
+    "VAN": [
+        "VAN-B",
+        "VAN-A"
+    ],
+    "ZELF": [
+        "ZELF-A"
+    ],
+    "OPLETTEN": [
+        "OPLETTEN-A"
+    ],
+    "HAND-IN-LUCHT": [
+        "HAND-IN-LUCHT"
+    ],
+    "KIND": [
+        "KIND-A"
+    ],
+    "MEISJE": [
+        "MEISJE-B"
+    ],
+    "PO+PT": [
+        "PO+PT"
+    ],
+    "STEL": [
+        "STEL-A"
+    ],
+    "OVERGEVEN": [
+        "OVERGEVEN-B"
+    ],
+    "RONDSNUFFELEN": [
+        "RONDSNUFFELEN"
+    ],
+    "OVERSTROMING": [
+        "OVERSTROMING"
+    ],
+    "ERG": [
+        "ERG-F",
+        "ERG-A"
+    ],
+    "VANDAAG": [
+        "VANDAAG"
+    ],
+    "WEER": [
+        "WEER"
+    ],
+    "HOE": [
+        "HOE-B"
+    ],
+    "PT-1hand:1": [
+        "PT-1hand:1"
+    ],
+    "THUIS": [
+        "THUIS-A"
+    ],
+    "BLIJVEN": [
+        "BLIJVEN-B"
+    ],
+    "JA": [
+        "JA-A"
+    ],
+    "MOND": [
+        "MOND"
+    ],
+    "ALLES": [
+        "ALLES-B",
+        "ALLES-D",
+        "ALLES-A"
+    ],
+    "PAPA": [
+        "PAPA-A"
+    ],
+    "VINGER": [
+        "VINGER"
+    ],
+    "SOMS": [
+        "SOMS-A"
+    ],
+    "TWEEEN": [
+        "TWEEEN-A",
+        "TWEEEN-F",
+        "TWEEEN-C"
+    ],
+    "PERFECT": [
+        "PERFECT-A"
+    ],
+    "HAAR": [
+        "HAAR-B",
+        "HAAR-A"
+    ],
+    "1.ORD": [
+        "1.ORD-A"
+    ],
+    "GEHOORAPPARAAT": [
+        "GEHOORAPPARAAT-A",
+        "GEHOORAPPARAAT-E",
+        "GEHOORAPPARAAT-B"
+    ],
+    "BUITEN": [
+        "BUITEN-B",
+        "BUITEN-D",
+        "BUITEN-A"
+    ],
+    "SOK": [
+        "SOK-A"
+    ],
+    "ANDERS": [
+        "ANDERS-A"
+    ],
+    "WAAR": [
+        "WAAR-A"
+    ],
+    "GAAN-NAAR": [
+        "GAAN-NAAR-A"
+    ],
+    "ZWEMMEN": [
+        "ZWEMMEN-A"
+    ],
+    "CI": [
+        "CI-A"
+    ],
+    "CI-AFDOEN": [
+        "CI-AFDOEN-B"
+    ],
+    "KOFFIE": [
+        "KOFFIE-C"
+    ],
+    "KLEIN": [
+        "KLEIN-A"
+    ],
+    "EVEN-WACHTEN": [
+        "EVEN-WACHTEN-A"
+    ],
+    "TRAP": [
+        "TRAP-A",
+        "TRAP-B"
+    ],
+    "WAARVOOR": [
+        "WAARVOOR"
+    ],
+    "OM": [
+        "OM"
+    ],
+    "#T": [
+        "#T"
+    ],
+    "#V": [
+        "#V"
+    ],
+    "MEER": [
+        "MEER-A"
+    ],
+    "RUSTIG": [
+        "RUSTIG"
+    ],
+    "BEEN": [
+        "BEEN-C"
+    ],
+    "FIT": [
+        "FIT"
+    ],
+    "VOELEN": [
+        "VOELEN-B"
+    ],
+    "HEE": [
+        "HEE-A"
+    ],
+    "NU": [
+        "NU-B",
+        "NU-A"
+    ],
+    "BED": [
+        "BED-A"
+    ],
+    "TIJD": [
+        "TIJD-A"
+    ],
+    "OF": [
+        "OF-A"
+    ],
+    "STIL": [
+        "STIL-A"
+    ],
+    "PRATEN": [
+        "PRATEN-L",
+        "PRATEN-A"
+    ],
+    "JAS": [
+        "JAS-A"
+    ],
+    "COOL": [
+        "COOL-B"
+    ],
+    "NIEUW": [
+        "NIEUW-B",
+        "NIEUW-A"
+    ],
+    "MOVE+C": [
+        "MOVE+C"
+    ],
+    "AL": [
+        "AL-A"
+    ],
+    "MOGEN": [
+        "MOGEN-B",
+        "MOGEN-A"
+    ],
+    "WETEN": [
+        "WETEN-A"
+    ],
+    "OP": [
+        "OP-F",
+        "OP-A",
+        "OP-C"
+    ],
+    "OMA": [
+        "OMA-A"
+    ],
+    "OPA": [
+        "OPA"
+    ],
+    "OOK": [
+        "OOK-A"
+    ],
+    "JARIG": [
+        "JARIG-A"
+    ],
+    "GEVOEL": [
+        "GEVOEL-A"
+    ],
+    "JAAR": [
+        "JAAR-G",
+        "JAAR-B"
+    ],
+    "PIET": [
+        "PIET"
+    ],
+    "VAAK": [
+        "VAAK"
+    ],
+    "BINNEN": [
+        "BINNEN-A"
+    ],
+    "GEVOLG": [
+        "GEVOLG"
+    ],
+    "NIEMAND": [
+        "NIEMAND-B"
+    ],
+    "WAKKER": [
+        "WAKKER"
+    ],
+    "MAMA": [
+        "MAMA-B",
+        "MAMA-A"
+    ],
+    "ONTBIJT": [
+        "ONTBIJT-B"
+    ],
+    "MOVE+snavel": [
+        "MOVE+snavel"
+    ],
+    "WERKEN": [
+        "WERKEN-A"
+    ],
+    "MUZIEK": [
+        "MUZIEK-A"
+    ],
+    "LEREN": [
+        "LEREN-A"
+    ],
+    "GEK": [
+        "GEK-B"
+    ],
+    "DOEN": [
+        "DOEN-A"
+    ],
+    "KAPOT": [
+        "KAPOT"
+    ],
+    "SLAPEN": [
+        "SLAPEN-A",
+        "SLAPEN-C"
+    ],
+    "STRAKS": [
+        "STRAKS-A",
+        "STRAKS-C"
+    ],
+    "ROEPEN": [
+        "ROEPEN-A"
+    ],
+    "KOMEN": [
+        "KOMEN-B",
+        "KOMEN-A"
+    ],
+    "AANKLEDEN": [
+        "AANKLEDEN-B",
+        "AANKLEDEN-C"
+    ],
+    "ENE-KANT-ANDERE-KANT": [
+        "ENE-KANT-ANDERE-KANT-B"
+    ],
+    "NOG": [
+        "NOG-A",
+        "NOG-B"
+    ],
+    "UUR-LANG+1": [
+        "UUR-LANG+1"
+    ],
+    "DOOR": [
+        "DOOR-A"
+    ],
+    "HOP": [
+        "HOP"
+    ],
+    "APPLAUS": [
+        "APPLAUS-A"
+    ],
+    "OPSCHIETEN": [
+        "OPSCHIETEN-A"
+    ],
+    "WIJ": [
+        "WIJ-A"
+    ],
+    "VERTREKKEN": [
+        "VERTREKKEN"
+    ],
+    "10": [
+        "10-B"
+    ],
+    "MINUUT": [
+        "MINUUT"
+    ],
+    "OPRUIMEN": [
+        "OPRUIMEN"
+    ],
+    "WINKELEN": [
+        "WINKELEN-A"
+    ],
+    "LEVEN": [
+        "LEVEN-B"
+    ],
+    "TUIN": [
+        "TUIN-A"
+    ],
+    "BEDENKEN": [
+        "BEDENKEN"
+    ],
+    "KAART": [
+        "KAART-C"
+    ],
+    "KAARTEN": [
+        "KAARTEN-D"
+    ],
+    "MEE": [
+        "MEE"
+    ],
+    "HELPEN": [
+        "HELPEN-A"
+    ],
+    "DRIEEN": [
+        "DRIEEN-A"
+    ],
+    "ZIEN": [
+        "ZIEN-A"
+    ],
+    "TELEVISIE": [
+        "TELEVISIE-A"
+    ],
+    "IETS": [
+        "IETS-C",
+        "IETS-A",
+        "IETS-D"
+    ],
+    "LEUK": [
+        "LEUK-A"
+    ],
+    "KLAAR": [
+        "KLAAR-A",
+        "KLAAR-C"
+    ],
+    "HAND.PL": [
+        "HAND.PL"
+    ],
+    "HANDEN-WRIJVEN": [
+        "HANDEN-WRIJVEN-B"
+    ],
+    "LOGOPEDIE": [
+        "LOGOPEDIE-A"
+    ],
+    "BIBLIOTHEEK": [
+        "BIBLIOTHEEK-A"
+    ],
+    "AANWEZIG": [
+        "AANWEZIG-A"
+    ],
+    "GISTEREN": [
+        "GISTEREN"
+    ],
+    "1": [
+        "1-A"
+    ],
+    "TOT-NU": [
+        "TOT-NU-A"
+    ],
+    "PRIMA": [
+        "PRIMA-A"
+    ],
+    "PT-Bhand": [
+        "PT-Bhand"
+    ],
+    "ENG": [
+        "ENG"
+    ],
+    "TANDARTS": [
+        "TANDARTS-A"
+    ],
+    "LICHT-AAN": [
+        "LICHT-AAN"
+    ],
+    "PRETTIG": [
+        "PRETTIG-A"
+    ],
+    "RUIMTE": [
+        "RUIMTE-A"
+    ],
+    "PT:down": [
+        "PT:down"
+    ],
+    "ZAND": [
+        "ZAND-B"
+    ],
+    "PALEIS": [
+        "PALEIS-B"
+    ],
+    "BOUWEN": [
+        "BOUWEN"
+    ],
+    "VLAKBIJ": [
+        "VLAKBIJ-C",
+        "VLAKBIJ-A"
+    ],
+    "ARM": [
+        "ARM-B"
+    ],
+    "AANLEUNEN": [
+        "AANLEUNEN"
+    ],
+    "TOT": [
+        "TOT-B"
+    ],
+    "BAL": [
+        "BAL-A"
+    ],
+    "UUR-HALF": [
+        "UUR-HALF"
+    ],
+    "6": [
+        "6-A"
+    ],
+    "MAAR": [
+        "MAAR"
+    ],
+    "DORP": [
+        "DORP"
+    ],
+    "BIJ": [
+        "BIJ-A",
+        "BIJ-F",
+        "BIJ-E"
+    ],
+    "MOLEN": [
+        "MOLEN"
+    ],
+    "WONEN": [
+        "WONEN-A"
+    ],
+    "FAMILIE": [
+        "FAMILIE-B"
+    ],
+    "GELD": [
+        "GELD"
+    ],
+    "BEHOEFTIG": [
+        "BEHOEFTIG-A"
+    ],
+    "KLEIN-VERTICAAL": [
+        "KLEIN-VERTICAAL-A"
+    ],
+    "ZWART": [
+        "ZWART-A"
+    ],
+    "MORGEN": [
+        "MORGEN-A"
+    ],
+    "SPANNEND": [
+        "SPANNEND"
+    ],
+    "WEDSTRIJD": [
+        "WEDSTRIJD"
+    ],
+    "NEE": [
+        "NEE-C",
+        "NEE-B"
+    ],
+    "ACHTERDOCHTIG": [
+        "ACHTERDOCHTIG"
+    ],
+    "SCHOOL": [
+        "SCHOOL-A"
+    ],
+    "AFSPRAAK": [
+        "AFSPRAAK-A"
+    ],
+    "FILM": [
+        "FILM"
+    ],
+    "HELE": [
+        "HELE"
+    ],
+    "DAG": [
+        "DAG-A",
+        "DAG-B"
+    ],
+    "DICHTBIJ": [
+        "DICHTBIJ"
+    ],
+    "KLINKT": [
+        "KLINKT-A"
+    ],
+    "ZACHT": [
+        "ZACHT"
+    ],
+    "LUKKEN-NIET": [
+        "LUKKEN-NIET-A"
+    ],
+    "ROEPEN:1": [
+        "ROEPEN:1"
+    ],
+    "BROEK": [
+        "BROEK"
+    ],
+    "NETJES": [
+        "NETJES-A"
+    ],
+    "MOVE+Snavel": [
+        "MOVE+Snavel"
+    ],
+    "VADER": [
+        "VADER-C"
+    ],
+    "CADEAU": [
+        "CADEAU-A"
+    ],
+    "KOPEN": [
+        "KOPEN-A"
+    ],
+    "BADPAK": [
+        "BADPAK"
+    ],
+    "DROOG": [
+        "DROOG-A"
+    ],
+    "KLEREN": [
+        "KLEREN-B"
+    ],
+    "TRUI": [
+        "TRUI"
+    ],
+    "VERPLEEGSTER": [
+        "VERPLEEGSTER"
+    ],
+    "PERSOON": [
+        "PERSOON-A"
+    ],
+    "GORDIJN": [
+        "GORDIJN-B",
+        "GORDIJN-A"
+    ],
+    "LICHT": [
+        "LICHT-A",
+        "LICHT-B"
+    ],
+    "OBER": [
+        "OBER-B"
+    ],
+    "LOPEND-VOORTBEWEGEN": [
+        "LOPEND-VOORTBEWEGEN-C",
+        "LOPEND-VOORTBEWEGEN-A"
+    ],
+    "ETEN": [
+        "ETEN-A",
+        "ETEN-B"
+    ],
+    "GEVEN": [
+        "GEVEN-C"
+    ],
+    "PROBEREN": [
+        "PROBEREN-A"
+    ],
+    "VASTHOUDEN": [
+        "VASTHOUDEN-A",
+        "VASTHOUDEN-K"
+    ],
+    "LANG": [
+        "LANG-A"
+    ],
+    "GEBAREN": [
+        "GEBAREN-C",
+        "GEBAREN-A"
+    ],
+    "HAAK": [
+        "HAAK"
+    ],
+    "ZEGGEN": [
+        "ZEGGEN"
+    ],
+    "REKENING-HOUDEN-MET": [
+        "REKENING-HOUDEN-MET"
+    ],
+    "DRINKEN": [
+        "DRINKEN-A"
+    ],
+    "WACHTEN": [
+        "WACHTEN-A"
+    ],
+    "BEURT": [
+        "BEURT"
+    ],
+    "ALTIJD": [
+        "ALTIJD-A"
+    ],
+    "BEDOELEN": [
+        "BEDOELEN"
+    ],
+    "OH": [
+        "OH"
+    ],
+    "KOUD": [
+        "KOUD-A"
+    ],
+    "SCHOEN": [
+        "SCHOEN-A"
+    ],
+    "MOVE+B": [
+        "MOVE+B"
+    ],
+    "WC": [
+        "WC-A",
+        "WC-D"
+    ],
+    "INDRUKKEN": [
+        "INDRUKKEN-B"
+    ],
+    "GEWOON": [
+        "GEWOON-A"
+    ],
+    "SCHULD": [
+        "SCHULD"
+    ],
+    "GROEIEN": [
+        "GROEIEN-A",
+        "GROEIEN-B"
+    ],
+    "PLASSEN": [
+        "PLASSEN-B",
+        "PLASSEN-A"
+    ],
+    "LEGO": [
+        "LEGO"
+    ],
+    "DOOS": [
+        "DOOS-A"
+    ],
+    "IN": [
+        "IN-G"
+    ],
+    "GLANS": [
+        "GLANS"
+    ],
+    "PEN": [
+        "PEN"
+    ],
+    "HAND": [
+        "HAND"
+    ],
+    "PRACHTIG": [
+        "PRACHTIG-C",
+        "PRACHTIG-A"
+    ],
+    "LIEVER": [
+        "LIEVER-C"
+    ],
+    "KAPPER": [
+        "KAPPER"
+    ],
+    "GEBRUIKEN": [
+        "GEBRUIKEN-A"
+    ],
+    "KNIPPEN": [
+        "KNIPPEN-A"
+    ],
+    "GASFORNUIS": [
+        "GASFORNUIS"
+    ],
+    "HEET": [
+        "HEET-B"
+    ],
+    "PLANT": [
+        "PLANT-A"
+    ],
+    "ZETTEN-LEGGEN": [
+        "ZETTEN-LEGGEN-K"
+    ],
+    "LIGGEN": [
+        "LIGGEN-A"
+    ],
+    "LANGZAAM": [
+        "LANGZAAM-A"
+    ],
+    "DEUR": [
+        "DEUR-A"
+    ],
+    "DICHT": [
+        "DICHT-B"
+    ],
+    "VORK": [
+        "VORK-A"
+    ],
+    "MES": [
+        "MES"
+    ],
+    "LA": [
+        "LA"
+    ],
+    "KOPJE": [
+        "KOPJE-A"
+    ],
+    "BORD": [
+        "BORD-A"
+    ],
+    "KAST": [
+        "KAST"
+    ],
+    "SPIEGEL": [
+        "SPIEGEL"
+    ],
+    "OPHANGEN": [
+        "OPHANGEN-C"
+    ],
+    "SCHRIJVEN": [
+        "SCHRIJVEN-A"
+    ],
+    "DIER": [
+        "DIER"
+    ],
+    "STORM": [
+        "STORM"
+    ],
+    "HEMEL": [
+        "HEMEL"
+    ],
+    "DONKER": [
+        "DONKER-A"
+    ],
+    "TWIJFEL": [
+        "TWIJFEL-A"
+    ],
+    "REGEN": [
+        "REGEN-A"
+    ],
+    "ELLEBOOG": [
+        "ELLEBOOG-B"
+    ],
+    "WIMPERS": [
+        "WIMPERS"
+    ],
+    "TEEN": [
+        "TEEN"
+    ],
+    "LUKKEN": [
+        "LUKKEN"
+    ],
+    "TYPEN": [
+        "TYPEN"
+    ],
+    "ELKE": [
+        "ELKE-A"
+    ],
+    "LICHAAM": [
+        "LICHAAM-B"
+    ],
+    "TAFEL": [
+        "TAFEL"
+    ],
+    "BIJEENKOMEN": [
+        "BIJEENKOMEN"
+    ],
+    "PLEZIER": [
+        "PLEZIER-A"
+    ],
+    "EETBUIEN": [
+        "EETBUIEN"
+    ],
+    "SCHOONMAKEN": [
+        "SCHOONMAKEN"
+    ],
+    "PROEVEN": [
+        "PROEVEN-C"
+    ],
+    "ONDERZOEK": [
+        "ONDERZOEK-C"
+    ],
+    "PASTA": [
+        "PASTA-B"
+    ],
+    "WARM": [
+        "WARM-A"
+    ],
+    "HUISWERK": [
+        "HUISWERK"
+    ],
+    "BES": [
+        "BES"
+    ],
+    "NOOT": [
+        "NOOT-B"
+    ],
+    "MENING": [
+        "MENING-A"
+    ],
+    "TEMPERATUUR": [
+        "TEMPERATUUR"
+    ],
+    "HELPEN-A:1": [
+        "HELPEN-A:1"
+    ],
+    "2": [
+        "2-A"
+    ],
+    "3": [
+        "3-B"
+    ],
+    "SPUITEN": [
+        "SPUITEN"
+    ],
+    "GROOT-VERTICAAL": [
+        "GROOT-VERTICAAL-C",
+        "GROOT-VERTICAAL-F"
+    ],
+    "HOEVEEL": [
+        "HOEVEEL-A"
+    ],
+    "BELLEN": [
+        "BELLEN"
+    ],
+    "HALLO": [
+        "HALLO-A"
+    ],
+    "GELIJKWAARDIG": [
+        "GELIJKWAARDIG"
+    ],
+    "PANNENKOEK": [
+        "PANNENKOEK-B"
+    ],
+    "OLIE": [
+        "OLIE-B"
+    ],
+    "HAGELSLAG": [
+        "HAGELSLAG-A"
+    ],
+    "NAT": [
+        "NAT"
+    ],
+    "LAATSTE": [
+        "LAATSTE-A"
+    ],
+    "DOOIEN": [
+        "DOOIEN"
+    ],
+    "FOTO": [
+        "FOTO"
+    ],
+    "OPSTUREN": [
+        "OPSTUREN-B"
+    ],
+    "KNUTSELEN": [
+        "KNUTSELEN"
+    ],
+    "GROEP": [
+        "GROEP-A",
+        "GROEP-C"
+    ],
+    "BRUS": [
+        "BRUS-A"
+    ],
+    "ZOEN": [
+        "ZOEN-A",
+        "ZOEN-C"
+    ],
+    "TERUG": [
+        "TERUG-C"
+    ],
+    "HAND-OP-MOND": [
+        "HAND-OP-MOND-A"
+    ],
+    "MELK": [
+        "MELK"
+    ],
+    "BANAAN": [
+        "BANAAN-A"
+    ],
+    "PINDAKAAS": [
+        "PINDAKAAS-A"
+    ],
+    "HOOG": [
+        "HOOG"
+    ],
+    "KEER": [
+        "KEER"
+    ],
+    "STERK": [
+        "STERK"
+    ],
+    "BUIK": [
+        "BUIK-B"
+    ],
+    "TASTEN": [
+        "TASTEN-A"
+    ],
+    "LUISTEREN": [
+        "LUISTEREN-B",
+        "LUISTEREN"
+    ],
+    "LIEF": [
+        "LIEF-A"
+    ],
+    "AUTO": [
+        "AUTO"
+    ],
+    "HOP:1": [
+        "HOP:1"
+    ],
+    "LEPEL": [
+        "LEPEL"
+    ],
+    "REKENEN": [
+        "REKENEN-A"
+    ],
+    "YOGHURT": [
+        "YOGHURT-A"
+    ],
+    "WASSEN": [
+        "WASSEN-A"
+    ],
+    "STOUT": [
+        "STOUT-B"
+    ],
+    "KRIJGEN": [
+        "KRIJGEN-B"
+    ],
+    "PLEISTER": [
+        "PLEISTER-A",
+        "PLEISTER-C"
+    ],
+    "KIEZEN": [
+        "KIEZEN-B",
+        "KIEZEN-A"
+    ],
+    "MOOI": [
+        "MOOI-A"
+    ],
+    "KLEUR": [
+        "KLEUR-A",
+        "KLEUR-B"
+    ],
+    "SNEL": [
+        "SNEL-A"
+    ],
+    "WEG": [
+        "WEG-D",
+        "WEG-C"
+    ],
+    "OOR": [
+        "OOR-A"
+    ],
+    "BIJZONDER": [
+        "BIJZONDER"
+    ],
+    "OMDAT": [
+        "OMDAT-A"
+    ],
+    "WILLEN-NIET": [
+        "WILLEN-NIET"
+    ],
+    "LAWAAI": [
+        "LAWAAI-C",
+        "LAWAAI-A"
+    ],
+    "MOETEN": [
+        "MOETEN-A"
+    ],
+    "HOUDEN-VAN": [
+        "HOUDEN-VAN"
+    ],
+    "STICKER": [
+        "STICKER"
+    ],
+    "PAKKEN": [
+        "PAKKEN-A"
+    ],
+    "VENEZUELA": [
+        "VENEZUELA"
+    ],
+    "SAMEN": [
+        "SAMEN-A"
+    ],
+    "EI": [
+        "EI-B",
+        "EI-A"
+    ],
+    "ZOEKEN": [
+        "ZOEKEN-A"
+    ],
+    "VOORHOOFD": [
+        "VOORHOOFD"
+    ],
+    "GRAAG": [
+        "GRAAG-A"
+    ],
+    "WORDEN": [
+        "WORDEN"
+    ],
+    "SORRY": [
+        "SORRY-A"
+    ],
+    "SCHATTIG": [
+        "SCHATTIG-A"
+    ],
+    "DIE": [
+        "DIE"
+    ],
+    "NACHT": [
+        "NACHT-A"
+    ],
+    "BOM": [
+        "BOM-A"
+    ],
+    "VERSPREIDEN": [
+        "VERSPREIDEN-B",
+        "VERSPREIDEN-A"
+    ],
+    "KIND.PL": [
+        "KIND.PL"
+    ],
+    "GLIJBAAN": [
+        "GLIJBAAN"
+    ],
+    "WATER": [
+        "WATER-A",
+        "WATER-B"
+    ],
+    "GLAD": [
+        "GLAD"
+    ],
+    "MOSSEL": [
+        "MOSSEL-B"
+    ],
+    "TOT-NU-TOE": [
+        "TOT-NU-TOE-C"
+    ],
+    "VORIGE": [
+        "VORIGE"
+    ],
+    "BINNENKORT": [
+        "BINNENKORT-D"
+    ],
+    "MISSELIJK": [
+        "MISSELIJK"
+    ],
+    "TELHAND+5": [
+        "TELHAND+5"
+    ],
+    "RENNEN": [
+        "RENNEN-A"
+    ],
+    "PAS": [
+        "PAS-A"
+    ],
+    "VRAGEN": [
+        "VRAGEN-A"
+    ],
+    "VUURWERK": [
+        "VUURWERK"
+    ],
+    "KAPSEL": [
+        "KAPSEL"
+    ],
+    "KRULLEN": [
+        "KRULLEN"
+    ],
+    "PT+Bhand": [
+        "PT+Bhand"
+    ],
+    "HAND-OP-WANG": [
+        "HAND-OP-WANG"
+    ],
+    "SLIM": [
+        "SLIM-B"
+    ],
+    "IDEE": [
+        "IDEE"
+    ],
+    "VLINDER": [
+        "VLINDER-A"
+    ],
+    "BLOEM": [
+        "BLOEM-A"
+    ],
+    "ALLEMAAL": [
+        "ALLEMAAL-B",
+        "ALLEMAAL-C",
+        "ALLEMAAL-A"
+    ],
+    "ZON": [
+        "ZON-A"
+    ],
+    "ZONSONDERGANG": [
+        "ZONSONDERGANG"
+    ],
+    "VLEES": [
+        "VLEES-B"
+    ],
+    "LIEFDE": [
+        "LIEFDE"
+    ],
+    "VAN-TOT": [
+        "VAN-TOT-A"
+    ],
+    " nvt": [
+        " nvt"
+    ],
+    "LUIER": [
+        "LUIER-A"
+    ],
+    "PT:bodypart": [
+        "PT:bodypart"
+    ],
+    "ROMPERTJE": [
+        "ROMPERTJE"
+    ],
+    "BIKINI": [
+        "BIKINI"
+    ],
+    "IEDEREEN": [
+        "IEDEREEN-A"
+    ],
+    "PIJN": [
+        "PIJN-A"
+    ],
+    "GRIEP": [
+        "GRIEP"
+    ],
+    "GEBEUREN": [
+        "GEBEUREN-B",
+        "GEBEUREN-A"
+    ],
+    "DENKEN": [
+        "DENKEN"
+    ],
+    "WELKE": [
+        "WELKE-B"
+    ],
+    "WIE": [
+        "WIE-A"
+    ],
+    "KLEED": [
+        "KLEED"
+    ],
+    "WESP": [
+        "WESP"
+    ],
+    "VAKANTIE": [
+        "VAKANTIE"
+    ],
+    "KOFFER": [
+        "KOFFER-A"
+    ],
+    "GOOIEN": [
+        "GOOIEN-A"
+    ],
+    "APPEL": [
+        "APPEL"
+    ],
+    "ZEBRA": [
+        "ZEBRA"
+    ],
+    "DUIDELIJK": [
+        "DUIDELIJK-A"
+    ],
+    "CABRIOLET": [
+        "CABRIOLET"
+    ],
+    "ZIN-IN": [
+        "ZIN-IN-A"
+    ],
+    "RUPS": [
+        "RUPS-A"
+    ],
+    "KIJKEN-F:1": [
+        "KIJKEN-F:1"
+    ],
+    "VINGER-OPSTEKEN": [
+        "VINGER-OPSTEKEN"
+    ],
+    "PIRAAT": [
+        "PIRAAT"
+    ],
+    "MACHT": [
+        "MACHT"
+    ],
+    "BLADEREN": [
+        "BLADEREN"
+    ],
+    "AVONTUUR": [
+        "AVONTUUR-B"
+    ],
+    "KAMP": [
+        "KAMP-B"
+    ],
+    "KAMPEREN": [
+        "KAMPEREN"
+    ],
+    "ZEE": [
+        "ZEE"
+    ],
+    "MAAT-HORIZONTAAL": [
+        "MAAT-HORIZONTAAL-D"
+    ],
+    "VINDEN": [
+        "VINDEN-B"
+    ],
+    "AAP": [
+        "AAP-B"
+    ],
+    "MENS.PL": [
+        "MENS.PL"
+    ],
+    "HARD": [
+        "HARD-A"
+    ],
+    "GELUID": [
+        "GELUID"
+    ],
+    "PT-alt": [
+        "PT-alt"
+    ],
+    "SCHRIKKEN": [
+        "SCHRIKKEN-A",
+        "SCHRIKKEN-C"
+    ],
+    "VOGEL": [
+        "VOGEL-A"
+    ],
+    "FLUITEN": [
+        "FLUITEN-C"
+    ],
+    "STOFZUIGEN": [
+        "STOFZUIGEN"
+    ],
+    "PAPEGAAI": [
+        "PAPEGAAI-B"
+    ],
+    "OVERNEMEN": [
+        "OVERNEMEN-A"
+    ],
+    "STEIGER": [
+        "STEIGER"
+    ],
+    "MIER": [
+        "MIER-A"
+    ],
+    "KROKODIL": [
+        "KROKODIL-A"
+    ],
+    "MOVE+T": [
+        "MOVE+T"
+    ],
+    "WALVIS": [
+        "WALVIS"
+    ],
+    "VOGELKOOI": [
+        "VOGELKOOI-A"
+    ],
+    "ALSTUBLIEFT": [
+        "ALSTUBLIEFT-B"
+    ],
+    "SPROEIEN": [
+        "SPROEIEN"
+    ],
+    "ZEIL": [
+        "ZEIL-B"
+    ],
+    "WATER-GEVEN": [
+        "WATER-GEVEN"
+    ],
+    "TAART": [
+        "TAART-A"
+    ],
+    "TOUW": [
+        "TOUW-A"
+    ],
+    "HUIS": [
+        "HUIS-A"
+    ],
+    "STRIP": [
+        "STRIP-A"
+    ],
+    "VERZAMELEN": [
+        "VERZAMELEN-B"
+    ],
+    "GROENTE": [
+        "GROENTE-B"
+    ],
+    "KAR": [
+        "KAR"
+    ],
+    "MOVE+V": [
+        "MOVE+V"
+    ],
+    "AFSLUITEN": [
+        "AFSLUITEN"
+    ],
+    "GRAPPIG": [
+        "GRAPPIG-A"
+    ],
+    "LEZEN": [
+        "LEZEN-A",
+        "LEZEN-B"
+    ],
+    "SCHREEUWEN": [
+        "SCHREEUWEN-E"
+    ],
+    "ADEMEN": [
+        "ADEMEN-C"
+    ],
+    "TROTS": [
+        "TROTS-A"
+    ],
+    "FOUT": [
+        "FOUT-A"
+    ],
+    "VIES": [
+        "VIES-B",
+        "VIES-A"
+    ],
+    "INPAKKEN": [
+        "INPAKKEN-B"
+    ],
+    "EXTRA": [
+        "EXTRA-A"
+    ],
+    "KNUFFELEN": [
+        "KNUFFELEN"
+    ],
+    "ECHT": [
+        "ECHT-A"
+    ],
+    "MOVE+C_spreid": [
+        "MOVE+C_spreid"
+    ],
+    "HART-BONST": [
+        "HART-BONST"
+    ],
+    "PIZZA": [
+        "PIZZA-A"
+    ],
+    "COMBINATIE": [
+        "COMBINATIE"
+    ],
+    "SCHILDEREN": [
+        "SCHILDEREN-B"
+    ],
+    "HALEN": [
+        "HALEN-A"
+    ],
+    "BOTER": [
+        "BOTER-B"
+    ],
+    "MAART": [
+        "MAART-A"
+    ],
+    "AANDACHT": [
+        "AANDACHT-A"
+    ],
+    "VLOEIBAAR": [
+        "VLOEIBAAR"
+    ],
+    "OPLOSSEN": [
+        "OPLOSSEN-A"
+    ],
+    "PROBLEEM": [
+        "PROBLEEM-C"
+    ],
+    "VRIEND": [
+        "VRIEND-A"
+    ],
+    "SAMENWERKEN": [
+        "SAMENWERKEN-A"
+    ],
+    "AANRAKEN": [
+        "AANRAKEN-A"
+    ],
+    "VERKIEZINGEN": [
+        "VERKIEZINGEN"
+    ],
+    "MERKEN": [
+        "MERKEN-A"
+    ],
+    "VERBETEREN": [
+        "VERBETEREN"
+    ],
+    "VRIENDELIJK": [
+        "VRIENDELIJK"
+    ],
+    "VERFIJNEN": [
+        "VERFIJNEN"
+    ],
+    "TANDPASTA": [
+        "TANDPASTA-B"
+    ],
+    "LIP": [
+        "LIP"
+    ],
+    "TONG": [
+        "TONG"
+    ],
+    "LOLLY": [
+        "LOLLY-B"
+    ],
+    "BEUGEL": [
+        "BEUGEL"
+    ],
+    "SCHOON": [
+        "SCHOON"
+    ],
+    "GA-MAAR": [
+        "GA-MAAR-A"
+    ],
+    "BLIJ": [
+        "BLIJ-A"
+    ],
+    "HOND": [
+        "HOND-A"
+    ],
+    "OPNIEUW": [
+        "OPNIEUW-A"
+    ],
+    "HONGER": [
+        "HONGER-B"
+    ],
+    "ONTMOETEN": [
+        "ONTMOETEN-E"
+    ],
+    "MEEVALLEN": [
+        "MEEVALLEN"
+    ],
+    "TOCH": [
+        "TOCH-A"
+    ],
+    "LACHEN": [
+        "LACHEN-A"
+    ],
+    "ONDERWIJS": [
+        "ONDERWIJS-A"
+    ],
+    "GYMNASTIEK": [
+        "GYMNASTIEK-B"
+    ],
+    "KASTEEL": [
+        "KASTEEL"
+    ],
+    "TAS": [
+        "TAS"
+    ],
+    "ZWAAR": [
+        "ZWAAR-A"
+    ],
+    "KOE": [
+        "KOE-D"
+    ],
+    "GRAZEN": [
+        "GRAZEN-B"
+    ],
+    "LAAT-MAAR": [
+        "LAAT-MAAR-A"
+    ],
+    "LUISTEREN-NIET": [
+        "LUISTEREN-NIET-A"
+    ],
+    "VAATWASSER": [
+        "VAATWASSER"
+    ],
+    "KAUWEN": [
+        "KAUWEN"
+    ],
+    "HAAS": [
+        "HAAS-C"
+    ],
+    "MOVE+B_krom": [
+        "MOVE+B_krom"
+    ],
+    "KLAP": [
+        "KLAP"
+    ],
+    "MOL": [
+        "MOL"
+    ],
+    "ONDER": [
+        "ONDER"
+    ],
+    "DOUCHEN": [
+        "DOUCHEN"
+    ],
+    "MOEILIJK": [
+        "MOEILIJK-C"
+    ],
+    "TREIN": [
+        "TREIN"
+    ],
+    "MOVE+Snavel_open": [
+        "MOVE+Snavel_open"
+    ],
+    "FIETSEN": [
+        "FIETSEN-A"
+    ],
+    "VOETSTAPPEN": [
+        "VOETSTAPPEN"
+    ],
+    "Pt-1hand": [
+        "Pt-1hand"
+    ],
+    "KASTANJE": [
+        "KASTANJE"
+    ],
+    "OEFENEN": [
+        "OEFENEN-A"
+    ],
+    "VAARDIG": [
+        "VAARDIG"
+    ],
+    "WEGSCHIETEN": [
+        "WEGSCHIETEN"
+    ],
+    "GAAN": [
+        "GAAN"
+    ],
+    "ZO": [
+        "ZO-A"
+    ],
+    "ONDERBROEK": [
+        "ONDERBROEK"
+    ],
+    "FIXEN": [
+        "FIXEN"
+    ],
+    "VERGETEN": [
+        "VERGETEN-A"
+    ],
+    "nee": [
+        "nee-f"
+    ],
+    "POT": [
+        "POT-A"
+    ],
+    "GLAS": [
+        "GLAS-B"
+    ],
+    "BOOS": [
+        "BOOS-D"
+    ],
+    "NAAST": [
+        "NAAST"
+    ],
+    "EMOTIE": [
+        "EMOTIE-B"
+    ],
+    "HOEFT-NIET": [
+        "HOEFT-NIET-A"
+    ],
+    "VERANTWOORDELIJK": [
+        "VERANTWOORDELIJK-A"
+    ],
+    "AARDBEI": [
+        "AARDBEI"
+    ]
+}

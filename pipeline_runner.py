@@ -136,9 +136,9 @@ def run_pipeline(generate_substitutions: bool = False, run_ue: bool = True):
         output_dir=unreal_ready_dir
     )
 
-    # print(f"\nStep 4: Executing headless Unreal processing...")
-    # if run_ue:
-    #     run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir)
+    print(f"\nStep 4: Executing headless Unreal processing...")
+    if run_ue:
+        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir)
 
    
 if __name__ == "__main__":
