@@ -11,6 +11,11 @@ def log_header(text: str):
 def main():
     job_dir = os.environ.get("UE_JOBS_DIR")
     output_dir = os.environ.get("UE_OUTPUT_DIR")
+    trimmed_fbx_dir = os.path.join(job_dir, "trimmed_fbx_cache")
+
+    if not trimmed_fbx_dir or not os.path.exists(trimmed_fbx_dir):
+        unreal.log_error(f"[Headless Pipeline] Invalid trimmed FBX cache directory: {trimmed_fbx_dir}")
+        sys.exit(1)
 
     if not job_dir or not os.path.exists(job_dir):
         unreal.log_error(f"[Headless Pipeline] Invalid jobs directory: {job_dir}")
@@ -49,7 +54,7 @@ def main():
 
             original_animation_path = os.path.join(job_dir, original_animation, fbx_file[0])
             original_animation_srt_path = os.path.join(job_dir, original_animation, srt_file[0])
-            donor_animation_path = os.path.join(job_dir, original_animation, f"{label}_TRIMMED.fbx")
+            donor_animation_path = os.path.join(trimmed_fbx_dir, f"{label}_TRIMMED.fbx")
             out_animation_path = os.path.join(output_dir, original_animation)
 
             result = unreal.BlendingAutomationBFL.process_animation_substitution(

@@ -11,6 +11,7 @@ import json
 import requests
 from pathlib import Path
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Add project root (PythonParseSplit) to Python search path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -45,38 +46,50 @@ def fetch_gloss_variants_mapping(filename: str | Path) -> Path:
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(base_variants_map, f, ensure_ascii=False, indent=4)
 
+    print(f"Successfully saved base variants mapping to '{filepath}'")
+
     return filepath
 
-def fetch_and_save_glosses(filename: str | Path) -> Path:
+def fetch_and_save_glosses(filename: str | Path, max_workers: int = 10) -> Path:
     filepath = Path(filename).resolve()
     filepath.parent.mkdir(parents=True, exist_ok=True)
 
     params = {"action": "glosses", "mcpStatusTijdAnnotatie": "Klaar"}
-
-    # Make the GET request
     response = requests.get(API_URL, params=params)
-    response.raise_for_status()  # Check for network/HTTP errors
+    response.raise_for_status()
 
     data = response.json()
-
-    # The API returns HTTP 200 even on error, so check the "success" key
     if isinstance(data, dict) and not data.get("success", True):
         raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
 
     bases = data.get("bases", {})
-    bases_variants = []
-
-    for base_name, base_info in bases.items():
-        bases_variants.extend(base_info.get("variants", []))
+    
+    # Extract unique variant names
+    unique_variants = set()
+    for base_info in bases.values():
+        variants = base_info.get("variants", {})
+        if isinstance(variants, dict):
+            for v in variants.keys():
+                clean_v = str(v).strip()
+                if clean_v and clean_v.lower() != "nvt":
+                    unique_variants.add(clean_v)
 
     variants_with_senses = {}
 
-    for base in bases_variants:
-            # Fetch senses for each gloss (where base is a string variant name)
-            senses = get_senses(base)
-            variants_with_senses[base] = senses
+    def _fetch_sense(variant):
+        try:
+            return variant, get_senses(variant)
+        except Exception as e:
+            print(f"Warning: Failed to fetch senses for {variant}: {e}")
+            return variant, []
 
-    # Save to JSON file with clean formatting and UTF-8 encoding
+    # Fetch senses in parallel across threads
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(_fetch_sense, v) for v in unique_variants]
+        for future in as_completed(futures):
+            variant, senses = future.result()
+            variants_with_senses[variant] = senses
+
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(variants_with_senses, f, ensure_ascii=False, indent=4)
 

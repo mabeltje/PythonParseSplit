@@ -31,6 +31,11 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, output_d
 
     base_out_dir = Path(output_dir).resolve()
 
+    # Make a directory for trimmed FBX file in the output directory
+    trimmed_fbx_dir = base_out_dir / "trimmed_fbx_cache"
+    trimmed_fbx_dir.mkdir(parents=True, exist_ok=True)
+    trimmed_fbx_dir = trimmed_fbx_dir.resolve()
+
     if not json_path.is_file():
         raise FileNotFoundError(f"Substitutions file not found: {json_path}")
  
@@ -85,10 +90,13 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, output_d
             end_time = item.get("end")
             fbx_path = item.get("fbx_path")
 
-            out_path = anim_folder / f"{gloss}_TRIMMED.fbx"
+            out_path = trimmed_fbx_dir / f"{gloss}_TRIMMED.fbx"
 
-            # TODO: Consider adding a check to see if the trimmed file already exists to avoid redundant processing
-            success, error = trim_fbx_file(fbx_path, start_time, end_time, str(out_path))
+            if f"{gloss}_TRIMMED.fbx" in os.listdir(trimmed_fbx_dir):
+                print(f"Trimmed FBX for gloss '{gloss}' already exists. Skipping trimming.")
+                continue
+
+            success, error = trim_fbx_file(str(fbx_path), start_time, end_time, str(out_path))
             
             if not success:
                 print(f"Error trimming FBX for gloss '{gloss}': {error}")
@@ -98,7 +106,6 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, output_d
             # Clean up un-trimmed source file
             if fbx_path and os.path.exists(fbx_path):
                 os.remove(fbx_path)
-                # print(f"Deleted original FBX file: {fbx_path}")
 
         print(f"Finished preprocessing base: {original_animation}\n")
 
