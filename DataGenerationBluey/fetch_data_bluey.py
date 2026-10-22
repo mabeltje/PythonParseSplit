@@ -170,7 +170,7 @@ def fetch_and_save_sentences(filename: str | Path, page: int = 1, limit: int = 2
             "original_glosses": [g.get("gloss") for g in sentence.get("glosses", [])],
             "original_zin": sentence.get("zin", ""),
             # "nederlands_zin": nederlandse_zin_cleaned,
-            "gvg_zin": gvg_zin_cleaned,
+            # "gvg_zin": gvg_zin_cleaned,
             "substitutions": []
         }
         output_data.append(formatted_item)

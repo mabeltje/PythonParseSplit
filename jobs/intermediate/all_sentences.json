@@ -1,52 +1,56 @@
 [
     {
         "original_animation": "M20260223_4835",
-        "glosses": [
+        "original_glosses": [
             "PT-1hand",
             "MUZIEK-A",
             "LEREN-A",
             "PT-1hand"
         ],
-        "zin": "Heb je een versje geleerd?",
+        "original_zin": "Heb je een versje geleerd?",
+        "gvg_zin": "jij versje leren jij",
         "substitutions": []
     },
     {
         "original_animation": "M20260223_4827",
-        "glosses": [
+        "original_glosses": [
             "PT-1hand",
             "PT-1hand",
             "WERKEN-A",
             "nvt"
         ],
-        "zin": "Heb je dat voor mij gemaakt?",
+        "original_zin": "Heb je dat voor mij gemaakt?",
+        "gvg_zin": "jij dat maken voor mij",
         "substitutions": []
     },
     {
         "original_animation": "M20260223_4821",
-        "glosses": [
+        "original_glosses": [
             "NIET-A",
             "GEK-B",
             "DING.PL-A",
             "DOEN-A",
             "PT-1hand"
         ],
-        "zin": "Geen gekke dingen doen.",
+        "original_zin": "Geen gekke dingen doen.",
+        "gvg_zin": "geen gek dingen doen jij",
         "substitutions": []
     },
     {
         "original_animation": "M20260223_4820",
-        "glosses": [
+        "original_glosses": [
             "DING.PL-A",
             "KAPOT",
             "WERKEN-A",
             "NIET-A"
         ],
-        "zin": "Geen spullen kapot maken.",
+        "original_zin": "Geen spullen kapot maken.",
+        "gvg_zin": "spullen kapotmaken niet",
         "substitutions": []
     },
     {
         "original_animation": "M20260223_4816",
-        "glosses": [
+        "original_glosses": [
             "PT-1hand",
             "SLAPEN-A",
             "PT-1hand",
@@ -56,12 +60,13 @@
             "ROEPEN-A",
             "KOMEN-B"
         ],
-        "zin": "Ik kom je zo uit bed halen.",
+        "original_zin": "Ik kom je zo uit bed halen.",
+        "gvg_zin": "jij bed jij zo ik (ik jou) roepen kom jij",
         "substitutions": []
     },
     {
         "original_animation": "M20260223_4814",
-        "glosses": [
+        "original_glosses": [
             "PT-1hand",
             "AANKLEDEN-B",
             "OF-A",
@@ -72,12 +77,13 @@
             "WAT-A",
             "PO+PT"
         ],
-        "zin": "Wil je eerst aankleden of eerst ontbijten?",
+        "original_zin": "Wil je eerst aankleden of eerst ontbijten?",
+        "gvg_zin": "jij aankleden of ontbijten dit of dat eerst willen wat (algemeen vraaggebaar)",
         "substitutions": []
     },
     {
         "original_animation": "M20260223_4813",
-        "glosses": [
+        "original_glosses": [
             "PT-1hand",
             "NOG-A",
             "UUR-LANG+1",
@@ -85,12 +91,13 @@
             "SLAPEN-C",
             "nvt"
         ],
-        "zin": "Ga nog maar een uurtje slapen.",
+        "original_zin": "Ga nog maar een uurtje slapen.",
+        "gvg_zin": "jij nog Ã©Ã©n uur lang door slapen ga maar",
         "substitutions": []
     },
     {
         "original_animation": "M20260223_4807",
-        "glosses": [
+        "original_glosses": [
             "MAMA-B",
             "HOP",
             "HAAR-B",
@@ -99,21 +106,23 @@
             "AL-A",
             "PO"
         ],
-        "zin": "Mama wast je haren snel, dan ben je zo klaar.",
+        "original_zin": "Mama wast je haren snel, dan ben je zo klaar.",
+        "gvg_zin": "mama OP (grammaticaal element) haar (jouw haar) wassen dan klaar",
         "substitutions": []
     },
     {
         "original_animation": "M20260223_4804",
-        "glosses": [
+        "original_glosses": [
             "APPLAUS-A",
             "OPSCHIETEN-A"
         ],
-        "zin": "Hup, hup, hup, even snel.",
+        "original_zin": "Hup, hup, hup, even snel.",
+        "gvg_zin": "hup hup hup opschieten",
         "substitutions": []
     },
     {
         "original_animation": "M20260127_2379",
-        "glosses": [
+        "original_glosses": [
             "NU-B",
             "nvt",
             "AANKLEDEN-B",
@@ -123,7 +132,8 @@
             "VERTREKKEN",
             "KUNNEN-E"
         ],
-        "zin": "We gaan nu aankleden, dan kunnen we op tijd vertrekken.",
+        "original_zin": "We gaan nu aankleden, dan kunnen we op tijd vertrekken.",
+        "gvg_zin": "nu wij (jij en ik) aankleden dan wij (jij en ik) op tijd vertrekken kunnen",
         "substitutions": []
     }
 ]
