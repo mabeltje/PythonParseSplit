@@ -121,10 +121,56 @@ def fetch_and_save_sentences(filename: str | Path, page: int = 1, limit: int = 2
     sentences = data.get("sentences", [])
 
     for sentence in sentences:
+        nederlandse_zin = sentence.get("nederlandsSrt", "")
+        if not nederlandse_zin:
+            print(f"Warning: Sentence ID {sentence.get('id')} has no 'nederlandsSrt'. Skipping.")
+            continue
+
+        # open the link nederlandse zin
+        response = requests.get(nederlandse_zin)
+        if response.status_code != 200:
+            print(f"Warning: Failed to fetch SRT for sentence ID {sentence.get('id')}. Skipping.")
+            continue
+
+        srt_content = response.text
+        lines = srt_content.splitlines()
+        clean_lines = []
+
+        for line in lines:
+            line = line.strip()
+            # Sla lege regels, getallen (regelnummers) en tijdstempels (bevat ->) over
+            if not line or line.isdigit() or "-->" in line:
+                continue
+            clean_lines.append(line)
+
+        nederlandse_zin_cleaned = " ".join(clean_lines)
+        # TODO: add this to other function
+
+        gvg_response = requests.get(sentence.get("gvgSrt", ""))
+        if gvg_response.status_code != 200:
+            print(f"Warning: Failed to fetch GVG SRT for sentence ID {sentence.get('id')}. Skipping.")
+            continue
+
+        gvg_srt_content = gvg_response.text
+        gvg_lines = gvg_srt_content.splitlines()
+
+        gvg_clean_lines = []
+        for line in gvg_lines:
+            line = line.strip()
+            # Sla lege regels, getallen (regelnummers) en tijdstempels (bevat ->) over
+            if not line or line.isdigit() or "-->" in line:
+                continue
+            gvg_clean_lines.append(line)
+
+        gvg_zin_cleaned = " ".join(gvg_clean_lines)
+        # TODO: how to match this with glosses? 
+
         formatted_item = {
             "original_animation": sentence.get("base", ""),
-            "glosses": [g.get("gloss") for g in sentence.get("glosses", [])],
-            "zin": sentence.get("zin", ""),
+            "original_glosses": [g.get("gloss") for g in sentence.get("glosses", [])],
+            "original_zin": sentence.get("zin", ""),
+            # "nederlands_zin": nederlandse_zin_cleaned,
+            "gvg_zin": gvg_zin_cleaned,
             "substitutions": []
         }
         output_data.append(formatted_item)
