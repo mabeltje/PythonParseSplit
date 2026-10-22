@@ -16,6 +16,10 @@ with open(CONFIG_PATH, "r", encoding="utf-8") as f:
 
 
 def query_llm(messages):
+    """
+    Queries the LLM API with a list of messages and returns the response.
+    Returns the content of the LLM's response or None if an error occurred.
+    """
     url = CONFIG["api_url"]
     headers = CONFIG.get("headers", {"Content-Type": "application/json"})
     

@@ -2,6 +2,7 @@
 import sys
 import argparse
 import os
+from pathlib import PurePath
 
 # Tell Python to search the fbx_sdk subfolder for modules
 SDK_PATH = os.path.join(os.path.dirname(__file__), 'fbx_sdk')
@@ -15,17 +16,10 @@ from fbx import FbxAnimStack, FbxAnimLayer, FbxTime, FbxTimeSpan, FbxDocumentInf
 Trim a single FBX animation to a specific start and end timestamp window,
 normalize the resulting keyframes to start at t = 0.0s, snap to frame boundaries,
 and embed trim metadata.
-
-Usage:
-  python trim_fbx.py \
-    --fbx animation.fbx \
-    --start 00:00:01,718 \
-    --end 00:00:03,842 \
-    --note "Trimmed sign segment" \
-    --out trimmed_animation.fbx
 """
 
 def load_scene(path):
+    """Loads an FBX scene from the specified path."""
     manager, scene = FbxCommon.InitializeSdkObjects()
     if not FbxCommon.LoadScene(manager, scene, path):
         print(f"Failed to load {path}")
@@ -34,6 +28,7 @@ def load_scene(path):
 
 
 def save_scene(manager, scene, out_path):
+    """Saves the FBX scene to the specified output path."""
     exporter = FbxCommon.FbxExporter.Create(manager, "")
     ios = manager.GetIOSettings()
     exporter.Initialize(out_path, -1, ios)
@@ -65,6 +60,7 @@ def snap_to_frame_boundary(time_sec, fps=24.0):
 
 
 def trim_and_shift_scene(scene, start_sec, end_sec):
+    """Trims the FBX scene to the specified time window and shifts keyframes to start at t=0.0s."""
     start_time = FbxTime(); start_time.SetSecondDouble(start_sec)
     end_time = FbxTime();   end_time.SetSecondDouble(end_sec)
 
@@ -139,6 +135,7 @@ def trim_and_shift_scene(scene, start_sec, end_sec):
         return False, str(e)
 
 def embed_metadata(manager, scene, start_sec, end_sec, note=None):
+    """Embeds metadata about the trim operation into the FBX scene."""
     doc_info = FbxDocumentInfo.Create(manager, "TrimMetadata")
     doc_info.mTitle = "Trimmed Animation Segment"
     doc_info.mSubject = f"Original Window: {start_sec:.3f}s - {end_sec:.3f}s"
@@ -155,6 +152,7 @@ def get_scene_fps(scene, default_fps=30.0):
     return float(fps) if fps > 0 else default_fps
 
 def trim_fbx_file(fbx_path, start_time, end_time, out_path, note=None):
+    """Trims an FBX file to the specified start and end timestamps, zero-aligns the animation, snaps to frame boundaries, and embeds metadata."""
     try:
         raw_start = parse_timestamp(start_time)
         raw_end = parse_timestamp(end_time)
@@ -176,6 +174,10 @@ def trim_fbx_file(fbx_path, start_time, end_time, out_path, note=None):
             manager.Destroy()
             return False, error
 
+        # Embed metadata of the original animation
+        original_filename = PurePath(fbx_path).parent.name
+        note = f"(Original file: {original_filename})"
+
         embed_metadata(manager, scene, start_sec, end_sec, note)
         
         save_scene(manager, scene, out_path)
@@ -196,6 +198,17 @@ def main():
     p.add_argument('--out',   required=True, help='Output FBX path')
     args = p.parse_args()
 
+    """
+    Main function to parse command-line arguments and call the trimming function.
+    Usage:
+
+    python trim_fbx.py \
+        --fbx animation.fbx \
+        --start 00:00:01,718 \
+        --end 00:00:03,842 \
+        --note "Trimmed sign segment" \
+        --out trimmed_animation.fbx
+    """
     trim_fbx_file(
         fbx_path=args.fbx,
         start_time=args.start,

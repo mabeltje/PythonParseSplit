@@ -3,18 +3,19 @@ import json
 from pathlib import Path
 import sys
 
+"""
+This module handles parsing the substitutions JSON, downloading the base animations and glosses, 
+trimming the FBX files, and organizing the deliverables into the specified output directory.
+"""
+
 # Ensure project root (PythonParseSplit) is in sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
 
 # Handle both direct execution (py parse_split.py) and package imports
-try:
-    from trim_fbx import trim_fbx_file
-    from call_api import download_single_gloss, download_batch
-except ModuleNotFoundError:
-    from DataFetch.trim_fbx import trim_fbx_file
-    from DataFetch.call_api import download_single_gloss, download_batch
+from DataFetch.trim_fbx import trim_fbx_file
+from DataFetch.call_api import download_single_gloss, download_batch
 
 MODULE_DIR = Path(__file__).resolve().parent
 
@@ -77,25 +78,21 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, output_d
                 print(f"Gloss '{gloss}' not found in variants mapping. Skipping.")
                 continue
 
-            # get all the occurances of the base_gloss in the sentence and pick the one that matches the gloss
-            item = download_single_gloss(gloss, base_gloss, output_dir=str(anim_folder))
-
-            if not item:
-                print(f"Failed to download gloss '{gloss}'")
-                continue
-
-            # go through the occurances and pick the one that matches the gloss
-
-            start_time = item.get("start")
-            end_time = item.get("end")
-            fbx_path = item.get("fbx_path")
-
+            # Check if the trimmed FBX already exists to avoid redundant processing
             out_path = trimmed_fbx_dir / f"{gloss}_TRIMMED.fbx"
-
             if f"{gloss}_TRIMMED.fbx" in os.listdir(trimmed_fbx_dir):
                 print(f"Trimmed FBX for gloss '{gloss}' already exists. Skipping trimming.")
                 continue
 
+            item = download_single_gloss(gloss, base_gloss, output_dir=str(anim_folder))
+        
+            if not item:
+                print(f"Failed to download gloss '{gloss}'")
+                continue
+
+            start_time = item.get("start")
+            end_time = item.get("end")
+            fbx_path = item.get("fbx_path")
             success, error = trim_fbx_file(str(fbx_path), start_time, end_time, str(out_path))
             
             if not success:
@@ -121,8 +118,10 @@ if __name__ == "__main__":
     # Standalone test fallback pointing relative to project root
     project_root = MODULE_DIR.parent
     default_unreal_ready = project_root / "jobs" / "unreal_ready"
+    default_unreal_inter = project_root / "jobs" / "intermediate"
 
     run_parse_split(
         substitutions_file=default_unreal_ready / "substitutions_output.json",
+        glosses_variants_map=default_unreal_inter / "base_variants_map.json",
         output_dir=default_unreal_ready
     )
