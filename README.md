@@ -14,7 +14,7 @@ The overall flow is documented in [Dataflow.md](Dataflow.md).
 - Access to `https://signcollect.nl/blendBaking/api.php`
 - An LLM endpoint configured in `DataGenerationBluey/bluey.json` when generating substitutions
 
-The repository contains the helper `DataFetch/fbx_sdk/FbxCommon.py`, but it does not contain the FBX SDK's native Python bindings. Install those separately and make sure they are importable by `DataFetch/trim_fbx.py`.
+The repository contains the helper `DataFetch/fbx_sdk/FbxCommon.py`. Install [FBX Python SDK downloads]([url](https://aps.autodesk.com/developer/overview/fbx-sdk)) for Python version 3.11.
 
 Install the Python dependency with:
 
@@ -53,6 +53,7 @@ The default fetch currently requests page 3 with a limit of 2. Change the `page`
 ## Run the Full Pipeline
 
 From the repository root:
+Run with Python version 3.11 (in a venv) for the FBX SDK animation trimming to work.
 
 ```powershell
 python pipeline_runner.py --skip-unreal
