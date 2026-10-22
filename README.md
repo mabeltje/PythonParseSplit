@@ -22,7 +22,7 @@ Install the Python dependency with:
 python -m pip install requests
 ```
 
-With importing of the FBX files, there is a bug in the Interchange pipeline that withholds the FBX import from happening with the old FBX importer. To work around this, disable the Interchange plugins in the Unreal project settings.
+With importing of the FBX files into Unreal Engine, there is a bug in the Interchange pipeline that withholds the FBX import from happening with the old FBX importer. The function used to import the FBX file is written for the old importer. To work around this, disable the Interchange plugins in the Unreal project settings.
 
 ## Project Layout
 
@@ -32,7 +32,6 @@ DataGenerationBluey/               Fetch source data and generate substitutions
 DataFetch/                         Download, trim, and organize FBX jobs
 jobs/intermediate/                 Generated gloss and sentence JSON files
 jobs/unreal_ready/                 Jobs prepared for Unreal processing
-Animations/                        Manually downloaded animation assets
 ue_process_jobs.py                 Unreal Python batch-processing script
 Dataflow.md                        Pipeline diagram
 ```
