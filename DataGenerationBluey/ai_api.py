@@ -19,7 +19,8 @@ client = OpenAI(
 response = client.chat.completions.create(
     model="claude-sonnet-4.5",
     messages=[
-        {"role": "user", "content": "Hello, world!"}
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Explain what you know about the grammar of Dutch Sign Language (NGT) in a concise manner."}
     ]
 )
 
