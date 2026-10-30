@@ -79,7 +79,9 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
         print("\n[Unreal] Unreal process finished successfully!")
 
 
-def run_pipeline(generate_substitutions: bool = True, run_ue: bool = True):
+
+
+def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, run_ue: bool = True, split_fbx: bool = True):
     """
     Runs the data fetching and saving pipeline to get all the data ready for Unreal.
     :param generate_substitutions: If True, will generate substitutions from the fetched data.
@@ -106,22 +108,26 @@ def run_pipeline(generate_substitutions: bool = True, run_ue: bool = True):
     rules_json = os.path.join(base_dir, "DataGenerationBluey", "rules.json")
     glosses_variants_output_path = os.path.join(inter_dir, "base_variants_map.json")
 
-    # print(f"Step 1: Fetching glosses and sentences from the API...")
-    # run_fetch(
-    #     glosses_output=glosses_output_path,
-    #     glosses_variants_output=glosses_variants_output_path,
-    #     sentences_output=sentences_output_path,
-    #     page=5,
-    #     limit=10
-    # )
+    if fetch_data:
+        print(f"Step 1: Fetching glosses and sentences from the API...")
+        run_fetch(
+            glosses_output=glosses_output_path,
+            glosses_variants_output=glosses_variants_output_path,
+            sentences_output=sentences_output_path,
+            page=5,
+            limit=10
+        )
+    else:
+        if not os.path.exists(glosses_output_path) or not os.path.exists(sentences_output_path):
+            raise FileNotFoundError(f"Intermediate files not found. Run with --skip-fetching to skip fetching, but ensure that '{glosses_output_path}' and '{sentences_output_path}' exist.")
+        print(f"Using existing intermediate files: '{glosses_output_path}' and '{sentences_output_path}'")
 
-    print(f"\nStep 2: Generating substitutions from fetched data...")
     if generate_substitutions:
+        print(f"\nStep 2: Generating substitutions from fetched data...")
         generate_sentence_substitutions(
             glosses_file=glosses_output_path,
             sentences_file=sentences_output_path,
             output_file=substitutions_output_path,
-            rules_file=rules_json
         )
     else:
         if not os.path.exists(substitutions_output_path):
@@ -129,24 +135,39 @@ def run_pipeline(generate_substitutions: bool = True, run_ue: bool = True):
                                     f"Run with --generate-substitutions to create it.")
         print(f"Using existing substitutions file: {substitutions_output_path}")
 
-    # print(f"\nStep 3: Parsing substitutions and splitting FBX files for Unreal...")
-    # run_parse_split(
-    #     substitutions_file=substitutions_output_path,
-    #     glosses_variants_map=glosses_variants_output_path,
-    #     output_dir=unreal_ready_dir
-    # )
+    if split_fbx:
+        print(f"\nStep 3: Parsing substitutions and splitting FBX files for Unreal...")
+        run_parse_split(
+            substitutions_file=substitutions_output_path,
+            glosses_variants_map=glosses_variants_output_path,
+            output_dir=unreal_ready_dir
+        )
+    else:
+        print(f"Skipping parsing and splitting of FBX files.")
 
-    # print(f"\nStep 4: Executing headless Unreal processing...")
-    # if run_ue:
-    #     run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir)
+    if run_ue:
+        print(f"\nStep 4: Executing headless Unreal processing...")
+        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir)
+    else:
+        print(f"Skipping Unreal headless execution.")
 
    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run the full data fetching and processing pipeline.")
     parser.add_argument(
-        "--generate-substitutions",
+        "--skip-fetching",
         action="store_true",
-        help="Generate substitutions from fetched data. If not set, will reuse existing substitutions_output.json if available."
+        help="Skip fetching data from the API. Use existing intermediate files if available."
+    )
+    parser.add_argument(
+        "--skip-substitutions",
+        action="store_true",
+        help="Skip generating substitutions from fetched data. If not set, will reuse existing substitutions_output.json if available."
+    )
+    parser.add_argument(
+        "--skip-splitting",
+        action="store_true",
+        help="Skip parsing substitutions and splitting FBX files for Unreal. Use existing unreal_ready files if available."
     )
     parser.add_argument(
         "--skip-unreal",
@@ -154,4 +175,9 @@ if __name__ == "__main__":
         help="Skip executing Unreal headless step."
     )
     args = parser.parse_args()
-    run_pipeline(generate_substitutions=args.generate_substitutions, run_ue=not args.skip_unreal)
+    run_pipeline(
+        fetch_data=not args.skip_fetching,
+        generate_substitutions=not args.skip_substitutions,
+        run_ue=not args.skip_unreal,
+        split_fbx=not args.skip_splitting
+    )

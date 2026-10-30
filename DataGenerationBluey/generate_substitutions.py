@@ -24,7 +24,6 @@ def generate_sentence_substitutions(
     glosses_file: str | Path,
     sentences_file: str | Path,
     output_file: str | Path,
-    rules_file: str | Path = None
 ) -> Path:
 
     glosses_path = Path(glosses_file).resolve()
