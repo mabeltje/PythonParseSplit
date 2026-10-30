@@ -1,52 +1,463 @@
 [
   {
-    "original_animation": "M20260227_5965",
+    "original_animation": "M20260223_4835",
+    "nederlands_zin": "Je hebt een versje geleerd.",
     "original_glosses": [
-      "DOKTER-A",
       "PT-1hand",
-      "UITZENDING",
-      "HEBBEN-A",
-      "VOOR-D",
-      "PO",
-      "GOED-A",
-      "KIJKEN-E",
-      "KUNNEN-E"
+      "MUZIEK-A",
+      "LEREN-A",
+      "PT-1hand"
     ],
-    "original_zin": "De dokter heeft een lampje om goed te kijken.",
+    "gvg_zin": [
+      "jij",
+      "versje",
+      "leren",
+      "jij"
+    ],
     "substitutions": [
       {
-        "index": 0,
-        "label": "VERPLEEGSTER",
-        "zin": "De verpleegster heeft een lampje om goed te kijken."
+        "index": 1,
+        "label": "VERHAAL",
+        "zin": "Je hebt een verhaal geleerd."
       },
       {
-        "index": 6,
-        "label": "PERFECT-A",
-        "zin": "De dokter heeft een lampje om perfect te kijken."
+        "index": 2,
+        "label": "OEFENEN-A",
+        "zin": "Je hebt een versje geoefend."
+      },
+      {
+        "index": 1,
+        "label": "STRIP-A",
+        "zin": "Je hebt een strip geleerd."
+      },
+      {
+        "index": 2,
+        "label": "BEGRIJPEN",
+        "zin": "Je hebt een versje begrepen."
+      },
+      {
+        "index": 1,
+        "label": "BOEK",
+        "zin": "Je hebt een boek geleerd."
       }
     ]
   },
   {
-    "original_animation": "M20260227_5953",
+    "original_animation": "M20260223_4827",
+    "nederlands_zin": "Heb je dat voor mij gemaakt?",
     "original_glosses": [
       "PT-1hand",
-      "TEKENEN-A",
-      "VOOR-F",
-      "TANTE-A",
-      "WILLEN-A",
-      "PT-1hand"
+      "PT-1hand",
+      "WERKEN-A",
+      "nvt"
     ],
-    "original_zin": "Wil je een tekening maken voor je tante?",
+    "gvg_zin": [
+      "jij",
+      "dat",
+      "maken",
+      "voor mij"
+    ],
     "substitutions": [
       {
+        "index": 2,
+        "label": "TEKENEN-A",
+        "zin": "Heb je dat voor mij getekend?"
+      },
+      {
+        "index": 2,
+        "label": "BOUWEN",
+        "zin": "Heb je dat voor mij gebouwd?"
+      },
+      {
+        "index": 2,
+        "label": "KNUTSELEN",
+        "zin": "Heb je dat voor mij geknutseld?"
+      },
+      {
+        "index": 2,
+        "label": "SCHILDEREN-B",
+        "zin": "Heb je dat voor mij geschilderd?"
+      },
+      {
+        "index": 2,
+        "label": "FIXEN",
+        "zin": "Heb je dat voor mij gefikst?"
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260223_4821",
+    "nederlands_zin": "Geen gekke dingen doen.",
+    "original_glosses": [
+      "NIET-A",
+      "GEK-B",
+      "DING.PL-A",
+      "DOEN-A",
+      "PT-1hand"
+    ],
+    "gvg_zin": [
+      "geen",
+      "gek",
+      "dingen",
+      "doen",
+      "jij"
+    ],
+    "substitutions": [
+      {
+        "index": 1,
+        "label": "STOUT-B",
+        "zin": "Geen stoute dingen doen."
+      },
+      {
+        "index": 1,
+        "label": "RAAR",
+        "zin": "Geen rare dingen doen."
+      },
+      {
+        "index": 1,
+        "label": "FOUT-A",
+        "zin": "Geen foute dingen doen."
+      },
+      {
+        "index": 1,
+        "label": "GEVAARLIJK",
+        "zin": "Geen gevaarlijke dingen doen."
+      },
+      {
         "index": 3,
-        "label": "OMA-A",
-        "zin": "Wil je een tekening maken voor je oma?"
+        "label": "PROBEREN-A",
+        "zin": "Geen gekke dingen proberen."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260223_4820",
+    "nederlands_zin": "Geen spullen kapotmaken.",
+    "original_glosses": [
+      "DING.PL-A",
+      "KAPOT",
+      "WERKEN-A",
+      "NIET-A"
+    ],
+    "gvg_zin": [
+      "spullen",
+      "kapotmaken",
+      "niet"
+    ],
+    "substitutions": [
+      {
+        "index": 0,
+        "label": "BES",
+        "zin": "Geen dingen kapotmaken."
+      },
+      {
+        "index": 1,
+        "label": "BREKEN",
+        "zin": "Geen spullen breken."
+      },
+      {
+        "index": 0,
+        "label": "IETS-D",
+        "zin": "Niets kapotmaken."
+      },
+      {
+        "index": 1,
+        "label": "BESCHADIGEN",
+        "zin": "Geen spullen beschadigen."
+      },
+      {
+        "index": 2,
+        "label": "DOEN-A",
+        "zin": "Geen spullen kapot doen."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260223_4816",
+    "nederlands_zin": "Ik kom je zo uit bed halen.",
+    "original_glosses": [
+      "PT-1hand",
+      "SLAPEN-A",
+      "PT-1hand",
+      "PT-1hand:1",
+      "STRAKS-A",
+      "PT-1hand:1",
+      "ROEPEN-A",
+      "KOMEN-B"
+    ],
+    "gvg_zin": [
+      "jij",
+      "bed",
+      "jij",
+      "zo",
+      "ik",
+      "(ik jou) roepen",
+      "kom",
+      "jij"
+    ],
+    "substitutions": [
+      {
+        "index": 1,
+        "label": "BED-A",
+        "zin": "Ik kom je zo uit bed halen."
       },
       {
         "index": 4,
-        "label": "MOETEN-A",
-        "zin": "Moet je een tekening maken voor je tante?"
+        "label": "BINNENKORT-D",
+        "zin": "Ik kom je binnenkort uit bed halen."
+      },
+      {
+        "index": 6,
+        "label": "HALEN-A",
+        "zin": "Ik kom je zo uit bed halen."
+      },
+      {
+        "index": 4,
+        "label": "STRAKS-C",
+        "zin": "Ik kom je straks uit bed halen."
+      },
+      {
+        "index": 7,
+        "label": "KOMEN-A",
+        "zin": "Ik kom je zo uit bed halen."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260223_4814",
+    "nederlands_zin": "Wil je eerst aankleden of eerst ontbijten?",
+    "original_glosses": [
+      "PT-1hand",
+      "AANKLEDEN-B",
+      "OF-A",
+      "ONTBIJT-B",
+      "ENE-KANT-ANDERE-KANT-B",
+      "1.ORD-A",
+      "WILLEN-A",
+      "WAT-A",
+      "PO+PT"
+    ],
+    "gvg_zin": [
+      "jij",
+      "aankleden",
+      "of",
+      "ontbijten",
+      "dit of dat",
+      "eerst",
+      "willen",
+      "wat",
+      "(algemeen vraaggebaar)"
+    ],
+    "substitutions": [
+      {
+        "index": 1,
+        "label": "AANKLEDEN-C",
+        "zin": "Wil je eerst je broek aantrekken of eerst ontbijten?"
+      },
+      {
+        "index": 3,
+        "label": "ETEN-A",
+        "zin": "Wil je eerst aankleden of eerst eten?"
+      },
+      {
+        "index": 1,
+        "label": "KLEREN-B",
+        "zin": "Wil je eerst kleren aandoen of eerst ontbijten?"
+      },
+      {
+        "index": 3,
+        "label": "DRINKEN-A",
+        "zin": "Wil je eerst aankleden of eerst drinken?"
+      },
+      {
+        "index": 6,
+        "label": "GRAAG-A",
+        "zin": "Wil je eerst aankleden of eerst ontbijten graag?"
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260223_4813",
+    "nederlands_zin": "Ga nog maar een uurtje doorslapen.",
+    "original_glosses": [
+      "PT-1hand",
+      "NOG-A",
+      "UUR-LANG+1",
+      "DOOR-A",
+      "SLAPEN-C",
+      "nvt"
+    ],
+    "gvg_zin": [
+      "jij",
+      "nog",
+      "één uur lang",
+      "door",
+      "slapen",
+      "ga maar"
+    ],
+    "substitutions": [
+      {
+        "index": 1,
+        "label": "NOG-B",
+        "zin": "Ga nog maar een uurtje doorslapen."
+      },
+      {
+        "index": 2,
+        "label": "MINUUT",
+        "zin": "Ga nog maar een minuutje doorslapen."
+      },
+      {
+        "index": 4,
+        "label": "SLAPEN-A",
+        "zin": "Ga nog maar een uurtje doorslapen."
+      },
+      {
+        "index": 3,
+        "label": "BLIJVEN-B",
+        "zin": "Ga nog maar een uurtje blijven slapen."
+      },
+      {
+        "index": 2,
+        "label": "EVEN-A",
+        "zin": "Ga nog maar even doorslapen."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260223_4807",
+    "nederlands_zin": "Mama wast je haren, daarna ben je klaar.",
+    "original_glosses": [
+      "MAMA-B",
+      "HOP",
+      "HAAR-B",
+      "nvt",
+      "DAN-A",
+      "AL-A",
+      "PO"
+    ],
+    "gvg_zin": [
+      "mama",
+      "OP (grammaticaal element)",
+      "haar",
+      "(jouw haar) wassen",
+      "dan",
+      "klaar"
+    ],
+    "substitutions": [
+      {
+        "index": 0,
+        "label": "MAMA-A",
+        "zin": "Mama wast je haren, daarna ben je klaar."
+      },
+      {
+        "index": 0,
+        "label": "PAPA-A",
+        "zin": "Papa wast je haren, daarna ben je klaar."
+      },
+      {
+        "index": 2,
+        "label": "HAAR-A",
+        "zin": "Mama wast je haren, daarna ben je klaar."
+      },
+      {
+        "index": 4,
+        "label": "VAN-TOT-A",
+        "zin": "Mama wast je haren, daarna ben je klaar."
+      },
+      {
+        "index": 5,
+        "label": "KLAAR-A",
+        "zin": "Mama wast je haren, daarna ben je klaar."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260223_4804",
+    "nederlands_zin": "Hup, hup, hup, opschieten.",
+    "original_glosses": [
+      "APPLAUS-A",
+      "OPSCHIETEN-A"
+    ],
+    "gvg_zin": [
+      "hup hup hup",
+      "opschieten"
+    ],
+    "substitutions": [
+      {
+        "index": 1,
+        "label": "SNEL-A",
+        "zin": "Hup, hup, hup, snel."
+      },
+      {
+        "index": 1,
+        "label": "GA-MAAR-A",
+        "zin": "Hup, hup, hup, ga maar."
+      },
+      {
+        "index": 0,
+        "label": "HEE-A",
+        "zin": "Hee, opschieten."
+      },
+      {
+        "index": 1,
+        "label": "RENNEN-A",
+        "zin": "Hup, hup, hup, rennen."
+      },
+      {
+        "index": 1,
+        "label": "GAAN",
+        "zin": "Hup, hup, hup, gaan."
+      }
+    ]
+  },
+  {
+    "original_animation": "M20260127_2379",
+    "nederlands_zin": "We gaan nu aankleden, dan kunnen we op tijd vertrekken.",
+    "original_glosses": [
+      "NU-B",
+      "nvt",
+      "AANKLEDEN-B",
+      "DAN-A",
+      "WIJ-A",
+      "TIJD-A",
+      "VERTREKKEN",
+      "KUNNEN-E"
+    ],
+    "gvg_zin": [
+      "nu",
+      "wij (jij en ik)",
+      "aankleden",
+      "dan",
+      "wij (jij en ik)",
+      "op tijd",
+      "vertrekken",
+      "kunnen"
+    ],
+    "substitutions": [
+      {
+        "index": 0,
+        "label": "NU-A",
+        "zin": "We gaan nu aankleden, dan kunnen we op tijd vertrekken."
+      },
+      {
+        "index": 2,
+        "label": "KLEREN-B",
+        "zin": "We gaan nu kleren aandoen, dan kunnen we op tijd vertrekken."
+      },
+      {
+        "index": 6,
+        "label": "GAAN",
+        "zin": "We gaan nu aankleden, dan kunnen we op tijd gaan."
+      },
+      {
+        "index": 2,
+        "label": "AANKLEDEN-C",
+        "zin": "We gaan nu onze broek aantrekken, dan kunnen we op tijd vertrekken."
+      },
+      {
+        "index": 7,
+        "label": "KUNNEN-A",
+        "zin": "We gaan nu aankleden, dan kunnen we op tijd vertrekken."
       }
     ]
   }

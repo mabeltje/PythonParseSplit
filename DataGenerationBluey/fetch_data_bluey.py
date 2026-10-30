@@ -55,6 +55,7 @@ def fetch_and_save_glosses(filename: str | Path, max_workers: int = 10) -> Path:
     filepath.parent.mkdir(parents=True, exist_ok=True)
 
     params = {"action": "glosses", "mcpStatusTijdAnnotatie": "Klaar"}
+    # params = {"action": "categories"}
     response = requests.get(API_URL, params=params)
     response.raise_for_status()
 
@@ -92,6 +93,7 @@ def fetch_and_save_glosses(filename: str | Path, max_workers: int = 10) -> Path:
 
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(variants_with_senses, f, ensure_ascii=False, indent=4)
+        # json.dump(data, f, ensure_ascii=False, indent=4)
 
     print(f"Successfully saved glosses to '{filepath}'")
     return filepath

@@ -4,7 +4,7 @@ import subprocess
 
 # Import modular steps
 from DataGenerationBluey.fetch_data_bluey import run_fetch
-from DataGenerationBluey.generate_substitutions import run_generate
+from DataGenerationBluey.generate_substitutions import generate_sentence_substitutions
 from DataFetch.parse_split import run_parse_split
 
 UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
@@ -79,7 +79,7 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
         print("\n[Unreal] Unreal process finished successfully!")
 
 
-def run_pipeline(generate_substitutions: bool = False, run_ue: bool = True):
+def run_pipeline(generate_substitutions: bool = True, run_ue: bool = True):
     """
     Runs the data fetching and saving pipeline to get all the data ready for Unreal.
     :param generate_substitutions: If True, will generate substitutions from the fetched data.
@@ -115,30 +115,30 @@ def run_pipeline(generate_substitutions: bool = False, run_ue: bool = True):
     #     limit=10
     # )
 
-    # print(f"\nStep 2: Generating substitutions from fetched data...")
-    # if generate_substitutions:
-    #     run_generate(
-    #         glosses_file=glosses_output_path,
-    #         sentences_file=sentences_output_path,
-    #         output_file=substitutions_output_path,
-    #         rules_file=rules_json
-    #     )
-    # else:
-    #     if not os.path.exists(substitutions_output_path):
-    #         raise FileNotFoundError(f"Substitutions file not found: {substitutions_output_path}. "
-    #                                 f"Run with --generate-substitutions to create it.")
-    #     print(f"Using existing substitutions file: {substitutions_output_path}")
+    print(f"\nStep 2: Generating substitutions from fetched data...")
+    if generate_substitutions:
+        generate_sentence_substitutions(
+            glosses_file=glosses_output_path,
+            sentences_file=sentences_output_path,
+            output_file=substitutions_output_path,
+            rules_file=rules_json
+        )
+    else:
+        if not os.path.exists(substitutions_output_path):
+            raise FileNotFoundError(f"Substitutions file not found: {substitutions_output_path}. "
+                                    f"Run with --generate-substitutions to create it.")
+        print(f"Using existing substitutions file: {substitutions_output_path}")
 
-    print(f"\nStep 3: Parsing substitutions and splitting FBX files for Unreal...")
-    run_parse_split(
-        substitutions_file=substitutions_output_path,
-        glosses_variants_map=glosses_variants_output_path,
-        output_dir=unreal_ready_dir
-    )
+    # print(f"\nStep 3: Parsing substitutions and splitting FBX files for Unreal...")
+    # run_parse_split(
+    #     substitutions_file=substitutions_output_path,
+    #     glosses_variants_map=glosses_variants_output_path,
+    #     output_dir=unreal_ready_dir
+    # )
 
-    print(f"\nStep 4: Executing headless Unreal processing...")
-    if run_ue:
-        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir)
+    # print(f"\nStep 4: Executing headless Unreal processing...")
+    # if run_ue:
+    #     run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir)
 
    
 if __name__ == "__main__":

@@ -7,33 +7,34 @@ query_llm(messages) takes a list of messages in the format:
 import json
 import os
 import requests
+from dotenv import load_dotenv
+from openai import OpenAI, APIError
 
-# Load the configuration from bluey.json
-CONFIG_PATH = os.path.join(os.path.dirname(__file__), "bluey.json")
+# Load environment variables from .env file
+load_dotenv()
 
-with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-    CONFIG = json.load(f)
+# Initialize OpenAI client pointed at UvA Proxy endpoint
+client = OpenAI(
+    base_url="https://llmproxy.uva.nl/v1",
+    api_key=os.getenv("UVA_LLM_KEY")
+)
 
-
-def query_llm(messages):
+def query_llm(messages: list[dict], model: str = "claude-sonnet-4.5") -> str | None:
     """
-    Queries the LLM API with a list of messages and returns the response.
-    Returns the content of the LLM's response or None if an error occurred.
+    Queries the LLM proxy with a list of messages and returns the text response.
     """
-    url = CONFIG["api_url"]
-    headers = CONFIG.get("headers", {"Content-Type": "application/json"})
-    
-    # Merge base config data (like model) with the prompt messages
-    payload = CONFIG.get("data", {}).copy()
-    payload["messages"] = messages
-
     try:
-        response = requests.post(url, headers=headers, json=payload)
-        response.raise_for_status()
-        data = response.json()
-        return data["choices"][0]["message"]["content"]
-    except requests.exceptions.RequestException as e:
-        print(f"Error querying LLM: {e}")
-        if response is not None:
-            print(f"Server error details: {response.text}")
+        response = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=0.2
+        )
+        return response.choices[0].message.content
+        
+    except APIError as e:
+        print(f"LLM API Error ({e.status_code}): {e.message}")
         return None
+    except Exception as e:
+        print(f"Unexpected error querying LLM: {e}")
+        return None
+    

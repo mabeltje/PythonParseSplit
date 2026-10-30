@@ -34,6 +34,7 @@ all_sentences.json: This file contains a strict JSON array containing elements t
     original_animation: The id of the animation file, do NOT change this. You do not need to do anything with this.
     original_glosses: This is the label for the sign that is used in the animation. This is NOT the meaning. Use the all_glosses.json file to look up possible meanings.
     nederlands_zin: This is the Dutch meaning of the whole sign animation.
+    gvg_zin: This is the direct sign-by-sign Dutch meaning in this sentence.
     substitutions: This is the spot where the generated substitutions go.    
 
 
