@@ -84,8 +84,11 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
 def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, run_ue: bool = True, split_fbx: bool = True):
     """
     Runs the data fetching and saving pipeline to get all the data ready for Unreal.
-    :param generate_substitutions: If True, will generate substitutions from the fetched data.
-    If False, reuses existing substitutions_output.json if available.
+    Parameters:
+        fetch_data (bool): Whether to fetch data from the API. If False, will use existing intermediate files.
+        generate_substitutions (bool): Whether to generate substitutions from fetched data. If False, will use existing substitutions_output.json if available.
+        run_ue (bool): Whether to execute the Unreal headless step. If False, will skip Unreal processing.
+        split_fbx (bool): Whether to parse substitutions and split FBX files for Unreal.
     """
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -104,9 +107,9 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
 
     glosses_output_path = os.path.join(inter_dir, "all_glosses.json")
     sentences_output_path = os.path.join(inter_dir, "all_sentences.json")
-    substitutions_output_path = os.path.join(unreal_ready_dir, "substitutions_output.json")
-    rules_json = os.path.join(base_dir, "DataGenerationBluey", "rules.json")
+    job_tracker_path = os.path.join(inter_dir, "job_tracker.json")
     glosses_variants_output_path = os.path.join(inter_dir, "base_variants_map.json")
+    substitutions_output_path = os.path.join(unreal_ready_dir, "substitutions_output.json")
 
     if fetch_data:
         print(f"Step 1: Fetching glosses and sentences from the API...")
@@ -114,6 +117,7 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
             glosses_output=glosses_output_path,
             glosses_variants_output=glosses_variants_output_path,
             sentences_output=sentences_output_path,
+            job_tracker_output=job_tracker_path,
             page=5,
             limit=10
         )

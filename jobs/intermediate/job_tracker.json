@@ -1,0 +1,29 @@
+{
+  "M20260227_5965": {
+    "status": {
+      "stage": "SUBSTITUTED",
+      "fetch_complete": true,
+      "llm_complete": true,
+      "parse_split_complete": false,
+      "unreal_complete": false,
+      "error": null
+    },
+    "input": {
+      "nederlands_zin": "De dokter heeft een lampje om goed te kunnen kijken..",
+      "original_glosses": ["DOKTER-A", "PT-1hand", "UITZENDING", "HEBBEN-A", "VOOR-D", "PO", "GOED-A", "KIJKEN-E", "KUNNEN-E"],
+      "gvg_zin": ["dokter", "IX", "lamp", "hebben", "doel", "(algemeen vraaggebaar)", "goed", "kijken", "kunnen"]
+    },
+    "substitutions": [
+      {
+        "index": 0,
+        "label": "VERPLEEGSTER",
+        "zin": "De verpleegster heeft een lampje om goed te kijken."
+      },
+      {
+        "index": 6,
+        "label": "PERFECT-A",
+        "zin": "De dokter heeft een lampje om perfect te kijken."
+      }
+    ]
+  }
+}

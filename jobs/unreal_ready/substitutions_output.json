@@ -110,8 +110,8 @@
       },
       {
         "index": 1,
-        "label": "RAAR-A",
-        "zin": "Geen rare dingen doen."
+        "label": "FOUT-A",
+        "zin": "Geen foute dingen doen."
       }
     ]
   },
@@ -142,13 +142,13 @@
       },
       {
         "index": 0,
-        "label": "SPEELGOED",
-        "zin": "Geen speelgoed kapotmaken."
+        "label": "LEGO",
+        "zin": "Geen lego kapotmaken."
       },
       {
         "index": 0,
-        "label": "PLANT-A",
-        "zin": "Geen planten kapotmaken."
+        "label": "CADEAU-A",
+        "zin": "Geen cadeaus kapotmaken."
       }
     ]
   }

@@ -183,7 +183,7 @@ def fetch_and_save_sentences(filename: str | Path, page: int = 1, limit: int = 2
     print(f"Successfully saved sentences to '{filepath}'")
     return filepath
 
-def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_variants_output: str | Path, page: int = 1, limit: int = 200):
+def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_variants_output: str | Path, job_tracker_output: str | Path, page: int = 1, limit: int = 200):
     """Unified entry function to call directly from pipeline_runner.py"""
     glosses_path = fetch_and_save_glosses(glosses_output)
     glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
