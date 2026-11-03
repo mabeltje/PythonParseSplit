@@ -60,6 +60,17 @@ def main():
             result = unreal.BlendingAutomationBFL.process_animation_substitution(
                 level_sequence, original_animation_path, original_animation_srt_path, donor_animation_path, label, out_animation_path, index)
 
+            if not result:
+                unreal.log_error(f"[Headless Pipeline] Failed to process substitution '{label}' for animation '{original_animation}'")
+
+            # Create the srt file for the donor animation in the output directory
+            donor_srt_path = os.path.join(job_dir, original_animation, f"{label}.srt")
+            unreal.log(f"[Headless Pipeline] Exporting SRT for donor animation '{label}' to '{donor_srt_path}'")
+            if os.path.exists(donor_srt_path):
+                srt_result = unreal.UBlendingAutomationBFL.ExportMarkersToSrt(level_sequence, donor_srt_path)
+                if not srt_result:
+                    unreal.log_error(f"[Headless Pipeline] Failed to export SRT for donor animation '{label}'")
+
     unreal.log("[Headless Pipeline] Unreal batch task complete. Exiting...")
     sys.exit(0)
 

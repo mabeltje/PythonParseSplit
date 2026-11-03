@@ -111,9 +111,12 @@ def fetch_and_save_glosses(filename: str | Path, max_workers: int = 15) -> Path:
     return filepath
 
 
-def fetch_and_save_sentences(filename: str | Path, page: int = 1, limit: int = 200) -> Path:
+
+def fetch_and_save_sentences(filename: str | Path, limit: int) -> Path:
     filepath = Path(filename).resolve()
     filepath.parent.mkdir(parents=True, exist_ok=True)
+
+    # Find the first limit of sentences in the job tracker.
 
     # Only the first page for now, as the API returns a maximum of 200 sentences per page
     # Need to find a way to fetch all pages eventually
@@ -194,11 +197,11 @@ def fetch_and_save_sentences(filename: str | Path, page: int = 1, limit: int = 2
     print(f"Successfully saved sentences to '{filepath}'")
     return filepath
 
-def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_variants_output: str | Path, job_tracker_output: str | Path, page: int = 1, limit: int = 200):
+def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_variants_output: str | Path, job_tracker_output: str | Path, limit: int):
     """Unified entry function to call directly from pipeline_runner.py"""
     glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
     glosses_path = fetch_and_save_glosses(glosses_output)
-    # sentences_path = fetch_and_save_sentences(sentences_output, page=page, limit=limit)
+    sentences_path = fetch_and_save_sentences(sentences_output,limit=limit)
     return glosses_path, glosses_variants_path, sentences_path
 
 

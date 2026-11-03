@@ -218,8 +218,7 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
             glosses_variants_output=glosses_variants_output_path,
             sentences_output=sentences_output_path,
             job_tracker_output=job_tracker_path,
-            page=5,
-            limit=10
+            limit=100
         )
     else:
         if not os.path.exists(glosses_output_path) or not os.path.exists(sentences_output_path):
