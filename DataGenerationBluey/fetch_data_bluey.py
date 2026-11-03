@@ -50,10 +50,7 @@ def fetch_gloss_variants_mapping(filename: str | Path) -> Path:
 
     return filepath
 
-def fetch_and_save_glosses(
-    filename: str | Path,
-    max_workers: int = 15
-) -> Path:
+def fetch_and_save_glosses(filename: str | Path, max_workers: int = 15) -> Path:
     filepath = Path(filename).resolve()
     filepath.parent.mkdir(parents=True, exist_ok=True)
 
