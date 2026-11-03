@@ -1,6 +1,10 @@
+import json
 import os
 import argparse
 import subprocess
+from datetime import datetime, timezone
+import requests
+from pathlib import Path
 
 # Import modular steps
 from DataGenerationBluey.fetch_data_bluey import run_fetch
@@ -9,6 +13,7 @@ from DataFetch.parse_split import run_parse_split
 
 UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
 UPROJECT_PATH = "C:/Users/visualisationLab/Documents/Unreal Projects/BlendingAutomation/BlendingAutomation.uproject"
+API_URL = "https://signcollect.nl/blendBaking/api.php"
 
 def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -78,7 +83,99 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
     else:
         print("\n[Unreal] Unreal process finished successfully!")
 
+def populate_job_tracker(filename: str | Path) -> Path:
+    """
+    Fetches available bases from the API and initializes any new entries 
+    in job_tracker.json without overwriting existing job states.
+    """
+    filepath = Path(filename).resolve()
 
+    # 1. Fetch current bases from the API
+    params = {"action": "bases"}
+    response = requests.get(API_URL, params=params)
+    response.raise_for_status()
+    api_data = response.json()
+
+    if isinstance(api_data, dict) and not api_data.get("success", True):
+        raise ValueError(f"API Error: {api_data.get('error', 'Unknown error')}")
+
+    bases = api_data.get("bases", {})
+
+    # 2. If file is completely empty, initialize it with an empty dict
+    if not filepath.is_file() or filepath.stat().st_size == 0:
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump({}, f, ensure_ascii=False, indent=4)
+
+    # 3. Check if file is valid JSON
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            existing_data = json.load(f)
+    except json.JSONDecodeError:
+        print(f"Error: '{filepath}' is not valid JSON.")
+        return filepath
+
+
+    # 4. Register/update each base using update_job
+    print(f"Populating job tracker with {len(bases)} base animations...")
+    for base_id in bases:
+        # Update the job status for each base
+        update_job(
+            tracker_path=filepath,
+            base_id=base_id,
+            status_updates={}  # Preserves existing status if job already exists
+        )
+
+    print(f"Successfully populated job tracker at '{filepath}'")
+    return filepath
+
+def update_job(
+    tracker_path: Path, 
+    base_id: str, 
+    status_updates: dict = None, 
+    input_data: dict = None, 
+    substitutions: list = None
+) -> None:
+    """Safely updates a specific job entry in job_tracker.json."""
+    tracker_path = Path(tracker_path).resolve()
+    tracker_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    data = {}
+    if tracker_path.is_file():
+        with open(tracker_path, "r", encoding="utf-8") as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                data = {}
+
+    # Initialize job entry if missing
+    if base_id not in data:
+        data[base_id] = {
+            "status": {
+                "stage": "PENDING",
+                "updated_at": None
+            },
+            "input": {
+                "nederlands_zin": "",
+                "original_glosses": [],
+                "gvg_zin": []
+            },
+            "substitutions": []
+        }
+
+    job = data[base_id]
+
+    if status_updates:
+        job["status"].update(status_updates)
+        job["status"]["updated_at"] = datetime.now(timezone.utc).isoformat()
+
+    if input_data:
+        job["input"].update(input_data)
+
+    if substitutions is not None:
+        job["substitutions"] = substitutions
+
+    with open(tracker_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, run_ue: bool = True, split_fbx: bool = True):
@@ -110,6 +207,9 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
     job_tracker_path = os.path.join(inter_dir, "job_tracker.json")
     glosses_variants_output_path = os.path.join(inter_dir, "base_variants_map.json")
     substitutions_output_path = os.path.join(unreal_ready_dir, "substitutions_output.json")
+
+    # Ensure job tracker is initialized before any processing
+    populate_job_tracker(job_tracker_path)
 
     if fetch_data:
         print(f"Step 1: Fetching glosses and sentences from the API...")

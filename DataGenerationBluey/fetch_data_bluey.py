@@ -198,7 +198,7 @@ def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_
     """Unified entry function to call directly from pipeline_runner.py"""
     glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
     glosses_path = fetch_and_save_glosses(glosses_output)
-    sentences_path = fetch_and_save_sentences(sentences_output, page=page, limit=limit)
+    # sentences_path = fetch_and_save_sentences(sentences_output, page=page, limit=limit)
     return glosses_path, glosses_variants_path, sentences_path
 
 
