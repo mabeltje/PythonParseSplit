@@ -1,2075 +1,3965 @@
 {
-    "NU-B": [
-        "nu, tegenwoordig, huidig"
-    ],
-    "PAKKEN-A": [
-        "nemen, stelen, betrappen, aannemen, pakken, halen, afpakken"
-    ],
-    "PT-arc": [
-        "allemaal, allen, alle, jullie"
-    ],
-    "GROEIEN-A": [
-        "groeien"
-    ],
-    "KOMEN-B": [
-        "komen",
-        "kom maar, kom mee",
-        "kom hier",
-        "kom op",
-        "afkomstig, uit komen, vandaan komen"
-    ],
-    "TRAP-B": [
-        "trap, trap naar beneden, de trap af"
-    ],
-    "AVONTUUR-B": [
-        "avontuur"
-    ],
-    "PALEIS-B": [
-        "paleis"
-    ],
-    "WC-D": [
-        "wc, plassen"
-    ],
-    "GROOT-VERTICAAL-F": [
-        "groot, lang, hoog, veel, groter (worden), langer (worden), hoger (worden), meer, ouder, groeien, opgroeien, boven, Hogeschool"
-    ],
-    "PROEVEN-C": [
-        "proeven"
-    ],
-    "OEFENEN-A": [
-        "oefening, trainen, training, oefenen"
-    ],
-    "LICHAAM-B": [
-        "lijf, lichaam, lichamelijk, fysiek, houding, zijnswijze, mens, humaan"
-    ],
-    "VADER-C": [
-        "vader"
-    ],
-    "HONGER-B": [
-        "honger"
-    ],
-    "PAPEGAAI-B": [
-        "papegaai",
-        "valk",
-        "feyenoord",
-        "heks, kromme neus",
-        "Zlatan Ibrahimovic"
-    ],
-    "KIEZEN-A": [
-        "selecteren, keuze, kiezen"
-    ],
-    "KASTEEL": [
-        "kasteel",
-        "paleis"
-    ],
-    "PROBEREN-A": [
-        "proef, poging, proberen"
-    ],
-    "BAL-A": [
-        "bal, bol",
-        "aarde, wereld, globe"
-    ],
-    "GELD": [
-        "geld",
-        "kosten",
-        "waarde",
-        "waarden",
-        "rijk",
-        "duur",
-        "schulden",
-        "fonds",
-        "kapitalisme",
-        "financien, financiën"
-    ],
-    "MORGEN-A": [
-        "morgen"
-    ],
-    "PT:down": [
-        "in",
-        "nu",
-        "hier",
-        "zuid",
-        "daar",
-        "dit"
-    ],
-    "KAART-C": [
-        "kaart, envelop",
-        "pas",
-        "brief",
-        "plaat",
-        "portemonnee",
-        "zakje"
-    ],
-    "LOPEND-VOORTBEWEGEN-C": [],
-    "SPANNEND": [
-        "spanning, gespannen, spannend"
-    ],
-    "HUIS-A": [
-        "huis, huisje, hok, schuur"
-    ],
-    "RONDSNUFFELEN": [
-        "rondsnuffelen, rondneuzen, nieuwsgierig"
-    ],
-    "MACHT": [
-        "macht"
-    ],
-    "LAWAAI-A": [
-        "lawaai, herrie, kabaal, geluid",
-        "geraas, getier"
-    ],
-    "IETS-C": [
-        "iets"
-    ],
-    "VAN-TOT-A": [
-        "van ... tot ..., na, erna, daarna, tot, later, dan"
-    ],
-    "DIE": [
-        "wijzen, die, deze, dit"
-    ],
-    "SPIEGEL": [
-        "spiegelbeeld, spiegel, spiegeling"
-    ],
-    "HANDEN-WRIJVEN-B": [
-        "plezier, verheugen, handen wrijven, zin in",
-        "motivatie, gemotiveerd",
-        "handen wassen"
-    ],
-    "KIJKEN-E": [
-        "kijken"
-    ],
-    "KAMP-B": [
-        "tent, kamperen, kamp, camping"
-    ],
-    "EI-B": [
-        "ei, pasen"
-    ],
-    "EMOTIE-B": [
-        "emotie, emoties, emotioneel, geemotioneerd",
-        "voelen, gevoelens, gevoel, voel"
-    ],
-    "ZIN-IN-A": [
-        "trek, zin, zin in"
-    ],
-    "MISSELIJK": [
-        "misselijk, naar ervan, akelig, vervelend"
-    ],
-    "WEG-D": [
-        "weg, over, verlaten, voorbij, weg doen, weg ermee, voor niks, afschaffen, vanaf"
-    ],
-    "TREIN": [
-        "trein"
-    ],
-    "DOOS-A": [
-        "met betrekking tot, omkaderd, beperkt tot, categorie, doos, cadeau"
-    ],
-    "PIZZA-A": [
-        "pizza"
-    ],
-    "SPUITEN": [
-        "drugs, injecteren, injectie, prik, spuit, spuiten, vaccinatie, verdoven, verdoving, inspuiten"
-    ],
-    "AFSPRAAK-A": [
-        "afspreken, afgesproken, afspraak"
-    ],
-    "KOMEN-A": [
-        "komen, gekomen"
-    ],
-    "TANDENPOETSEN-B": [
-        "tandenborstel, tandenpoetsen"
-    ],
-    "KNIPPEN-A": [
-        "schaar, knippen, snoeien, kappen"
-    ],
-    "OM": [
-        "om, afhankelijk van, hangt van af"
-    ],
-    "DRIEEN-A": [
-        "met z'n drieen, drieen, drietal"
-    ],
-    "OVERSTROMING": [
-        "overstroming, tsunami"
-    ],
-    "GISTEREN": [
-        "vorige, vroeger, gisteren"
-    ],
-    "MOVE+snavel": [
-        "breed plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
-    ],
-    "KOUD-A": [
-        "koud, kouwelijk, winter, ijzig, kil, koelen"
-    ],
-    "NIET-A": [
-        "niet, nee",
-        "mag niet",
-        "verboden",
-        "geen (nadruk)",
-        "nooit"
-    ],
-    "PT-Bhand": [
-        "die, dat, dit, daar, deze",
-        "het, hij, hun, zij, jij, jou"
-    ],
-    "EVEN-A": [
-        "even, eventjes"
-    ],
-    "GRAPPIG-A": [
-        "humor, grap, grappig, mop, nep, fop, alsof"
-    ],
-    "BUIK-B": [
-        "buik"
-    ],
-    "GYMNASTIEK-B": [
-        "gymnastiek"
-    ],
-    "WIE-A": [
-        "wie"
-    ],
-    "SCHRIKKEN-A": [
-        "geschrokken, schok, eng, schrikken, onverwacht, geschokt"
-    ],
-    "AANRAKEN-A": [
-        "aanraken"
-    ],
-    "HAGELSLAG-A": [
-        "schudden, hagelslag, strooien",
-        "Kruidvat",
-        "ketchup"
-    ],
-    "STOFZUIGEN": [
-        "stofzuigen"
-    ],
-    "GROEIEN-B": [
-        "groeien (planten)"
-    ],
-    "OVER-D": [
-        "over",
-        "overheen"
-    ],
-    "HALLO-A": [
-        "hallo, dag, uitzwaaien, zwaaien, hoi, toedeloe, hee"
-    ],
-    "GEK-B": [
-        "getikt, raar, weirdo, maf, gek",
-        "Heiloo"
-    ],
-    "VERSPREIDEN-B": [
-        "netwerk, verspreiden, snel verspreiden"
-    ],
-    "HOEFT-NIET-A": [
-        "geeft niet, niet erg, hoeft niet"
-    ],
-    "PO": [
-        "po"
-    ],
-    "LUIER-A": [
-        "luier, maandverband, verband"
-    ],
-    "OPRUIMEN": [
-        "opruimen"
-    ],
-    "ONTMOETEN-E": [
-        "ontmoeten, elkaar tegenkomen, elkaar treffen"
-    ],
-    "OPA": [
-        "grootvader, opa"
-    ],
-    "JA-A": [
-        "klopt, dat klopt, wel, ja"
-    ],
-    "MAAR": [
-        "maar"
-    ],
-    "ONDERWIJS-A": [
-        "les, lesgeven, leraar, docent, meester, juf, leerkracht, onderwijzer, juffrouw, onderwijs, doceren, educatie, instructie, instrueren"
-    ],
-    "GELIJKWAARDIG": [
-        "gelijkwaardig, van gelijke waarde, met dezelfde waarde, equivalent"
-    ],
-    "AANWEZIG-A": [
-        "aanwezig zijn, er is, er zijn, aanwezig, present, ter plaatse",
-        "bestaande, bestaan"
-    ],
-    "CADEAU-A": [
-        "kado, cadeau"
-    ],
-    "YOGHURT-A": [
-        "yoghurt"
-    ],
-    "BES": [
-        "bes",
-        "dingen, spullen",
-        "boon"
-    ],
-    "BLIJ-A": [
-        "vrolijk, gezellig, blij, plezier, prettig, fijn, plezant"
-    ],
-    "GROOT-HORIZONTAAL-C": [
-        "groot, lang, afstand, breed, groter (worden), langer (worden), breder (worden), toenemen"
-    ],
-    "LACHEN-A": [
-        "lachen, hard lachen, schateren, schaterlachen"
-    ],
-    "OVER-C": [
-        "betreffende, over, waarover, hierover"
-    ],
-    "BUITEN-B": [
-        "buiten"
-    ],
-    "BIJ-E": [
-        "bij, honing"
-    ],
-    "BOEK": [
-        "bibliotheek, boek, boek open, schrift, map",
-        "rijbewijs"
-    ],
-    "BOM-A": [
-        "bom",
-        "ontploffen"
-    ],
-    "BEURT": [
-        "beurt"
-    ],
-    "ATTENTIE": [
-        "maar",
-        "als",
-        "moment, wacht even",
-        "pas op, let op",
-        "oja, ik weet het weer",
-        "even denken",
-        "vooral",
-        "soms"
-    ],
-    "BLIJVEN-B": [
-        "blijven, verblijf"
-    ],
-    "PEN": [
-        "pen"
-    ],
-    "MOVE+Snavel_open": [
-        "breed tamelijk plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
-    ],
-    "BEDOELEN": [
-        "noemen, bedoelen"
-    ],
-    "GAAN-NAAR-A": [
-        "naar buiten gaan, erheen, gaan, gaan naar, heen, naar"
-    ],
-    "DEUR-A": [
-        "deur, deuropening"
-    ],
-    "KLINKT-A": [
-        "klinkt",
-        "geluid"
-    ],
-    "ROEPEN:1": [
-        "mij vragen, mij roepen, mij aantikken, mijn aandacht vragen"
-    ],
-    "OBER-B": [
-        "ober, serveerster",
-        "dienblad",
-        "serveren, bedienen"
-    ],
-    "PLEISTER-A": [
-        "pleister, pleisteren, tapen"
-    ],
-    "WACHTEN-A": [
-        "afwachten, verwachten, wachten"
-    ],
-    "OP-F": [
-        "op"
-    ],
-    "TANDARTS-A": [
-        "tandarts"
-    ],
-    "VERSPREIDEN-A": [
-        "netwerk, verspreiden"
-    ],
-    "APPLAUS-A": [
-        "klappen, applaus"
-    ],
-    "KAR": [
-        "wagen, buggy, kinderwagen, winkelwagen, kar, rijtuig, voertuig"
-    ],
-    "1.ORD-A": [
-        "1e, eerst, eerste",
-        "vooral",
-        "eigenlijk"
-    ],
-    "VLINDER-A": [
-        "vlinder",
-        "Emmen"
-    ],
-    "GRAAG-A": [
-        "graag"
-    ],
-    "DOKTER-A": [
-        "medisch, arts, dokter"
-    ],
-    "VIES-A": [
-        "vies, vuil"
-    ],
-    "GORDIJN-A": [
-        "gordijn, gordijnen openen"
-    ],
-    "PLASSEN-A": [
-        "plassen, pissen, pies, zeiken, urine, urineren, wateren"
-    ],
-    "OOK-A": [
-        "ook, zelfde, lijken op, lijkt net, net als, gelijk als, zelfde als"
-    ],
-    "TEENSLIPPER-A": [
-        "teenslipper",
-        "voet"
-    ],
-    "MAART-A": [
-        "maart, dooien, dooi, smelten, diarree"
-    ],
-    "PERFECT-A": [
-        "perfect, ideaal, keurig, netjes, deftig, fantastisch, prachtig, super, precies",
-        "veilig"
-    ],
-    "KLEUR-A": [
-        "kleur"
-    ],
-    "HEET-B": [
-        "heet"
-    ],
-    "KLEED": [
-        "kleed"
-    ],
-    "WELKE-B": [
-        "welke, welke van de twee"
-    ],
-    "VRIEND-A": [
-        "vriend, bevriend, vrienden, vriendschappelijk"
-    ],
-    "LAWAAI-C": [
-        "lawaai, ruis, geruis"
-    ],
-    "AANKLEDEN-C": [
-        "broek/rok aantrekken",
-        "broek aan doen",
-        "broek omhoog hijsen"
-    ],
-    "1-A": [
-        "1, een, één"
-    ],
-    "TOT-NU-TOE-C": [
-        "van toen tot nu, door de tijd heen, sinds, tot nu toe, al die tijd tot nu toe"
-    ],
-    "BIKINI": [
-        "bikini"
-    ],
-    "LEKKER-A": [
-        "heerlijk, lekker, smakelijk, verrukkelijk, zalig",
-        "vers"
-    ],
-    "BINNENKORT-D": [
-        "zometeen, binnenkort"
-    ],
-    "ONDER": [
-        "tunnel, onder, metro, binnen, in"
-    ],
-    "MEISJE-B": [
-        "meisje"
-    ],
-    "MOEILIJK-C": [
-        "moeilijk, moeite, heel moeilijk"
-    ],
-    "VOOR-D": [
-        "ten behoeve van, met als doel, voor"
-    ],
-    "ADEMEN-C": [
-        "ademhalen, ademen, benauwd, hijgen, inademen, uitademen, zuurstof, borstademhaling"
-    ],
-    "NOG-B": [
-        "nog, na, daarna, erna, dan"
-    ],
-    "KLEIN-VERTICAAL-A": [
-        "minder, minder worden, klein beetje, weinig, niet veel"
-    ],
-    "TASTEN-A": [
-        "voelen, aanraken, tasten"
-    ],
-    "ERG-F": [
-        "versterkende functie (heel, ontzettend etc.)",
-        "erg, vreselijk, afschuwelijk, verschrikkelijk, allemachtig, wow, heftig, hevig, zo hee, tjonge, heel erg, heel wat"
-    ],
-    "SLAPEN-C": [
-        "slapen"
-    ],
-    "WILLEN-A": [
-        "willen"
-    ],
-    "BLADEREN": [
-        "bladeren, doorbladeren, snel doorkijken"
-    ],
-    "TERUG-C": [
-        "terug"
-    ],
-    "REKENEN-A": [
-        "getal, rekenen, aantal, tellen"
-    ],
-    "SNEL-A": [
-        "vlug, hard, meteen, gelijk, snel, sneller"
-    ],
-    "VASTHOUDEN-A": [],
-    "ZORGEN-A": [
-        "babysitten, oppassen, pleegzorg, pleeg",
-        "verplegen, verzorgen, zorgen"
-    ],
-    "HOP:1": [
-        "op mij, aan mij, iets of iemand doet een actie gericht op mij"
-    ],
-    "KOPEN-A": [
-        "kopen, gekocht"
-    ],
-    "PT+PO": [],
-    "STOUT-B": [
-        "boef, ondeugend, stout"
-    ],
-    "GLIJBAAN": [
-        "glijbaan, glijden"
-    ],
-    "VROEGER-A": [
-        "verleden, lang geleden, tijdje geleden, toen, onlangs, vorige, vroeger, een poos geleden, in het verleden"
-    ],
-    "ZIEN-A": [
-        "zien, kijken, merken, opletten"
-    ],
-    "TWEEEN-C": [
-        "wij twee√´n, jullie twee√´n, wij, jullie, zij, samen, elkaar, allebei, tweeen, ons, alleen wij tweeën"
-    ],
-    "KLEUR-B": [
-        "kleur, tekenen"
-    ],
-    "LICHT-AAN": [
-        "licht aan, lamp aandoen "
-    ],
-    "TWIJFEL-A": [
-        "aarzeling, afwegen, eigenlijk, matig, misschien, mwah, ongeveer, onzeker, redelijk, twijfel, twijfelachtig, weet niet zeker, zozo, eventueel"
-    ],
-    "BROEK": [
-        "broek, pantalon, broek omhoog doen, ophijsen"
-    ],
-    "FIXEN": [
-        "fixen, fiksen, knutselen, klussen, in elkaar zetten"
-    ],
-    "HEBBEN-A": [
-        "hebben"
-    ],
-    "LIGGEN-A": [
-        "liggen, plat, vlak, vloer, grond"
-    ],
-    "BIBLIOTHEEK-A": [
-        "bibliotheek, bieb ",
-        "literatuur"
-    ],
-    "HALEN-A": [
-        "ophalen, halen"
-    ],
-    "POEP-A": [
-        "poep, schijt, kak, poepen, schijten, kakken, mest"
-    ],
-    "PLASSEN-B": [
-        "plassen",
-        "Venezuela"
-    ],
-    "ZACHT": [
-        "zacht"
-    ],
-    "KAARTEN-D": [
-        "kaarten"
-    ],
-    "OLIE-B": [
-        "olie"
-    ],
-    "STERK": [
-        "sterk, krachtig, spierballen"
-    ],
-    "SLAAN-B": [
-        "slaan, meppen, mep, tik, klap"
-    ],
-    "SAMEN-A": [
-        "samen, tezamen, bij elkaar, met elkaar",
-        "samenkomen, bijeenkomen, bijeenkomst",
-        "samenvoegen",
-        "groep",
-        "team",
-        "gemeenschap"
-    ],
-    "MOND": [
-        "mond, lippen"
-    ],
-    "GROOT-VERTICAAL-C": [
-        "meer, extra, meerdere, gestegen"
-    ],
-    "PRATEN-A": [
-        "spreken, kletsen, bespreken, praten, babbelen, zeggen"
-    ],
-    "WESP": [
-        "wesp"
-    ],
-    "ZOEN-A": [
-        "zoen, kus, kussen, zoenen"
-    ],
-    "GAAN": [
-        "gaan, ga"
-    ],
-    "ZELF-A": [
-        "eigen, vanzelf, zelf"
-    ],
-    "OPSTUREN-B": [
-        "posten, zenden, verzenden, versturen, sturen, opsturen, emailen, SMSen, mail, e-mail"
-    ],
-    "ZEIL-B": [
-        "vliegeren",
-        "zeilen"
-    ],
-    "ZWAAR-A": [
-        "bezwaar, zwaar, gewicht"
-    ],
-    "KAPPER": [
-        "kapper"
-    ],
-    "BEUGEL": [
-        "beugel"
-    ],
-    "ALWEER-B": [
-        "alweer, opnieuw, nogmaals"
-    ],
-    "STEL-A": [
-        "stel, als, stel je voor, stel dat..., zich voorstellen dat"
-    ],
-    "TEKENEN-A": [
-        "tekenen, ontwerpen",
-        "kleuren",
-        "kunst"
-    ],
-    "OPSCHIETEN-A": [
-        "haast maken, opschieten, vort, vooruit"
-    ],
-    "GEWOON-A": [
-        "normaal, regulier, gewoonte, simpel, eenvoudig, gewoon, gebruikelijk, gewoonlijk",
-        "wennen"
-    ],
-    "DOUCHEN": [
-        "douche, douchen"
-    ],
-    "STORM": [
-        "storm"
-    ],
-    "LEREN-A": [
-        "leren, aanleren, school, studeren, onderwijzen"
-    ],
-    "IEDEREEN-A": [
-        "ieder, iedereen, allemaal, allen"
-    ],
-    "IDEE": [
-        "bedenken, idee, lampje gaat branden, plan, plannen, mening"
-    ],
-    "GASFORNUIS": [
-        "gasfornuis"
-    ],
-    "TIJD-A": [
-        "tijd, lang, minuut, seconde, moment",
-        "TYD",
-        "let op de tijd, het is tijd",
-        "hoe laat?",
-        "klok, horloge"
-    ],
-    "HAAR-A": [
-        "haar, blond",
-        "Haarlem"
-    ],
-    "DAG-A": [
-        "dag"
-    ],
-    "NAT": [
-        "nat"
-    ],
-    "3-B": [
-        "3, drie"
-    ],
-    "LOLLY-B": [
-        "lolly"
-    ],
-    "UITZENDING": [
-        "uitzending"
-    ],
-    "WOEDEND": [
-        "woedend"
-    ],
-    "GOOIEN-A": [
-        "gooien, worp, werpen, gooi"
-    ],
-    "OPNIEUW-A": [
-        "opnieuw, weer, alweer, wederom"
-    ],
-    "WATER-A": [
-        "water, meer, plas, ven"
-    ],
-    "GRIEP": [
-        "griep"
-    ],
-    "HOE-B": [
-        "hoe"
-    ],
-    "VORIGE": [
-        "vorige"
-    ],
-    "KNUTSELEN": [
-        "knutselen"
-    ],
-    "ZWART-A": [
-        "zwart, Zorro"
-    ],
-    "ENG": [
-        "eng",
-        "horror "
-    ],
-    "HELPEN-A": [
-        "hulp, helpen"
-    ],
-    "BRUS-A": [
-        "broer, zus, zussen, broers",
-        "neef, nicht",
-        "vriend, vriendin, iemand die dichtbij je staat op hetzelfde niveau"
-    ],
-    "LEPEL": [
-        "lepel"
-    ],
-    "AANKLEDEN-B": [
-        "aantrekken, aankleden, aan doen",
-        "kleren, kleding",
-        "omkleden, verkleden"
-    ],
-    "SORRY-A": [
-        "pardon, sorry, het spijt me"
-    ],
-    "WERKEN-A": [
-        "werk, baan, beroep, werken, maken, meegemaakt",
-        "schoen"
-    ],
-    "KAPOT": [
-        "breken, beschadigen, kwetsen, beschadigd, gebrek, gebreken, gebroken, kapot, stuk, kaduuk, defect"
-    ],
-    "BOOS-D": [
-        "boos, kwaad"
-    ],
-    "IETS-A": [
-        "iets, een fractie"
-    ],
-    "TOT-B": [
-        "tot"
-    ],
-    "GROEP-A": [
-        "team, klas, club, gemeenschap, afdeling, groep",
-        "gezin",
-        "partij",
-        "nest"
-    ],
-    "GEBEUREN-B": [
-        "gebeurd, in verleden gebeuren, gebeuren"
-    ],
-    "IN-G": [
-        "in, binnen"
-    ],
-    "VIES-B": [
-        "vies, vuil"
-    ],
-    "HAND": [
-        "hand"
-    ],
-    "HELPEN-A:1": [
-        "mij helpen, zij, hij, iemand helpt mij, zij helpen mij"
-    ],
-    "DING.PL-A": [
-        "dingen, kleine dingen, bepaalde dingen, van die dingen",
-        "blokker"
-    ],
-    "JAAR-B": [
-        "jaar"
-    ],
-    "THUIS-A": [
-        "thuis, wonen"
-    ],
-    "STRIP-A": [
-        "strip"
-    ],
-    "LIEF-A": [
-        "aardig, lief",
-        "lieveling, schattig, liefje",
-        "liever",
-        "liefde"
-    ],
-    "BIJZONDER": [
-        "speciaal, bijzonder"
-    ],
-    "MOL": [
-        "mol"
-    ],
-    "GEHOORAPPARAAT-A": [
-        "hoorapparaat, oorhanger, gehoorapparaat"
-    ],
-    "DAG-B": [
-        "dag"
-    ],
-    "PASTA-B": [
-        "pasta"
-    ],
-    "ZOEN-C": [
-        "zoen, zoenen"
-    ],
-    "PROBLEEM-C": [
-        "probleem, problemen"
-    ],
-    "PT:bodypart": [],
-    "KLEIN-A": [
-        "beetje, bijna, weinig, klein, kleintje, mini, peuter, jury",
-        "even"
-    ],
-    "WETEN-A": [
-        "weten, denken, kennen, bewust, leren, beseffen, verstand, verstandelijk, psychisch"
-    ],
-    "VLOEIBAAR": [
-        "stof, vloeistof, vloeibaar"
-    ],
-    "BANAAN-A": [
-        "banaan, banaan pellen"
-    ],
-    "FLUITEN-C": [
-        "fluiten"
-    ],
-    "GRAZEN-B": [
-        "grazen"
-    ],
-    "MOVE+Snavel": [
-        "breed plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
-    ],
-    "ALLES-A": [
-        "algemeen, totaal, heel, geheel, totaalbeeld, helemaal, alles, volledig"
-    ],
-    "INDRUKKEN-B": [
-        "toetsen, intoetsen, op knop drukken, indrukken, aanbellen, op de bel drukken"
-    ],
-    "MOGEN-B": [
-        "mag, mogen"
-    ],
-    "POEP-B": [
-        "poep, poepen, schijten, kakken, schijt, kak"
-    ],
-    "POT-A": [
-        "potje, vaas, pot"
-    ],
-    "SPROEIEN": [
-        "sproeien",
-        "tuinslang"
-    ],
-    "LUISTEREN-NIET-A": [
-        "ongehoorzaam, niet luisteren, negeren"
-    ],
-    "HOUDEN-VAN": [
-        "houden van, liefde, verliefd, hobby, braaf, aardig (Gr.), behoefte, voorkeur hebben voor, voorliefde hebben voor, voelen"
-    ],
-    "CI-AFDOEN-B": [
-        "CI afdoen, geen CI meer gebruiken, hoortoestel afdoen, geen hoortoestel gebruiken"
-    ],
-    "PO+PT": [],
-    "ONDERZOEK-C": [
-        "onderzoek, onderzoeken"
-    ],
-    "KEER": [
-        "keer",
-        "maal",
-        "kruis",
-        "vermenigvuldigen"
-    ],
-    "AANLEUNEN": [
-        "aanleunen, leunen op, leuning",
-        "aanleunwoning"
-    ],
-    "VANDAAG": [
-        "vandaag",
-        "beneden",
-        "hier",
-        "nu"
-    ],
-    "ZONSONDERGANG": [
-        "zonsondergang"
-    ],
-    "GLAS-B": [
-        "glas, beker, mok, kop, fles"
-    ],
-    "ANDERS-A": [
-        "andere, ander, anders"
-    ],
-    "WINKELEN-A": [
-        "boodschappen, winkel, winkelen, shoppen"
-    ],
-    "DOOR-A": [
-        "door, doorgaan, steeds doorgaan, verder"
-    ],
-    "VASTHOUDEN-K": [
-        "vasthouden"
-    ],
-    "MOVE+5": [
-        "5 lange dunne dingen, mensen of dieren bewegen door de ruimte"
-    ],
-    "VOELEN-B": [
-        "iets, waarde?, zoiets, weet je wel, aanvoelen, gevoel, subtiel, sfeer, voelen",
-        "sensitief"
-    ],
-    "PERSOON-A": [
-        "iemand, persoon, persoonlijk"
-    ],
-    "GELUID": [
-        "geluid, verstaan"
-    ],
-    "BINNEN-A": [
-        "entree, toegang, toegankelijk",
-        "binnen, erin, in, van binnen"
-    ],
-    "WORDEN": [
-        "worden"
-    ],
-    "OVERNEMEN-A": [
-        "eigen maken, verwerven, nadoen, overnemen"
-    ],
-    "STOEL": [
-        "stoel"
-    ],
-    "GA-MAAR-A": [
-        "hup hup, zetje geven, ga maar, sneller, tempo"
-    ],
-    "LUISTEREN-B": [
-        "luisteren"
-    ],
-    "VAATWASSER": [
-        "vaatwasser"
-    ],
-    "EVEN-WACHTEN-A": [
-        "wachten, afwachten, even wachten, ho even, kalm, rustig, niet te snel, moment"
-    ],
-    "MELK": [
-        "melk"
-    ],
-    "HELE": [
-        "hele dag, hele tijd, duren, lang, allemaal, hele"
-    ],
-    "NEE-B": [
-        "niet, mag niet, geen, nee, ontkennen"
-    ],
-    "ALLES-B": [
-        "algemeen, totaal, heel, geheel, alles"
-    ],
-    "PIJN-A": [
-        "heet, warm, pijn, zeer, au, oei"
-    ],
-    "WATER-GEVEN": [
-        "water geven, gieten"
-    ],
-    "EETBUIEN": [
-        "eetbuien, eten naar binnen werken"
-    ],
-    "ONTBIJT-B": [
-        "ontbijt"
-    ],
-    "GEBAREN-A": [
-        "gebaar, gebaren"
-    ],
-    "SCHOOL-A": [
-        "school, onderwijs"
-    ],
-    "GEBEUREN-A": [
-        "in toekomst gebeuren, gebeuren"
-    ],
-    "MOVE+C_spreid": [
-        "rond of groot vormloos ding beweegt door de ruimte; groot rond ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
-    ],
-    "KRIJGEN-B": [
-        "krijgen, geven aan mij, ontvangen"
-    ],
-    "ALSTUBLIEFT-B": [
-        "alsjeblieft, verzoeken",
-        "smeken",
-        "Lieverdjes (Amsterdamse Dove Jongerenclub)"
-    ],
-    "VAKANTIE": [
-        "vakantie"
-    ],
-    "KIJKEN-B": [
-        "eens kijken, even kijken, kijken, bekijken, zien"
-    ],
-    "NU-A": [
-        "nu, tegenwoordig, hier, huidig"
-    ],
-    "LICHT-B": [
-        "niet donker, licht, weer"
-    ],
-    "BIJEENKOMEN": [
-        "bijeenkomen, samen komen, groep komt bijeen",
-        "integreren"
-    ],
-    "KIND.PL": [
-        "kinderen"
-    ],
-    "PLANT-A": [
-        "plant",
-        "hooi",
-        "stro"
-    ],
-    "LIEVER-C": [
-        "liever"
-    ],
-    "MOVE+C": [
-        "rond of cylindervormig ding beweegt door de ruimte; rond, of cylindervormig of plat dik ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
-    ],
-    "NOOT-B": [
-        "noot"
-    ],
-    "OPLOSSEN-A": [
-        "oplossing, oplossen, uitvinden, uitvinding"
-    ],
-    "WAT-A": [
-        "wat, welk (Gronings), welke",
-        "minuut",
-        "betekenen"
-    ],
-    "COMBINATIE": [
-        "combineren, combinatie"
-    ],
-    "2-A": [
-        "2, twee"
-    ],
-    "MENING-A": [
-        "mening, eigen, egoïstisch, zelf, zichzelf"
-    ],
-    "BEEN-C": [
-        "benen, been, poot"
-    ],
-    "GROOT-HORIZONTAAL-D": [
-        "groot, lang, breed, groter (worden), langer (worden), breder (worden), toenemen, uitbreiden, uitgebreid, langdurig"
-    ],
-    "VOETSTAPPEN": [
-        "stappen, voetstappen"
-    ],
-    "PRACHTIG-C": [
-        "prachtig"
-    ],
-    "GROENTE-B": [
-        "groente, groenten"
-    ],
-    "VLEES-B": [
-        "vlees"
-    ],
-    "DAN-A": [
-        "binnenkort, daarna, dan, erna, in de komende tijd, over, vervolgens, volgende",
-        "dus"
-    ],
-    "AL-A": [
-        "al, af, afgelopen, eerder, gehad, geweest, klaar, meer niet, nog, reeds, ophouden"
-    ],
-    "WAARVOOR": [
-        "waarvoor"
-    ],
-    "LAAT-MAAR-A": [
-        "ach, valt mee, af, niet nodig, laat maar, ga weg, nee joh"
-    ],
-    "VERFIJNEN": [
-        "verfijnen, aan iets schaven"
-    ],
-    "LEZEN-A": [
-        "lezen, voorlezen"
-    ],
-    "FIT": [
-        "fit",
-        "sterk"
-    ],
-    "NIEUW-A": [
-        "opnieuw, nieuw, nieuws",
-        "nieuws, journaal"
-    ],
-    "FOUT-A": [
-        "fout"
-    ],
-    "VAN-A": [
-        "eigen, van mij, mijn, braaf, van"
-    ],
-    "KASTANJE": [
-        "kastanje"
-    ],
-    "NIEMAND-B": [
-        "niemand, geen, zonder, niks, niets, nergens"
-    ],
-    "PIRAAT": [
-        "piraat"
-    ],
-    "KIJKEN-F:1": [
-        "kijk me aan"
-    ],
-    "LUKKEN-NIET-A": [
-        "lukt niet, niet lukken, tevergeefs"
-    ],
-    "PRETTIG-A": [
-        "plezier, gezellig, genieten, prettig, fijn, plezant, leuk"
-    ],
-    "OMA-A": [
-        "oma"
-    ],
-    "TELEVISIE-A": [
-        "TV, televisie"
-    ],
-    "MAMA-A": [
-        "moeder, mama"
-    ],
-    "DORP": [
-        "dorp"
-    ],
-    "REGEN-A": [
-        "motregen, stortregen, bui, regen, miezerig",
-        "herfst"
-    ],
-    "OH": [
-        "oeps, oh, hand op mond"
-    ],
-    "NACHT-A": [
-        "nacht, donker"
-    ],
-    "MOSSEL-B": [
-        "mossel, schelp",
-        "oester"
-    ],
-    "KNUFFELEN": [
-        "knuffelen, omhelzen, vasthouden"
-    ],
-    "TUIN-A": [
-        "tuin"
-    ],
-    "OP-C": [
-        "op, niks meer over, leeg zijn, op zijn; opslaan (op computer); uitdoen, uitgaan"
-    ],
-    "LEUK-A": [
-        "leuk"
-    ],
-    "MES": [
-        "mes, snijden, bestek"
-    ],
-    "WEER": [
-        "het weer, lucht, weer"
-    ],
-    "MERKEN-A": [
-        "herkennen, merken, ontdekken, opmerken, bemerken",
-        "betrappen"
-    ],
-    "ONDERBROEK": [
-        "onderbroek",
-        "panty",
-        "luier",
-        "broekje"
-    ],
-    "VERANTWOORDELIJK-A": [
-        "verantwoord",
-        "verantwoordelijkheid, verantwoordelijk, op mijn schouders nemen"
-    ],
-    "HART-BONST": [
-        "angst, angstig, bang, hart bonst, bonzend hart, kloppend hart, hart klopt"
-    ],
-    "SAMENWERKEN-A": [
-        "samenwerken, samenwerking"
-    ],
-    "TANTE-A": [
-        "tante"
-    ],
-    "KAMPEREN": [
-        "kamperen, kamp, tenten, tent, camping"
-    ],
-    "WILLEN-NIET": [
-        "niet willen, weigeren, wil niet"
-    ],
-    "MOGEN-A": [
-        "mogelijkheid, mag, toestemming, mogen, toegestaan, open, opening"
-    ],
-    "HAAK": [
-        "haak, kleerhanger, knaapje, ophangen"
-    ],
-    "ZITTEN-A": [
-        "stoel, bank",
-        "zitten"
-    ],
-    "NOG-A": [
-        "nog, na, daarna, erna, dan"
-    ],
-    "DICHT-B": [
-        "dicht, dicht gaan, deur gaat dicht, deur sluit"
-    ],
-    "STRAKS-A": [
-        "straks",
-        "batterij"
-    ],
-    "AFSLUITEN": [
-        "afsluiten"
-    ],
-    "GEBAREN-C": [
-        "soepel gebaren, vlotjes gebaren, vloeiend gebaren, gebaren, kletsen, babbelen"
-    ],
-    "PRACHTIG-A": [
-        "fantastisch, geweldig, ergens goed in zijn, prachtig, mooi, toppie, super, perfect"
-    ],
-    "LEGO": [
-        "lego"
-    ],
-    "MOVE+B_krom": [
-        "gebogen plat breed ding beweegt door de ruimte, groot bolvormig ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
-    ],
-    "HAND-OP-MOND-A": [
-        "lachertje, uitlachen, niet bijzonder, makkelijk, gemakkelijk, simpel, fluitje van een cent"
-    ],
-    "HOP": [
-        "op"
-    ],
-    "ALLES-D": [
-        "alles"
-    ],
-    "KLAAR-C": [
-        "klaar, gedaan",
-        " af, afgelopen zijn, voorbij",
-        " stoppen, ophouden, genoeg",
-        "de maat is vol, basta",
-        "mag niet",
-        "afkappen"
-    ],
-    "VOORHOOFD": [
-        "voorhoofd"
-    ],
-    "GEBRUIKEN-A": [
-        "gebruiken, nodig, nuttig"
-    ],
-    "AAP-B": [
-        "aap",
-        "chimpansee"
-    ],
-    "OPLETTEN-A": [
-        "opletten, oppassen, even kijken, uitkijken, even aankijken, pas op"
-    ],
-    "BOS-B": [
-        "bos"
-    ],
-    "LOPEND-VOORTBEWEGEN-A": [
-        "wandelen, lopen, te voet gaan, met de benenwagen"
-    ],
-    "HOEVEEL-A": [
-        "hoeveel, enkele, paar, sommige"
-    ],
-    "ERG-A": [
-        "erg, vreselijk, afschuwelijk, verschrikkelijk"
-    ],
-    "VERBETEREN": [
-        "verbeteren, corrigeren"
-    ],
-    "LIP": [
-        "lip, mond"
-    ],
-    "MEEVALLEN": [
-        "meevallen, niet zo erg zijn, het valt wel mee"
-    ],
-    "10-B": [
-        "10, tien"
-    ],
-    "SCHULD": [
-        "schuld, schuldig"
-    ],
-    "BOTER-B": [
-        "boter, smeren, op brood smeren, pasta",
-        "lijm"
-    ],
-    "NETJES-A": [
-        "netjes, keurig, onberispelijk, net, elegant, correct"
-    ],
-    "OPHANGEN-C": [
-        "hangen van foto of schilderij, ophangen van foto of schilderij"
-    ],
-    "GEVOEL-A": [
-        "gelukkig, gevoel, gevoelens, plezant, plezier, plezierig, prettig, geluk",
-        "borst"
-    ],
-    "KIJKEN-F": [
-        "kijken, even kijken"
-    ],
-    "LANG-A": [
-        "langzaam",
-        "lang, duurt lang",
-        "laat",
-        "hoelang"
-    ],
-    "STEIGER": [
-        "steiger"
-    ],
-    "KUNNEN-E": [
-        "kunnen, kan, moeilijk"
-    ],
-    "PT-alt": [
-        "her en der, hier en daar, die en die en die, dit en dit en dit, dat en dat en dat"
-    ],
-    "AUTO": [
-        "autorijden, chaufeur, auto, stuur",
-        "skelter"
-    ],
-    "LEZEN-B": [
-        "lezen"
-    ],
-    "WIMPERS": [
-        "wimpers"
-    ],
-    "KROKODIL-A": [
-        "krokodil, alligator"
-    ],
-    "BIJVOORBEELD-B": [
-        "bijvoorbeeld, laten zien, voorbeeld, tonen, aantonen"
-    ],
-    "MEE": [
-        "mee eens, meedoen, meemaken, meenemen, meegemaakt, meevallen, mee"
-    ],
-    "LANGZAAM-A": [
-        "langzaam, sloom, loom, rustig, slow, zacht, zachtjes"
-    ],
-    "VRAGEN-A": [
-        "vragen, vraag, aanvragen, aanvraag"
-    ],
-    "LOGOPEDIE-A": [
-        "logopedie, articulatie"
-    ],
-    "VUURWERK": [
-        "vuurwerk, Enschede"
-    ],
-    "VINGER": [
-        "vinger"
-    ],
-    "WIND": [
-        "waaien, wind"
-    ],
-    "HUISWERK": [
-        "huiswerk",
-        "Roemenië"
-    ],
-    "MINUUT": [
-        "moment, seconde, minuut, tel",
-        "minuut"
-    ],
-    "RUPS-A": [
-        "rups, worm"
-    ],
-    "VRIENDELIJK": [
-        "vrolijk, aardig, vriendelijk"
-    ],
-    "SCHRIKKEN-C": [
-        "schrikken, geschrokken",
-        " schok, shock"
-    ],
-    "EXTRA-A": [
-        "extra"
-    ],
-    "TEEN": [
-        "teen"
-    ],
-    "FILM": [
-        "filmen, bioscoop, film"
-    ],
-    "DICHTBIJ": [
-        "dichtbij, vlakbij, komt steeds dichterbij, bijna dichtbij"
-    ],
-    "APPEL": [
-        "appel"
-    ],
-    "BEHOEFTIG-A": [
-        "arm, behoeftig, niet rijk"
-    ],
-    "DROOG-A": [
-        "droog"
-    ],
-    "KIND-A": [
-        "kind, jongen, zoon, kleintje"
-    ],
-    "JARIG-A": [
-        "verjaardag, jarig",
-        "feliciteren, gefeliciteerd"
-    ],
-    "OP-A": [
-        "op"
-    ],
-    "SCHILDEREN-B": [
-        "verf, kwast, schilderij, verven, schilderen"
-    ],
-    "KOFFIE-C": [
-        "koffie, roeren, lepelen"
-    ],
-    "VAN-B": [
-        "van jullie, zelf weten, van jou, even wachten, eigen pakkie an, van",
-        "haar, zijn"
-    ],
-    "MENS.PL": [
-        "antropologie, mens.pl, menselijk, mensen"
-    ],
-    "KRULLEN": [
-        "krul, krullend haar, krullen, permanent"
-    ],
-    "ECHT-A": [
-        "echt, toch, zeker"
-    ],
-    "ZEE": [
-        "zee, golven",
-        "Zeeland"
-    ],
-    "MAAT-HORIZONTAAL-D": [
-        "deze maat, deze grootte, deze lengte, zo groot, zo lang, zo veel"
-    ],
-    "HOND-A": [
-        "hond"
-    ],
-    "LICHT-A": [
-        "lamp, verlichting, flits, licht, zon, schijnen"
-    ],
-    "ZAND-B": [
-        "zand"
-    ],
-    "MUZIEK-A": [
-        "zingen, muziek, zang, koor, lied, song"
-    ],
-    "VINDEN-B": [
-        "gevonden, vinden, vondst, ontdekking, ontdekken"
-    ],
-    "BUITEN-D": [
-        "buiten"
-    ],
-    "NIEUW-B": [
-        "opnieuw, nieuw, weer, alweer",
-        "nieuws"
-    ],
-    "MAMA-B": [
-        "mama, moeder"
-    ],
-    "PINDAKAAS-A": [
-        "pindakaas"
-    ],
-    "HARD-A": [
-        "steen, kei, hard, ijzer, bikkel"
-    ],
-    "WC-A": [
-        "wc, toilet"
-    ],
-    "LIEFDE": [
-        "liefde, verliefd"
-    ],
-    "VLAKBIJ-A": [
-        "dichtbij, vlakbij"
-    ],
-    "DONKER-A": [
-        "donker, duister, verduisteren, avond valt in",
-        "onzichtbaar"
-    ],
-    "LUKKEN": [
-        "lukken, slagen, geslaagd, uitslag",
-        "aanslag"
-    ],
-    "ZEBRA": [
-        "zebra",
-        "strepen"
-    ],
-    "WONEN-A": [
-        "wonen"
-    ],
-    "Pt-1hand": [
-        "daar, dat, deze, die, dit, het, hij, hun, zij, jij, jou"
-    ],
-    "HEE-A": [
-        "aandacht, aandacht trekken, roepen, hee, hallo, mag ik vragen, beurt nemen in gesprek"
-    ],
-    "BLOEM-A": [
-        "plant, bloem, bloem gaat open"
-    ],
-    "OF-A": [
-        "of, oftewel, andere kant, mogelijk"
-    ],
-    "SCHRIJVEN-A": [
-        "opschrijven, pen, potlood, schrijven"
-    ],
-    "ALTIJD-A": [
-        "steeds, altijd"
-    ],
-    "BED-A": [
-        "bed, slapen gaan, onder de dekens"
-    ],
-    "MOETEN-A": [
-        "moeten, verplicht, eis, bevel, zullen, gebieden"
-    ],
-    "SOMS-A": [
-        "soms"
-    ],
-    "KOE-D": [
-        "koe"
-    ],
-    "KIJKEN-G": [
-        "kijken, kijk eens"
-    ],
-    "HOOG": [
-        "omhoog, verhogen, hoog"
-    ],
-    "TEKENEN-C": [
-        "tekenen, ontwerpen, schetsen",
-        "grafisch"
-    ],
-    "KAUWEN": [
-        "kauwen"
-    ],
-    "SLIM-B": [
-        "intelligent, intelligentie, slim"
-    ],
-    "LAATSTE-A": [
-        "laatste, laat"
-    ],
-    "SCHREEUWEN-E": [
-        "schreeuwen"
-    ],
-    "STER-A": [
-        "ster"
-    ],
-    "WEDSTRIJD": [
-        "wedstrijd"
-    ],
-    "DUIDELIJK-A": [
-        "duidelijk, helder"
-    ],
-    "ZEGGEN": [
-        "benoemen, noemen, zeggen"
-    ],
-    "NIET-C": [
-        "niet, geen",
-        "niets, niks,",
-        "nooit",
-        "zonder",
-        "niemand",
-        "nergens"
-    ],
-    "VLAKBIJ-C": [
-        "vlakbij, dichtbij"
-    ],
-    "ELKE-A": [
-        "dagelijks, iedere dag, elke maand, elke week, elke"
-    ],
-    "ZOEKEN-A": [
-        "zoeken"
-    ],
-    "WIJ-A": [
-        "ons, wij"
-    ],
-    "ROMPERTJE": [
-        "rompertje"
-    ],
-    "SCHOON": [
-        "schoon"
-    ],
-    "VEEL-A": [
-        "vaak, veel, heel veel",
-        "meestal"
-    ],
-    "NEE-C": [
-        "nee"
-    ],
-    "VERTREKKEN": [
-        "weg, weggaan, vertrekken, ervandoor gaan"
-    ],
-    "MOVE+V": [
-        "2 lange dunne dingen, mensen of dieren bewegen door de ruimte, ding met 2 extensies (benen, armen) beweegt door de ruimte"
-    ],
-    "TRAP-A": [
-        "trap naar boven, trap, de trap op, omhoog lopen"
-    ],
-    "BIJ-A": [
-        "met, dichtbij, vlakbij, en, bij"
-    ],
-    "PLEISTER-C": [
-        "pleister, pleisteren, tapen, klittenband"
-    ],
-    "DIER": [
-        "dier, dieren, beest, beesten"
-    ],
-    "ROEPEN-A": [
-        "aanspreken, vragen, roepen, aantikken, aandringen"
-    ],
-    "PT+Bhand": [],
-    "RUIMTE-A": [
-        "gebied, omgeving, regio",
-        "maatschappij",
-        "algemeen",
-        "situatie, geval",
-        "groep mensen",
-        "milieu",
-        "wijk, buurt",
-        "kamer, ruimte",
-        "ergens, plaats",
-        "familie",
-        "tuin"
-    ],
-    "nee-f": [
-        "nee, niet, niet mogelijk"
-    ],
-    "KOFFER-A": [
-        "bagage, dragen, emmer, koffer"
-    ],
-    "UUR-LANG+1": [
-        "1 uur lang, 1 uur achter elkaar, 1 uur aan een stuk"
-    ],
-    "STICKER": [
-        "sticker"
-    ],
-    "GORDIJN-B": [
-        "gordijn",
-        "gordijnen dicht, gordijnen dicht doen"
-    ],
-    "HAND-OP-WANG": [
-        "hand op wang"
-    ],
-    "PAPA-A": [
-        "vader, ouders, papa"
-    ],
-    "HAAS-C": [
-        "konijn, haas"
-    ],
-    "BORD-A": [
-        "bord, bordje",
-        "schotel, schoteltje"
-    ],
-    "WAKKER": [
-        "oog open, wakker, ogen open"
-    ],
-    "LA": [
-        "la, lade"
-    ],
-    "SCHATTIG-A": [
-        "schattig, schat"
-    ],
-    "KOPJE-A": [
-        "kopje, thee, koffie, drinken"
-    ],
-    "AANDACHT-A": [
-        "richten op, focus",
-        "concentreren, concentratie",
-        "aandacht"
-    ],
-    "ETEN-B": [
-        "eten, voeden, met handen eten",
-        "speen, speentje"
-    ],
-    "TOUW-A": [
-        "touw, draad, snoer, kabel",
-        "maat",
-        "zenuw"
-    ],
-    "HAAR-B": [
-        "haar"
-    ],
-    "JAAR-G": [
-        "jaar"
-    ],
-    "IETS-D": [
-        "iets, ding"
-    ],
-    "SOK-A": [
-        "sok, sok aandoen"
-    ],
-    "MOOI-A": [
-        "mooi, goed, prima",
-        "precies"
-    ],
-    "GLAD": [
-        "glad",
-        "uitglijden"
-    ],
-    "VENEZUELA": [
-        "Venezuela"
-    ],
-    "#T": [
-        "t..."
-    ],
-    "ETEN-A": [
-        "eten, voedsel, voer, eet"
-    ],
-    "TELHAND+5": [
-        "ten vijfde, punt vijf (in de lijst), telhand"
-    ],
-    "KIEZEN-B": [
-        "kiezen, keuze"
-    ],
-    "CABRIOLET": [
-        "cabriolet"
-    ],
-    "BOUWEN": [
-        "bouw, verbouwen, ombouwen, opbouwen, bouwen",
-        "produceren, product",
-        "functioneren, functie"
-    ],
-    "GEHOORAPPARAAT-B": [
-        "gehoorapparaat"
-    ],
-    "VERKIEZINGEN": [
-        "verkiezingen, selecteren, kiezen"
-    ],
-    "KAST": [
-        "kast, kastje"
-    ],
-    "ZWEMMEN-A": [
-        "zwemmen, schoolslag"
-    ],
-    "MIER-A": [
-        "mier"
-    ],
-    "DENKEN": [
-        "denken, weten, bewust, beseffen, besef",
-        "DENK (politieke partij)"
-    ],
-    "EI-A": [
-        "ei"
-    ],
-    "WAAR-A": [
-        "waarom, waar"
-    ],
-    "JAS-A": [
-        "aandoen, colbert, jas, vest"
-    ],
-    "TAS": [
-        "tas, dragen"
-    ],
-    "VERTELLEN": [
-        "uitleggen, verhaal, vertellen"
-    ],
-    "CI-A": [
-        "CI, Cochleair Implantaat, cochleaire implantatie, implanteren"
-    ],
-    "KLAP": [
-        "klap, smak, slag, klets, lel, pets"
-    ],
-    "PIET": [
-        "zwarte piet, piet"
-    ],
-    "TYPEN": [
-        "computer, toetsen, toetsenbord, kantoor, typen, internet"
-    ],
-    "MOVE+B": [
-        "plat breed ding beweegt door de ruimte; groot ding met vlakke bodem of vlakke zijkanten oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
-    ],
-    "OMDAT-A": [
-        "daarom, oorzaak, omdat, daardoor, want"
-    ],
-    "ZON-A": [
-        "schijnen, zon, zonnig",
-        "fel"
-    ],
-    "PAS-A": [
-        "net, vroeger, geleden, toen, pas, onlangs, daarstraks"
-    ],
-    "VORK-A": [
-        "vork",
-        "prikken met vork"
-    ],
-    "OOR-A": [
-        "oor, horen"
-    ],
-    "AARDBEI": [
-        "aardbei"
-    ],
-    "ALLEMAAL-A": [
-        "alles, iedereen, allemaal, alle, sommigen, geheel, allen, de hele mikmak, al, jullie, zij, hen, de mensen, het volk"
-    ],
-    "GEVOLG": [
-        "gevolg, opvolgen, opvolging"
-    ],
-    "VERGETEN-A": [
-        "vergeten",
-        "verbijsterend"
-    ],
-    "EVEN-B": [
-        "even"
-    ],
-    "ALLEMAAL-C": [
-        "allemaal"
-    ],
-    "SCHOONMAKEN": [
-        "schoonmaken, huishouden, poetsen"
-    ],
-    "PT-1hand": [
-        "daar, dat, deze, die, dit, het, hij, hun, zij, jij, jou"
-    ],
-    "VOOR-F": [
-        "voor"
-    ],
-    "WEGSCHIETEN": [
-        "wegschieten",
-        "verwerpen (idee), weggooien (object)"
-    ],
-    "FOTO": [
-        "foto, fotograferen, kiekje maken"
-    ],
-    "SLAPEN-A": [
-        "logeren, bed, slapen, dutje, gaan slapen, slaapje, doezelen, slaap"
-    ],
-    "LUISTEREN": [
-        "horen, gehoord, verstaan, luisteren, aanhoren, afluisteren, toehoren"
-    ],
-    "TOT-NU-A": [
-        "tot nu toe, van toen tot nu, tot op heden"
-    ],
-    "KUNNEN-A": [
-        "mogelijkheid, wel, mogelijk, kunnen, niet kunnen, moeilijk"
-    ],
-    "KIJKEN-A": [
-        "kijken, observeren, gadeslaan, iets of iemand bestuderen, bekijken, toezien, toezicht, zien, beschouwen"
-    ],
-    "PRATEN-L": [
-        "spreken, kletsen, bespreken, praten, babbelen"
-    ],
-    "BELLEN": [
-        "bellen, opbellen"
-    ],
-    "PANNENKOEK-B": [
-        "pannenkoek"
-    ],
-    "RUSTIG": [
-        "rustig, kalm, rustig maar, kalm aan, voorzichtig, langzaam, traag, sloom, loom, zacht, zachtjes"
-    ],
-    "INPAKKEN-B": [
-        "inpakken"
-    ],
-    "SPELEN-C": [
-        "spelen"
-    ],
-    "WASSEN-A": [
-        "wassen, kleren wassen"
-    ],
-    "BADPAK": [
-        "badpak, zwempak"
-    ],
-    "BOS-A": [
-        "bos"
-    ],
-    "BEDENKEN": [
-        "bedenken, verzinnen, zich bedenken dat, idee, aha",
-        "raden"
-    ],
-    "LEVEN-B": [
-        "leven",
-        "spelen"
-    ],
-    "ELLEBOOG-B": [],
-    "VERPLEEGSTER": [
-        "verpleegster, zuster, non, de kap van een zuster, verpleegkundig"
-    ],
-    "ZO-A": [
-        "zo, zo is het//dat/hij/zij/..., zoals"
-    ],
-    "KLEREN-B": [
-        "kleding, kleren, pyjama, t-shirt, aantrekken, trui, bloes"
-    ],
-    "ALLEMAAL-B": [
-        "allen, jullie, zij, iedereen, ruimte, overal, allemaal, sommigen"
-    ],
-    "GROEP-C": [
-        "team, klas, club, gemeenschap, groep, besloten",
-        "gezin, familie"
-    ],
-    "HEMEL": [
-        "hemel, weer, lucht",
-        "hemel (religie)"
-    ],
-    "VERHAAL": [
-        "verhaal"
-    ],
-    "MOVE+T": [
-        "klein, dun ding (delicaat) oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
-    ],
-    "KAPSEL": [
-        "kapsel"
-    ],
-    "ZETTEN-LEGGEN-K": [
-        "zetten, leggen, neerzetten, neerleggen"
-    ],
-    "ACHTERDOCHTIG": [
-        "achterdochtig"
-    ],
-    "GOED-A": [
-        "prima, fantastisch, super, okee, perfect, OK, geweldig, goed, leuk"
-    ],
-    "VERZAMELEN-B": [
-        "verwerven, verwerving, verzamelen, bijeen schrapen, sprokkelen, bijeen harken"
-    ],
-    "WARM-A": [
-        "warm"
-    ],
-    "TAART-A": [
-        "taart"
-    ],
-    "HAND.PL": [
-        "hand, handen"
-    ],
-    "VAARDIG": [
-        "vloeiend, geoefend, vaardigheid, vaardigheden, ervaring, vaardig, bekwaam"
-    ],
-    "GEVEN-C": [
-        "geven, inbreng"
-    ],
-    "VOGELKOOI-A": [
-        "vogelkooi"
-    ],
-    "HAND-IN-LUCHT": [
-        "kom nou toch, nou ja, kom op zeg"
-    ],
-    "#V": [
-        "v..."
-    ],
-    "COOL-B": [
-        "cool, stoer"
-    ],
-    "NAAST": [
-        "ernaast, daarnaast, naast, buren, behalve dat, achter"
-    ],
-    "PT-1hand:1": [
-        "ik, mij, mijn"
-    ],
-    "ARM-B": [
-        "arm (lichaamsdeel)"
-    ],
-    "TEMPERATUUR": [
-        "temperatuur",
-        "thermometer"
-    ],
-    "WATER-B": [
-        "water, drinkwater, water uit de kraan"
-    ],
-    "OVERGEVEN-B": [
-        "overgeven, kotsen"
-    ],
-    "MOLEN": [
-        "molen"
-    ],
-    "UUR-HALF": [
-        "een half uur"
-    ],
-    "TAFEL": [
-        "tafel, podium",
-        "bureau"
-    ],
-    "WEG-C": [
-        "weg zijn, kwijt, niet hebben, leeg, foetsie, er niet meer zijn"
-    ],
-    "TROTS-A": [
-        "trots"
-    ],
-    "FAMILIE-B": [
-        "familie"
-    ],
-    "GLANS": [
-        "glans, glimmen"
-    ],
-    "SCHOEN-A": [
-        "schoen, schoenen,, schoen aandoen"
-    ],
-    "GEHOORAPPARAAT-E": [
-        "gehoorapparaat"
-    ],
-    "REKENING-HOUDEN-MET": [
-        "rekening houden met, voorzichtig",
-        "verwachten"
-    ],
-    "TWEEEN-A": [
-        "wij tweeën, jullie tweeën, wij, jullie, zij, samen, elkaar, allebei, tweeling, tweeen, ons"
-    ],
-    "BIJ-F": [
-        "bij",
-        "prikken, geprikt worden"
-    ],
-    "VOOR-A": [
-        "eerder, achter, van te voren, afstand, voor"
-    ],
-    "VAAK": [
-        "vaak"
-    ],
-    "TONG": [
-        "tong"
-    ],
-    "TWEEEN-F": [
-        "allebei, alleen wij tweeën, elkaar, jullie, jullie twee√´n, ons, samen, tweeen, wij, wij twee√´n, zij"
-    ],
-    "KLAAR-A": [
-        "klaar",
-        "af, afgelopen zijn, voorbij",
-        "gedaan",
-        "stoppen, ophouden, genoeg",
-        "de maat is vol, basta",
-        "mag niet",
-        "afkappen",
-        "vol"
-    ],
-    "BUITEN-A": [
-        "buiten"
-    ],
-    "MEER-A": [
-        "groter aantal of hoeveelheid, meer, meestal, nog, nog meer, vooral"
-    ],
-    "RENNEN-A": [
-        "hardlopen, lopen, rennen, joggen"
-    ],
-    "ENE-KANT-ANDERE-KANT-B": [
-        "aan de ene kant ..., aan de andere kant..., enerzijds-anderzijds, beide, of dit of dat, twijfel"
-    ],
-    "TANDENPOETSEN-A": [
-        "tandenpoetsen, tandenborstel"
-    ],
-    "STIL-A": [
-        "zwijgen, stil, mond dicht houden"
-    ],
-    "DOOIEN": [
-        "dooien, smelten, dooi"
-    ],
-    "DOEN-A": [
-        "doen, doe, gedaan"
-    ],
-    "PLEZIER-A": [
-        "plezier"
-    ],
-    "TOCH-A": [
-        "wel, toch"
-    ],
-    "FIETSEN-A": [
-        "fiets, fietsen, trappen",
-        "radler (bier)"
-    ],
-    "BEGRIJPEN": [
-        "begrijpen, kennen, verstaan"
-    ],
-    "PRIMA-A": [
-        "OK, fantastisch, geweldig, okee, perfect, prima, super, uitstekend"
-    ],
-    "TANDPASTA-B": [
-        "tandpasta"
-    ],
-    "DRINKEN-A": [
-        "drinken, water, zuipen, drank, opdrinken"
-    ],
-    "VINGER-OPSTEKEN": [
-        "vinger opsteken"
-    ],
-    "TRUI": [
-        "trui"
-    ],
-    "6-A": [
-        "6, zes"
-    ],
-    "VOGEL-A": [
-        "vliegen, vogel, vleugels"
-    ],
-    "WALVIS": [
-        "Walvis"
-    ],
-    "STRAKS-C": [
-        "straks"
-    ]
+    "VEEL-A": {
+        "senses": [
+            "vaak, veel, heel veel",
+            "meestal"
+        ],
+        "category": "getal"
+    },
+    "POEP-A": {
+        "senses": [
+            "poep, schijt, kak, poepen, schijten, kakken, mest"
+        ],
+        "category": "lichaam"
+    },
+    "ALWEER-B": {
+        "senses": [
+            "alweer, opnieuw, nogmaals"
+        ],
+        "category": "tijd"
+    },
+    "ZITTEN-A": {
+        "senses": [
+            "stoel, bank",
+            "zitten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "BIJVOORBEELD-B": {
+        "senses": [
+            "bijvoorbeeld, laten zien, voorbeeld, tonen, aantonen"
+        ],
+        "category": "communicatie"
+    },
+    "PT-1hand": {
+        "senses": [
+            "daar, dat, deze, die, dit, het, hij, hun, zij, jij, jou"
+        ],
+        "category": "pointing"
+    },
+    "ZORGEN-A": {
+        "senses": [
+            "babysitten, oppassen, pleegzorg, pleeg",
+            "verplegen, verzorgen, zorgen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LEKKER-A": {
+        "senses": [
+            "heerlijk, lekker, smakelijk, verrukkelijk, zalig",
+            "vers"
+        ],
+        "category": "emotie"
+    },
+    "STER-A": {
+        "senses": [
+            "ster"
+        ],
+        "category": "natuur"
+    },
+    "PT+PO": {
+        "senses": [],
+        "category": "pointing"
+    },
+    "UITZENDING": {
+        "senses": [
+            "uitzending"
+        ],
+        "category": "communicatie"
+    },
+    "STOEL": {
+        "senses": [
+            "stoel"
+        ],
+        "category": "wonen"
+    },
+    "WAT-A": {
+        "senses": [
+            "wat, welk (Gronings), welke",
+            "minuut",
+            "betekenen"
+        ],
+        "category": "communicatie"
+    },
+    "DOKTER-A": {
+        "senses": [
+            "medisch, arts, dokter"
+        ],
+        "category": "lichaam"
+    },
+    "POEP-B": {
+        "senses": [
+            "poep, poepen, schijten, kakken, schijt, kak"
+        ],
+        "category": "lichaam"
+    },
+    "HEBBEN-A": {
+        "senses": [
+            "hebben"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VOOR-D": {
+        "senses": [
+            "ten behoeve van, met als doel, voor"
+        ],
+        "category": "plaats"
+    },
+    "KIJKEN-G": {
+        "senses": [
+            "kijken, kijk eens"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VOOR-A": {
+        "senses": [
+            "eerder, achter, van te voren, afstand, voor"
+        ],
+        "category": "plaats"
+    },
+    "GOED-A": {
+        "senses": [
+            "prima, fantastisch, super, okee, perfect, OK, geweldig, goed, leuk"
+        ],
+        "category": "emotie"
+    },
+    "KIJKEN-B": {
+        "senses": [
+            "eens kijken, even kijken, kijken, bekijken, zien"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KUNNEN-E": {
+        "senses": [
+            "kunnen, kan, moeilijk"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KIJKEN-A": {
+        "senses": [
+            "kijken, observeren, gadeslaan, iets of iemand bestuderen, bekijken, toezien, toezicht, zien, beschouwen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KIJKEN-F": {
+        "senses": [
+            "kijken, even kijken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VOOR-F": {
+        "senses": [
+            "voor"
+        ],
+        "category": "plaats"
+    },
+    "PO": {
+        "senses": [
+            "po"
+        ],
+        "category": "pointing"
+    },
+    "TEKENEN-C": {
+        "senses": [
+            "tekenen, ontwerpen, schetsen",
+            "grafisch"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "TEKENEN-A": {
+        "senses": [
+            "tekenen, ontwerpen",
+            "kleuren",
+            "kunst"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KUNNEN-A": {
+        "senses": [
+            "mogelijkheid, wel, mogelijk, kunnen, niet kunnen, moeilijk"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KIJKEN-E": {
+        "senses": [
+            "kijken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "WILLEN-A": {
+        "senses": [
+            "willen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "TANTE-A": {
+        "senses": [
+            "tante"
+        ],
+        "category": "familie_personen"
+    },
+    "BEGRIJPEN": {
+        "senses": [
+            "begrijpen, kennen, verstaan"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "WOEDEND": {
+        "senses": [
+            "woedend"
+        ],
+        "category": "emotie"
+    },
+    "SLAAN-B": {
+        "senses": [
+            "slaan, meppen, mep, tik, klap"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VERHAAL": {
+        "senses": [
+            "verhaal"
+        ],
+        "category": "communicatie"
+    },
+    "ATTENTIE": {
+        "senses": [
+            "maar",
+            "als",
+            "moment, wacht even",
+            "pas op, let op",
+            "oja, ik weet het weer",
+            "even denken",
+            "vooral",
+            "soms"
+        ],
+        "category": "communicatie"
+    },
+    "VROEGER-A": {
+        "senses": [
+            "verleden, lang geleden, tijdje geleden, toen, onlangs, vorige, vroeger, een poos geleden, in het verleden"
+        ],
+        "category": "tijd"
+    },
+    "TEENSLIPPER-A": {
+        "senses": [
+            "teenslipper",
+            "voet"
+        ],
+        "category": "kleding"
+    },
+    "OVER-D": {
+        "senses": [
+            "over",
+            "overheen"
+        ],
+        "category": "plaats"
+    },
+    "NIET-C": {
+        "senses": [
+            "niet, geen",
+            "niets, niks,",
+            "nooit",
+            "zonder",
+            "niemand",
+            "nergens"
+        ],
+        "category": "communicatie"
+    },
+    "NIET-A": {
+        "senses": [
+            "niet, nee",
+            "mag niet",
+            "verboden",
+            "geen (nadruk)",
+            "nooit"
+        ],
+        "category": "communicatie"
+    },
+    "OVER-C": {
+        "senses": [
+            "betreffende, over, waarover, hierover"
+        ],
+        "category": "plaats"
+    },
+    "VERTELLEN": {
+        "senses": [
+            "uitleggen, verhaal, vertellen"
+        ],
+        "category": "communicatie"
+    },
+    "SPELEN-C": {
+        "senses": [
+            "spelen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "TANDENPOETSEN-A": {
+        "senses": [
+            "tandenpoetsen, tandenborstel"
+        ],
+        "category": "lichaam"
+    },
+    "EVEN-B": {
+        "senses": [
+            "even"
+        ],
+        "category": "tijd"
+    },
+    "TANDENPOETSEN-B": {
+        "senses": [
+            "tandenborstel, tandenpoetsen"
+        ],
+        "category": "lichaam"
+    },
+    "DAN-A": {
+        "senses": [
+            "binnenkort, daarna, dan, erna, in de komende tijd, over, vervolgens, volgende",
+            "dus"
+        ],
+        "category": "tijd"
+    },
+    "EVEN-A": {
+        "senses": [
+            "even, eventjes"
+        ],
+        "category": "tijd"
+    },
+    "BOEK": {
+        "senses": [
+            "bibliotheek, boek, boek open, schrift, map",
+            "rijbewijs"
+        ],
+        "category": "school_werk"
+    },
+    "GROOT-HORIZONTAAL-D": {
+        "senses": [
+            "groot, lang, breed, groter (worden), langer (worden), breder (worden), toenemen, uitbreiden, uitgebreid, langdurig"
+        ],
+        "category": "getal"
+    },
+    "MOVE+5": {
+        "senses": [
+            "5 lange dunne dingen, mensen of dieren bewegen door de ruimte"
+        ],
+        "category": "classifier"
+    },
+    "BOS-B": {
+        "senses": [
+            "bos"
+        ],
+        "category": "natuur"
+    },
+    "GROOT-HORIZONTAAL-C": {
+        "senses": [
+            "groot, lang, afstand, breed, groter (worden), langer (worden), breder (worden), toenemen"
+        ],
+        "category": "getal"
+    },
+    "WIND": {
+        "senses": [
+            "waaien, wind"
+        ],
+        "category": "natuur"
+    },
+    "DING.PL-A": {
+        "senses": [
+            "dingen, kleine dingen, bepaalde dingen, van die dingen",
+            "blokker"
+        ],
+        "category": "overig"
+    },
+    "BOS-A": {
+        "senses": [
+            "bos"
+        ],
+        "category": "natuur"
+    },
+    "PT-arc": {
+        "senses": [
+            "allemaal, allen, alle, jullie"
+        ],
+        "category": "pointing"
+    },
+    "VAN-B": {
+        "senses": [
+            "van jullie, zelf weten, van jou, even wachten, eigen pakkie an, van",
+            "haar, zijn"
+        ],
+        "category": "overig"
+    },
+    "ZELF-A": {
+        "senses": [
+            "eigen, vanzelf, zelf"
+        ],
+        "category": "overig"
+    },
+    "VAN-A": {
+        "senses": [
+            "eigen, van mij, mijn, braaf, van"
+        ],
+        "category": "overig"
+    },
+    "HAND-IN-LUCHT": {
+        "senses": [
+            "kom nou toch, nou ja, kom op zeg"
+        ],
+        "category": "lichaam"
+    },
+    "OPLETTEN-A": {
+        "senses": [
+            "opletten, oppassen, even kijken, uitkijken, even aankijken, pas op"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KIND-A": {
+        "senses": [
+            "kind, jongen, zoon, kleintje"
+        ],
+        "category": "familie_personen"
+    },
+    "MEISJE-B": {
+        "senses": [
+            "meisje"
+        ],
+        "category": "familie_personen"
+    },
+    "PO+PT": {
+        "senses": [],
+        "category": "pointing"
+    },
+    "ERG-A": {
+        "senses": [
+            "erg, vreselijk, afschuwelijk, verschrikkelijk"
+        ],
+        "category": "emotie"
+    },
+    "STEL-A": {
+        "senses": [
+            "stel, als, stel je voor, stel dat..., zich voorstellen dat"
+        ],
+        "category": "overig"
+    },
+    "RONDSNUFFELEN": {
+        "senses": [
+            "rondsnuffelen, rondneuzen, nieuwsgierig"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "WEER": {
+        "senses": [
+            "het weer, lucht, weer"
+        ],
+        "category": "natuur"
+    },
+    "ERG-F": {
+        "senses": [
+            "versterkende functie (heel, ontzettend etc.)",
+            "erg, vreselijk, afschuwelijk, verschrikkelijk, allemachtig, wow, heftig, hevig, zo hee, tjonge, heel erg, heel wat"
+        ],
+        "category": "emotie"
+    },
+    "OVERGEVEN-B": {
+        "senses": [
+            "overgeven, kotsen"
+        ],
+        "category": "lichaam"
+    },
+    "OVERSTROMING": {
+        "senses": [
+            "overstroming, tsunami"
+        ],
+        "category": "natuur"
+    },
+    "VANDAAG": {
+        "senses": [
+            "vandaag",
+            "beneden",
+            "hier",
+            "nu"
+        ],
+        "category": "tijd"
+    },
+    "HOE-B": {
+        "senses": [
+            "hoe"
+        ],
+        "category": "communicatie"
+    },
+    "PT-1hand:1": {
+        "senses": [
+            "ik, mij, mijn"
+        ],
+        "category": "pointing"
+    },
+    "THUIS-A": {
+        "senses": [
+            "thuis, wonen"
+        ],
+        "category": "wonen"
+    },
+    "BLIJVEN-B": {
+        "senses": [
+            "blijven, verblijf"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "JA-A": {
+        "senses": [
+            "klopt, dat klopt, wel, ja"
+        ],
+        "category": "communicatie"
+    },
+    "ALLES-B": {
+        "senses": [
+            "algemeen, totaal, heel, geheel, alles"
+        ],
+        "category": "getal"
+    },
+    "MOND": {
+        "senses": [
+            "mond, lippen"
+        ],
+        "category": "lichaam"
+    },
+    "ALLES-D": {
+        "senses": [
+            "alles"
+        ],
+        "category": "getal"
+    },
+    "ALLES-A": {
+        "senses": [
+            "algemeen, totaal, heel, geheel, totaalbeeld, helemaal, alles, volledig"
+        ],
+        "category": "getal"
+    },
+    "PAPA-A": {
+        "senses": [
+            "vader, ouders, papa"
+        ],
+        "category": "familie_personen"
+    },
+    "TWEEEN-A": {
+        "senses": [
+            "wij tweeën, jullie tweeën, wij, jullie, zij, samen, elkaar, allebei, tweeling, tweeen, ons"
+        ],
+        "category": "getal"
+    },
+    "VINGER": {
+        "senses": [
+            "vinger"
+        ],
+        "category": "lichaam"
+    },
+    "TWEEEN-C": {
+        "senses": [
+            "wij twee√´n, jullie twee√´n, wij, jullie, zij, samen, elkaar, allebei, tweeen, ons, alleen wij tweeën"
+        ],
+        "category": "getal"
+    },
+    "SOMS-A": {
+        "senses": [
+            "soms"
+        ],
+        "category": "tijd"
+    },
+    "TWEEEN-F": {
+        "senses": [
+            "allebei, alleen wij tweeën, elkaar, jullie, jullie twee√´n, ons, samen, tweeen, wij, wij twee√´n, zij"
+        ],
+        "category": "getal"
+    },
+    "PERFECT-A": {
+        "senses": [
+            "perfect, ideaal, keurig, netjes, deftig, fantastisch, prachtig, super, precies",
+            "veilig"
+        ],
+        "category": "emotie"
+    },
+    "1.ORD-A": {
+        "senses": [
+            "1e, eerst, eerste",
+            "vooral",
+            "eigenlijk"
+        ],
+        "category": "getal"
+    },
+    "HAAR-A": {
+        "senses": [
+            "haar, blond",
+            "Haarlem"
+        ],
+        "category": "lichaam"
+    },
+    "HAAR-B": {
+        "senses": [
+            "haar"
+        ],
+        "category": "lichaam"
+    },
+    "GEHOORAPPARAAT-A": {
+        "senses": [
+            "hoorapparaat, oorhanger, gehoorapparaat"
+        ],
+        "category": "lichaam"
+    },
+    "GEHOORAPPARAAT-E": {
+        "senses": [
+            "gehoorapparaat"
+        ],
+        "category": "lichaam"
+    },
+    "GEHOORAPPARAAT-B": {
+        "senses": [
+            "gehoorapparaat"
+        ],
+        "category": "lichaam"
+    },
+    "BUITEN-D": {
+        "senses": [
+            "buiten"
+        ],
+        "category": "plaats"
+    },
+    "BUITEN-B": {
+        "senses": [
+            "buiten"
+        ],
+        "category": "plaats"
+    },
+    "BUITEN-A": {
+        "senses": [
+            "buiten"
+        ],
+        "category": "plaats"
+    },
+    "WAAR-A": {
+        "senses": [
+            "waarom, waar"
+        ],
+        "category": "communicatie"
+    },
+    "SOK-A": {
+        "senses": [
+            "sok, sok aandoen"
+        ],
+        "category": "kleding"
+    },
+    "ANDERS-A": {
+        "senses": [
+            "andere, ander, anders"
+        ],
+        "category": "overig"
+    },
+    "ZWEMMEN-A": {
+        "senses": [
+            "zwemmen, schoolslag"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "GAAN-NAAR-A": {
+        "senses": [
+            "naar buiten gaan, erheen, gaan, gaan naar, heen, naar"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "CI-A": {
+        "senses": [
+            "CI, Cochleair Implantaat, cochleaire implantatie, implanteren"
+        ],
+        "category": "lichaam"
+    },
+    "CI-AFDOEN-B": {
+        "senses": [
+            "CI afdoen, geen CI meer gebruiken, hoortoestel afdoen, geen hoortoestel gebruiken"
+        ],
+        "category": "lichaam"
+    },
+    "KOFFIE-C": {
+        "senses": [
+            "koffie, roeren, lepelen"
+        ],
+        "category": "eten_drinken"
+    },
+    "KLEIN-A": {
+        "senses": [
+            "beetje, bijna, weinig, klein, kleintje, mini, peuter, jury",
+            "even"
+        ],
+        "category": "getal"
+    },
+    "EVEN-WACHTEN-A": {
+        "senses": [
+            "wachten, afwachten, even wachten, ho even, kalm, rustig, niet te snel, moment"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "TRAP-B": {
+        "senses": [
+            "trap, trap naar beneden, de trap af"
+        ],
+        "category": "wonen"
+    },
+    "TRAP-A": {
+        "senses": [
+            "trap naar boven, trap, de trap op, omhoog lopen"
+        ],
+        "category": "wonen"
+    },
+    "WAARVOOR": {
+        "senses": [
+            "waarvoor"
+        ],
+        "category": "communicatie"
+    },
+    "OM": {
+        "senses": [
+            "om, afhankelijk van, hangt van af"
+        ],
+        "category": "overig"
+    },
+    "#T": {
+        "senses": [
+            "t..."
+        ],
+        "category": "vingerspelling"
+    },
+    "#V": {
+        "senses": [
+            "v..."
+        ],
+        "category": "vingerspelling"
+    },
+    "MEER-A": {
+        "senses": [
+            "groter aantal of hoeveelheid, meer, meestal, nog, nog meer, vooral"
+        ],
+        "category": "getal"
+    },
+    "RUSTIG": {
+        "senses": [
+            "rustig, kalm, rustig maar, kalm aan, voorzichtig, langzaam, traag, sloom, loom, zacht, zachtjes"
+        ],
+        "category": "emotie"
+    },
+    "FIT": {
+        "senses": [
+            "fit",
+            "sterk"
+        ],
+        "category": "lichaam"
+    },
+    "BEEN-C": {
+        "senses": [
+            "benen, been, poot"
+        ],
+        "category": "lichaam"
+    },
+    "VOELEN-B": {
+        "senses": [
+            "iets, waarde?, zoiets, weet je wel, aanvoelen, gevoel, subtiel, sfeer, voelen",
+            "sensitief"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "HEE-A": {
+        "senses": [
+            "aandacht, aandacht trekken, roepen, hee, hallo, mag ik vragen, beurt nemen in gesprek"
+        ],
+        "category": "communicatie"
+    },
+    "NU-B": {
+        "senses": [
+            "nu, tegenwoordig, huidig"
+        ],
+        "category": "tijd"
+    },
+    "NU-A": {
+        "senses": [
+            "nu, tegenwoordig, hier, huidig"
+        ],
+        "category": "tijd"
+    },
+    "BED-A": {
+        "senses": [
+            "bed, slapen gaan, onder de dekens"
+        ],
+        "category": "wonen"
+    },
+    "TIJD-A": {
+        "senses": [
+            "tijd, lang, minuut, seconde, moment",
+            "TYD",
+            "let op de tijd, het is tijd",
+            "hoe laat?",
+            "klok, horloge"
+        ],
+        "category": "tijd"
+    },
+    "OF-A": {
+        "senses": [
+            "of, oftewel, andere kant, mogelijk"
+        ],
+        "category": "overig"
+    },
+    "STIL-A": {
+        "senses": [
+            "zwijgen, stil, mond dicht houden"
+        ],
+        "category": "emotie"
+    },
+    "PRATEN-L": {
+        "senses": [
+            "spreken, kletsen, bespreken, praten, babbelen"
+        ],
+        "category": "communicatie"
+    },
+    "PRATEN-A": {
+        "senses": [
+            "spreken, kletsen, bespreken, praten, babbelen, zeggen"
+        ],
+        "category": "communicatie"
+    },
+    "COOL-B": {
+        "senses": [
+            "cool, stoer"
+        ],
+        "category": "emotie"
+    },
+    "JAS-A": {
+        "senses": [
+            "aandoen, colbert, jas, vest"
+        ],
+        "category": "kleding"
+    },
+    "MOVE+C": {
+        "senses": [
+            "rond of cylindervormig ding beweegt door de ruimte; rond, of cylindervormig of plat dik ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+        ],
+        "category": "classifier"
+    },
+    "NIEUW-A": {
+        "senses": [
+            "opnieuw, nieuw, nieuws",
+            "nieuws, journaal"
+        ],
+        "category": "tijd"
+    },
+    "NIEUW-B": {
+        "senses": [
+            "opnieuw, nieuw, weer, alweer",
+            "nieuws"
+        ],
+        "category": "tijd"
+    },
+    "AL-A": {
+        "senses": [
+            "al, af, afgelopen, eerder, gehad, geweest, klaar, meer niet, nog, reeds, ophouden"
+        ],
+        "category": "tijd"
+    },
+    "MOGEN-B": {
+        "senses": [
+            "mag, mogen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "WETEN-A": {
+        "senses": [
+            "weten, denken, kennen, bewust, leren, beseffen, verstand, verstandelijk, psychisch"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "MOGEN-A": {
+        "senses": [
+            "mogelijkheid, mag, toestemming, mogen, toegestaan, open, opening"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "OP-F": {
+        "senses": [
+            "op"
+        ],
+        "category": "plaats"
+    },
+    "OP-A": {
+        "senses": [
+            "op"
+        ],
+        "category": "plaats"
+    },
+    "OP-C": {
+        "senses": [
+            "op, niks meer over, leeg zijn, op zijn; opslaan (op computer); uitdoen, uitgaan"
+        ],
+        "category": "plaats"
+    },
+    "OMA-A": {
+        "senses": [
+            "oma"
+        ],
+        "category": "familie_personen"
+    },
+    "OPA": {
+        "senses": [
+            "grootvader, opa"
+        ],
+        "category": "familie_personen"
+    },
+    "OOK-A": {
+        "senses": [
+            "ook, zelfde, lijken op, lijkt net, net als, gelijk als, zelfde als"
+        ],
+        "category": "overig"
+    },
+    "JARIG-A": {
+        "senses": [
+            "verjaardag, jarig",
+            "feliciteren, gefeliciteerd"
+        ],
+        "category": "tijd"
+    },
+    "JAAR-G": {
+        "senses": [
+            "jaar"
+        ],
+        "category": "tijd"
+    },
+    "PIET": {
+        "senses": [
+            "zwarte piet, piet"
+        ],
+        "category": "familie_personen"
+    },
+    "GEVOEL-A": {
+        "senses": [
+            "gelukkig, gevoel, gevoelens, plezant, plezier, plezierig, prettig, geluk",
+            "borst"
+        ],
+        "category": "emotie"
+    },
+    "JAAR-B": {
+        "senses": [
+            "jaar"
+        ],
+        "category": "tijd"
+    },
+    "VAAK": {
+        "senses": [
+            "vaak"
+        ],
+        "category": "tijd"
+    },
+    "BINNEN-A": {
+        "senses": [
+            "entree, toegang, toegankelijk",
+            "binnen, erin, in, van binnen"
+        ],
+        "category": "plaats"
+    },
+    "GEVOLG": {
+        "senses": [
+            "gevolg, opvolgen, opvolging"
+        ],
+        "category": "overig"
+    },
+    "NIEMAND-B": {
+        "senses": [
+            "niemand, geen, zonder, niks, niets, nergens"
+        ],
+        "category": "getal"
+    },
+    "WAKKER": {
+        "senses": [
+            "oog open, wakker, ogen open"
+        ],
+        "category": "lichaam"
+    },
+    "MAMA-B": {
+        "senses": [
+            "mama, moeder"
+        ],
+        "category": "familie_personen"
+    },
+    "MAMA-A": {
+        "senses": [
+            "moeder, mama"
+        ],
+        "category": "familie_personen"
+    },
+    "ONTBIJT-B": {
+        "senses": [
+            "ontbijt"
+        ],
+        "category": "eten_drinken"
+    },
+    "MOVE+snavel": {
+        "senses": [
+            "breed plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+        ],
+        "category": "classifier"
+    },
+    "WERKEN-A": {
+        "senses": [
+            "werk, baan, beroep, werken, maken, meegemaakt",
+            "schoen"
+        ],
+        "category": "school_werk"
+    },
+    "LEREN-A": {
+        "senses": [
+            "leren, aanleren, school, studeren, onderwijzen"
+        ],
+        "category": "school_werk"
+    },
+    "MUZIEK-A": {
+        "senses": [
+            "zingen, muziek, zang, koor, lied, song"
+        ],
+        "category": "communicatie"
+    },
+    "GEK-B": {
+        "senses": [
+            "getikt, raar, weirdo, maf, gek",
+            "Heiloo"
+        ],
+        "category": "emotie"
+    },
+    "DOEN-A": {
+        "senses": [
+            "doen, doe, gedaan"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KAPOT": {
+        "senses": [
+            "breken, beschadigen, kwetsen, beschadigd, gebrek, gebreken, gebroken, kapot, stuk, kaduuk, defect"
+        ],
+        "category": "emotie"
+    },
+    "SLAPEN-A": {
+        "senses": [
+            "logeren, bed, slapen, dutje, gaan slapen, slaapje, doezelen, slaap"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "SLAPEN-C": {
+        "senses": [
+            "slapen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "STRAKS-A": {
+        "senses": [
+            "straks",
+            "batterij"
+        ],
+        "category": "tijd"
+    },
+    "STRAKS-C": {
+        "senses": [
+            "straks"
+        ],
+        "category": "tijd"
+    },
+    "ROEPEN-A": {
+        "senses": [
+            "aanspreken, vragen, roepen, aantikken, aandringen"
+        ],
+        "category": "communicatie"
+    },
+    "KOMEN-B": {
+        "senses": [
+            "komen",
+            "kom maar, kom mee",
+            "kom hier",
+            "kom op",
+            "afkomstig, uit komen, vandaan komen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KOMEN-A": {
+        "senses": [
+            "komen, gekomen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "AANKLEDEN-B": {
+        "senses": [
+            "aantrekken, aankleden, aan doen",
+            "kleren, kleding",
+            "omkleden, verkleden"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "AANKLEDEN-C": {
+        "senses": [
+            "broek/rok aantrekken",
+            "broek aan doen",
+            "broek omhoog hijsen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ENE-KANT-ANDERE-KANT-B": {
+        "senses": [
+            "aan de ene kant ..., aan de andere kant..., enerzijds-anderzijds, beide, of dit of dat, twijfel"
+        ],
+        "category": "plaats"
+    },
+    "NOG-B": {
+        "senses": [
+            "nog, na, daarna, erna, dan"
+        ],
+        "category": "tijd"
+    },
+    "UUR-LANG+1": {
+        "senses": [
+            "1 uur lang, 1 uur achter elkaar, 1 uur aan een stuk"
+        ],
+        "category": "tijd"
+    },
+    "HOP": {
+        "senses": [
+            "op"
+        ],
+        "category": "communicatie"
+    },
+    "NOG-A": {
+        "senses": [
+            "nog, na, daarna, erna, dan"
+        ],
+        "category": "tijd"
+    },
+    "DOOR-A": {
+        "senses": [
+            "door, doorgaan, steeds doorgaan, verder"
+        ],
+        "category": "plaats"
+    },
+    "APPLAUS-A": {
+        "senses": [
+            "klappen, applaus"
+        ],
+        "category": "communicatie"
+    },
+    "VERTREKKEN": {
+        "senses": [
+            "weg, weggaan, vertrekken, ervandoor gaan"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "OPSCHIETEN-A": {
+        "senses": [
+            "haast maken, opschieten, vort, vooruit"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "WIJ-A": {
+        "senses": [
+            "ons, wij"
+        ],
+        "category": "overig"
+    },
+    "10-B": {
+        "senses": [
+            "10, tien"
+        ],
+        "category": "getal"
+    },
+    "MINUUT": {
+        "senses": [
+            "moment, seconde, minuut, tel",
+            "minuut"
+        ],
+        "category": "tijd"
+    },
+    "OPRUIMEN": {
+        "senses": [
+            "opruimen"
+        ],
+        "category": "wonen"
+    },
+    "LEVEN-B": {
+        "senses": [
+            "leven",
+            "spelen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "WINKELEN-A": {
+        "senses": [
+            "boodschappen, winkel, winkelen, shoppen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "TUIN-A": {
+        "senses": [
+            "tuin"
+        ],
+        "category": "wonen"
+    },
+    "BEDENKEN": {
+        "senses": [
+            "bedenken, verzinnen, zich bedenken dat, idee, aha",
+            "raden"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KAART-C": {
+        "senses": [
+            "kaart, envelop",
+            "pas",
+            "brief",
+            "plaat",
+            "portemonnee",
+            "zakje"
+        ],
+        "category": "overig"
+    },
+    "KAARTEN-D": {
+        "senses": [
+            "kaarten"
+        ],
+        "category": "overig"
+    },
+    "MEE": {
+        "senses": [
+            "mee eens, meedoen, meemaken, meenemen, meegemaakt, meevallen, mee"
+        ],
+        "category": "overig"
+    },
+    "HELPEN-A": {
+        "senses": [
+            "hulp, helpen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "DRIEEN-A": {
+        "senses": [
+            "met z'n drieen, drieen, drietal"
+        ],
+        "category": "getal"
+    },
+    "ZIEN-A": {
+        "senses": [
+            "zien, kijken, merken, opletten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "TELEVISIE-A": {
+        "senses": [
+            "TV, televisie"
+        ],
+        "category": "communicatie"
+    },
+    "IETS-C": {
+        "senses": [
+            "iets"
+        ],
+        "category": "overig"
+    },
+    "IETS-A": {
+        "senses": [
+            "iets, een fractie"
+        ],
+        "category": "overig"
+    },
+    "IETS-D": {
+        "senses": [
+            "iets, ding"
+        ],
+        "category": "overig"
+    },
+    "LEUK-A": {
+        "senses": [
+            "leuk"
+        ],
+        "category": "emotie"
+    },
+    "KLAAR-C": {
+        "senses": [
+            "klaar, gedaan",
+            " af, afgelopen zijn, voorbij",
+            " stoppen, ophouden, genoeg",
+            "de maat is vol, basta",
+            "mag niet",
+            "afkappen"
+        ],
+        "category": "overig"
+    },
+    "KLAAR-A": {
+        "senses": [
+            "klaar",
+            "af, afgelopen zijn, voorbij",
+            "gedaan",
+            "stoppen, ophouden, genoeg",
+            "de maat is vol, basta",
+            "mag niet",
+            "afkappen",
+            "vol"
+        ],
+        "category": "overig"
+    },
+    "HAND.PL": {
+        "senses": [
+            "hand, handen"
+        ],
+        "category": "lichaam"
+    },
+    "HANDEN-WRIJVEN-B": {
+        "senses": [
+            "plezier, verheugen, handen wrijven, zin in",
+            "motivatie, gemotiveerd",
+            "handen wassen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LOGOPEDIE-A": {
+        "senses": [
+            "logopedie, articulatie"
+        ],
+        "category": "lichaam"
+    },
+    "GISTEREN": {
+        "senses": [
+            "vorige, vroeger, gisteren"
+        ],
+        "category": "tijd"
+    },
+    "BIBLIOTHEEK-A": {
+        "senses": [
+            "bibliotheek, bieb ",
+            "literatuur"
+        ],
+        "category": "school_werk"
+    },
+    "AANWEZIG-A": {
+        "senses": [
+            "aanwezig zijn, er is, er zijn, aanwezig, present, ter plaatse",
+            "bestaande, bestaan"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "1-A": {
+        "senses": [
+            "1, een, één"
+        ],
+        "category": "getal"
+    },
+    "PRIMA-A": {
+        "senses": [
+            "OK, fantastisch, geweldig, okee, perfect, prima, super, uitstekend"
+        ],
+        "category": "emotie"
+    },
+    "TOT-NU-A": {
+        "senses": [
+            "tot nu toe, van toen tot nu, tot op heden"
+        ],
+        "category": "tijd"
+    },
+    "PT-Bhand": {
+        "senses": [
+            "die, dat, dit, daar, deze",
+            "het, hij, hun, zij, jij, jou"
+        ],
+        "category": "pointing"
+    },
+    "TANDARTS-A": {
+        "senses": [
+            "tandarts"
+        ],
+        "category": "lichaam"
+    },
+    "ENG": {
+        "senses": [
+            "eng",
+            "horror "
+        ],
+        "category": "emotie"
+    },
+    "LICHT-AAN": {
+        "senses": [
+            "licht aan, lamp aandoen "
+        ],
+        "category": "wonen"
+    },
+    "RUIMTE-A": {
+        "senses": [
+            "gebied, omgeving, regio",
+            "maatschappij",
+            "algemeen",
+            "situatie, geval",
+            "groep mensen",
+            "milieu",
+            "wijk, buurt",
+            "kamer, ruimte",
+            "ergens, plaats",
+            "familie",
+            "tuin"
+        ],
+        "category": "plaats"
+    },
+    "PRETTIG-A": {
+        "senses": [
+            "plezier, gezellig, genieten, prettig, fijn, plezant, leuk"
+        ],
+        "category": "emotie"
+    },
+    "PT:down": {
+        "senses": [
+            "in",
+            "nu",
+            "hier",
+            "zuid",
+            "daar",
+            "dit"
+        ],
+        "category": "pointing"
+    },
+    "ZAND-B": {
+        "senses": [
+            "zand"
+        ],
+        "category": "natuur"
+    },
+    "BOUWEN": {
+        "senses": [
+            "bouw, verbouwen, ombouwen, opbouwen, bouwen",
+            "produceren, product",
+            "functioneren, functie"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PALEIS-B": {
+        "senses": [
+            "paleis"
+        ],
+        "category": "plaats"
+    },
+    "VLAKBIJ-C": {
+        "senses": [
+            "vlakbij, dichtbij"
+        ],
+        "category": "plaats"
+    },
+    "VLAKBIJ-A": {
+        "senses": [
+            "dichtbij, vlakbij"
+        ],
+        "category": "plaats"
+    },
+    "ARM-B": {
+        "senses": [
+            "arm (lichaamsdeel)"
+        ],
+        "category": "lichaam"
+    },
+    "TOT-B": {
+        "senses": [
+            "tot"
+        ],
+        "category": "tijd"
+    },
+    "BAL-A": {
+        "senses": [
+            "bal, bol",
+            "aarde, wereld, globe"
+        ],
+        "category": "overig"
+    },
+    "AANLEUNEN": {
+        "senses": [
+            "aanleunen, leunen op, leuning",
+            "aanleunwoning"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "UUR-HALF": {
+        "senses": [
+            "een half uur"
+        ],
+        "category": "tijd"
+    },
+    "6-A": {
+        "senses": [
+            "6, zes"
+        ],
+        "category": "getal"
+    },
+    "MAAR": {
+        "senses": [
+            "maar"
+        ],
+        "category": "overig"
+    },
+    "BIJ-A": {
+        "senses": [
+            "met, dichtbij, vlakbij, en, bij"
+        ],
+        "category": "overig"
+    },
+    "BIJ-F": {
+        "senses": [
+            "bij",
+            "prikken, geprikt worden"
+        ],
+        "category": "overig"
+    },
+    "DORP": {
+        "senses": [
+            "dorp"
+        ],
+        "category": "plaats"
+    },
+    "BIJ-E": {
+        "senses": [
+            "bij, honing"
+        ],
+        "category": "overig"
+    },
+    "MOLEN": {
+        "senses": [
+            "molen"
+        ],
+        "category": "overig"
+    },
+    "WONEN-A": {
+        "senses": [
+            "wonen"
+        ],
+        "category": "wonen"
+    },
+    "FAMILIE-B": {
+        "senses": [
+            "familie"
+        ],
+        "category": "familie_personen"
+    },
+    "GELD": {
+        "senses": [
+            "geld",
+            "kosten",
+            "waarde",
+            "waarden",
+            "rijk",
+            "duur",
+            "schulden",
+            "fonds",
+            "kapitalisme",
+            "financien, financiën"
+        ],
+        "category": "overig"
+    },
+    "BEHOEFTIG-A": {
+        "senses": [
+            "arm, behoeftig, niet rijk"
+        ],
+        "category": "emotie"
+    },
+    "KLEIN-VERTICAAL-A": {
+        "senses": [
+            "minder, minder worden, klein beetje, weinig, niet veel"
+        ],
+        "category": "getal"
+    },
+    "ZWART-A": {
+        "senses": [
+            "zwart, Zorro"
+        ],
+        "category": "kleur"
+    },
+    "MORGEN-A": {
+        "senses": [
+            "morgen"
+        ],
+        "category": "tijd"
+    },
+    "SPANNEND": {
+        "senses": [
+            "spanning, gespannen, spannend"
+        ],
+        "category": "emotie"
+    },
+    "WEDSTRIJD": {
+        "senses": [
+            "wedstrijd"
+        ],
+        "category": "tijd"
+    },
+    "NEE-C": {
+        "senses": [
+            "nee"
+        ],
+        "category": "communicatie"
+    },
+    "NEE-B": {
+        "senses": [
+            "niet, mag niet, geen, nee, ontkennen"
+        ],
+        "category": "communicatie"
+    },
+    "SCHOOL-A": {
+        "senses": [
+            "school, onderwijs"
+        ],
+        "category": "school_werk"
+    },
+    "ACHTERDOCHTIG": {
+        "senses": [
+            "achterdochtig"
+        ],
+        "category": "emotie"
+    },
+    "FILM": {
+        "senses": [
+            "filmen, bioscoop, film"
+        ],
+        "category": "communicatie"
+    },
+    "DAG-A": {
+        "senses": [
+            "dag"
+        ],
+        "category": "tijd"
+    },
+    "HELE": {
+        "senses": [
+            "hele dag, hele tijd, duren, lang, allemaal, hele"
+        ],
+        "category": "getal"
+    },
+    "AFSPRAAK-A": {
+        "senses": [
+            "afspreken, afgesproken, afspraak"
+        ],
+        "category": "tijd"
+    },
+    "DAG-B": {
+        "senses": [
+            "dag"
+        ],
+        "category": "tijd"
+    },
+    "DICHTBIJ": {
+        "senses": [
+            "dichtbij, vlakbij, komt steeds dichterbij, bijna dichtbij"
+        ],
+        "category": "plaats"
+    },
+    "KLINKT-A": {
+        "senses": [
+            "klinkt",
+            "geluid"
+        ],
+        "category": "communicatie"
+    },
+    "ZACHT": {
+        "senses": [
+            "zacht"
+        ],
+        "category": "emotie"
+    },
+    "LUKKEN-NIET-A": {
+        "senses": [
+            "lukt niet, niet lukken, tevergeefs"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ROEPEN:1": {
+        "senses": [
+            "mij vragen, mij roepen, mij aantikken, mijn aandacht vragen"
+        ],
+        "category": "communicatie"
+    },
+    "BROEK": {
+        "senses": [
+            "broek, pantalon, broek omhoog doen, ophijsen"
+        ],
+        "category": "kleding"
+    },
+    "NETJES-A": {
+        "senses": [
+            "netjes, keurig, onberispelijk, net, elegant, correct"
+        ],
+        "category": "emotie"
+    },
+    "MOVE+Snavel": {
+        "senses": [
+            "breed plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+        ],
+        "category": "classifier"
+    },
+    "VADER-C": {
+        "senses": [
+            "vader"
+        ],
+        "category": "familie_personen"
+    },
+    "CADEAU-A": {
+        "senses": [
+            "kado, cadeau"
+        ],
+        "category": "overig"
+    },
+    "KOPEN-A": {
+        "senses": [
+            "kopen, gekocht"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "BADPAK": {
+        "senses": [
+            "badpak, zwempak"
+        ],
+        "category": "kleding"
+    },
+    "KLEREN-B": {
+        "senses": [
+            "kleding, kleren, pyjama, t-shirt, aantrekken, trui, bloes"
+        ],
+        "category": "kleding"
+    },
+    "DROOG-A": {
+        "senses": [
+            "droog"
+        ],
+        "category": "emotie"
+    },
+    "TRUI": {
+        "senses": [
+            "trui"
+        ],
+        "category": "kleding"
+    },
+    "VERPLEEGSTER": {
+        "senses": [
+            "verpleegster, zuster, non, de kap van een zuster, verpleegkundig"
+        ],
+        "category": "lichaam"
+    },
+    "PERSOON-A": {
+        "senses": [
+            "iemand, persoon, persoonlijk"
+        ],
+        "category": "familie_personen"
+    },
+    "GORDIJN-A": {
+        "senses": [
+            "gordijn, gordijnen openen"
+        ],
+        "category": "wonen"
+    },
+    "GORDIJN-B": {
+        "senses": [
+            "gordijn",
+            "gordijnen dicht, gordijnen dicht doen"
+        ],
+        "category": "wonen"
+    },
+    "LICHT-A": {
+        "senses": [
+            "lamp, verlichting, flits, licht, zon, schijnen"
+        ],
+        "category": "emotie"
+    },
+    "LICHT-B": {
+        "senses": [
+            "niet donker, licht, weer"
+        ],
+        "category": "emotie"
+    },
+    "OBER-B": {
+        "senses": [
+            "ober, serveerster",
+            "dienblad",
+            "serveren, bedienen"
+        ],
+        "category": "school_werk"
+    },
+    "LOPEND-VOORTBEWEGEN-C": {
+        "senses": [],
+        "category": "werkwoord_actie"
+    },
+    "LOPEND-VOORTBEWEGEN-A": {
+        "senses": [
+            "wandelen, lopen, te voet gaan, met de benenwagen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ETEN-A": {
+        "senses": [
+            "eten, voedsel, voer, eet"
+        ],
+        "category": "eten_drinken"
+    },
+    "ETEN-B": {
+        "senses": [
+            "eten, voeden, met handen eten",
+            "speen, speentje"
+        ],
+        "category": "eten_drinken"
+    },
+    "GEVEN-C": {
+        "senses": [
+            "geven, inbreng"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PROBEREN-A": {
+        "senses": [
+            "proef, poging, proberen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VASTHOUDEN-A": {
+        "senses": [],
+        "category": "werkwoord_actie"
+    },
+    "VASTHOUDEN-K": {
+        "senses": [
+            "vasthouden"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LANG-A": {
+        "senses": [
+            "langzaam",
+            "lang, duurt lang",
+            "laat",
+            "hoelang"
+        ],
+        "category": "getal"
+    },
+    "GEBAREN-C": {
+        "senses": [
+            "soepel gebaren, vlotjes gebaren, vloeiend gebaren, gebaren, kletsen, babbelen"
+        ],
+        "category": "communicatie"
+    },
+    "GEBAREN-A": {
+        "senses": [
+            "gebaar, gebaren"
+        ],
+        "category": "communicatie"
+    },
+    "HAAK": {
+        "senses": [
+            "haak, kleerhanger, knaapje, ophangen"
+        ],
+        "category": "wonen"
+    },
+    "ZEGGEN": {
+        "senses": [
+            "benoemen, noemen, zeggen"
+        ],
+        "category": "communicatie"
+    },
+    "REKENING-HOUDEN-MET": {
+        "senses": [
+            "rekening houden met, voorzichtig",
+            "verwachten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "DRINKEN-A": {
+        "senses": [
+            "drinken, water, zuipen, drank, opdrinken"
+        ],
+        "category": "eten_drinken"
+    },
+    "WACHTEN-A": {
+        "senses": [
+            "afwachten, verwachten, wachten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "BEURT": {
+        "senses": [
+            "beurt"
+        ],
+        "category": "overig"
+    },
+    "ALTIJD-A": {
+        "senses": [
+            "steeds, altijd"
+        ],
+        "category": "tijd"
+    },
+    "BEDOELEN": {
+        "senses": [
+            "noemen, bedoelen"
+        ],
+        "category": "communicatie"
+    },
+    "KOUD-A": {
+        "senses": [
+            "koud, kouwelijk, winter, ijzig, kil, koelen"
+        ],
+        "category": "natuur"
+    },
+    "SCHOEN-A": {
+        "senses": [
+            "schoen, schoenen,, schoen aandoen"
+        ],
+        "category": "kleding"
+    },
+    "OH": {
+        "senses": [
+            "oeps, oh, hand op mond"
+        ],
+        "category": "communicatie"
+    },
+    "MOVE+B": {
+        "senses": [
+            "plat breed ding beweegt door de ruimte; groot ding met vlakke bodem of vlakke zijkanten oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+        ],
+        "category": "classifier"
+    },
+    "WC-A": {
+        "senses": [
+            "wc, toilet"
+        ],
+        "category": "wonen"
+    },
+    "WC-D": {
+        "senses": [
+            "wc, plassen"
+        ],
+        "category": "wonen"
+    },
+    "GEWOON-A": {
+        "senses": [
+            "normaal, regulier, gewoonte, simpel, eenvoudig, gewoon, gebruikelijk, gewoonlijk",
+            "wennen"
+        ],
+        "category": "emotie"
+    },
+    "INDRUKKEN-B": {
+        "senses": [
+            "toetsen, intoetsen, op knop drukken, indrukken, aanbellen, op de bel drukken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "SCHULD": {
+        "senses": [
+            "schuld, schuldig"
+        ],
+        "category": "overig"
+    },
+    "GROEIEN-A": {
+        "senses": [
+            "groeien"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "GROEIEN-B": {
+        "senses": [
+            "groeien (planten)"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PLASSEN-A": {
+        "senses": [
+            "plassen, pissen, pies, zeiken, urine, urineren, wateren"
+        ],
+        "category": "lichaam"
+    },
+    "PLASSEN-B": {
+        "senses": [
+            "plassen",
+            "Venezuela"
+        ],
+        "category": "lichaam"
+    },
+    "LEGO": {
+        "senses": [
+            "lego"
+        ],
+        "category": "overig"
+    },
+    "DOOS-A": {
+        "senses": [
+            "met betrekking tot, omkaderd, beperkt tot, categorie, doos, cadeau"
+        ],
+        "category": "wonen"
+    },
+    "IN-G": {
+        "senses": [
+            "in, binnen"
+        ],
+        "category": "plaats"
+    },
+    "GLANS": {
+        "senses": [
+            "glans, glimmen"
+        ],
+        "category": "emotie"
+    },
+    "HAND": {
+        "senses": [
+            "hand"
+        ],
+        "category": "lichaam"
+    },
+    "PEN": {
+        "senses": [
+            "pen"
+        ],
+        "category": "school_werk"
+    },
+    "PRACHTIG-C": {
+        "senses": [
+            "prachtig"
+        ],
+        "category": "emotie"
+    },
+    "PRACHTIG-A": {
+        "senses": [
+            "fantastisch, geweldig, ergens goed in zijn, prachtig, mooi, toppie, super, perfect"
+        ],
+        "category": "emotie"
+    },
+    "LIEVER-C": {
+        "senses": [
+            "liever"
+        ],
+        "category": "emotie"
+    },
+    "KAPPER": {
+        "senses": [
+            "kapper"
+        ],
+        "category": "school_werk"
+    },
+    "GEBRUIKEN-A": {
+        "senses": [
+            "gebruiken, nodig, nuttig"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KNIPPEN-A": {
+        "senses": [
+            "schaar, knippen, snoeien, kappen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "GASFORNUIS": {
+        "senses": [
+            "gasfornuis"
+        ],
+        "category": "wonen"
+    },
+    "HEET-B": {
+        "senses": [
+            "heet"
+        ],
+        "category": "natuur"
+    },
+    "PLANT-A": {
+        "senses": [
+            "plant",
+            "hooi",
+            "stro"
+        ],
+        "category": "natuur"
+    },
+    "LIGGEN-A": {
+        "senses": [
+            "liggen, plat, vlak, vloer, grond"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ZETTEN-LEGGEN-K": {
+        "senses": [
+            "zetten, leggen, neerzetten, neerleggen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LANGZAAM-A": {
+        "senses": [
+            "langzaam, sloom, loom, rustig, slow, zacht, zachtjes"
+        ],
+        "category": "tijd"
+    },
+    "DEUR-A": {
+        "senses": [
+            "deur, deuropening"
+        ],
+        "category": "wonen"
+    },
+    "VORK-A": {
+        "senses": [
+            "vork",
+            "prikken met vork"
+        ],
+        "category": "wonen"
+    },
+    "DICHT-B": {
+        "senses": [
+            "dicht, dicht gaan, deur gaat dicht, deur sluit"
+        ],
+        "category": "emotie"
+    },
+    "MES": {
+        "senses": [
+            "mes, snijden, bestek"
+        ],
+        "category": "wonen"
+    },
+    "LA": {
+        "senses": [
+            "la, lade"
+        ],
+        "category": "wonen"
+    },
+    "KOPJE-A": {
+        "senses": [
+            "kopje, thee, koffie, drinken"
+        ],
+        "category": "wonen"
+    },
+    "BORD-A": {
+        "senses": [
+            "bord, bordje",
+            "schotel, schoteltje"
+        ],
+        "category": "wonen"
+    },
+    "KAST": {
+        "senses": [
+            "kast, kastje"
+        ],
+        "category": "wonen"
+    },
+    "SPIEGEL": {
+        "senses": [
+            "spiegelbeeld, spiegel, spiegeling"
+        ],
+        "category": "wonen"
+    },
+    "OPHANGEN-C": {
+        "senses": [
+            "hangen van foto of schilderij, ophangen van foto of schilderij"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "SCHRIJVEN-A": {
+        "senses": [
+            "opschrijven, pen, potlood, schrijven"
+        ],
+        "category": "school_werk"
+    },
+    "DIER": {
+        "senses": [
+            "dier, dieren, beest, beesten"
+        ],
+        "category": "dier"
+    },
+    "STORM": {
+        "senses": [
+            "storm"
+        ],
+        "category": "natuur"
+    },
+    "HEMEL": {
+        "senses": [
+            "hemel, weer, lucht",
+            "hemel (religie)"
+        ],
+        "category": "natuur"
+    },
+    "DONKER-A": {
+        "senses": [
+            "donker, duister, verduisteren, avond valt in",
+            "onzichtbaar"
+        ],
+        "category": "emotie"
+    },
+    "TWIJFEL-A": {
+        "senses": [
+            "aarzeling, afwegen, eigenlijk, matig, misschien, mwah, ongeveer, onzeker, redelijk, twijfel, twijfelachtig, weet niet zeker, zozo, eventueel"
+        ],
+        "category": "emotie"
+    },
+    "ELLEBOOG-B": {
+        "senses": [],
+        "category": "lichaam"
+    },
+    "REGEN-A": {
+        "senses": [
+            "motregen, stortregen, bui, regen, miezerig",
+            "herfst"
+        ],
+        "category": "natuur"
+    },
+    "WIMPERS": {
+        "senses": [
+            "wimpers"
+        ],
+        "category": "lichaam"
+    },
+    "TEEN": {
+        "senses": [
+            "teen"
+        ],
+        "category": "lichaam"
+    },
+    "LUKKEN": {
+        "senses": [
+            "lukken, slagen, geslaagd, uitslag",
+            "aanslag"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ELKE-A": {
+        "senses": [
+            "dagelijks, iedere dag, elke maand, elke week, elke"
+        ],
+        "category": "getal"
+    },
+    "TYPEN": {
+        "senses": [
+            "computer, toetsen, toetsenbord, kantoor, typen, internet"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LICHAAM-B": {
+        "senses": [
+            "lijf, lichaam, lichamelijk, fysiek, houding, zijnswijze, mens, humaan"
+        ],
+        "category": "lichaam"
+    },
+    "TAFEL": {
+        "senses": [
+            "tafel, podium",
+            "bureau"
+        ],
+        "category": "wonen"
+    },
+    "PLEZIER-A": {
+        "senses": [
+            "plezier"
+        ],
+        "category": "emotie"
+    },
+    "EETBUIEN": {
+        "senses": [
+            "eetbuien, eten naar binnen werken"
+        ],
+        "category": "eten_drinken"
+    },
+    "BIJEENKOMEN": {
+        "senses": [
+            "bijeenkomen, samen komen, groep komt bijeen",
+            "integreren"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PROEVEN-C": {
+        "senses": [
+            "proeven"
+        ],
+        "category": "eten_drinken"
+    },
+    "SCHOONMAKEN": {
+        "senses": [
+            "schoonmaken, huishouden, poetsen"
+        ],
+        "category": "wonen"
+    },
+    "ONDERZOEK-C": {
+        "senses": [
+            "onderzoek, onderzoeken"
+        ],
+        "category": "school_werk"
+    },
+    "WARM-A": {
+        "senses": [
+            "warm"
+        ],
+        "category": "natuur"
+    },
+    "PASTA-B": {
+        "senses": [
+            "pasta"
+        ],
+        "category": "eten_drinken"
+    },
+    "HUISWERK": {
+        "senses": [
+            "huiswerk",
+            "Roemenië"
+        ],
+        "category": "school_werk"
+    },
+    "BES": {
+        "senses": [
+            "bes",
+            "dingen, spullen",
+            "boon"
+        ],
+        "category": "eten_drinken"
+    },
+    "NOOT-B": {
+        "senses": [
+            "noot"
+        ],
+        "category": "eten_drinken"
+    },
+    "MENING-A": {
+        "senses": [
+            "mening, eigen, egoïstisch, zelf, zichzelf"
+        ],
+        "category": "communicatie"
+    },
+    "TEMPERATUUR": {
+        "senses": [
+            "temperatuur",
+            "thermometer"
+        ],
+        "category": "natuur"
+    },
+    "HELPEN-A:1": {
+        "senses": [
+            "mij helpen, zij, hij, iemand helpt mij, zij helpen mij"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "2-A": {
+        "senses": [
+            "2, twee"
+        ],
+        "category": "getal"
+    },
+    "3-B": {
+        "senses": [
+            "3, drie"
+        ],
+        "category": "getal"
+    },
+    "GROOT-VERTICAAL-C": {
+        "senses": [
+            "meer, extra, meerdere, gestegen"
+        ],
+        "category": "getal"
+    },
+    "SPUITEN": {
+        "senses": [
+            "drugs, injecteren, injectie, prik, spuit, spuiten, vaccinatie, verdoven, verdoving, inspuiten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "HOEVEEL-A": {
+        "senses": [
+            "hoeveel, enkele, paar, sommige"
+        ],
+        "category": "getal"
+    },
+    "GROOT-VERTICAAL-F": {
+        "senses": [
+            "groot, lang, hoog, veel, groter (worden), langer (worden), hoger (worden), meer, ouder, groeien, opgroeien, boven, Hogeschool"
+        ],
+        "category": "getal"
+    },
+    "HALLO-A": {
+        "senses": [
+            "hallo, dag, uitzwaaien, zwaaien, hoi, toedeloe, hee"
+        ],
+        "category": "communicatie"
+    },
+    "BELLEN": {
+        "senses": [
+            "bellen, opbellen"
+        ],
+        "category": "communicatie"
+    },
+    "GELIJKWAARDIG": {
+        "senses": [
+            "gelijkwaardig, van gelijke waarde, met dezelfde waarde, equivalent"
+        ],
+        "category": "overig"
+    },
+    "PANNENKOEK-B": {
+        "senses": [
+            "pannenkoek"
+        ],
+        "category": "eten_drinken"
+    },
+    "OLIE-B": {
+        "senses": [
+            "olie"
+        ],
+        "category": "eten_drinken"
+    },
+    "HAGELSLAG-A": {
+        "senses": [
+            "schudden, hagelslag, strooien",
+            "Kruidvat",
+            "ketchup"
+        ],
+        "category": "eten_drinken"
+    },
+    "NAT": {
+        "senses": [
+            "nat"
+        ],
+        "category": "emotie"
+    },
+    "DOOIEN": {
+        "senses": [
+            "dooien, smelten, dooi"
+        ],
+        "category": "natuur"
+    },
+    "LAATSTE-A": {
+        "senses": [
+            "laatste, laat"
+        ],
+        "category": "tijd"
+    },
+    "FOTO": {
+        "senses": [
+            "foto, fotograferen, kiekje maken"
+        ],
+        "category": "communicatie"
+    },
+    "OPSTUREN-B": {
+        "senses": [
+            "posten, zenden, verzenden, versturen, sturen, opsturen, emailen, SMSen, mail, e-mail"
+        ],
+        "category": "communicatie"
+    },
+    "GROEP-A": {
+        "senses": [
+            "team, klas, club, gemeenschap, afdeling, groep",
+            "gezin",
+            "partij",
+            "nest"
+        ],
+        "category": "overig"
+    },
+    "KNUTSELEN": {
+        "senses": [
+            "knutselen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "GROEP-C": {
+        "senses": [
+            "team, klas, club, gemeenschap, groep, besloten",
+            "gezin, familie"
+        ],
+        "category": "overig"
+    },
+    "BRUS-A": {
+        "senses": [
+            "broer, zus, zussen, broers",
+            "neef, nicht",
+            "vriend, vriendin, iemand die dichtbij je staat op hetzelfde niveau"
+        ],
+        "category": "familie_personen"
+    },
+    "ZOEN-A": {
+        "senses": [
+            "zoen, kus, kussen, zoenen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ZOEN-C": {
+        "senses": [
+            "zoen, zoenen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "TERUG-C": {
+        "senses": [
+            "terug"
+        ],
+        "category": "plaats"
+    },
+    "HAND-OP-MOND-A": {
+        "senses": [
+            "lachertje, uitlachen, niet bijzonder, makkelijk, gemakkelijk, simpel, fluitje van een cent"
+        ],
+        "category": "lichaam"
+    },
+    "MELK": {
+        "senses": [
+            "melk"
+        ],
+        "category": "eten_drinken"
+    },
+    "BANAAN-A": {
+        "senses": [
+            "banaan, banaan pellen"
+        ],
+        "category": "eten_drinken"
+    },
+    "PINDAKAAS-A": {
+        "senses": [
+            "pindakaas"
+        ],
+        "category": "eten_drinken"
+    },
+    "HOOG": {
+        "senses": [
+            "omhoog, verhogen, hoog"
+        ],
+        "category": "plaats"
+    },
+    "KEER": {
+        "senses": [
+            "keer",
+            "maal",
+            "kruis",
+            "vermenigvuldigen"
+        ],
+        "category": "tijd"
+    },
+    "STERK": {
+        "senses": [
+            "sterk, krachtig, spierballen"
+        ],
+        "category": "emotie"
+    },
+    "BUIK-B": {
+        "senses": [
+            "buik"
+        ],
+        "category": "lichaam"
+    },
+    "TASTEN-A": {
+        "senses": [
+            "voelen, aanraken, tasten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LUISTEREN-B": {
+        "senses": [
+            "luisteren"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LUISTEREN": {
+        "senses": [
+            "horen, gehoord, verstaan, luisteren, aanhoren, afluisteren, toehoren"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LIEF-A": {
+        "senses": [
+            "aardig, lief",
+            "lieveling, schattig, liefje",
+            "liever",
+            "liefde"
+        ],
+        "category": "emotie"
+    },
+    "AUTO": {
+        "senses": [
+            "autorijden, chaufeur, auto, stuur",
+            "skelter"
+        ],
+        "category": "vervoer"
+    },
+    "HOP:1": {
+        "senses": [
+            "op mij, aan mij, iets of iemand doet een actie gericht op mij"
+        ],
+        "category": "communicatie"
+    },
+    "LEPEL": {
+        "senses": [
+            "lepel"
+        ],
+        "category": "wonen"
+    },
+    "REKENEN-A": {
+        "senses": [
+            "getal, rekenen, aantal, tellen"
+        ],
+        "category": "school_werk"
+    },
+    "YOGHURT-A": {
+        "senses": [
+            "yoghurt"
+        ],
+        "category": "eten_drinken"
+    },
+    "WASSEN-A": {
+        "senses": [
+            "wassen, kleren wassen"
+        ],
+        "category": "wonen"
+    },
+    "STOUT-B": {
+        "senses": [
+            "boef, ondeugend, stout"
+        ],
+        "category": "emotie"
+    },
+    "PLEISTER-A": {
+        "senses": [
+            "pleister, pleisteren, tapen"
+        ],
+        "category": "lichaam"
+    },
+    "KRIJGEN-B": {
+        "senses": [
+            "krijgen, geven aan mij, ontvangen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PLEISTER-C": {
+        "senses": [
+            "pleister, pleisteren, tapen, klittenband"
+        ],
+        "category": "lichaam"
+    },
+    "KIEZEN-B": {
+        "senses": [
+            "kiezen, keuze"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KIEZEN-A": {
+        "senses": [
+            "selecteren, keuze, kiezen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "MOOI-A": {
+        "senses": [
+            "mooi, goed, prima",
+            "precies"
+        ],
+        "category": "emotie"
+    },
+    "KLEUR-A": {
+        "senses": [
+            "kleur"
+        ],
+        "category": "kleur"
+    },
+    "KLEUR-B": {
+        "senses": [
+            "kleur, tekenen"
+        ],
+        "category": "kleur"
+    },
+    "SNEL-A": {
+        "senses": [
+            "vlug, hard, meteen, gelijk, snel, sneller"
+        ],
+        "category": "tijd"
+    },
+    "WEG-C": {
+        "senses": [
+            "weg zijn, kwijt, niet hebben, leeg, foetsie, er niet meer zijn"
+        ],
+        "category": "plaats"
+    },
+    "WEG-D": {
+        "senses": [
+            "weg, over, verlaten, voorbij, weg doen, weg ermee, voor niks, afschaffen, vanaf"
+        ],
+        "category": "plaats"
+    },
+    "OOR-A": {
+        "senses": [
+            "oor, horen"
+        ],
+        "category": "lichaam"
+    },
+    "BIJZONDER": {
+        "senses": [
+            "speciaal, bijzonder"
+        ],
+        "category": "emotie"
+    },
+    "OMDAT-A": {
+        "senses": [
+            "daarom, oorzaak, omdat, daardoor, want"
+        ],
+        "category": "overig"
+    },
+    "WILLEN-NIET": {
+        "senses": [
+            "niet willen, weigeren, wil niet"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LAWAAI-C": {
+        "senses": [
+            "lawaai, ruis, geruis"
+        ],
+        "category": "communicatie"
+    },
+    "MOETEN-A": {
+        "senses": [
+            "moeten, verplicht, eis, bevel, zullen, gebieden"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LAWAAI-A": {
+        "senses": [
+            "lawaai, herrie, kabaal, geluid",
+            "geraas, getier"
+        ],
+        "category": "communicatie"
+    },
+    "STICKER": {
+        "senses": [
+            "sticker"
+        ],
+        "category": "overig"
+    },
+    "HOUDEN-VAN": {
+        "senses": [
+            "houden van, liefde, verliefd, hobby, braaf, aardig (Gr.), behoefte, voorkeur hebben voor, voorliefde hebben voor, voelen"
+        ],
+        "category": "emotie"
+    },
+    "PAKKEN-A": {
+        "senses": [
+            "nemen, stelen, betrappen, aannemen, pakken, halen, afpakken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VENEZUELA": {
+        "senses": [
+            "Venezuela"
+        ],
+        "category": "plaats"
+    },
+    "SAMEN-A": {
+        "senses": [
+            "samen, tezamen, bij elkaar, met elkaar",
+            "samenkomen, bijeenkomen, bijeenkomst",
+            "samenvoegen",
+            "groep",
+            "team",
+            "gemeenschap"
+        ],
+        "category": "overig"
+    },
+    "EI-B": {
+        "senses": [
+            "ei, pasen"
+        ],
+        "category": "eten_drinken"
+    },
+    "EI-A": {
+        "senses": [
+            "ei"
+        ],
+        "category": "eten_drinken"
+    },
+    "ZOEKEN-A": {
+        "senses": [
+            "zoeken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VOORHOOFD": {
+        "senses": [
+            "voorhoofd"
+        ],
+        "category": "lichaam"
+    },
+    "GRAAG-A": {
+        "senses": [
+            "graag"
+        ],
+        "category": "emotie"
+    },
+    "WORDEN": {
+        "senses": [
+            "worden"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "SORRY-A": {
+        "senses": [
+            "pardon, sorry, het spijt me"
+        ],
+        "category": "communicatie"
+    },
+    "SCHATTIG-A": {
+        "senses": [
+            "schattig, schat"
+        ],
+        "category": "emotie"
+    },
+    "DIE": {
+        "senses": [
+            "wijzen, die, deze, dit"
+        ],
+        "category": "overig"
+    },
+    "NACHT-A": {
+        "senses": [
+            "nacht, donker"
+        ],
+        "category": "tijd"
+    },
+    "VERSPREIDEN-A": {
+        "senses": [
+            "netwerk, verspreiden"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "BOM-A": {
+        "senses": [
+            "bom",
+            "ontploffen"
+        ],
+        "category": "overig"
+    },
+    "VERSPREIDEN-B": {
+        "senses": [
+            "netwerk, verspreiden, snel verspreiden"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KIND.PL": {
+        "senses": [
+            "kinderen"
+        ],
+        "category": "familie_personen"
+    },
+    "GLIJBAAN": {
+        "senses": [
+            "glijbaan, glijden"
+        ],
+        "category": "overig"
+    },
+    "WATER-A": {
+        "senses": [
+            "water, meer, plas, ven"
+        ],
+        "category": "eten_drinken"
+    },
+    "WATER-B": {
+        "senses": [
+            "water, drinkwater, water uit de kraan"
+        ],
+        "category": "eten_drinken"
+    },
+    "GLAD": {
+        "senses": [
+            "glad",
+            "uitglijden"
+        ],
+        "category": "emotie"
+    },
+    "MOSSEL-B": {
+        "senses": [
+            "mossel, schelp",
+            "oester"
+        ],
+        "category": "eten_drinken"
+    },
+    "TOT-NU-TOE-C": {
+        "senses": [
+            "van toen tot nu, door de tijd heen, sinds, tot nu toe, al die tijd tot nu toe"
+        ],
+        "category": "tijd"
+    },
+    "VORIGE": {
+        "senses": [
+            "vorige"
+        ],
+        "category": "tijd"
+    },
+    "BINNENKORT-D": {
+        "senses": [
+            "zometeen, binnenkort"
+        ],
+        "category": "tijd"
+    },
+    "MISSELIJK": {
+        "senses": [
+            "misselijk, naar ervan, akelig, vervelend"
+        ],
+        "category": "lichaam"
+    },
+    "TELHAND+5": {
+        "senses": [
+            "ten vijfde, punt vijf (in de lijst), telhand"
+        ],
+        "category": "getal"
+    },
+    "RENNEN-A": {
+        "senses": [
+            "hardlopen, lopen, rennen, joggen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PAS-A": {
+        "senses": [
+            "net, vroeger, geleden, toen, pas, onlangs, daarstraks"
+        ],
+        "category": "tijd"
+    },
+    "VRAGEN-A": {
+        "senses": [
+            "vragen, vraag, aanvragen, aanvraag"
+        ],
+        "category": "communicatie"
+    },
+    "VUURWERK": {
+        "senses": [
+            "vuurwerk, Enschede"
+        ],
+        "category": "tijd"
+    },
+    "KAPSEL": {
+        "senses": [
+            "kapsel"
+        ],
+        "category": "lichaam"
+    },
+    "PT+Bhand": {
+        "senses": [],
+        "category": "pointing"
+    },
+    "KRULLEN": {
+        "senses": [
+            "krul, krullend haar, krullen, permanent"
+        ],
+        "category": "lichaam"
+    },
+    "HAND-OP-WANG": {
+        "senses": [
+            "hand op wang"
+        ],
+        "category": "lichaam"
+    },
+    "SLIM-B": {
+        "senses": [
+            "intelligent, intelligentie, slim"
+        ],
+        "category": "emotie"
+    },
+    "IDEE": {
+        "senses": [
+            "bedenken, idee, lampje gaat branden, plan, plannen, mening"
+        ],
+        "category": "overig"
+    },
+    "VLINDER-A": {
+        "senses": [
+            "vlinder",
+            "Emmen"
+        ],
+        "category": "dier"
+    },
+    "BLOEM-A": {
+        "senses": [
+            "plant, bloem, bloem gaat open"
+        ],
+        "category": "natuur"
+    },
+    "ALLEMAAL-B": {
+        "senses": [
+            "allen, jullie, zij, iedereen, ruimte, overal, allemaal, sommigen"
+        ],
+        "category": "getal"
+    },
+    "ALLEMAAL-C": {
+        "senses": [
+            "allemaal"
+        ],
+        "category": "getal"
+    },
+    "ALLEMAAL-A": {
+        "senses": [
+            "alles, iedereen, allemaal, alle, sommigen, geheel, allen, de hele mikmak, al, jullie, zij, hen, de mensen, het volk"
+        ],
+        "category": "getal"
+    },
+    "ZON-A": {
+        "senses": [
+            "schijnen, zon, zonnig",
+            "fel"
+        ],
+        "category": "natuur"
+    },
+    "VLEES-B": {
+        "senses": [
+            "vlees"
+        ],
+        "category": "eten_drinken"
+    },
+    "ZONSONDERGANG": {
+        "senses": [
+            "zonsondergang"
+        ],
+        "category": "natuur"
+    },
+    "LIEFDE": {
+        "senses": [
+            "liefde, verliefd"
+        ],
+        "category": "emotie"
+    },
+    "VAN-TOT-A": {
+        "senses": [
+            "van ... tot ..., na, erna, daarna, tot, later, dan"
+        ],
+        "category": "tijd"
+    },
+    "LUIER-A": {
+        "senses": [
+            "luier, maandverband, verband"
+        ],
+        "category": "kleding"
+    },
+    "PT:bodypart": {
+        "senses": [],
+        "category": "pointing"
+    },
+    "ROMPERTJE": {
+        "senses": [
+            "rompertje"
+        ],
+        "category": "kleding"
+    },
+    "BIKINI": {
+        "senses": [
+            "bikini"
+        ],
+        "category": "kleding"
+    },
+    "IEDEREEN-A": {
+        "senses": [
+            "ieder, iedereen, allemaal, allen"
+        ],
+        "category": "getal"
+    },
+    "PIJN-A": {
+        "senses": [
+            "heet, warm, pijn, zeer, au, oei"
+        ],
+        "category": "lichaam"
+    },
+    "GRIEP": {
+        "senses": [
+            "griep"
+        ],
+        "category": "lichaam"
+    },
+    "GEBEUREN-B": {
+        "senses": [
+            "gebeurd, in verleden gebeuren, gebeuren"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "GEBEUREN-A": {
+        "senses": [
+            "in toekomst gebeuren, gebeuren"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "WELKE-B": {
+        "senses": [
+            "welke, welke van de twee"
+        ],
+        "category": "communicatie"
+    },
+    "DENKEN": {
+        "senses": [
+            "denken, weten, bewust, beseffen, besef",
+            "DENK (politieke partij)"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KLEED": {
+        "senses": [
+            "kleed"
+        ],
+        "category": "wonen"
+    },
+    "WIE-A": {
+        "senses": [
+            "wie"
+        ],
+        "category": "communicatie"
+    },
+    "WESP": {
+        "senses": [
+            "wesp"
+        ],
+        "category": "dier"
+    },
+    "VAKANTIE": {
+        "senses": [
+            "vakantie"
+        ],
+        "category": "tijd"
+    },
+    "GOOIEN-A": {
+        "senses": [
+            "gooien, worp, werpen, gooi"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KOFFER-A": {
+        "senses": [
+            "bagage, dragen, emmer, koffer"
+        ],
+        "category": "overig"
+    },
+    "APPEL": {
+        "senses": [
+            "appel"
+        ],
+        "category": "eten_drinken"
+    },
+    "ZEBRA": {
+        "senses": [
+            "zebra",
+            "strepen"
+        ],
+        "category": "dier"
+    },
+    "DUIDELIJK-A": {
+        "senses": [
+            "duidelijk, helder"
+        ],
+        "category": "emotie"
+    },
+    "CABRIOLET": {
+        "senses": [
+            "cabriolet"
+        ],
+        "category": "vervoer"
+    },
+    "ZIN-IN-A": {
+        "senses": [
+            "trek, zin, zin in"
+        ],
+        "category": "emotie"
+    },
+    "RUPS-A": {
+        "senses": [
+            "rups, worm"
+        ],
+        "category": "dier"
+    },
+    "KIJKEN-F:1": {
+        "senses": [
+            "kijk me aan"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VINGER-OPSTEKEN": {
+        "senses": [
+            "vinger opsteken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PIRAAT": {
+        "senses": [
+            "piraat"
+        ],
+        "category": "familie_personen"
+    },
+    "BLADEREN": {
+        "senses": [
+            "bladeren, doorbladeren, snel doorkijken"
+        ],
+        "category": "natuur"
+    },
+    "AVONTUUR-B": {
+        "senses": [
+            "avontuur"
+        ],
+        "category": "overig"
+    },
+    "MACHT": {
+        "senses": [
+            "macht"
+        ],
+        "category": "overig"
+    },
+    "KAMP-B": {
+        "senses": [
+            "tent, kamperen, kamp, camping"
+        ],
+        "category": "tijd"
+    },
+    "KAMPEREN": {
+        "senses": [
+            "kamperen, kamp, tenten, tent, camping"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ZEE": {
+        "senses": [
+            "zee, golven",
+            "Zeeland"
+        ],
+        "category": "natuur"
+    },
+    "MAAT-HORIZONTAAL-D": {
+        "senses": [
+            "deze maat, deze grootte, deze lengte, zo groot, zo lang, zo veel"
+        ],
+        "category": "getal"
+    },
+    "VINDEN-B": {
+        "senses": [
+            "gevonden, vinden, vondst, ontdekking, ontdekken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "AAP-B": {
+        "senses": [
+            "aap",
+            "chimpansee"
+        ],
+        "category": "dier"
+    },
+    "MENS.PL": {
+        "senses": [
+            "antropologie, mens.pl, menselijk, mensen"
+        ],
+        "category": "familie_personen"
+    },
+    "HARD-A": {
+        "senses": [
+            "steen, kei, hard, ijzer, bikkel"
+        ],
+        "category": "emotie"
+    },
+    "GELUID": {
+        "senses": [
+            "geluid, verstaan"
+        ],
+        "category": "communicatie"
+    },
+    "SCHRIKKEN-A": {
+        "senses": [
+            "geschrokken, schok, eng, schrikken, onverwacht, geschokt"
+        ],
+        "category": "emotie"
+    },
+    "SCHRIKKEN-C": {
+        "senses": [
+            "schrikken, geschrokken",
+            " schok, shock"
+        ],
+        "category": "emotie"
+    },
+    "PT-alt": {
+        "senses": [
+            "her en der, hier en daar, die en die en die, dit en dit en dit, dat en dat en dat"
+        ],
+        "category": "pointing"
+    },
+    "VOGEL-A": {
+        "senses": [
+            "vliegen, vogel, vleugels"
+        ],
+        "category": "dier"
+    },
+    "STOFZUIGEN": {
+        "senses": [
+            "stofzuigen"
+        ],
+        "category": "wonen"
+    },
+    "FLUITEN-C": {
+        "senses": [
+            "fluiten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PAPEGAAI-B": {
+        "senses": [
+            "papegaai",
+            "valk",
+            "feyenoord",
+            "heks, kromme neus",
+            "Zlatan Ibrahimovic"
+        ],
+        "category": "dier"
+    },
+    "OVERNEMEN-A": {
+        "senses": [
+            "eigen maken, verwerven, nadoen, overnemen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "STEIGER": {
+        "senses": [
+            "steiger"
+        ],
+        "category": "overig"
+    },
+    "MIER-A": {
+        "senses": [
+            "mier"
+        ],
+        "category": "dier"
+    },
+    "KROKODIL-A": {
+        "senses": [
+            "krokodil, alligator"
+        ],
+        "category": "dier"
+    },
+    "MOVE+T": {
+        "senses": [
+            "klein, dun ding (delicaat) oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+        ],
+        "category": "classifier"
+    },
+    "WALVIS": {
+        "senses": [
+            "Walvis"
+        ],
+        "category": "dier"
+    },
+    "VOGELKOOI-A": {
+        "senses": [
+            "vogelkooi"
+        ],
+        "category": "dier"
+    },
+    "ALSTUBLIEFT-B": {
+        "senses": [
+            "alsjeblieft, verzoeken",
+            "smeken",
+            "Lieverdjes (Amsterdamse Dove Jongerenclub)"
+        ],
+        "category": "communicatie"
+    },
+    "TAART-A": {
+        "senses": [
+            "taart"
+        ],
+        "category": "eten_drinken"
+    },
+    "SPROEIEN": {
+        "senses": [
+            "sproeien",
+            "tuinslang"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ZEIL-B": {
+        "senses": [
+            "vliegeren",
+            "zeilen"
+        ],
+        "category": "overig"
+    },
+    "TOUW-A": {
+        "senses": [
+            "touw, draad, snoer, kabel",
+            "maat",
+            "zenuw"
+        ],
+        "category": "wonen"
+    },
+    "WATER-GEVEN": {
+        "senses": [
+            "water geven, gieten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "HUIS-A": {
+        "senses": [
+            "huis, huisje, hok, schuur"
+        ],
+        "category": "wonen"
+    },
+    "STRIP-A": {
+        "senses": [
+            "strip"
+        ],
+        "category": "communicatie"
+    },
+    "VERZAMELEN-B": {
+        "senses": [
+            "verwerven, verwerving, verzamelen, bijeen schrapen, sprokkelen, bijeen harken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "GROENTE-B": {
+        "senses": [
+            "groente, groenten"
+        ],
+        "category": "eten_drinken"
+    },
+    "KAR": {
+        "senses": [
+            "wagen, buggy, kinderwagen, winkelwagen, kar, rijtuig, voertuig"
+        ],
+        "category": "vervoer"
+    },
+    "MOVE+V": {
+        "senses": [
+            "2 lange dunne dingen, mensen of dieren bewegen door de ruimte, ding met 2 extensies (benen, armen) beweegt door de ruimte"
+        ],
+        "category": "classifier"
+    },
+    "AFSLUITEN": {
+        "senses": [
+            "afsluiten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "GRAPPIG-A": {
+        "senses": [
+            "humor, grap, grappig, mop, nep, fop, alsof"
+        ],
+        "category": "emotie"
+    },
+    "LEZEN-A": {
+        "senses": [
+            "lezen, voorlezen"
+        ],
+        "category": "school_werk"
+    },
+    "LEZEN-B": {
+        "senses": [
+            "lezen"
+        ],
+        "category": "school_werk"
+    },
+    "SCHREEUWEN-E": {
+        "senses": [
+            "schreeuwen"
+        ],
+        "category": "communicatie"
+    },
+    "FOUT-A": {
+        "senses": [
+            "fout"
+        ],
+        "category": "emotie"
+    },
+    "ADEMEN-C": {
+        "senses": [
+            "ademhalen, ademen, benauwd, hijgen, inademen, uitademen, zuurstof, borstademhaling"
+        ],
+        "category": "lichaam"
+    },
+    "TROTS-A": {
+        "senses": [
+            "trots"
+        ],
+        "category": "emotie"
+    },
+    "VIES-B": {
+        "senses": [
+            "vies, vuil"
+        ],
+        "category": "emotie"
+    },
+    "VIES-A": {
+        "senses": [
+            "vies, vuil"
+        ],
+        "category": "emotie"
+    },
+    "INPAKKEN-B": {
+        "senses": [
+            "inpakken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "EXTRA-A": {
+        "senses": [
+            "extra"
+        ],
+        "category": "getal"
+    },
+    "KNUFFELEN": {
+        "senses": [
+            "knuffelen, omhelzen, vasthouden"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ECHT-A": {
+        "senses": [
+            "echt, toch, zeker"
+        ],
+        "category": "emotie"
+    },
+    "MOVE+C_spreid": {
+        "senses": [
+            "rond of groot vormloos ding beweegt door de ruimte; groot rond ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+        ],
+        "category": "classifier"
+    },
+    "HART-BONST": {
+        "senses": [
+            "angst, angstig, bang, hart bonst, bonzend hart, kloppend hart, hart klopt"
+        ],
+        "category": "lichaam"
+    },
+    "PIZZA-A": {
+        "senses": [
+            "pizza"
+        ],
+        "category": "eten_drinken"
+    },
+    "COMBINATIE": {
+        "senses": [
+            "combineren, combinatie"
+        ],
+        "category": "overig"
+    },
+    "SCHILDEREN-B": {
+        "senses": [
+            "verf, kwast, schilderij, verven, schilderen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "HALEN-A": {
+        "senses": [
+            "ophalen, halen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "MAART-A": {
+        "senses": [
+            "maart, dooien, dooi, smelten, diarree"
+        ],
+        "category": "tijd"
+    },
+    "BOTER-B": {
+        "senses": [
+            "boter, smeren, op brood smeren, pasta",
+            "lijm"
+        ],
+        "category": "eten_drinken"
+    },
+    "AANDACHT-A": {
+        "senses": [
+            "richten op, focus",
+            "concentreren, concentratie",
+            "aandacht"
+        ],
+        "category": "overig"
+    },
+    "VLOEIBAAR": {
+        "senses": [
+            "stof, vloeistof, vloeibaar"
+        ],
+        "category": "emotie"
+    },
+    "OPLOSSEN-A": {
+        "senses": [
+            "oplossing, oplossen, uitvinden, uitvinding"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "PROBLEEM-C": {
+        "senses": [
+            "probleem, problemen"
+        ],
+        "category": "overig"
+    },
+    "VRIEND-A": {
+        "senses": [
+            "vriend, bevriend, vrienden, vriendschappelijk"
+        ],
+        "category": "familie_personen"
+    },
+    "SAMENWERKEN-A": {
+        "senses": [
+            "samenwerken, samenwerking"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "AANRAKEN-A": {
+        "senses": [
+            "aanraken"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VERKIEZINGEN": {
+        "senses": [
+            "verkiezingen, selecteren, kiezen"
+        ],
+        "category": "tijd"
+    },
+    "MERKEN-A": {
+        "senses": [
+            "herkennen, merken, ontdekken, opmerken, bemerken",
+            "betrappen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VERBETEREN": {
+        "senses": [
+            "verbeteren, corrigeren"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VRIENDELIJK": {
+        "senses": [
+            "vrolijk, aardig, vriendelijk"
+        ],
+        "category": "emotie"
+    },
+    "VERFIJNEN": {
+        "senses": [
+            "verfijnen, aan iets schaven"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "TANDPASTA-B": {
+        "senses": [
+            "tandpasta"
+        ],
+        "category": "lichaam"
+    },
+    "LIP": {
+        "senses": [
+            "lip, mond"
+        ],
+        "category": "lichaam"
+    },
+    "TONG": {
+        "senses": [
+            "tong"
+        ],
+        "category": "lichaam"
+    },
+    "LOLLY-B": {
+        "senses": [
+            "lolly"
+        ],
+        "category": "eten_drinken"
+    },
+    "BEUGEL": {
+        "senses": [
+            "beugel"
+        ],
+        "category": "lichaam"
+    },
+    "SCHOON": {
+        "senses": [
+            "schoon"
+        ],
+        "category": "wonen"
+    },
+    "GA-MAAR-A": {
+        "senses": [
+            "hup hup, zetje geven, ga maar, sneller, tempo"
+        ],
+        "category": "communicatie"
+    },
+    "BLIJ-A": {
+        "senses": [
+            "vrolijk, gezellig, blij, plezier, prettig, fijn, plezant"
+        ],
+        "category": "emotie"
+    },
+    "OPNIEUW-A": {
+        "senses": [
+            "opnieuw, weer, alweer, wederom"
+        ],
+        "category": "tijd"
+    },
+    "HOND-A": {
+        "senses": [
+            "hond"
+        ],
+        "category": "dier"
+    },
+    "HONGER-B": {
+        "senses": [
+            "honger"
+        ],
+        "category": "eten_drinken"
+    },
+    "ONTMOETEN-E": {
+        "senses": [
+            "ontmoeten, elkaar tegenkomen, elkaar treffen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "MEEVALLEN": {
+        "senses": [
+            "meevallen, niet zo erg zijn, het valt wel mee"
+        ],
+        "category": "emotie"
+    },
+    "TOCH-A": {
+        "senses": [
+            "wel, toch"
+        ],
+        "category": "overig"
+    },
+    "LACHEN-A": {
+        "senses": [
+            "lachen, hard lachen, schateren, schaterlachen"
+        ],
+        "category": "emotie"
+    },
+    "ONDERWIJS-A": {
+        "senses": [
+            "les, lesgeven, leraar, docent, meester, juf, leerkracht, onderwijzer, juffrouw, onderwijs, doceren, educatie, instructie, instrueren"
+        ],
+        "category": "school_werk"
+    },
+    "TAS": {
+        "senses": [
+            "tas, dragen"
+        ],
+        "category": "overig"
+    },
+    "GYMNASTIEK-B": {
+        "senses": [
+            "gymnastiek"
+        ],
+        "category": "school_werk"
+    },
+    "KASTEEL": {
+        "senses": [
+            "kasteel",
+            "paleis"
+        ],
+        "category": "plaats"
+    },
+    "ZWAAR-A": {
+        "senses": [
+            "bezwaar, zwaar, gewicht"
+        ],
+        "category": "getal"
+    },
+    "KOE-D": {
+        "senses": [
+            "koe"
+        ],
+        "category": "dier"
+    },
+    "GRAZEN-B": {
+        "senses": [
+            "grazen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "LAAT-MAAR-A": {
+        "senses": [
+            "ach, valt mee, af, niet nodig, laat maar, ga weg, nee joh"
+        ],
+        "category": "communicatie"
+    },
+    "VAATWASSER": {
+        "senses": [
+            "vaatwasser"
+        ],
+        "category": "wonen"
+    },
+    "LUISTEREN-NIET-A": {
+        "senses": [
+            "ongehoorzaam, niet luisteren, negeren"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "KAUWEN": {
+        "senses": [
+            "kauwen"
+        ],
+        "category": "eten_drinken"
+    },
+    "HAAS-C": {
+        "senses": [
+            "konijn, haas"
+        ],
+        "category": "dier"
+    },
+    "MOVE+B_krom": {
+        "senses": [
+            "gebogen plat breed ding beweegt door de ruimte, groot bolvormig ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+        ],
+        "category": "classifier"
+    },
+    "KLAP": {
+        "senses": [
+            "klap, smak, slag, klets, lel, pets"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "MOL": {
+        "senses": [
+            "mol"
+        ],
+        "category": "dier"
+    },
+    "ONDER": {
+        "senses": [
+            "tunnel, onder, metro, binnen, in"
+        ],
+        "category": "plaats"
+    },
+    "DOUCHEN": {
+        "senses": [
+            "douche, douchen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "MOEILIJK-C": {
+        "senses": [
+            "moeilijk, moeite, heel moeilijk"
+        ],
+        "category": "emotie"
+    },
+    "MOVE+Snavel_open": {
+        "senses": [
+            "breed tamelijk plat ding oppakken, ergens neerzetten/leggen/hangen of verplaatsen"
+        ],
+        "category": "classifier"
+    },
+    "TREIN": {
+        "senses": [
+            "trein"
+        ],
+        "category": "vervoer"
+    },
+    "VOETSTAPPEN": {
+        "senses": [
+            "stappen, voetstappen"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "FIETSEN-A": {
+        "senses": [
+            "fiets, fietsen, trappen",
+            "radler (bier)"
+        ],
+        "category": "vervoer"
+    },
+    "Pt-1hand": {
+        "senses": [
+            "daar, dat, deze, die, dit, het, hij, hun, zij, jij, jou"
+        ],
+        "category": "pointing"
+    },
+    "KASTANJE": {
+        "senses": [
+            "kastanje"
+        ],
+        "category": "natuur"
+    },
+    "OEFENEN-A": {
+        "senses": [
+            "oefening, trainen, training, oefenen"
+        ],
+        "category": "school_werk"
+    },
+    "VAARDIG": {
+        "senses": [
+            "vloeiend, geoefend, vaardigheid, vaardigheden, ervaring, vaardig, bekwaam"
+        ],
+        "category": "emotie"
+    },
+    "WEGSCHIETEN": {
+        "senses": [
+            "wegschieten",
+            "verwerpen (idee), weggooien (object)"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "GAAN": {
+        "senses": [
+            "gaan, ga"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "ZO-A": {
+        "senses": [
+            "zo, zo is het//dat/hij/zij/..., zoals"
+        ],
+        "category": "overig"
+    },
+    "ONDERBROEK": {
+        "senses": [
+            "onderbroek",
+            "panty",
+            "luier",
+            "broekje"
+        ],
+        "category": "kleding"
+    },
+    "FIXEN": {
+        "senses": [
+            "fixen, fiksen, knutselen, klussen, in elkaar zetten"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "VERGETEN-A": {
+        "senses": [
+            "vergeten",
+            "verbijsterend"
+        ],
+        "category": "werkwoord_actie"
+    },
+    "POT-A": {
+        "senses": [
+            "potje, vaas, pot"
+        ],
+        "category": "wonen"
+    },
+    "nee-f": {
+        "senses": [
+            "nee, niet, niet mogelijk"
+        ],
+        "category": "communicatie"
+    },
+    "NAAST": {
+        "senses": [
+            "ernaast, daarnaast, naast, buren, behalve dat, achter"
+        ],
+        "category": "plaats"
+    },
+    "GLAS-B": {
+        "senses": [
+            "glas, beker, mok, kop, fles"
+        ],
+        "category": "wonen"
+    },
+    "BOOS-D": {
+        "senses": [
+            "boos, kwaad"
+        ],
+        "category": "emotie"
+    },
+    "EMOTIE-B": {
+        "senses": [
+            "emotie, emoties, emotioneel, geemotioneerd",
+            "voelen, gevoelens, gevoel, voel"
+        ],
+        "category": "emotie"
+    },
+    "HOEFT-NIET-A": {
+        "senses": [
+            "geeft niet, niet erg, hoeft niet"
+        ],
+        "category": "overig"
+    },
+    "VERANTWOORDELIJK-A": {
+        "senses": [
+            "verantwoord",
+            "verantwoordelijkheid, verantwoordelijk, op mijn schouders nemen"
+        ],
+        "category": "emotie"
+    },
+    "AARDBEI": {
+        "senses": [
+            "aardbei"
+        ],
+        "category": "eten_drinken"
+    }
 }

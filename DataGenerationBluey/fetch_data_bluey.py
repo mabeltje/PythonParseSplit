@@ -50,50 +50,65 @@ def fetch_gloss_variants_mapping(filename: str | Path) -> Path:
 
     return filepath
 
-def fetch_and_save_glosses(filename: str | Path, max_workers: int = 10) -> Path:
+def fetch_and_save_glosses(
+    filename: str | Path,
+    max_workers: int = 15
+) -> Path:
     filepath = Path(filename).resolve()
     filepath.parent.mkdir(parents=True, exist_ok=True)
 
+    # 1. Fetch base glosses
     params = {"action": "glosses", "mcpStatusTijdAnnotatie": "Klaar"}
-    # params = {"action": "categories"}
     response = requests.get(API_URL, params=params)
     response.raise_for_status()
-
     data = response.json()
+
     if isinstance(data, dict) and not data.get("success", True):
         raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
 
+    # Extract base glosses and category lookup table
     bases = data.get("bases", {})
-    
-    # Extract unique variant names
-    unique_variants = set()
-    for base_info in bases.values():
+    category_map = data.get("categoryMap", {}).get("glosses", {})
+
+    # 2. Build unique variant -> category mapping
+    variant_category_map = {}
+    for base_name, base_info in bases.items():
+        category = category_map.get(base_name, "Unknown")
         variants = base_info.get("variants", {})
+
         if isinstance(variants, dict):
-            for v in variants.keys():
-                clean_v = str(v).strip()
-                if clean_v and clean_v.lower() != "nvt":
-                    unique_variants.add(clean_v)
+            for variant in variants.keys():
+                clean_variant = str(variant).strip()
+                if clean_variant and clean_variant.lower() != "nvt":
+                    variant_category_map[clean_variant] = category
 
-    variants_with_senses = {}
-
-    def _fetch_sense(variant):
+    # 3. Fetch senses concurrently
+    def _fetch_sense(variant: str) -> tuple[str, list]:
         try:
             return variant, get_senses(variant)
         except Exception as e:
-            print(f"Warning: Failed to fetch senses for {variant}: {e}")
+            print(f"Warning: Failed to fetch senses for '{variant}': {e}")
             return variant, []
 
-    # Fetch senses in parallel across threads
+    senses_map = {}
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = [executor.submit(_fetch_sense, v) for v in unique_variants]
+        futures = [executor.submit(_fetch_sense, v) for v in variant_category_map.keys()]
         for future in as_completed(futures):
             variant, senses = future.result()
-            variants_with_senses[variant] = senses
+            senses_map[variant] = senses
 
+    # 4. Construct output dictionary
+    final_gloss_structure = {
+        variant: {
+            "senses": senses,
+            "category": variant_category_map.get(variant, "Unknown")
+        }
+        for variant, senses in senses_map.items()
+    }
+
+    # Save to file
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(variants_with_senses, f, ensure_ascii=False, indent=4)
-        # json.dump(data, f, ensure_ascii=False, indent=4)
+        json.dump(final_gloss_structure, f, ensure_ascii=False, indent=4)
 
     print(f"Successfully saved glosses to '{filepath}'")
     return filepath
@@ -165,7 +180,6 @@ def fetch_and_save_sentences(filename: str | Path, page: int = 1, limit: int = 2
             gvg_clean_lines.append(line)
 
         gvg_zin_cleaned = " ".join(gvg_clean_lines)
-        # TODO: how to match this with glosses? 
 
         formatted_item = {
             "original_animation": sentence.get("base", ""),
@@ -185,8 +199,8 @@ def fetch_and_save_sentences(filename: str | Path, page: int = 1, limit: int = 2
 
 def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_variants_output: str | Path, job_tracker_output: str | Path, page: int = 1, limit: int = 200):
     """Unified entry function to call directly from pipeline_runner.py"""
-    glosses_path = fetch_and_save_glosses(glosses_output)
     glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
+    glosses_path = fetch_and_save_glosses(glosses_output)
     sentences_path = fetch_and_save_sentences(sentences_output, page=page, limit=limit)
     return glosses_path, glosses_variants_path, sentences_path
 
