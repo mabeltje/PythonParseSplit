@@ -149,7 +149,6 @@ def run_pipeline(
         print(f"\n[Step 3/5] Generating LLM substitutions (Limit: {limit})...")
         generate_sentence_substitutions(
             glosses_file=glosses_output_path,
-            output_file=substitutions_output_path,
             job_tracker_file=job_tracker_path,
             limit=limit
         )
@@ -157,10 +156,9 @@ def run_pipeline(
     if "split" in steps:
         print(f"\n[Step 4/5] Parsing substitutions and splitting FBX files...")
         run_parse_split(
-            substitutions_file=substitutions_output_path,
             glosses_variants_map=glosses_variants_output_path,
             job_tracker_file=job_tracker_path,
-            output_dir=unreal_ready_dir,
+            unreal_ready_dir=unreal_ready_dir,
             limit=limit
         )
 

@@ -1,52 +1,32 @@
 import os
 import json
 from pathlib import Path
-import sys
 
 """
 This module handles parsing the substitutions JSON, downloading the base animations and glosses, 
 trimming the FBX files, and organizing the deliverables into the specified output directory.
 """
 
-# Ensure project root (PythonParseSplit) is in sys.path
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(PROJECT_ROOT))
-
-# Handle both direct execution (py parse_split.py) and package imports
 from DataFetch.trim_fbx import trim_fbx_file
 from DataFetch.call_api import download_single_gloss, download_batch
 from DataGenerationBluey.job_tracker import update_job
 
-MODULE_DIR = Path(__file__).resolve().parent
-
-def parse_json(file_path: str | Path, glosses_variants_map: str | Path, job_tracker_file: str | Path, output_dir: str | Path, limit: int) -> Path:
+def run_parse_split(glosses_variants_map: str | Path, job_tracker_file: str | Path, unreal_ready_dir: str | Path, limit: int) -> Path:
     """
-    Parses substitutions JSON, downloads the base animations and glosses,
-    trims the files, and organizes deliverables into output_dir.
+    Parses a 'limit' number of sentences from the job tracker that are marked as "LLM_DONE", 
+    downloads the corresponding base animations and glosses, trims the FBX files, 
+    and organizes the deliverables into the specified unreal_ready directory.
     """
-    json_path = Path(file_path).resolve()
-
     # Ensure output directory exists
-    if not Path(output_dir).exists():
-        Path(output_dir).mkdir(parents=True, exist_ok=True)
+    if not Path(unreal_ready_dir).exists():
+        Path(unreal_ready_dir).mkdir(parents=True, exist_ok=True)
 
-    base_out_dir = Path(output_dir).resolve()
+    unreal_ready_dir = Path(unreal_ready_dir).resolve()
 
     # Make a directory for trimmed FBX file in the output directory
-    trimmed_fbx_dir = base_out_dir / "trimmed_fbx_cache"
+    trimmed_fbx_dir = unreal_ready_dir / "trimmed_fbx_cache"
     trimmed_fbx_dir.mkdir(parents=True, exist_ok=True)
     trimmed_fbx_dir = trimmed_fbx_dir.resolve()
-
-    if not json_path.is_file():
-        raise FileNotFoundError(f"Substitutions file not found: {json_path}")
- 
-    # make sure the json file is empty or make it empty if it is not empty
-    with open(json_path, "r", encoding="utf-8") as f:
-        try:
-            data_json = json.load(f)
-        except json.JSONDecodeError:
-            data_json = []
 
     with open(Path(job_tracker_file).resolve(), "r", encoding="utf-8") as f:
         job_tracker = json.load(f)
@@ -74,7 +54,7 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, job_trac
             continue
 
         # Destination folder for this specific animation set
-        anim_folder = base_out_dir / original_animation
+        anim_folder = unreal_ready_dir / original_animation
         anim_folder.mkdir(parents=True, exist_ok=True)
 
         print(f"Preprocessing base: {original_animation}")
@@ -84,7 +64,6 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, job_trac
 
         for sub in substitutions:
             gloss = sub.get("label")
-            
             if not gloss:
                 print(f"Warning: Substitution entry missing 'label' for base '{original_animation}'. Skipping.")
                 continue
@@ -97,6 +76,7 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, job_trac
                     base_gloss = base
                     break
             if not base_gloss:
+                # TODO: mark error in job tracker for this gloss, this means that the LLM generated a gloss that is not in the variants mapping, which is an error
                 print(f"Gloss '{gloss}' not found in variants mapping. Skipping.")
                 continue
 
@@ -131,24 +111,5 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, job_trac
         # Update the job tracker to indicate that this base is done
         update_job(job_tracker_file, original_animation, status_update="UNREAL_READY")
 
-    return base_out_dir
+    return unreal_ready_dir
    
-
-def run_parse_split(substitutions_file: str | Path, glosses_variants_map: str | Path, job_tracker_file: str | Path, output_dir: str | Path, limit: int) -> Path:
-    """Unified entry function for pipeline_runner.py"""
-    return parse_json(file_path=substitutions_file, glosses_variants_map=glosses_variants_map, job_tracker_file=job_tracker_file, output_dir=output_dir, limit=limit)
-
-
-if __name__ == "__main__":
-    # Standalone test fallback pointing relative to project root
-    project_root = MODULE_DIR.parent
-    default_unreal_ready = project_root / "jobs" / "unreal_ready"
-    default_unreal_inter = project_root / "jobs" / "intermediate"
-
-    run_parse_split(
-        substitutions_file=default_unreal_ready / "substitutions_output.json",
-        glosses_variants_map=default_unreal_inter / "base_variants_map.json",
-        job_tracker_file=default_unreal_inter / "job_tracker.json",
-        output_dir=default_unreal_ready,
-        limit=1
-    )

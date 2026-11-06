@@ -188,35 +188,3 @@ def trim_fbx_file(fbx_path, start_time, end_time, out_path, note=None):
     except Exception as e:
         return False, str(e)
 
-
-def main():
-    p = argparse.ArgumentParser(description='Trim FBX animation to timestamps, zero-align start, and snap frames.')
-    p.add_argument('--fbx',   required=True, help='Input FBX file')
-    p.add_argument('--start', required=True, type=parse_timestamp, help='Start time (e.g. 0.972 or 00:00:00,972)')
-    p.add_argument('--end',   required=True, type=parse_timestamp, help='End time (e.g. 3.842 or 00:00:03,842)')
-    p.add_argument('--note',  help='Optional comment/note to embed in FBX metadata')
-    p.add_argument('--out',   required=True, help='Output FBX path')
-    args = p.parse_args()
-
-    """
-    Main function to parse command-line arguments and call the trimming function.
-    Usage:
-
-    python trim_fbx.py \
-        --fbx animation.fbx \
-        --start 00:00:01,718 \
-        --end 00:00:03,842 \
-        --note "Trimmed sign segment" \
-        --out trimmed_animation.fbx
-    """
-    trim_fbx_file(
-        fbx_path=args.fbx,
-        start_time=args.start,
-        end_time=args.end,
-        out_path=args.out,
-        note=args.note
-    )
-
-
-if __name__ == '__main__':
-    main()

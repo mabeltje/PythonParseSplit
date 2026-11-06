@@ -1,5 +1,4 @@
 import json
-import os
 from pathlib import Path
 from DataGenerationBluey.bluey_LLM import query_llm
 from DataGenerationBluey.job_tracker import update_job
@@ -7,35 +6,44 @@ from DataGenerationBluey.job_tracker import update_job
 MODULE_DIR = Path(__file__).resolve().parent
 
 def load_json(filepath: Path) -> dict | list:
+    """
+    Load JSON data from a file.
+    """
     if not filepath.is_file():
         raise FileNotFoundError(f"Input file not found: {filepath}")
     with open(filepath, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def load_text(filepath: Path) -> str:
+    """
+    Load text data from a file.
+    """
     with open(filepath, "r", encoding="utf-8") as f:
         return f.read().strip()
 
 def save_json(data: dict | list, filepath: Path) -> None:
+    """
+    Save JSON data to a file, creating parent directories if they don't exist.
+    """
     filepath.parent.mkdir(parents=True, exist_ok=True)
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 def generate_sentence_substitutions(
     glosses_file: str | Path,
-    output_file: str | Path,
     job_tracker_file: str | Path,
     limit: int,
 ) -> Path:
-
+    """
+    Generate sentence substitutions for 'limit' sentences using an LLM based on the provided glosses and job tracker.
+    """
     glosses_path = Path(glosses_file).resolve()
-    out_path = Path(output_file).resolve()
+    job_tracker_path = Path(job_tracker_file).resolve()
     
     # Default to system_prompt.md
+    # TODO: pass rules_file as an argument to this function instead of hardcoding it
     rules_path = (MODULE_DIR / "system_prompt.md")
-    job_tracker_path = Path(job_tracker_file).resolve()
     job_tracker = load_json(job_tracker_path)
-    
     available_glosses = load_json(glosses_path)
 
     # Get the first 'limit' number of sentences that are marked as "LLM_READY" in the job tracker
@@ -56,6 +64,7 @@ def generate_sentence_substitutions(
     system_prompt = load_text(rules_path)
 
     # Read template and fill in variables
+    # TODO: pass this in as an argument to this function instead of hardcoding it``
     user_template = load_text(MODULE_DIR / "user_prompt.md")
 
     user_prompt = user_template.format(
@@ -88,18 +97,4 @@ def generate_sentence_substitutions(
         substitutions = item.get("substitutions", [])
         update_job(job_tracker_path, base_id, status_update="LLM_DONE", substitutions=substitutions)
 
-    # save_json(parsed_data, out_path)
-    # print(f"Successfully generated substitutions and saved to '{out_path}'")
-    return out_path
-
-if __name__ == "__main__":
-    PROJECT_ROOT = MODULE_DIR.parent
-    DEFAULT_INTERMEDIATE = PROJECT_ROOT / "jobs" / "intermediate"
-    DEFAULT_UNREAL_READY = PROJECT_ROOT / "jobs" / "unreal_ready"
-
-    generate_sentence_substitutions(
-        glosses_file=DEFAULT_INTERMEDIATE / "all_glosses.json",
-        job_tracker_file=DEFAULT_INTERMEDIATE / "job_tracker.json",
-        output_file=DEFAULT_UNREAL_READY / "substitutions_output.json",
-        rules_file=MODULE_DIR / "system_prompt.md"
-    )
+    return job_tracker_path
