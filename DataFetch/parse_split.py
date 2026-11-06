@@ -16,10 +16,11 @@ if str(PROJECT_ROOT) not in sys.path:
 # Handle both direct execution (py parse_split.py) and package imports
 from DataFetch.trim_fbx import trim_fbx_file
 from DataFetch.call_api import download_single_gloss, download_batch
+from DataGenerationBluey.job_tracker import update_job
 
 MODULE_DIR = Path(__file__).resolve().parent
 
-def parse_json(file_path: str | Path, glosses_variants_map: str | Path, output_dir: str | Path) -> Path:
+def parse_json(file_path: str | Path, glosses_variants_map: str | Path, job_tracker_file: str | Path, output_dir: str | Path, limit: int) -> Path:
     """
     Parses substitutions JSON, downloads the base animations and glosses,
     trims the files, and organizes deliverables into output_dir.
@@ -40,11 +41,29 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, output_d
     if not json_path.is_file():
         raise FileNotFoundError(f"Substitutions file not found: {json_path}")
  
+    # make sure the json file is empty or make it empty if it is not empty
     with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+        try:
+            data_json = json.load(f)
+        except json.JSONDecodeError:
+            data_json = []
+
+    with open(Path(job_tracker_file).resolve(), "r", encoding="utf-8") as f:
+        job_tracker = json.load(f)
 
     with open(Path(glosses_variants_map).resolve(), "r", encoding="utf-8") as f:
         variants_map = json.load(f)
+
+    # get the first 'limit' number of sentences that are marked as "LLM_DONE" in the job tracker
+    data = []
+    for base_id, job in job_tracker.items():
+        if job.get("status", {}) == "LLM_DONE":
+            data.append({
+                "original_animation": base_id,
+                "substitutions": job.get("substitutions", [])
+            })
+        if len(data) >= limit:
+            break
 
     # Process each sentence in the JSON data
     for sentence in data:
@@ -59,12 +78,15 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, output_d
         anim_folder.mkdir(parents=True, exist_ok=True)
 
         print(f"Preprocessing base: {original_animation}")
+        # Download the base animation FBX and SRT files into the anim_folder
+        # TODO: get this information from the job tracker to avoid redundant API calls
         download_batch([original_animation], output_dir=str(anim_folder))
 
         for sub in substitutions:
             gloss = sub.get("label")
             
             if not gloss:
+                print(f"Warning: Substitution entry missing 'label' for base '{original_animation}'. Skipping.")
                 continue
 
             # Look up the gloss in the keys of the variants_map to find the corresponding base animation
@@ -106,12 +128,15 @@ def parse_json(file_path: str | Path, glosses_variants_map: str | Path, output_d
 
         print(f"Finished preprocessing base: {original_animation}\n")
 
+        # Update the job tracker to indicate that this base is done
+        update_job(job_tracker_file, original_animation, status_update="UNREAL_READY")
+
     return base_out_dir
    
 
-def run_parse_split(substitutions_file: str | Path, glosses_variants_map: str | Path, output_dir: str | Path) -> Path:
+def run_parse_split(substitutions_file: str | Path, glosses_variants_map: str | Path, job_tracker_file: str | Path, output_dir: str | Path, limit: int) -> Path:
     """Unified entry function for pipeline_runner.py"""
-    return parse_json(file_path=substitutions_file, glosses_variants_map=glosses_variants_map, output_dir=output_dir)
+    return parse_json(file_path=substitutions_file, glosses_variants_map=glosses_variants_map, job_tracker_file=job_tracker_file, output_dir=output_dir, limit=limit)
 
 
 if __name__ == "__main__":
@@ -123,5 +148,7 @@ if __name__ == "__main__":
     run_parse_split(
         substitutions_file=default_unreal_ready / "substitutions_output.json",
         glosses_variants_map=default_unreal_inter / "base_variants_map.json",
-        output_dir=default_unreal_ready
+        job_tracker_file=default_unreal_inter / "job_tracker.json",
+        output_dir=default_unreal_ready,
+        limit=1
     )

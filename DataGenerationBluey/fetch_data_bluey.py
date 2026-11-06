@@ -19,6 +19,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
 
 from DataFetch.call_api import get_senses
+from DataGenerationBluey.job_tracker import update_job
 
 API_URL = "https://signcollect.nl/blendBaking/api.php"
 MODULE_DIR = Path(__file__).resolve().parent
@@ -112,38 +113,47 @@ def fetch_and_save_glosses(filename: str | Path, max_workers: int = 15) -> Path:
 
 
 
-def fetch_and_save_sentences(filename: str | Path, limit: int) -> Path:
+def fetch_and_save_sentences(filename: str | Path, job_tracker_output: str | Path, limit: int) -> Path:
     filepath = Path(filename).resolve()
     filepath.parent.mkdir(parents=True, exist_ok=True)
 
-    # Find the first limit of sentences in the job tracker.
+    # Find the first limit of sentences in the job tracker that have the stage pending 
+    with open(job_tracker_output, "r", encoding="utf-8") as f:
+        job_tracker_data = json.load(f)
 
-    # Only the first page for now, as the API returns a maximum of 200 sentences per page
-    # Need to find a way to fetch all pages eventually
-    params = {
-        "action": "timings",
-        "page": page,
-        "limit": limit,
-        "mcpStatusTijdAnnotatie": "Klaar"
-    }
+    # List of base_ids that are pending
+    pending_ids = [
+        base_id
+        for base_id, job in job_tracker_data.items()
+        if job.get("status", {})== "PENDING"
+    ]
 
-    response = requests.get(API_URL, params=params)
-    response.raise_for_status()
-
-    data = response.json()
-    if isinstance(data, dict) and not data.get("success", True):
-        raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
-
+    sentence_count = 0
     output_data = []
-    sentences = data.get("sentences", [])
+    for base_id in pending_ids:
+        params = {
+            "action": "timings",
+            "base": base_id,
+        }
 
-    for sentence in sentences:
+        response = requests.get(API_URL, params=params)
+        response.raise_for_status()
+
+        data = response.json()
+        if isinstance(data, dict) and not data.get("success", True):
+            raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
+        
+        sentence = data.get("sentences", [])[0]
+        if (sentence.get("statusTijdAnnotatie") != "Klaar" or sentence.get("statusTijdAnnotatieGvg") != "Klaar"):
+            # print(f"Skipping {base_id}: {sentence.get('srtError')}")
+            continue
+
         nederlandse_zin = sentence.get("nederlandsSrt", "")
         if not nederlandse_zin:
             print(f"Warning: Sentence ID {sentence.get('id')} has no 'nederlandsSrt'. Skipping.")
             continue
 
-        # open the link nederlandse zin
+        # Open the link nederlandse zin
         response = requests.get(nederlandse_zin)
         if response.status_code != 200:
             print(f"Warning: Failed to fetch SRT for sentence ID {sentence.get('id')}. Skipping.")
@@ -155,7 +165,7 @@ def fetch_and_save_sentences(filename: str | Path, limit: int) -> Path:
 
         for line in lines:
             line = line.strip()
-            # Sla lege regels, getallen (regelnummers) en tijdstempels (bevat ->) over
+            # Skip empty lines, numbers (line numbers), and timestamps (contains -->)
             if not line or line.isdigit() or "-->" in line:
                 continue
             clean_lines.append(line)
@@ -174,7 +184,7 @@ def fetch_and_save_sentences(filename: str | Path, limit: int) -> Path:
         gvg_clean_lines = []
         for line in gvg_lines:
             line = line.strip()
-            # Sla lege regels, getallen (regelnummers) en tijdstempels (bevat ->) over
+            # Skip empty lines, numbers (line numbers), and timestamps (contains -->)
             if not line or line.isdigit() or "-->" in line:
                 continue
             gvg_clean_lines.append(line)
@@ -189,6 +199,24 @@ def fetch_and_save_sentences(filename: str | Path, limit: int) -> Path:
             # "original_zin": sentence.get("zin", ""), # Do not use this, this is not the correct sentence, use the SRT instead
             "substitutions": []
         }
+
+        # Update the job tracker to mark this base_id as llm ready
+        update_job(
+            job_tracker_output, 
+            base_id, 
+            status_updates="LLM_READY", 
+            input_data={
+                "nederlands_zin": nederlandse_zin_cleaned, 
+                "original_glosses": [g.get("gloss") for g in sentence.get("glosses", [])], 
+                "gvg_zin": gvg_clean_lines
+            }
+        )
+
+        # Check if the limit has been reached
+        sentence_count += 1
+        if sentence_count >= limit:
+            break
+
         output_data.append(formatted_item)
 
     with open(filepath, "w", encoding="utf-8") as f:
@@ -201,7 +229,7 @@ def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_
     """Unified entry function to call directly from pipeline_runner.py"""
     glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
     glosses_path = fetch_and_save_glosses(glosses_output)
-    sentences_path = fetch_and_save_sentences(sentences_output,limit=limit)
+    sentences_path = fetch_and_save_sentences(sentences_output, job_tracker_output, limit=limit)
     return glosses_path, glosses_variants_path, sentences_path
 
 
@@ -214,6 +242,6 @@ if __name__ == "__main__":
         glosses_output=target_dir / "all_glosses.json",
         glosses_variants_output=target_dir / "base_variants_map.json",
         sentences_output=target_dir / "all_sentences.json",
-        page=3,
-        limit=2
+        job_tracker_output=target_dir / "job_tracker.json",
+        limit=10
     )

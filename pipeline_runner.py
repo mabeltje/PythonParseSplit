@@ -10,14 +10,32 @@ from pathlib import Path
 from DataGenerationBluey.fetch_data_bluey import run_fetch
 from DataGenerationBluey.generate_substitutions import generate_sentence_substitutions
 from DataFetch.parse_split import run_parse_split
+from DataGenerationBluey.job_tracker import populate_job_tracker, update_job
 
 UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
 UPROJECT_PATH = "C:/Users/visualisationLab/Documents/Unreal Projects/BlendingAutomation/BlendingAutomation.uproject"
 API_URL = "https://signcollect.nl/blendBaking/api.php"
 
-def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
+def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str, job_tracker_file: str, limit: int):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     ue_script_path = os.path.join(base_dir, "ue_process_jobs.py")
+
+    # Get the first 'limit' number of jobs that are marked as "UNREAL_READY" in the job tracker, also include the base_id in the output json
+    with open(job_tracker_file, "r", encoding="utf-8") as f:
+        job_tracker = json.load(f)
+        unreal_ready_jobs = [
+            {
+                "original_animation": base_id,
+                "nederlands_zin": job.get("input", {}).get("nederlands_zin", ""),
+                "substitutions": job.get("substitutions", [])
+            }
+            for base_id, job in job_tracker.items()
+            if job.get("status", {}) == "UNREAL_READY"
+        ][:limit]
+        
+    with open(os.path.join(unreal_jobs_dir, "substitutions_output.json"), "w", encoding="utf-8") as f:
+        json.dump(unreal_ready_jobs, f, ensure_ascii=False, indent=2)
+
 
     if not os.path.exists(UE_CMD_PATH):
         raise FileNotFoundError(f"UnrealEditor-Cmd not found at {UE_CMD_PATH}")
@@ -39,7 +57,7 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
         # "-nosplash",         # Headless: disable splash screen
         # "-Interchange.FeatureFlags.Import.FBX=False", # Disable FBX EXPERIMENTAL import feature flag
         "-FullStdOutLogOutput",
-        f"-jobs_dir={unreal_jobs_dir}"  # Custom argument passed to the UE script
+        f"-jobs_dir={unreal_jobs_dir}",  # Custom argument passed to the UE script
         # "-nop4"
     ]
 
@@ -81,107 +99,17 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str):
     if process.returncode != 0:
         print(f"\n[Unreal Error] Unreal exited with code {process.returncode}")
     else:
+        # for all jobs that were processed, update the job tracker to mark them as "DONE"
+        for job in unreal_ready_jobs:
+            base_id = job.get("original_animation")
+            update_job(job_tracker_file, base_id, status_update="UNREAL_DONE")
         print("\n[Unreal] Unreal process finished successfully!")
-
-def populate_job_tracker(filename: str | Path) -> Path:
-    """
-    Fetches available bases from the API and initializes any new entries 
-    in job_tracker.json without overwriting existing job states.
-    """
-    filepath = Path(filename).resolve()
-
-    # 1. Fetch current bases from the API
-    params = {"action": "bases"}
-    response = requests.get(API_URL, params=params)
-    response.raise_for_status()
-    api_data = response.json()
-
-    if isinstance(api_data, dict) and not api_data.get("success", True):
-        raise ValueError(f"API Error: {api_data.get('error', 'Unknown error')}")
-
-    bases = api_data.get("bases", {})
-
-    # 2. If file is completely empty, initialize it with an empty dict
-    if not filepath.is_file() or filepath.stat().st_size == 0:
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump({}, f, ensure_ascii=False, indent=4)
-
-    # 3. Check if file is valid JSON
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            existing_data = json.load(f)
-    except json.JSONDecodeError:
-        print(f"Error: '{filepath}' is not valid JSON.")
-        return filepath
-
-
-    # 4. Register/update each base using update_job
-    print(f"Populating job tracker with {len(bases)} base animations...")
-    for base_id in bases:
-        # Update the job status for each base
-        update_job(
-            tracker_path=filepath,
-            base_id=base_id,
-            status_updates={}  # Preserves existing status if job already exists
-        )
-
-    print(f"Successfully populated job tracker at '{filepath}'")
-    return filepath
-
-def update_job(
-    tracker_path: Path, 
-    base_id: str, 
-    status_updates: dict = None, 
-    input_data: dict = None, 
-    substitutions: list = None
-) -> None:
-    """Safely updates a specific job entry in job_tracker.json."""
-    tracker_path = Path(tracker_path).resolve()
-    tracker_path.parent.mkdir(parents=True, exist_ok=True)
-    
-    data = {}
-    if tracker_path.is_file():
-        with open(tracker_path, "r", encoding="utf-8") as f:
-            try:
-                data = json.load(f)
-            except json.JSONDecodeError:
-                data = {}
-
-    # Initialize job entry if missing
-    if base_id not in data:
-        data[base_id] = {
-            "status": {
-                "stage": "PENDING",
-                "updated_at": None
-            },
-            "input": {
-                "nederlands_zin": "",
-                "original_glosses": [],
-                "gvg_zin": []
-            },
-            "substitutions": []
-        }
-
-    job = data[base_id]
-
-    if status_updates:
-        job["status"].update(status_updates)
-        job["status"]["updated_at"] = datetime.now(timezone.utc).isoformat()
-
-    if input_data:
-        job["input"].update(input_data)
-
-    if substitutions is not None:
-        job["substitutions"] = substitutions
-
-    with open(tracker_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, run_ue: bool = True, split_fbx: bool = True):
     """
     Runs the data fetching and saving pipeline to get all the data ready for Unreal.
-    Parameters:
+    Parametlimiters:
         fetch_data (bool): Whether to fetch data from the API. If False, will use existing intermediate files.
         generate_substitutions (bool): Whether to generate substitutions from fetched data. If False, will use existing substitutions_output.json if available.
         run_ue (bool): Whether to execute the Unreal headless step. If False, will skip Unreal processing.
@@ -211,6 +139,9 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
     # Ensure job tracker is initialized before any processing
     populate_job_tracker(job_tracker_path)
 
+    # Initialize limit here for now
+    limit = 1  # Limit the number of sentences to fetch for testing purposes
+
     if fetch_data:
         print(f"Step 1: Fetching glosses and sentences from the API...")
         run_fetch(
@@ -218,7 +149,7 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
             glosses_variants_output=glosses_variants_output_path,
             sentences_output=sentences_output_path,
             job_tracker_output=job_tracker_path,
-            limit=100
+            limit=limit
         )
     else:
         if not os.path.exists(glosses_output_path) or not os.path.exists(sentences_output_path):
@@ -229,8 +160,9 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
         print(f"\nStep 2: Generating substitutions from fetched data...")
         generate_sentence_substitutions(
             glosses_file=glosses_output_path,
-            sentences_file=sentences_output_path,
             output_file=substitutions_output_path,
+            job_tracker_file=job_tracker_path,
+            limit=limit
         )
     else:
         if not os.path.exists(substitutions_output_path):
@@ -243,14 +175,16 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
         run_parse_split(
             substitutions_file=substitutions_output_path,
             glosses_variants_map=glosses_variants_output_path,
-            output_dir=unreal_ready_dir
+            job_tracker_file=job_tracker_path,
+            output_dir=unreal_ready_dir,
+            limit=limit
         )
     else:
         print(f"Skipping parsing and splitting of FBX files.")
 
     if run_ue:
         print(f"\nStep 4: Executing headless Unreal processing...")
-        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir)
+        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir, job_tracker_file=job_tracker_path, limit=limit)
     else:
         print(f"Skipping Unreal headless execution.")
 
