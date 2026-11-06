@@ -102,7 +102,7 @@ def run_pipeline(limit: int = 10, steps: list[str] = None):
     Executes selected pipeline stages with specified batch limits.
     """
     if steps is None:
-        steps = ["fetch", "substitute", "split", "unreal"]
+        steps = ["setup", "fetch", "substitute", "split", "unreal"]
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
     unreal_ready_dir = os.path.join(base_dir, "jobs", "unreal_ready")
@@ -164,13 +164,14 @@ def run_pipeline(limit: int = 10, steps: list[str] = None):
             limit=limit
         )
 
-    
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="NGT Animation Blending Pipeline Runner",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
-    
+
+    # TODO: maybe default to 0 if you want to run all avaiable jobs
     parser.add_argument(
         "-l", "--limit",
         type=int,
@@ -182,7 +183,7 @@ if __name__ == "__main__":
         "-s", "--steps",
         nargs="+",
         choices=["setup", "fetch", "substitute", "split", "unreal"],
-        default=["fetch", "substitute", "split", "unreal"],
+        default=["setup", "fetch", "substitute", "split", "unreal"],
         help="Specify which pipeline step(s) to execute."
     )
 
