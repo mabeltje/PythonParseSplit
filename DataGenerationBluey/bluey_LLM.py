@@ -4,9 +4,7 @@ Calls the LLM API using settings imported from bluey.json.
 query_llm(messages) takes a list of messages in the format:
 """
 
-import json
 import os
-import requests
 from dotenv import load_dotenv
 from openai import OpenAI, APIError
 

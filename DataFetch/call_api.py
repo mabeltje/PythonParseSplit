@@ -1,22 +1,12 @@
 import os
 import requests
 
-# Base codes you want to download
-BASE_CODES = ["M20260224_5441", "M20260127_2280"]
-
-# Target output directory (points directly to your Unreal Project directory or external folder)
-OUTPUT_DIR = r"C:\Users\visualisationLab\Documents\PythonParseSplit\Animations"
-
 API_URL = "https://signcollect.nl/blendBaking/api.php"
 
-def get_base(video_id):
-    response = requests.get(API_URL, params={'action': 'base', 'video': video_id})
-    data = response.json()
-    if not data.get('success'):
-        raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
-    return data.get('base')
-
 def get_senses(gloss):
+    """
+    Fetches the senses for a given gloss from the API.
+    """
     response = requests.get(API_URL, params={'action': 'senses', 'gloss': gloss})
     data = response.json()
 
@@ -25,10 +15,12 @@ def get_senses(gloss):
     
     return data.get('senses', [])
 
+
 def download_batch(codes, output_dir):
+    """
+    Downloads FBX and SRT files for a batch of base animation codes.
+    """
     for base in codes:
-        # Create folder for code
-        # target_folder = os.path.join(output_dir, base)
         os.makedirs(output_dir, exist_ok=True)
         
         # Fetch JSON timings
@@ -40,11 +32,10 @@ def download_batch(codes, output_dir):
             continue
    
         sentence = data['sentences'][0]
-
         fbx_url = sentence['fbxUrl']
         srt_url = sentence['srtUrl']
 
-        # check if fbx_url and srt_url are valid
+        # Check if fbx_url and srt_url are valid
         if not fbx_url or not srt_url:
             print(f"Skipping {base}: Missing FBX or SRT URL.")
             continue
@@ -68,8 +59,11 @@ def download_batch(codes, output_dir):
         print(f"Successfully saved {base} -> {output_dir}")
 
 
-# Download a single gloss and its associated FBX file
 def download_single_gloss(gloss, base_gloss, output_dir):
+    """
+    Downloads the FBX file for a specific gloss and its corresponding base gloss.
+    Returns a dictionary containing the base, gloss, start time, end time, and the path to the downloaded FBX file.
+    """
     # Fetch the first sentence that contains the gloss
     r = requests.get(API_URL, params={'action': 'timings', 'gloss': base_gloss})
     data = r.json()
@@ -115,14 +109,3 @@ def download_single_gloss(gloss, base_gloss, output_dir):
         'end': gloss_end,
         'fbx_path': fbx_path
     }
-
-
-def main():
-    # download_batch(BASE_CODES, OUTPUT_DIR)
-    download_single_gloss("WIE-A", OUTPUT_DIR)
-    # get_senses("NIET-C")
-
-
-if __name__ == "__main__":
-    main()
-

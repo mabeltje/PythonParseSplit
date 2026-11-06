@@ -14,12 +14,14 @@ def load_json(filepath: Path) -> dict | list:
     with open(filepath, "r", encoding="utf-8") as f:
         return json.load(f)
 
+
 def load_text(filepath: Path) -> str:
     """
     Load text data from a file.
     """
     with open(filepath, "r", encoding="utf-8") as f:
         return f.read().strip()
+
 
 def save_json(data: dict | list, filepath: Path) -> None:
     """
@@ -29,11 +31,8 @@ def save_json(data: dict | list, filepath: Path) -> None:
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-def generate_sentence_substitutions(
-    glosses_file: str | Path,
-    job_tracker_file: str | Path,
-    limit: int,
-) -> Path:
+
+def generate_sentence_substitutions(glosses_file: str | Path, job_tracker_file: str | Path, limit: int,) -> Path:
     """
     Generate sentence substitutions for 'limit' sentences using an LLM based on the provided glosses and job tracker.
     """

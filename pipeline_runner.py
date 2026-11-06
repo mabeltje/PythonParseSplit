@@ -2,8 +2,6 @@ import argparse
 import json
 import os
 import subprocess
-from pathlib import Path
-import requests
 
 from DataFetch.parse_split import run_parse_split
 from DataGenerationBluey.fetch_data_bluey import run_fetch_setup, run_fetch_sentences
@@ -99,10 +97,7 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str, job_tracke
         print("\n[Unreal] Unreal process finished successfully!")
 
 
-def run_pipeline(
-    limit: int = 10,
-    steps: list[str] = None
-):
+def run_pipeline(limit: int = 10, steps: list[str] = None):
     """
     Executes selected pipeline stages with specified batch limits.
     """
@@ -119,10 +114,8 @@ def run_pipeline(
     os.makedirs(unreal_output_dir, exist_ok=True)
 
     glosses_output_path = os.path.join(inter_dir, "all_glosses.json")
-    sentences_output_path = os.path.join(inter_dir, "all_sentences.json")
     job_tracker_path = os.path.join(inter_dir, "job_tracker.json")
     glosses_variants_output_path = os.path.join(inter_dir, "base_variants_map.json")
-    substitutions_output_path = os.path.join(unreal_ready_dir, "substitutions_output.json")
 
     # TODO: move into setup step
     populate_job_tracker(job_tracker_path)
@@ -171,7 +164,7 @@ def run_pipeline(
             limit=limit
         )
 
-
+    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="NGT Animation Blending Pipeline Runner",

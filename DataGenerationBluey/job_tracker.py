@@ -11,7 +11,8 @@ def update_job(
     input_data: dict = None, 
     substitutions: list = None
 ) -> None:
-    """Safely updates a specific job entry in job_tracker.json."""
+    """
+    Safely updates a specific job entry in job_tracker.json."""
     tracker_path = Path(tracker_path).resolve()
     tracker_path.parent.mkdir(parents=True, exist_ok=True)
     
@@ -50,7 +51,9 @@ def update_job(
 
 
 def populate_job_tracker(filename: str | Path) -> Path:
-    """Fetches available bases from the API and populates job_tracker.json without touching existing entries."""
+    """
+    Fetches available bases from the API and populates job_tracker.json without touching existing entries.
+    """
     filepath = Path(filename).resolve()
 
     params = {"action": "bases"}

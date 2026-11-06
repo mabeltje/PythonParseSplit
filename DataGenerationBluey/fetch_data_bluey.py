@@ -194,7 +194,6 @@ def fetch_batch_sentences(job_tracker_output: str | Path, limit: int) -> Path:
         original_glosses = [g.get("gloss") for g in sentence.get("glosses", [])]
 
         # Update the job tracker to mark this base_id as LLM_READY
-        # Note: kwarg updated to status_updates (plural) to match job_tracker signature
         update_job(
             tracker_path=job_tracker_path, 
             base_id=base_id, 
@@ -211,6 +210,7 @@ def fetch_batch_sentences(job_tracker_output: str | Path, limit: int) -> Path:
             break
 
     return job_tracker_path
+
 
 def run_fetch_setup(glosses_output: str | Path,  glosses_variants_output: str | Path):
     """Unified entry function to call directly from pipeline_runner.py"""
