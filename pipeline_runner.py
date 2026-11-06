@@ -1,20 +1,19 @@
+import argparse
 import json
 import os
-import argparse
 import subprocess
-from datetime import datetime, timezone
-import requests
 from pathlib import Path
+import requests
 
-# Import modular steps
-from DataGenerationBluey.fetch_data_bluey import run_fetch
-from DataGenerationBluey.generate_substitutions import generate_sentence_substitutions
 from DataFetch.parse_split import run_parse_split
+from DataGenerationBluey.fetch_data_bluey import run_fetch_setup, run_fetch_sentences
+from DataGenerationBluey.generate_substitutions import generate_sentence_substitutions
 from DataGenerationBluey.job_tracker import populate_job_tracker, update_job
 
 UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
 UPROJECT_PATH = "C:/Users/visualisationLab/Documents/Unreal Projects/BlendingAutomation/BlendingAutomation.uproject"
 API_URL = "https://signcollect.nl/blendBaking/api.php"
+
 
 def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str, job_tracker_file: str, limit: int):
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -36,7 +35,6 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str, job_tracke
     with open(os.path.join(unreal_jobs_dir, "substitutions_output.json"), "w", encoding="utf-8") as f:
         json.dump(unreal_ready_jobs, f, ensure_ascii=False, indent=2)
 
-
     if not os.path.exists(UE_CMD_PATH):
         raise FileNotFoundError(f"UnrealEditor-Cmd not found at {UE_CMD_PATH}")
     if not os.path.exists(UPROJECT_PATH):
@@ -44,21 +42,17 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str, job_tracke
     if not os.path.exists(ue_script_path):
         raise FileNotFoundError(f"Unreal script not found at {ue_script_path}")
 
-    print(f"\nThe jobs directory for Unreal processing is: {unreal_jobs_dir}")
     cmd = [
         UE_CMD_PATH,
         UPROJECT_PATH,
         f"-ExecutePythonScript={ue_script_path}",
-        "-nullrhi",          # Headless: disable rendering backend
-        "-nosound",          # Headless: disable audio
-        "-nopause",          # Headless: don't hang on warnings
-        "-unattended",       # Headless: suppress popups and dialogs
-        "-stdout",           # Forward logs to stdout
-        # "-nosplash",         # Headless: disable splash screen
-        # "-Interchange.FeatureFlags.Import.FBX=False", # Disable FBX EXPERIMENTAL import feature flag
+        "-nullrhi",
+        "-nosound",
+        "-nopause",
+        "-unattended",
+        "-stdout",
         "-FullStdOutLogOutput",
-        f"-jobs_dir={unreal_jobs_dir}",  # Custom argument passed to the UE script
-        # "-nop4"
+        f"-jobs_dir={unreal_jobs_dir}",
     ]
 
     # Pass the jobs directory via environment variables
@@ -66,7 +60,7 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str, job_tracke
     env["UE_JOBS_DIR"] = os.path.abspath(unreal_jobs_dir)
     env["UE_OUTPUT_DIR"] = os.path.abspath(unreal_output_dir)
 
-    print(f"\n[Unreal] Launching headless Unreal Engine instance...")
+    print(f"\n[Unreal] Launching headless Unreal Engine instance for batch of {len(unreal_ready_jobs)} jobs...")
     
     process = subprocess.Popen(
         cmd,
@@ -81,12 +75,12 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str, job_tracke
     
     # Filter lines live as they are emitted
     keywords = (
-    "[Headless Pipeline]",
-    "[BlendingAutomation C++]",
-    "LogTemp:",
-    "LogPython: Error:",
-    "LogPython: Warning:",
-    "LogBlendingAuto"
+        "[Headless Pipeline]",
+        "[BlendingAutomation C++]",
+        "LogTemp:",
+        "LogPython: Error:",
+        "LogPython: Warning:",
+        "LogBlendingAuto"
     )    
 
     if process.stdout:
@@ -99,22 +93,21 @@ def run_unreal_headless(unreal_jobs_dir: str, unreal_output_dir: str, job_tracke
     if process.returncode != 0:
         print(f"\n[Unreal Error] Unreal exited with code {process.returncode}")
     else:
-        # for all jobs that were processed, update the job tracker to mark them as "DONE"
         for job in unreal_ready_jobs:
             base_id = job.get("original_animation")
             update_job(job_tracker_file, base_id, status_update="UNREAL_DONE")
         print("\n[Unreal] Unreal process finished successfully!")
 
 
-def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, run_ue: bool = True, split_fbx: bool = True):
+def run_pipeline(
+    limit: int = 10,
+    steps: list[str] = None
+):
     """
-    Runs the data fetching and saving pipeline to get all the data ready for Unreal.
-    Parametlimiters:
-        fetch_data (bool): Whether to fetch data from the API. If False, will use existing intermediate files.
-        generate_substitutions (bool): Whether to generate substitutions from fetched data. If False, will use existing substitutions_output.json if available.
-        run_ue (bool): Whether to execute the Unreal headless step. If False, will skip Unreal processing.
-        split_fbx (bool): Whether to parse substitutions and split FBX files for Unreal.
+    Executes selected pipeline stages with specified batch limits.
     """
+    if steps is None:
+        steps = ["fetch", "substitute", "split", "unreal"]
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
     unreal_ready_dir = os.path.join(base_dir, "jobs", "unreal_ready")
@@ -125,53 +118,44 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
     os.makedirs(unreal_ready_dir, exist_ok=True)
     os.makedirs(unreal_output_dir, exist_ok=True)
 
-    print(f"Base directory: {base_dir}")
-    print(f"Intermediate directory: {inter_dir}")
-    print(f"Unreal directory: {unreal_ready_dir}")
-    print(f"Output directory: {unreal_output_dir}")
-
     glosses_output_path = os.path.join(inter_dir, "all_glosses.json")
     sentences_output_path = os.path.join(inter_dir, "all_sentences.json")
     job_tracker_path = os.path.join(inter_dir, "job_tracker.json")
     glosses_variants_output_path = os.path.join(inter_dir, "base_variants_map.json")
     substitutions_output_path = os.path.join(unreal_ready_dir, "substitutions_output.json")
 
-    # Ensure job tracker is initialized before any processing
+    # TODO: move into setup step
     populate_job_tracker(job_tracker_path)
 
-    # Initialize limit here for now
-    limit = 1  # Limit the number of sentences to fetch for testing purposes
+    print(f"\n--- Pipeline Run Config ---")
+    print(f"Batch Limit: {limit}")
+    print(f"Active Steps: {', '.join(steps)}")
+    print(f"---------------------------\n")
 
-    if fetch_data:
-        print(f"Step 1: Fetching glosses and sentences from the API...")
-        run_fetch(
+    if "setup" in steps:
+        print(f"[Step 1/5] Fetching glosses and gloss variants mapping...")
+        run_fetch_setup(
             glosses_output=glosses_output_path,
-            glosses_variants_output=glosses_variants_output_path,
-            sentences_output=sentences_output_path,
+            glosses_variants_output=glosses_variants_output_path
+        )
+
+    if "fetch" in steps:
+        print(f"[Step 2/5] Fetching batch of sentences (Limit: {limit})...")
+        run_fetch_sentences(
             job_tracker_output=job_tracker_path,
             limit=limit
         )
-    else:
-        if not os.path.exists(glosses_output_path) or not os.path.exists(sentences_output_path):
-            raise FileNotFoundError(f"Intermediate files not found. Run with --skip-fetching to skip fetching, but ensure that '{glosses_output_path}' and '{sentences_output_path}' exist.")
-        print(f"Using existing intermediate files: '{glosses_output_path}' and '{sentences_output_path}'")
-
-    if generate_substitutions:
-        print(f"\nStep 2: Generating substitutions from fetched data...")
+    if "substitute" in steps:
+        print(f"\n[Step 3/5] Generating LLM substitutions (Limit: {limit})...")
         generate_sentence_substitutions(
             glosses_file=glosses_output_path,
             output_file=substitutions_output_path,
             job_tracker_file=job_tracker_path,
             limit=limit
         )
-    else:
-        if not os.path.exists(substitutions_output_path):
-            raise FileNotFoundError(f"Substitutions file not found: {substitutions_output_path}. "
-                                    f"Run with --generate-substitutions to create it.")
-        print(f"Using existing substitutions file: {substitutions_output_path}")
 
-    if split_fbx:
-        print(f"\nStep 3: Parsing substitutions and splitting FBX files for Unreal...")
+    if "split" in steps:
+        print(f"\n[Step 4/5] Parsing substitutions and splitting FBX files...")
         run_parse_split(
             substitutions_file=substitutions_output_path,
             glosses_variants_map=glosses_variants_output_path,
@@ -179,42 +163,37 @@ def run_pipeline(fetch_data: bool = True, generate_substitutions: bool = True, r
             output_dir=unreal_ready_dir,
             limit=limit
         )
-    else:
-        print(f"Skipping parsing and splitting of FBX files.")
 
-    if run_ue:
-        print(f"\nStep 4: Executing headless Unreal processing...")
-        run_unreal_headless(unreal_jobs_dir=unreal_ready_dir, unreal_output_dir=unreal_output_dir, job_tracker_file=job_tracker_path, limit=limit)
-    else:
-        print(f"Skipping Unreal headless execution.")
+    if "unreal" in steps:
+        print(f"\n[Step 5/5] Running Unreal Engine headless baking...")
+        run_unreal_headless(
+            unreal_jobs_dir=unreal_ready_dir,
+            unreal_output_dir=unreal_output_dir,
+            job_tracker_file=job_tracker_path,
+            limit=limit
+        )
 
-   
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run the full data fetching and processing pipeline.")
-    parser.add_argument(
-        "--skip-fetching",
-        action="store_true",
-        help="Skip fetching data from the API. Use existing intermediate files if available."
+    parser = argparse.ArgumentParser(
+        description="NGT Animation Blending Pipeline Runner",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
+    
     parser.add_argument(
-        "--skip-substitutions",
-        action="store_true",
-        help="Skip generating substitutions from fetched data. If not set, will reuse existing substitutions_output.json if available."
+        "-l", "--limit",
+        type=int,
+        default=10,
+        help="Number of sentences/jobs to process per stage."
     )
+    
     parser.add_argument(
-        "--skip-splitting",
-        action="store_true",
-        help="Skip parsing substitutions and splitting FBX files for Unreal. Use existing unreal_ready files if available."
+        "-s", "--steps",
+        nargs="+",
+        choices=["setup", "fetch", "substitute", "split", "unreal"],
+        default=["fetch", "substitute", "split", "unreal"],
+        help="Specify which pipeline step(s) to execute."
     )
-    parser.add_argument(
-        "--skip-unreal",
-        action="store_true",
-        help="Skip executing Unreal headless step."
-    )
+
     args = parser.parse_args()
-    run_pipeline(
-        fetch_data=not args.skip_fetching,
-        generate_substitutions=not args.skip_substitutions,
-        run_ue=not args.skip_unreal,
-        split_fbx=not args.skip_splitting
-    )
+    run_pipeline(limit=args.limit, steps=args.steps)

@@ -10,30 +10,26 @@ and saves them to the specified JSON file.
 import json
 import requests
 from pathlib import Path
-import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
-
-# Add project root (PythonParseSplit) to Python search path
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(PROJECT_ROOT))
 
 from DataFetch.call_api import get_senses
 from DataGenerationBluey.job_tracker import update_job
 
 API_URL = "https://signcollect.nl/blendBaking/api.php"
-MODULE_DIR = Path(__file__).resolve().parent
 
-def fetch_gloss_variants_mapping(filename: str | Path) -> Path:
-    filepath = Path(filename).resolve()
-    filepath.parent.mkdir(parents=True, exist_ok=True)
+def fetch_gloss_variants_mapping(output_filename: str | Path) -> Path:
+    """
+    Fetches the mapping of base glosses to their variants and saves it to a JSON file.
+    This is used later in the pipeline to get senses for each variant.
+    """
+    output_filepath = Path(output_filename).resolve()
+    output_filepath.parent.mkdir(parents=True, exist_ok=True)
 
-    params = {"action": "glosses", "mcpStatusTijdAnnotatie": "Klaar"}
+    api_params = {"action": "glosses"}
 
-    # Make the GET request
-    response = requests.get(API_URL, params=params)
-    response.raise_for_status()  # Check for network/HTTP errors
-
+    # TODO: move all API calls to a separate function in call_api.py and add error handling
+    response = requests.get(API_URL, params=api_params)
+    response.raise_for_status()
     data = response.json()
 
     # The API returns HTTP 200 even on error, so check the "success" key
@@ -44,19 +40,24 @@ def fetch_gloss_variants_mapping(filename: str | Path) -> Path:
     base_variants_map = {base_name: list(base_info.get("variants", []).keys()) for base_name, base_info in bases.items()}
 
     # Save the base variants mapping to a JSON file into a subdirectory of the project root
-    with open(filepath, "w", encoding="utf-8") as f:
+    with open(output_filepath, "w", encoding="utf-8") as f:
         json.dump(base_variants_map, f, ensure_ascii=False, indent=4)
 
-    print(f"Successfully saved base variants mapping to '{filepath}'")
+    print(f"Successfully saved base variants mapping to '{output_filepath}'")
 
-    return filepath
+    return output_filepath
 
-def fetch_and_save_glosses(filename: str | Path, max_workers: int = 15) -> Path:
-    filepath = Path(filename).resolve()
-    filepath.parent.mkdir(parents=True, exist_ok=True)
 
-    # 1. Fetch base glosses
-    params = {"action": "glosses", "mcpStatusTijdAnnotatie": "Klaar"}
+def fetch_glosses(output_filename: str | Path, max_workers: int = 15) -> Path:
+    """
+    Fetches all glosses with their senses and categories from the BlendBaking API and saves them to a JSON file.
+    This function uses a ThreadPoolExecutor to fetch senses for each variant concurrently.
+    """
+    output_filepath = Path(output_filename).resolve()
+    output_filepath.parent.mkdir(parents=True, exist_ok=True)
+
+    # Fetch base glosses
+    params = {"action": "glosses"}
     response = requests.get(API_URL, params=params)
     response.raise_for_status()
     data = response.json()
@@ -68,7 +69,7 @@ def fetch_and_save_glosses(filename: str | Path, max_workers: int = 15) -> Path:
     bases = data.get("bases", {})
     category_map = data.get("categoryMap", {}).get("glosses", {})
 
-    # 2. Build unique variant -> category mapping
+    # Build unique variant -> category mapping
     variant_category_map = {}
     for base_name, base_info in bases.items():
         category = category_map.get(base_name, "Unknown")
@@ -80,7 +81,7 @@ def fetch_and_save_glosses(filename: str | Path, max_workers: int = 15) -> Path:
                 if clean_variant and clean_variant.lower() != "nvt":
                     variant_category_map[clean_variant] = category
 
-    # 3. Fetch senses concurrently
+    # Fetch senses concurrently
     def _fetch_sense(variant: str) -> tuple[str, list]:
         try:
             return variant, get_senses(variant)
@@ -95,7 +96,7 @@ def fetch_and_save_glosses(filename: str | Path, max_workers: int = 15) -> Path:
             variant, senses = future.result()
             senses_map[variant] = senses
 
-    # 4. Construct output dictionary
+    # Construct output dictionary
     final_gloss_structure = {
         variant: {
             "senses": senses,
@@ -105,31 +106,57 @@ def fetch_and_save_glosses(filename: str | Path, max_workers: int = 15) -> Path:
     }
 
     # Save to file
-    with open(filepath, "w", encoding="utf-8") as f:
+    with open(output_filepath, "w", encoding="utf-8") as f:
         json.dump(final_gloss_structure, f, ensure_ascii=False, indent=4)
 
-    print(f"Successfully saved glosses to '{filepath}'")
-    return filepath
+    print(f"Successfully saved glosses to '{output_filepath}'")
+    return output_filepath
 
 
+def _fetch_and_clean_srt(srt_url: str) -> list[str] | None:
+    """
+    Helper function to download an SRT file from a URL, filter out line numbers 
+    and timestamps, and return a clean list of text lines.
+    """
+    if not srt_url:
+        return None
 
-def fetch_and_save_sentences(filename: str | Path, job_tracker_output: str | Path, limit: int) -> Path:
-    filepath = Path(filename).resolve()
-    filepath.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        response = requests.get(srt_url)
+        if response.status_code != 200:
+            return None
 
-    # Find the first limit of sentences in the job tracker that have the stage pending 
-    with open(job_tracker_output, "r", encoding="utf-8") as f:
+        clean_lines = []
+        for line in response.text.splitlines():
+            line = line.strip()
+            # Skip empty lines, sequence numbers, and timestamp arrows
+            if not line or line.isdigit() or "-->" in line:
+                continue
+            clean_lines.append(line)
+
+        return clean_lines
+    except Exception as e:
+        print(f"Warning: Failed to fetch/parse SRT from '{srt_url}': {e}")
+        return None
+    
+
+def fetch_batch_sentences(job_tracker_output: str | Path, limit: int) -> Path:
+    """
+    Fetches a batch of sentences of size `limit` from the BlendBaking API that are marked as "PENDING" in the job tracker.
+    It updates the job tracker to mark these sentences as "LLM_READY" and saves the relevant data.
+    """
+    job_tracker_path = Path(job_tracker_output).resolve()
+    
+    with open(job_tracker_path, "r", encoding="utf-8") as f:
         job_tracker_data = json.load(f)
 
-    # List of base_ids that are pending
     pending_ids = [
         base_id
         for base_id, job in job_tracker_data.items()
-        if job.get("status", {})== "PENDING"
+        if job.get("status", {}) == "PENDING"
     ]
 
     sentence_count = 0
-    output_data = []
     for base_id in pending_ids:
         params = {
             "action": "timings",
@@ -143,105 +170,56 @@ def fetch_and_save_sentences(filename: str | Path, job_tracker_output: str | Pat
         if isinstance(data, dict) and not data.get("success", True):
             raise ValueError(f"API Error: {data.get('error', 'Unknown error')}")
         
-        sentence = data.get("sentences", [])[0]
-        if (sentence.get("statusTijdAnnotatie") != "Klaar" or sentence.get("statusTijdAnnotatieGvg") != "Klaar"):
-            # print(f"Skipping {base_id}: {sentence.get('srtError')}")
+        sentences = data.get("sentences", [])
+        if not sentences:
+            continue
+            
+        sentence = sentences[0]
+        if sentence.get("statusTijdAnnotatie") != "Klaar" or sentence.get("statusTijdAnnotatieGvg") != "Klaar":
             continue
 
-        nederlandse_zin = sentence.get("nederlandsSrt", "")
-        if not nederlandse_zin:
-            print(f"Warning: Sentence ID {sentence.get('id')} has no 'nederlandsSrt'. Skipping.")
+        # Fetch and clean Dutch SRT content
+        dutch_lines = _fetch_and_clean_srt(sentence.get("nederlandsSrt", ""))
+        if not dutch_lines:
+            print(f"Warning: Failed to process Nederlands SRT for sentence ID {sentence.get('id')}. Skipping.")
+            continue
+        nederlandse_zin_cleaned = " ".join(dutch_lines)
+
+        # Fetch and clean GVG SRT content
+        gvg_clean_lines = _fetch_and_clean_srt(sentence.get("gvgSrt", ""))
+        if not gvg_clean_lines:
+            print(f"Warning: Failed to process GVG SRT for sentence ID {sentence.get('id')}. Skipping.")
             continue
 
-        # Open the link nederlandse zin
-        response = requests.get(nederlandse_zin)
-        if response.status_code != 200:
-            print(f"Warning: Failed to fetch SRT for sentence ID {sentence.get('id')}. Skipping.")
-            continue
+        original_glosses = [g.get("gloss") for g in sentence.get("glosses", [])]
 
-        srt_content = response.text
-        lines = srt_content.splitlines()
-        clean_lines = []
-
-        for line in lines:
-            line = line.strip()
-            # Skip empty lines, numbers (line numbers), and timestamps (contains -->)
-            if not line or line.isdigit() or "-->" in line:
-                continue
-            clean_lines.append(line)
-
-        nederlandse_zin_cleaned = " ".join(clean_lines)
-        # TODO: add this to other function
-
-        gvg_response = requests.get(sentence.get("gvgSrt", ""))
-        if gvg_response.status_code != 200:
-            print(f"Warning: Failed to fetch GVG SRT for sentence ID {sentence.get('id')}. Skipping.")
-            continue
-
-        gvg_srt_content = gvg_response.text
-        gvg_lines = gvg_srt_content.splitlines()
-
-        gvg_clean_lines = []
-        for line in gvg_lines:
-            line = line.strip()
-            # Skip empty lines, numbers (line numbers), and timestamps (contains -->)
-            if not line or line.isdigit() or "-->" in line:
-                continue
-            gvg_clean_lines.append(line)
-
-        gvg_zin_cleaned = " ".join(gvg_clean_lines)
-
-        formatted_item = {
-            "original_animation": sentence.get("base", ""),
-            "nederlands_zin": nederlandse_zin_cleaned,
-            "original_glosses": [g.get("gloss") for g in sentence.get("glosses", [])],
-            "gvg_zin": gvg_clean_lines,
-            # "original_zin": sentence.get("zin", ""), # Do not use this, this is not the correct sentence, use the SRT instead
-            "substitutions": []
-        }
-
-        # Update the job tracker to mark this base_id as llm ready
+        # Update the job tracker to mark this base_id as LLM_READY
+        # Note: kwarg updated to status_updates (plural) to match job_tracker signature
         update_job(
-            job_tracker_output, 
-            base_id, 
-            status_updates="LLM_READY", 
+            tracker_path=job_tracker_path, 
+            base_id=base_id, 
+            status_update="LLM_READY", 
             input_data={
                 "nederlands_zin": nederlandse_zin_cleaned, 
-                "original_glosses": [g.get("gloss") for g in sentence.get("glosses", [])], 
+                "original_glosses": original_glosses, 
                 "gvg_zin": gvg_clean_lines
             }
         )
 
-        # Check if the limit has been reached
         sentence_count += 1
         if sentence_count >= limit:
             break
 
-        output_data.append(formatted_item)
+    return job_tracker_path
 
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=4)
-
-    print(f"Successfully saved sentences to '{filepath}'")
-    return filepath
-
-def run_fetch(glosses_output: str | Path, sentences_output: str | Path, glosses_variants_output: str | Path, job_tracker_output: str | Path, limit: int):
+def run_fetch_setup(glosses_output: str | Path,  glosses_variants_output: str | Path):
     """Unified entry function to call directly from pipeline_runner.py"""
     glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
-    glosses_path = fetch_and_save_glosses(glosses_output)
-    sentences_path = fetch_and_save_sentences(sentences_output, job_tracker_output, limit=limit)
-    return glosses_path, glosses_variants_path, sentences_path
+    glosses_path = fetch_glosses(glosses_output)
+    return glosses_path, glosses_variants_path
 
 
-if __name__ == "__main__":
-    # Direct execution fallback writes to jobs/intermediate relative to project root
-    project_root = MODULE_DIR.parent
-    target_dir = project_root / "jobs" / "intermediate"
-
-    run_fetch(
-        glosses_output=target_dir / "all_glosses.json",
-        glosses_variants_output=target_dir / "base_variants_map.json",
-        sentences_output=target_dir / "all_sentences.json",
-        job_tracker_output=target_dir / "job_tracker.json",
-        limit=10
-    )
+def run_fetch_sentences(job_tracker_output: str | Path, limit: int):
+    """Fetches a batch of sentences and updates the job tracker."""
+    sentences_path = fetch_batch_sentences(job_tracker_output, limit=limit)
+    return sentences_path
