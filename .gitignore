@@ -222,7 +222,8 @@ __marimo__/
 Animations
 DataFetch/jobs/
 fbx_sdk
-jobs/intermediate/*
+jobs
+
 DataGenerationBluey/bluey.json
 
 *.fbx
