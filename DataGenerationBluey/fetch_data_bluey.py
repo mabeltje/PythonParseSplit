@@ -214,6 +214,7 @@ def fetch_batch_sentences(job_tracker_output: str | Path, limit: int) -> Path:
 
 def run_fetch_setup(glosses_output: str | Path,  glosses_variants_output: str | Path):
     """Unified entry function to call directly from pipeline_runner.py"""
+    # TODO: implement to show how mnay new sentences and glosses were fetched
     glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
     glosses_path = fetch_glosses(glosses_output)
     return glosses_path, glosses_variants_path

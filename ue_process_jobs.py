@@ -21,6 +21,7 @@ def main():
         unreal.log_error(f"[Headless Pipeline] Invalid jobs directory: {job_dir}")
         sys.exit(1)
 
+    # File with substitution data
     json_path = os.path.join(job_dir, "substitutions_output.json")
     if not os.path.exists(json_path):
         unreal.log_error(f"[Headless Pipeline] File not found: {json_path}")
@@ -31,6 +32,7 @@ def main():
 
     unreal.log(f"[Headless Pipeline] Starting Unreal Headless Pipeline: {len(job_data)} sentences to process")
 
+    # TODO: do not hardcode the sequence name
     level_sequence = unreal.SequencerAbstractionBPLibrary.load_level_sequence_asset("/Game/LevelSequences/start_sequence")
     if not level_sequence:
         unreal.log_error("[Headless Pipeline] Failed to load level sequence asset: /Game/Sequences/start_sequence")
