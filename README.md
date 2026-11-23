@@ -97,3 +97,10 @@ Start and end times accept seconds (`1.718`) or `HH:MM:SS,mmm` / `HH:MM:SS.mmm`.
 - If the runner reports a missing Unreal executable or project, correct `UE_CMD_PATH` and `UPROJECT_PATH`.
 - If substitution generation fails, create and check the endpoint configuration in `DataGenerationBluey/bluey.json` and verify the returned response format.
 - If trimming fails, confirm that the FBX contains animation keys within the requested time window and that the FBX SDK matches the active Python installation.
+
+
+## Setup steps
+
+- List dependencies
+- Config file: open a folder in unreal and set the config file to the skeleton, mesh and level seq.
+- Level in Unreal with palmer
