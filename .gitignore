@@ -221,9 +221,10 @@ __marimo__/
 
 Animations
 DataFetch/jobs/
-fbx_sdk
 jobs
 
+DataGenerationBluey/all_glosses.json
+DataGenerationBluey/all_sentences.json
 DataGenerationBluey/bluey.json
 
 *.fbx
