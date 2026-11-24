@@ -118,9 +118,6 @@ def run_pipeline(limit: int = 10, steps: list[str] = None):
     job_tracker_path = os.path.join(inter_dir, "job_tracker.json")
     glosses_variants_output_path = os.path.join(inter_dir, "base_variants_map.json")
 
-    # TODO: move into setup step
-    populate_job_tracker(job_tracker_path)
-
     print(f"\n--- Pipeline Run Config ---")
     print(f"Batch Limit: {limit}")
     print(f"Active Steps: {', '.join(steps)}")
@@ -130,7 +127,8 @@ def run_pipeline(limit: int = 10, steps: list[str] = None):
         print(f"[Step 1/5] Fetching glosses and gloss variants mapping...")
         run_fetch_setup(
             glosses_output=glosses_output_path,
-            glosses_variants_output=glosses_variants_output_path
+            glosses_variants_output=glosses_variants_output_path,
+            job_tracker_path=job_tracker_path
         )
 
     if "fetch" in steps:
@@ -164,6 +162,9 @@ def run_pipeline(limit: int = 10, steps: list[str] = None):
             job_tracker_file=job_tracker_path,
             limit=limit
         )
+
+    # TODO: Cleanup: remove intermediate files if needed, or move to a "completed" directory
+    # TODO: Overview of completed jobs, failed jobs, and any warnings encountered during the run
 
 
 if __name__ == "__main__":

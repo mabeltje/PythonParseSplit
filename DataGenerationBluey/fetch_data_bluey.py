@@ -13,7 +13,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from DataFetch.call_api import get_senses
-from DataGenerationBluey.job_tracker import update_job
+from DataGenerationBluey.job_tracker import update_job, populate_job_tracker
 
 API_URL = "https://signcollect.nl/blendBaking/api.php"
 
@@ -212,12 +212,14 @@ def fetch_batch_sentences(job_tracker_output: str | Path, limit: int) -> Path:
     return job_tracker_path
 
 
-def run_fetch_setup(glosses_output: str | Path,  glosses_variants_output: str | Path):
+
+def run_fetch_setup(glosses_output: str | Path,  glosses_variants_output: str | Path, job_tracker_path: str | Path):
     """Unified entry function to call directly from pipeline_runner.py"""
     # TODO: implement to show how mnay new sentences and glosses were fetched
     glosses_variants_path = fetch_gloss_variants_mapping(glosses_variants_output)
     glosses_path = fetch_glosses(glosses_output)
-    return glosses_path, glosses_variants_path
+    job_tracker = populate_job_tracker(job_tracker_path)
+    return glosses_path, glosses_variants_path, job_tracker
 
 
 def run_fetch_sentences(job_tracker_output: str | Path, limit: int):

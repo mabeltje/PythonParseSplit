@@ -1,6 +1,6 @@
 # Python FBX Animation Pipeline
 
-This repository prepares sign-language animation jobs for Unreal Engine. It fetches animation metadata, downloads and trims donor FBX files, and prepares the jobs for Unreal processing. Substitution generation and Unreal execution are currently disabled in `pipeline_runner.py` because those calls are commented out.
+This repository prepares sign-language animation jobs for Unreal Engine. It fetches animation metadata and sentences, generates gloss substitutions, downloads and trims donor FBX files, and processes ready jobs in Unreal Engine.
 
 The overall flow is documented in [Dataflow.md](Dataflow.md).
 
@@ -47,47 +47,32 @@ UPROJECT_PATH = "C:/Users/visualisationLab/Documents/Unreal Projects/BlendingAut
 
 When using the LLM substitution step, configure the API URL, headers, and request data in `DataGenerationBluey/bluey.json`. That file is not currently included in the repository, so create it before using the LLM scripts. Do not commit credentials to that file.
 
-The runner currently requests page 5 with a limit of 10. Change the `page` and `limit` arguments in `pipeline_runner.py` if a different batch is required.
+The runner processes 10 sentences/jobs per stage by default. Use `-l` or `--limit` to change the batch size and `-s` or `--steps` to choose which stages run. Available steps are `setup`, `fetch`, `substitute`, `split`, and `unreal`.
 
 ## Run the Full Pipeline
 
-From the repository root:
-Run with Python version 3.11 (in a venv) for the FBX SDK animation trimming to work.
+From the repository root, run with Python version 3.11 (in a venv) for the FBX SDK animation trimming to work.
 
 ```powershell
-python pipeline_runner.py --skip-unreal
+python pipeline_runner.py
 ```
 
-This fetches glosses and sentences, uses the existing `jobs/unreal_ready/substitutions_output.json`, downloads the required source and donor animations, trims the donor FBX files, and creates Unreal-ready job folders.
+With no options, all five steps run in order: `setup`, `fetch`, `substitute`, `split`, and `unreal`.
 
-To generate a new substitution file through the configured LLM endpoint:
+To run only the preparation steps and skip Unreal:
 
 ```powershell
-python pipeline_runner.py --generate-substitutions --skip-unreal
+python pipeline_runner.py --steps setup fetch substitute split
 ```
 
-To run the Unreal batch step as well, omit `--skip-unreal`:
+To run only the substitution and split steps with a limit of five jobs per stage:
 
 ```powershell
-python pipeline_runner.py --generate-substitutions
+python pipeline_runner.py --steps substitute split --limit 5
 ```
 
-The Unreal step runs `UnrealEditor-Cmd.exe` headlessly and passes `jobs/unreal_ready` through the `UE_JOBS_DIR` environment variable. It expects `/Game/LevelSequences/start_sequence` to exist in the Unreal project.
+The `--limit` value applies to each selected stage. The Unreal step runs `UnrealEditor-Cmd.exe` headlessly and passes `jobs/unreal_ready` through the `UE_JOBS_DIR` environment variable. It expects `/Game/LevelSequences/start_sequence` to exist in the Unreal project.
 
-## Trim an FBX Directly
-
-For a single animation, use `DataFetch/trim_fbx.py`:
-
-```powershell
-python DataFetch/trim_fbx.py `
-  --fbx "Animations\input.fbx" `
-  --start "00:00:01,718" `
-  --end "00:00:03,842" `
-  --note "Trimmed sign segment" `
-  --out "Animations\trimmed_animation.fbx"
-```
-
-Start and end times accept seconds (`1.718`) or `HH:MM:SS,mmm` / `HH:MM:SS.mmm`. The script reads the FBX frame rate, snaps the boundaries to frame boundaries, removes keys outside the window, shifts the remaining animation to start at zero, and embeds trim metadata in the output FBX.
 
 ## Outputs and Troubleshooting
 
