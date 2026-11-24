@@ -1,91 +1,199 @@
 # Python FBX Animation Pipeline
 
-This repository prepares sign-language animation jobs for Unreal Engine. It fetches animation metadata and sentences, generates gloss substitutions, downloads and trims donor FBX files, and processes ready jobs in Unreal Engine.
+This project prepares Dutch Sign Language (NGT) animation jobs for Unreal
+Engine. It fetches source data, generates gloss substitutions, downloads and
+trims donor FBX files, and runs Unreal Engine headlessly to produce blended
+animation output.
 
-The overall flow is documented in [Dataflow.md](Dataflow.md).
+The high-level workflow is documented in [Dataflow.md](Dataflow.md).
 
 ## Requirements
 
+### Operating system and Python
+
 - Windows
-- Python 3.11
+- Python 3.11 (in a virtual environment)
+- Access to the BlendBaking API:
+  `https://signcollect.nl/blendBaking/api.php`
+
+
+#### Python dependencies
+
 - `requests`
-- Autodesk FBX Python SDK, including the native `fbx` module for the selected Python version and architecture
-- Unreal Engine 5.7, with a project containing the level sequence expected by `ue_process_jobs.py`
-- Access to `https://signcollect.nl/blendBaking/api.php`
-- An LLM endpoint configured in `DataGenerationBluey/bluey.json` when generating substitutions
+- `openai`
+- `python-dotenv`
 
-The repository contains the helper `DataFetch/fbx_sdk/FbxCommon.py`. Install [FBX Python SDK downloads]([url](https://aps.autodesk.com/developer/overview/fbx-sdk)) for Python version 3.11.
-
-Install the Python dependency with:
+The following command installs the required packages:
 
 ```powershell
-python -m pip install requests
+python -m pip install requests openai python-dotenv
 ```
 
-With importing of the FBX files into Unreal Engine, there is a bug in the Interchange pipeline that withholds the FBX import from happening with the old FBX importer. The function used to import the FBX file is written for the old importer. To work around this, disable the Interchange plugins in the Unreal project settings.
+### Autodesk FBX SDK
 
-## Project Layout
+Autodesk FBX Python SDK, including the native fbx module for the selected Python version and architecture.
+The preparation stage imports Autodesk's native `fbx` module to inspect, trim,
+and export FBX animation files.
+
+- [Autodesk FBX SDK downloads](https://aps.autodesk.com/developer/overview/fbx-sdk)
+- Install FBX Python SDK downloads for Python version 3.11.
+<!-- - The native `fbx` module must be importable by the selected Python
+  interpreter. -->
+- The repository contains the helper DataFetch/fbx_sdk/FbxCommon.py.
+
+
+### Unreal Engine Project Setup
+
+- Unreal Engine 5.7
+- A compatible Unreal project called `BlendingAutomation` (`BlendingAutomation.uproject`) (see [Unreal Project Setup](#unreal-project-setup))
+- `UnrealEditor-Cmd.exe` available on disk
+
+
+#### Plugins 
+
+- [Unreal VTT Parser](https://github.com/mabeltje/UnrealVTTParser)
+- [Sequencer Abstraction](https://github.com/J-Andersen-UvA/sequencerAbstraction)
+- [Unreal Asset File Management](https://github.com/J-Andersen-UvA/UnrealAssetFileManagement)
+- Interchange FBX Importer: This project uses the legacy FBX importer, disable all the Interchange plugins in Edit > Plugins to prevent the Interchange FBX Importer from being used. 
+
+#### C++ Modules
+
+[Unreal Headless Module](https://github.com/mabeltje/UnrealHeadlessModule): Clone into `Source/BlendingAutomationEditor` and register the module in your `.uproject` and `Editor.Target.cs` files before building. See the module's README for instructions on setting up the module and Project.
+
+#### Unreal Project Setup
+
+- A level sequence at `/Game/LevelSequences/start_sequence`
+- An actor that is compatible with the animations used
+- Create a `SkeletalSequenceDataAsset` at **`/Game/Config/AutomationConfig`** and assign its values (more info in the [Unreal Headless Module README](https://github.com/mabeltje/UnrealHeadlessModule))
+
+
+### LLM credentials
+
+The substitution stage uses the UvA OpenAI-compatible proxy configured in
+`DataGenerationBluey/bluey_LLM.py`. Create a `.env` file in the repository
+root with:
 
 ```text
-pipeline_runner.py                 Fetch data and prepare FBX jobs
-DataGenerationBluey/               Fetch source data and generate substitutions
-DataFetch/                         Download, trim, and organize FBX jobs
-jobs/intermediate/                 Generated gloss and sentence JSON files
-jobs/unreal_ready/                 Jobs prepared for Unreal processing
-ue_process_jobs.py                 Unreal Python batch-processing script
-Dataflow.md                        Pipeline diagram
+UVA_LLM_KEY=your-key-here
 ```
 
-## Configuration
+Do NOT commit `.env` or credentials. The current pipeline runner does not use
+`DataGenerationBluey/bluey.json` for its LLM configuration.
 
-Before running the full pipeline, update the Unreal paths near the top of `pipeline_runner.py`:
+## Getting started
+
+Clone the repository and create an environment:
+
+```powershell
+git clone https://github.com/mabeltje/PythonParseSplit.git
+cd PythonParseSplit
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install requests openai python-dotenv
+```
+
+Install and verify the FBX SDK for the active Python 3.11 interpreter, create
+the `.env` file if using substitutions, and configure the Unreal paths in
+`pipeline_runner.py`:
 
 ```python
 UE_CMD_PATH = "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor-Cmd.exe"
 UPROJECT_PATH = "C:/Users/visualisationLab/Documents/Unreal Projects/BlendingAutomation/BlendingAutomation.uproject"
 ```
 
-When using the LLM substitution step, configure the API URL, headers, and request data in `DataGenerationBluey/bluey.json`. That file is not currently included in the repository, so create it before using the LLM scripts. Do not commit credentials to that file.
+The runner creates these directories automatically:
 
-The runner processes 10 sentences/jobs per stage by default. Use `-l` or `--limit` to change the batch size and `-s` or `--steps` to choose which stages run. Available steps are `setup`, `fetch`, `substitute`, `split`, and `unreal`.
+- `jobs/intermediate`
+- `jobs/unreal_ready`
+- `jobs/unreal_out`
 
-## Run the Full Pipeline
+## Pipeline stages
 
-From the repository root, run with Python version 3.11 (in a venv) for the FBX SDK animation trimming to work.
+The runner supports five stages. They normally run in this order:
+
+| Stage | Description | Tracker transition |
+| --- | --- | --- |
+| `setup` | Fetch glosses and gloss variants, then add available base animations to the tracker | New jobs become `PENDING` |
+| `fetch` | Fetch sentence and subtitle data for pending jobs | `PENDING` -> `LLM_READY` |
+| `substitute` | Send eligible sentences and glosses to the LLM | `LLM_READY` -> `LLM_DONE` |
+| `split` | Download source and donor animations, trim donor FBX files, and prepare Unreal jobs | `LLM_DONE` -> `UNREAL_READY` |
+| `unreal` | Run Unreal Engine headlessly for prepared jobs | `UNREAL_READY` -> `UNREAL_DONE` |
+
+The tracker is stored in `jobs/intermediate/job_tracker.json`. Running only
+later stages is supported, but the required earlier-stage files and tracker
+statuses must already exist.
+
+## Usage
+
+To set up the correct environment and fetch the required data, follow these steps:
+
+```powershell
+python pipeline_runner.py --steps setup
+```
+
+Run all stages with the default limit of 10 jobs per stage:
 
 ```powershell
 python pipeline_runner.py
 ```
 
-With no options, all five steps run in order: `setup`, `fetch`, `substitute`, `split`, and `unreal`.
-
-To run only the preparation steps and skip Unreal:
+Show the current command-line options:
 
 ```powershell
-python pipeline_runner.py --steps setup fetch substitute split
+python pipeline_runner.py --help
 ```
 
-To run only the substitution and split steps with a limit of five jobs per stage:
+The runner supports:
+
+```text
+-l, --limit       Number of sentences/jobs processed by each selected stage
+-s, --steps       One or more of: setup fetch substitute split unreal
+```
+
+Run only the preparation stages and skip Unreal:
 
 ```powershell
-python pipeline_runner.py --steps substitute split --limit 5
+python pipeline_runner.py --steps fetch substitute split
 ```
 
-The `--limit` value applies to each selected stage. The Unreal step runs `UnrealEditor-Cmd.exe` headlessly and passes `jobs/unreal_ready` through the `UE_JOBS_DIR` environment variable. It expects `/Game/LevelSequences/start_sequence` to exist in the Unreal project.
+Run a smaller batch. The limit applies independently to every selected stage:
+
+```powershell
+python pipeline_runner.py --steps fetch substitute split --limit 5
+```
+
+Run Unreal only for jobs already marked `UNREAL_READY`:
+
+```powershell
+python pipeline_runner.py --steps unreal --limit 10
+```
+
+## Unreal processing
+
+Before the `unreal` stage, the runner writes the selected ready jobs to:
+
+```text
+jobs/unreal_ready/substitutions_output.json
+```
+
+It launches `UnrealEditor-Cmd.exe` with `ue_process_jobs.py` and sets:
+
+- `UE_JOBS_DIR` to `jobs/unreal_ready`
+- `UE_OUTPUT_DIR` to `jobs/unreal_out`
+
+The Unreal script loads `/Game/LevelSequences/start_sequence`, processes each
+substitution, and writes blended output beneath
+`jobs/unreal_out/<original-animation>/`. Donor SRT export files are written
+into the corresponding `jobs/unreal_ready/<base-id>/` folder.
 
 
-## Outputs and Troubleshooting
+## Generated files
 
-- `jobs/intermediate/all_glosses.json` and `all_sentences.json` contain data fetched from the BlendBaking API.
-- `jobs/unreal_ready/substitutions_output.json` contains the substitution definitions consumed by the preparation step.
-- Each animation folder under `jobs/unreal_ready/` contains the original animation and downloaded SRT metadata. Trimmed donor FBX files are stored in the shared `jobs/unreal_ready/trimmed_fbx_cache/` directory.
-- If the runner reports a missing Unreal executable or project, correct `UE_CMD_PATH` and `UPROJECT_PATH`.
-- If substitution generation fails, create and check the endpoint configuration in `DataGenerationBluey/bluey.json` and verify the returned response format.
-- If trimming fails, confirm that the FBX contains animation keys within the requested time window and that the FBX SDK matches the active Python installation.
+- `jobs/intermediate/all_glosses.json`: gloss and sense data from the API.
+- `jobs/intermediate/base_variants_map.json`: base gloss to variant mapping.
+- `jobs/intermediate/job_tracker.json`: job inputs, substitutions, and statuses.
+- `jobs/unreal_ready/<base-id>/`: downloaded source animation and SRT files.
+- `jobs/unreal_ready/trimmed_fbx_cache/`: cached trimmed donor FBX files.
+- `jobs/unreal_ready/substitutions_output.json`: jobs supplied to Unreal.
+- `jobs/unreal_out/<base-id>/`: blended output generated by Unreal.
 
-
-## Setup steps
-
-- List dependencies
-- Config file: open a folder in unreal and set the config file to the skeleton, mesh and level seq.
-- Level in Unreal with palmer
